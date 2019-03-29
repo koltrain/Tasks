@@ -1,0 +1,109 @@
+select order_id,
+       order_pos_id,
+       sum_sale_loc,
+       offcnt_id,
+       row_number() over (order by sum_sale_loc desc) as tt 
+  from ksas_crm.cl_order_pos
+where order_id = 59503400;
+
+
+
+
+create or replace procedure KSAS_BSC.GEN_PRC_1020
+ (   aCurClientID        in number   -- Текущий клиент - из цикла БС
+   , aCurOrderID         in number   -- Текущий заказ - из цикла БС
+   , aCurOrderPosID      in number   -- Текущая позиция заказа - из цикла БС
+   , aCurMaID            in number   -- Текущая МА - из цикла БС
+   , aCurBpID            in number   -- Текущий БП - из цикла БС
+   , aCurOfferID         in number   -- Текущий каталог - из цикла БС
+   , aCurParcelID        in number   -- Текущая посылка - из цикла БС
+   , aCurParcelPosID     in number   -- Текущая позиция посылки - из цикла БС
+   , aCurParam1          in varchar2 -- Свободный параметр 1 - из цикла БС
+   , aCurParam2          in varchar2 -- Свободный параметр 2 - из цикла БС
+   , aCurParam3          in varchar2 -- Свободный параметр 3 - из цикла БС
+   , aScrCurGroupID      in number   -- Текущая группа клиентов - из аргументов БС
+   , aScrCurOrderID      in number   -- Текущий заказ - из аргументов БС
+   , aScrCurParcelID     in number   -- Текущая посылка - из аргументов БС
+   , aScrCurClientID     in number   -- Текущий клиент - из аргументов БС
+   , aScrCurSessionID    in number   -- Текущая сессия - из аргументов БС
+   , aScrCurCaseID       in number   -- Текущий кейс - из аргументов БС
+   , aScrCurSFinID       in number   -- Текущая нода дерева причин закрытия сессии - из аргументов БС
+   , aScrFeeTypeID       in number   -- Текущий идентификатор сервисного сбора - из аргументов БС
+   , aScrCurMaID         in number   -- Текущая МА - из аргументов БС
+   , aScrScriptID        in number   -- Идентификатор БС - из аргументов БС
+   , aScrMaListID        in number   -- Идентификатор списка МА - из аргументов БС
+   , aScrBpListID        in number   -- Идентификатор списка БП - из аргументов БС
+   , aScrOfferListID     in number   -- Идентификатор списка каталогов - из аргументов БС
+   , aScrOrdStatusIDsrc  in number   -- Исходный статус заказа
+   , aScrOrdStatusIDdst  in number   -- Целевой статус заказа
+   , aScrPrcStatusIDsrc  in number   -- Исходный статус посылки
+   , aScrPrcStatusIDdst  in number   -- Целевой статус посылки
+   , aScrDate1           in date     -- Дата 1 - из параметра скрипта
+   , aScrDate2           in date     -- Дата 2 - из параметра скрипта
+   , aFreeParam1         in varchar2 -- Свободный параметр скрипта 1
+   , aFreeParam2         in varchar2 -- Свободный параметр скрипта 1
+   , aFreeParam3         in varchar2 -- Свободный параметр скрипта 1
+   , aParameter1  in NUMBER
+ )
+
+is
+
+  vPriceRes number;
+  vPriceLoc number;
+
+begin
+
+  select price_loc into vPriceLoc from ksas_crm.cl_order_pos where order_id = aCurOrderID and order_pos_id = aCurOrderPosID;
+
+  vPriceRes := nvl(round(vPriceLoc - vPriceLoc * aParameter1 / 100, 2), 0);
+
+  if vPriceRes < 0 then vPriceRes := 0; end if;
+
+  update ksas_crm.cl_order_pos
+     set price_sale_loc = vPriceRes
+        ,ma_id = aScrCurMaID
+        ,bs_script_id = aScrScriptID
+   where order_id = aCurOrderID and order_pos_id = aCurOrderPosID;
+
+  return;
+
+end GEN_PRC_1020;
+
+
+
+
+
+KSAS_BSC.GEN_PRC_1020 (   aCurClientID        => :CUR_CLIENT
+   , aCurOrderID         => :CUR_ORDER
+   , aCurOrderPosID      => :CUR_ORDER_POS
+   , aCurMaID            => :CUR_MA
+   , aCurBpID            => :CUR_BP
+   , aCurOfferID         => :CUR_OFFER
+   , aCurParcelID        => :CUR_PARCEL
+   , aCurParcelPosID     => :CUR_PARCEL_POS
+   , aCurParam1          => :CUR_PARAM_1
+   , aCurParam2          => :CUR_PARAM_2
+   , aCurParam3          => :CUR_PARAM_3
+   , aScrCurGroupID      => :SCR_CUR_CLNT_GROUP
+   , aScrCurOrderID      => :SCR_CUR_ORDER
+   , aScrCurParcelID     => :SCR_CUR_PARCEL
+   , aScrCurClientID     => :SCR_CUR_CLIENT
+   , aScrCurSessionID    => :SCR_CUR_SESSION
+   , aScrCurCaseID       => :SCR_CUR_CASE
+   , aScrCurSFinID       => :SCR_CUR_S_FIN
+   , aScrFeeTypeID       => :SCR_CUR_FEE_TYPE
+   , aScrCurMaID         => :SCR_CUR_MA
+   , aScrScriptID        => :SCR_BS
+   , aScrMaListID        => :SCR_MA_LIST_ID
+   , aScrBpListID        => :SCR_BP_LIST_ID
+   , aScrOfferListID     => :SCR_OFFER_LIST_ID
+   , aScrOrdStatusIDsrc  => :SCR_ORD_STATUS_ID_SRC
+   , aScrOrdStatusIDdst  => :SCR_ORD_STATUS_ID_DST
+   , aScrPrcStatusIDsrc  => :SCR_PRC_STATUS_ID_SRC
+   , aScrPrcStatusIDdst  => :SCR_PRC_STATUS_ID_DST
+   , aScrDate1           => :DATE_1
+   , aScrDate2           => :DATE_2
+   , aFreeParam1         => :FREE_PARAM_1
+   , aFreeParam2         => :FREE_PARAM_2
+   , aFreeParam3         => :FREE_PARAM_3
+   , aParameter1  => :PARAMETER_1)
