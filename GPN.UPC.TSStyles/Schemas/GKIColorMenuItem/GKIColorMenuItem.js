@@ -1,5 +1,8 @@
 define("GKIColorMenuItem", [],
 	function() {
+		/**
+		* Test
+		*/
 		Ext.define("Terrasoft.controls.GKIColorMenuItem", {
 			alternateClassName: "Terrasoft.GKIColorMenuItem",
 			override: "Terrasoft.ColorMenuItem",
