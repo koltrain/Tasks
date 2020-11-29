@@ -1,8 +1,0 @@
-= MetaData.Schema.UId "c12ea491-f52d-4d4f-b5ff-6a9e41695071"
-= MetaData.Schema.A5 "08ec6a3f-2712-42d4-a838-8d9d29e81d6f"
-= MetaData.Schema.B2.["c950747f-ac1f-451e-8a59-7d648a7b1ba6"].A4 "c12ea491-f52d-4d4f-b5ff-6a9e41695071"
-= MetaData.Schema.B6 "a573f98a-f239-4bf2-a33b-536b75893709"
-= MetaData.Schema.B8 "7.14.1.935"
-~ MetaData.Schema.HD8 ["213c72b7-1419-4898-ac95-dbc5299c1568","d433f9c9-3807-41ac-b658-8dd36cd071e7","c9007d38-a06e-43cf-b64c-3d441a4b4c74","5b2d93b0-2649-4c51-97d8-2c64afbcac72","2a8cdb68-5be6-49e0-815a-642d50e9115d","9f28b901-9f14-4a63-a1c0-35ad9a48ab9a","ba5c8940-49f4-4366-ab14-e0d102529c36","6dff4616-e7ab-4dae-92aa-86d927443b46","81c8d085-d86e-4ba0-816f-6a2e51420ce8","d80708ca-89c4-4ab1-8ded-0b42cc5e238d"]
-- MetaData.Schema.HD12
-+ MetaData.Schema.B7 true
