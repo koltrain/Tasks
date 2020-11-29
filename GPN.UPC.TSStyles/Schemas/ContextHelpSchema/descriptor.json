@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "fa970b75-8c90-407e-a04c-458d82fc401e",
+    "Name": "ContextHelpSchema",
+    "ModifiedOnUtc": "\/Date(1603275121000)\/",
+    "Parent": {
+      "UId": "f0d4a38d-f8f5-44a4-87d5-c0d5407f20db",
+      "Name": "ContextHelpSchema"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "ContextHelpSchema"
+  }
+}

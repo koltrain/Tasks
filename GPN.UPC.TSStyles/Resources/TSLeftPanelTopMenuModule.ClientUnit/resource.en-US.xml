@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="TSLeftPanelTopMenuModule" />
+			<Item Name="Images.1a435f2c-ada7-460e-9a81-e7e810af61c3.Image" Type="Image" ContentType="Data" FileExtension=".svg" Value="PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzOCAzOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzggMzgiPjxwYXRoIGQ9Ik0xNC41LDh2Mi4zbDkuMiw5LjJsLTkuMiw5LjJWMzFMMjYsMTkuNUwxNC41LDh6IiBmaWxsPSIjZmZmIi8+PC9zdmc+" />
+			<Item Name="Images.6c34c406-600d-4d42-8449-7a9f0c83986f.Image" Type="Image" ContentType="Data" FileExtension=".svg" Value="PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjMgLTMgMzggMzgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMyAtMyAzOCAzOCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0ibTMyIDE1aC05di05aC0ydjloLTl2Mmg5djloMnYtOWg5eiIvPjwvc3ZnPg==" />
+			<Item Name="Images.acc72b7a-511f-4f58-a756-7db0f4bc6b4c.Image" Type="Image" ContentType="Data" FileExtension=".svg" Value="PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjMgLTMgMzggMzgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMyAtMyAzOCAzOCI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCI+PHBhdGggZD0ibTM0IDhoLTIzIi8+PHBhdGggZD0ibTM0IDE2aC0yMyIvPjxwYXRoIGQ9Im0zNCAyNGgtMjMiLz48L2c+PC9zdmc+" />
+			<Item Name="Images.d2664d4f-3c51-42c9-b330-80326389e0b1.Image" Type="Image" ContentType="Data" FileExtension=".svg" Value="PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjMgLTMgMzggMzgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMyAtMyAzOCAzOCI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0ibTIyIDMuN2M2LjYgMCAxMiA1LjQgMTIgMTJzLTUuNCAxMi0xMiAxMi0xMi01LjQtMTItMTIgNS40LTEyIDEyLTEybTAtMWMtNy4yIDAtMTMgNS44LTEzIDEzIDAgNy4yIDUuOCAxMyAxMyAxMyA3LjIgMCAxMy01LjggMTMtMTMgMC03LjItNS44LTEzLTEzLTEzeiIvPjxwYXRoIGQ9Im0xOSAxMHYxMS41bDguOC01Ljh6Ii8+PC9nPjwvc3ZnPg==" />
+			<Item Name="LocalizableStrings.AddButtonHint.Value" Value="Добавить" />
+			<Item Name="LocalizableStrings.MenuButtonHint.Value" Value="Меню" />
+			<Item Name="LocalizableStrings.StartProcessButtonHint.Value" Value="Запустить процесс" />
+		</Items>
+	</Group>
+</Resources>

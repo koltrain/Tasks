@@ -1,0 +1,46 @@
+﻿{
+  "Descriptor": {
+    "UId": "a573f98a-f239-4bf2-a33b-536b75893709",
+    "PackageVersion": "7.16.0",
+    "Name": "GPN.UPC.TSStyles",
+    "ModifiedOnUtc": "\/Date(1603291366000)\/",
+    "Maintainer": "Customer",
+    "DependsOn": [
+      {
+        "UId": "08c80cf3-52f3-43fa-b450-d1815fb07619",
+        "PackageVersion": "7.8.0",
+        "Name": "EmailMessagePublisher"
+      },
+      {
+        "UId": "3218e5ec-25c1-472b-9de0-1673e071a79f",
+        "PackageVersion": "7.8.0",
+        "Name": "Platform"
+      },
+      {
+        "UId": "4e9b7aff-71f7-46eb-bad9-60cfdc0a54c2",
+        "PackageVersion": "7.8.0",
+        "Name": "CallMessagePublisher"
+      },
+      {
+        "UId": "613fd913-be03-46ce-909b-f44e4225469e",
+        "PackageVersion": "7.8.0",
+        "Name": "UIv2"
+      },
+      {
+        "UId": "7aba540c-a7dc-465e-8a22-54ef78fcb5a5",
+        "PackageVersion": "7.8.0",
+        "Name": "SocialMessagePublisher"
+      },
+      {
+        "UId": "a5ae219e-4519-4a0e-88b1-a172f834baa5",
+        "PackageVersion": "7.8.0",
+        "Name": "TaskMessagePublisher"
+      },
+      {
+        "UId": "a7d9c356-450c-46d7-bc85-72dca4e280ba",
+        "PackageVersion": "7.8.0",
+        "Name": "NUI"
+      }
+    ]
+  }
+}
