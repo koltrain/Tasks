@@ -1,4 +1,4 @@
 /**
- *Test for demo2
+ *Еба всё работает
  */
 var test = 0;
