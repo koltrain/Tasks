@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="GKIDashboardWidgetCustomization" />
+			<Item Name="Images.0cc02c20-78d4-4840-8401-cda476982abf.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jUK648Z8SPGrAqAEgPGrAMDDgxn8AZHpyH+xHe10AAAAASUVORK5CYII=" />
+			<Item Name="Images.0ee5f14f-9dd8-4ba3-8796-0c32f29816af.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9juMbI8J8SPGrAqAEgPGrAMDCA4T8ArvbWEAO15hYAAAAASUVORK5CYII=" />
+			<Item Name="Images.1d627898-57b9-4aa9-a392-ed2cf5166216.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9j2PPk139K8KgBowaA8KgBw8CAX/8ByiKZLry80E4AAAAASUVORK5CYII=" />
+			<Item Name="Images.26a2aedc-a192-44fe-91fc-e141cf2a7a1f.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jOHLs8n9K8KgBowaA8KgBw8CAy/8B615cLv3JqvsAAAAASUVORK5CYII=" />
+			<Item Name="Images.397610ca-c5da-47b7-9608-0e7861e37f53.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADpJREFUOE+lyDERACAMADH8G8AaboqBDPwxZMla+8wXZsEsmAWzYBbMglkwC2bBLJgFs2AWzIL57MwFHwJuH0dwz/IAAAAASUVORK5CYII=" />
+			<Item Name="Images.4d229dd6-519a-4523-8339-864f8baec35a.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9j+Pzlx39K8KgBowaA8KgBw8CAH/8BVeXeLlfz6EIAAAAASUVORK5CYII=" />
+			<Item Name="Images.54fe947f-d997-42a3-b1e8-9925ad6067e4.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jYF669D8leNSAUQNAeNSAYWDA0v8AL/dMHzPP4eQAAAAASUVORK5CYII=" />
+			<Item Name="Images.63bf7ad7-bdee-4062-9427-9a35a6e4e6e8.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jmL98639K8KgBowaA8KgBw8CArf8Bl7X6H3lH488AAAAASUVORK5CYII=" />
+			<Item Name="Images.70f284c1-9cb4-4f8a-9937-dd393d676bd8.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jcNvo+p8SPGrAqAEgPGrAMDDA9T8AQHk7H/SgBL4AAAAASUVORK5CYII=" />
+			<Item Name="Images.715fecac-c486-4437-9467-6e34900b3a6e.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jWHjrx39K8KgBowaA8KgBw8CAH/8BYQFyLlArKSsAAAAASUVORK5CYII=" />
+			<Item Name="Images.72860e58-2927-4d89-b348-1c835ac41725.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jWLF6539K8KgBowaA8KgBw8CAnf8BL0ILLpkPlqUAAAAASUVORK5CYII=" />
+			<Item Name="Images.7417d7fe-3ca1-45e5-8044-d3023da0362b.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9juPvg2X9K8KgBowaA8KgBw8CAZ/8BTL+iLjSbIo8AAAAASUVORK5CYII=" />
+			<Item Name="Images.8771bb73-d172-424c-9ab1-60cc4739591e.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9juHLn6X9K8KgBowaA8KgBw8CAp/8BzAyULhKbNtwAAAAASUVORK5CYII=" />
+			<Item Name="Images.894d921e-7237-46eb-bcb1-73beef83abc9.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9j0Nny8j8leNSAUQNAeNSAYWDAy/8AQbvIH3IvC6gAAAAASUVORK5CYII=" />
+			<Item Name="Images.bb1be4dd-3e50-4e14-b6ac-3121ba6106eb.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jiE2o/k8JHjVg1AAQHjVgGBhQ/R8A/vI3H8KclT8AAAAASUVORK5CYII=" />
+			<Item Name="Images.c22b7ded-e3d9-4ee1-8be2-2186c3a6e651.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADlJREFUOE+lyDERACAMADGMYQv7xUAG/hiyZK195guzYBbMglkwC2bBLJgFs2AWzIJZMAtmwXx25gIsoLIQJNW6dwAAAABJRU5ErkJggg==" />
+			<Item Name="Images.c2827d9f-ea50-4ee8-a13c-b6f382cde371.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jKDz64T8leNSAUQNAeNSAYWDAh/8AoU4lLhFpl4gAAAAASUVORK5CYII=" />
+			<Item Name="Images.c9444a00-5a28-4f36-b9c2-ec8114353832.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADlJREFUOE+lyDERACAMADFUYg6xxUAG/hiyZK195guzYBbMglkwC2bBLJgFs2AWzIJZMAtmwXx25gIeAvAQZQfVRgAAAABJRU5ErkJggg==" />
+			<Item Name="Images.d21896dd-b899-4745-b639-a007558cfc7d.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9j+L+R4T8leNSAUQNAeNSAYWAAw38AJlyvHxBhor8AAAAASUVORK5CYII=" />
+			<Item Name="Images.dae78235-ca12-44cd-9c7c-83ce9e417ab5.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADlJREFUOE+lyDERACAMADEc4w9zxUAG/hiyZK195guzYBbMglkwC2bBLJgFs2AWzIJZMAtmwXx25gLhoSgfXs75hAAAAABJRU5ErkJggg==" />
+			<Item Name="Images.e88f9af4-f876-4b4c-8925-300ed38cf91e.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jqLQ98J8SPGrAqAEgPGrAMDDgwH8A7FR1H/sT77oAAAAASUVORK5CYII=" />
+			<Item Name="Images.fb92094f-d3e8-405e-9d40-7a822fa08de5.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABxJREFUOE9jeP369X9K8KgBowaA8KgBw8CA1/8BWFLALhp+LmsAAAAASUVORK5CYII=" />
+			<Item Name="LocalizableStrings.Style003d76Caption.Value" Value="Транспортно-синий" />
+			<Item Name="LocalizableStrings.Style00569bCaption.Value" Value="Насыщенный синий" />
+			<Item Name="LocalizableStrings.Style006fbaCaption.Value" Value="Ярко-синий" />
+			<Item Name="LocalizableStrings.Style0097d8Caption.Value" Value="Аква" />
+			<Item Name="LocalizableStrings.Style03a5a5Caption.Value" Value="Бирюзовый" />
+			<Item Name="LocalizableStrings.Style2378d8Caption.Value" Value="Темно-синий Крайола" />
+			<Item Name="LocalizableStrings.Style2cb4e9Caption.Value" Value="Цвет Твиттера" />
+			<Item Name="LocalizableStrings.Style46b145Caption.Value" Value="Зеленый" />
+			<Item Name="LocalizableStrings.Style5d607bCaption.Value" Value="Антрацитовый" />
+			<Item Name="LocalizableStrings.Style71c5f0Caption.Value" Value="Светло-голубой" />
+			<Item Name="LocalizableStrings.Style793dc0Caption.Value" Value="Фиолетовый" />
+			<Item Name="LocalizableStrings.Style9fa7b5Caption.Value" Value="Нейтральный-серый" />
+			<Item Name="LocalizableStrings.Stylea1daf8Caption.Value" Value="Бирюзово-голубой" />
+			<Item Name="LocalizableStrings.Stylea8abb9Caption.Value" Value="Бело-алюминиевый" />
+			<Item Name="LocalizableStrings.Stylebce4faCaption.Value" Value="Бледно-синий" />
+			<Item Name="LocalizableStrings.Stylec4c6d3Caption.Value" Value="Кадетский синий Крайола" />
+			<Item Name="LocalizableStrings.Styled4dce5Caption.Value" Value="Светлый серо-лазурный" />
+			<Item Name="LocalizableStrings.Styled60100Caption.Value" Value="Красный" />
+			<Item Name="LocalizableStrings.Styledde0e6Caption.Value" Value="Светло-серый" />
+			<Item Name="LocalizableStrings.StyleebebebCaption.Value" Value="Дымчато-белый" />
+			<Item Name="LocalizableStrings.Stylef3f4f8Caption.Value" Value="Гейнсборо" />
+			<Item Name="LocalizableStrings.Styleffb100Caption.Value" Value="Желтый" />
+		</Items>
+	</Group>
+</Resources>

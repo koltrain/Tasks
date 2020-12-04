@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "8fcc49f4-c526-4fa3-94e8-036ed4ebaa6c",
+    "Name": "CommunicationPanel",
+    "ModifiedOnUtc": "\/Date(1606998840000)\/",
+    "Parent": {
+      "UId": "3431e29c-09d8-4c7c-a1d5-4f76de040039",
+      "Name": "CommunicationPanel"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема коммуникационной панели"
+  }
+}

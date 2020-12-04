@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "22183c61-d08a-4019-9bd1-784671bbb127",
+    "Name": "BaseSectionMainSettings",
+    "ModifiedOnUtc": "\/Date(1606217046000)\/",
+    "Parent": {
+      "UId": "14f4b7e5-7687-41e9-b43c-e323c8d6d945",
+      "Name": "BaseSectionMainSettings"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Основные настройки раздела (без миникарточек и визирования)"
+  }
+}

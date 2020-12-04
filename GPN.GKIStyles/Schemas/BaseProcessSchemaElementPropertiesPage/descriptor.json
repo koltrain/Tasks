@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "93bad6c4-48b1-4e2c-b982-74dd7d2f4417",
+    "Name": "BaseProcessSchemaElementPropertiesPage",
+    "ModifiedOnUtc": "\/Date(1606203687000)\/",
+    "Parent": {
+      "UId": "10a8efdc-8474-4a9a-b28f-ab96ec9bbe4a",
+      "Name": "BaseProcessSchemaElementPropertiesPage"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "BaseProcessSchemaElementPropertiesPage"
+  }
+}

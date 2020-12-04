@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "04584c16-482b-484e-a8e7-019fb7829a5c",
+    "Name": "EmptyEmailPanelSchema",
+    "ModifiedOnUtc": "\/Date(1605708755000)\/",
+    "Parent": {
+      "UId": "f2686b2e-14e5-479c-899e-dedd08dbe2b5",
+      "Name": "EmptyEmailPanelSchema"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "EmptyEmailPanelSchema"
+  }
+}

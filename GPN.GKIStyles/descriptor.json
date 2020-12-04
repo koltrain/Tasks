@@ -1,0 +1,61 @@
+﻿{
+  "Descriptor": {
+    "UId": "a573f98a-f239-4bf2-a33b-536b75893709",
+    "PackageVersion": "7.16.0",
+    "Name": "GPN.GKIStyles",
+    "ModifiedOnUtc": "\/Date(1606896399000)\/",
+    "Maintainer": "Customer",
+    "DependsOn": [
+      {
+        "UId": "08c80cf3-52f3-43fa-b450-d1815fb07619",
+        "PackageVersion": "7.8.0",
+        "Name": "EmailMessagePublisher"
+      },
+      {
+        "UId": "3218e5ec-25c1-472b-9de0-1673e071a79f",
+        "PackageVersion": "7.8.0",
+        "Name": "Platform"
+      },
+      {
+        "UId": "4e9b7aff-71f7-46eb-bad9-60cfdc0a54c2",
+        "PackageVersion": "7.8.0",
+        "Name": "CallMessagePublisher"
+      },
+      {
+        "UId": "5048abef-9ed6-4a50-97bd-e91dea4ac632",
+        "PackageVersion": "7.8.0",
+        "Name": "CTIBase"
+      },
+      {
+        "UId": "613fd913-be03-46ce-909b-f44e4225469e",
+        "PackageVersion": "7.8.0",
+        "Name": "UIv2"
+      },
+      {
+        "UId": "7252c5e2-120b-47c9-bcf7-260367039743",
+        "PackageVersion": "7.8.0",
+        "Name": "DcmDesigner"
+      },
+      {
+        "UId": "76c2f1ba-2917-4eea-8bd0-e2cfd8cc3dde",
+        "PackageVersion": "7.8.0",
+        "Name": "Completeness"
+      },
+      {
+        "UId": "7aba540c-a7dc-465e-8a22-54ef78fcb5a5",
+        "PackageVersion": "7.8.0",
+        "Name": "SocialMessagePublisher"
+      },
+      {
+        "UId": "a5ae219e-4519-4a0e-88b1-a172f834baa5",
+        "PackageVersion": "7.8.0",
+        "Name": "TaskMessagePublisher"
+      },
+      {
+        "UId": "a7d9c356-450c-46d7-bc85-72dca4e280ba",
+        "PackageVersion": "7.8.0",
+        "Name": "NUI"
+      }
+    ]
+  }
+}

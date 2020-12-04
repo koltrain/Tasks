@@ -1,0 +1,107 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ClientUnitSchemaManager",
+      "UId": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+      "A2": "GKIResourcesSwapper",
+      "A5": "a2b32cf8-189d-4a1d-9c22-4ad126370330",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "a573f98a-f239-4bf2-a33b-536b75893709",
+      "B8": "7.16.4.1731",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3",
+      "HD4": 1,
+      "HD6": "null",
+      "HD5": [],
+      "HD7": [],
+      "HD8": [
+        {
+          "UId": "2d0510ce-41ef-4c24-bf86-e0a440036cd4",
+          "A2": "SearchFolderIcon",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "33df33c7-4c4f-4e56-b467-8fb4e26a8f42",
+          "A2": "OmniChatMenuIconSVG",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "b4519709-3227-4349-918d-f99cd1aaef6b",
+          "A2": "SplineImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "20209bfb-b0bf-45a2-a1da-ae7483f4531e",
+          "A2": "LineImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "b4f9cdd5-2845-4780-86f7-461e6ce8f56e",
+          "A2": "BarImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "a4332190-30ca-4295-927b-57d0097c7955",
+          "A2": "PieImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "db34bdf6-0e0d-4767-b0b9-a683b24f3647",
+          "A2": "AreasplineImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "46fb2380-78e1-4971-b239-7cae47f5748b",
+          "A2": "FunnelImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "e49cdc57-e24f-4551-ba4d-4ac2a573a6fd",
+          "A2": "ColumnImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "cdc38a24-6178-46b0-8528-d02f0805e41d",
+          "A2": "ScatterImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "28436c4d-b4c3-4514-b4b3-59d2f8180535",
+          "A2": "GeneralFolderImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "5a212bbd-52a7-4e43-8b36-76d97e15529f",
+          "A2": "DcmSchemaPropertiesPageIcon",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "0dfc391f-472b-4dbd-bbd9-0fbab1932f53",
+          "A2": "DcmHelpIcon",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "b8a7a821-a552-45cc-8ed7-db0f44f6f1af",
+          "A2": "DcmFeedIcon",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        }
+      ],
+      "HD11": []
+    }
+  }
+}

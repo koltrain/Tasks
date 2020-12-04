@@ -1,0 +1,60 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "197d5ede-8749-4adb-878e-76fc19282593",
+          "Value": "Contact"
+        },
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "eb0a2e15-c018-42fd-89bc-58350c215939"
+        },
+        {
+          "SchemaColumnUId": "e53c3bbf-037b-49cc-8fe4-2e07388512a8",
+          "Value": "Completeness"
+        },
+        {
+          "SchemaColumnUId": "73402440-6a06-4811-9143-8e425be82aad",
+          "Value": "{\"sectorsBounds\":{\"min\":0,\"middleFrom\":51,\"middleTo\":80,\"max\":100}}"
+        },
+        {
+          "SchemaColumnUId": "943f5f8c-cb2c-4146-a580-46a8633d0e96",
+          "Value": ""
+        },
+        {
+          "SchemaColumnUId": "8394ccd2-d73c-4004-af96-27ef6ac8a821",
+          "Value": "null"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "197d5ede-8749-4adb-878e-76fc19282593",
+          "Value": "Account"
+        },
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "16be3651-8fe2-4159-8dd0-a803d4683dd3"
+        },
+        {
+          "SchemaColumnUId": "e53c3bbf-037b-49cc-8fe4-2e07388512a8",
+          "Value": "Completeness"
+        },
+        {
+          "SchemaColumnUId": "73402440-6a06-4811-9143-8e425be82aad",
+          "Value": "{\"sectorsBounds\":{\"min\":0,\"middleFrom\":51,\"middleTo\":80,\"max\":100}}"
+        },
+        {
+          "SchemaColumnUId": "943f5f8c-cb2c-4146-a580-46a8633d0e96",
+          "Value": ""
+        },
+        {
+          "SchemaColumnUId": "8394ccd2-d73c-4004-af96-27ef6ac8a821",
+          "Value": "null"
+        }
+      ]
+    }
+  ]
+}

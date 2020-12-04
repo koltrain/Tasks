@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="fr-FR">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.09b5f9df-c79e-4a80-9215-ba5f7a5330c1.Caption" Value="CtiPanelMenuCounterIcon" />
+			<Item Name="Images.7027e335-4e64-464b-9484-f95374bcfcf2.Caption" Value="CtiPanelMenuPressedCounterIcon" />
+			<Item Name="Images.815435e8-dfa9-46f2-965d-7acec17e386d.Caption" Value="CtiPanelMenuIconSVG" />
+			<Item Name="Images.8b1dd395-69f8-47de-97cd-53bf4903fd14.Caption" Value="CtiPanelMenuPressedIcon" />
+			<Item Name="Images.9cd0fe32-ed24-4b46-baae-07b298ca68ef.Caption" Value="CtiPanelMenuIcon" />
+			<Item Name="LocalizableStrings.CtiPanelMenuHint.Caption" Value="CtiPanelMenuHint" />
+			<Item Name="LocalizableStrings.CtiPanelMenuHint.Value" Value="Appels" />
+			<Item Name="LocalizableStrings.ESNNotificationMenuHint.Value" Value="Notifications ESN" />
+		</Items>
+	</Group>
+</Resources>

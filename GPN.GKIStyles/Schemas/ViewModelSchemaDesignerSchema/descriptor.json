@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "e0753307-c2bb-484a-accc-90ed2574847d",
+    "Name": "ViewModelSchemaDesignerSchema",
+    "ModifiedOnUtc": "\/Date(1606470795000)\/",
+    "Parent": {
+      "UId": "f6a3d8d0-3407-4b93-9b69-24bb7d4998c1",
+      "Name": "ViewModelSchemaDesignerSchema"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "ViewModelSchemaDesignerSchema"
+  }
+}

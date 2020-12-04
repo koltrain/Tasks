@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "e4b42d7e-9dbd-457e-8584-fde7da499901",
+    "Name": "ESNFeedSectionV2",
+    "ModifiedOnUtc": "\/Date(1605270835000)\/",
+    "Parent": {
+      "UId": "ced36170-31ed-43d6-8d63-2ca0f6a0e194",
+      "Name": "ESNFeedSectionV2"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Раздел лента"
+  }
+}
