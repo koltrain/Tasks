@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="it-IT">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.a4b11c18-9e35-4bfe-ba14-6a62a3d8b1f1.Caption" Value="EnrichmentDefaultIcon" />
+			<Item Name="Images.cd6fb42c-38cc-49a3-8395-f28de0d676b2.Caption" Value="EnrichedDefaultIcon" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Caption" Value="CompletenessCaption" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Value" Value="Completamento del profilo" />
+			<Item Name="LocalizableStrings.CompletenessHint.Value" Value="Percentuale di completamento del profilo. Clicca sull'indicatore per vedere con quali dati devi completare il profilo." />
+			<Item Name="LocalizableStrings.CompletenessLabel.Value" Value="Profilo completato" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Caption" Value="EnrichedDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Value" Value="Trovati nuovi dati ({0})" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Caption" Value="EnrichedDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Value" Value="Mostra nuovi dati per l'arricchimento del profilo aziendale" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Caption" Value="EnrichmentDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Value" Value="Arricchisci dati" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Caption" Value="EnrichmentDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Value" Value="Cerca nuovio dati per l'arricchimento del profilo aziendale" />
+			<Item Name="LocalizableStrings.ESNTabCaption.Value" Value="Feed" />
+			<Item Name="LocalizableStrings.FillAccountQuestion.Value" Value="Deve essere specificato almeno un profilo di social per l'account per eseguire questa azione." />
+			<Item Name="LocalizableStrings.FillAccountWithSocialNetworksDataActionCaption.Value" Value="Aggiorna con dati dai social network" />
+			<Item Name="LocalizableStrings.OpenAccountCardQuestion.Value" Value="Deve essere specificato almeno un profilo di social per l'account per eseguire questa azione" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Caption" Value="RightsErrorMessage" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Value" Value="Diritti insufficienti per eseguire questa operazione. Contattare l'amministratore di sistema." />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Segui il feed" />
+			<Item Name="LocalizableStrings.SubscribedInformationDialog.Value" Value="Ora stai seguendo il feed: {0}" />
+			<Item Name="LocalizableStrings.TimelineTabCaption.Value" Value="Linea temporale" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="Smetti di seguire il feed" />
+			<Item Name="LocalizableStrings.UnsubscribedInformationDialog.Value" Value="Hai smesso di seguire il feed: {0}" />
+		</Items>
+	</Group>
+</Resources>

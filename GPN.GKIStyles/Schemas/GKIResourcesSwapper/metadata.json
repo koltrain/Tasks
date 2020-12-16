@@ -99,6 +99,54 @@
           "A2": "DcmFeedIcon",
           "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
           "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "4c048d4c-c2dd-44bd-9d2c-652e190864da",
+          "A2": "PortalMessageTabImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "2eb507ad-f57b-4299-8a90-03fa32e8550d",
+          "A2": "CallButtonImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "e4b4ebe1-8d91-462c-b963-33097f7c158d",
+          "A2": "EmailButtonImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "82f5c3d0-5561-4868-aaa7-191275d249ac",
+          "A2": "TimeZoneImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "8083d6b0-8548-42aa-8a68-49112bc39816",
+          "A2": "CallIcon",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "26d46f0c-ed68-4aff-9459-3ee097fd770e",
+          "A2": "EmailIcon",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "7a353f48-5d3c-47c8-b7f0-60dd5b7a11e6",
+          "A2": "WebIcon",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
+        },
+        {
+          "UId": "dd132ac4-03b6-472a-bbd9-f246ddb0cdfe",
+          "A2": "AddButtonImage",
+          "A3": "0582afb1-6308-4aef-ab39-bd53b0ab3c14",
+          "A4": "0582afb1-6308-4aef-ab39-bd53b0ab3c14"
         }
       ],
       "HD11": []

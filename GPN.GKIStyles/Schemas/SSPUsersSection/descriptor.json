@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "34d1c091-2ca1-46df-8211-f3049aba8e79",
+    "Name": "SSPUsersSection",
+    "ModifiedOnUtc": "\/Date(1607880926000)\/",
+    "Parent": {
+      "UId": "46bbcb8b-a3f4-44a8-8fd3-c74b4c17da1c",
+      "Name": "SSPUsersSection"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Раздел \"Пользователи портала\""
+  }
+}

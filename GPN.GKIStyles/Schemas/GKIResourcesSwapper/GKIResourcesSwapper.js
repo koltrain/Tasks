@@ -1,5 +1,9 @@
-define("GKIResourcesSwapper", ["GKIResourcesSwapperResources", "ExtendedFilterEditViewV2Resources", "ChartModuleHelperResources", "QuickFilterViewV2Resources", "DcmSchemaDesignerResources"],
-	function(gkiResources, extendedFilterEditViewV2Resources, chartModuleHelperResources, quickFilterViewV2Resources, dcmSchemaDesignerResources) {
+define("GKIResourcesSwapper", ["GKIResourcesSwapperResources", "ExtendedFilterEditViewV2Resources", 
+"ChartModuleHelperResources", "QuickFilterViewV2Resources", "DcmSchemaDesignerResources", "TimezoneGeneratorResources",
+"MiniPageResourceUtilitiesResources", "CTIBaseCommunicationViewModelResources", "BaseCommunicationViewModelResources"],
+	function(gkiResources, extendedFilterEditViewV2Resources, 
+	chartModuleHelperResources, quickFilterViewV2Resources, dcmSchemaDesignerResources, timezoneGeneratorResources,
+	miniPageResourceUtilitiesResources, ctiBaseCommunicationViewModelResources, baseCommunicationViewModelResources) {
 		
 		//#region: ExtendedFilterEditViewV2Resources
 		extendedFilterEditViewV2Resources.localizableImages.SearchFolderIcon = gkiResources.localizableImages.SearchFolderIcon;
@@ -25,5 +29,24 @@ define("GKIResourcesSwapper", ["GKIResourcesSwapperResources", "ExtendedFilterEd
 		dcmSchemaDesignerResources.localizableImages.DcmSchemaPropertiesPageIcon = gkiResources.localizableImages.DcmSchemaPropertiesPageIcon;
 		dcmSchemaDesignerResources.localizableImages.DcmHelpIcon = gkiResources.localizableImages.DcmHelpIcon;
 		dcmSchemaDesignerResources.localizableImages.DcmFeedIcon = gkiResources.localizableImages.DcmFeedIcon;
+		//#endregion
+		
+		//#region: TimezoneGeneratorResources
+		timezoneGeneratorResources.localizableImages.TimeZoneImage = gkiResources.localizableImages.TimeZoneImage;
+		//#endregion
+
+		//#region: TimezoneGeneratorResources
+		miniPageResourceUtilitiesResources.localizableImages.CallButtonImage = gkiResources.localizableImages.CallButtonImage;
+		miniPageResourceUtilitiesResources.localizableImages.EmailButtonImage = gkiResources.localizableImages.EmailButtonImage;
+		miniPageResourceUtilitiesResources.localizableImages.AddButtonImage = gkiResources.localizableImages.AddButtonImage;
+		//#endregion
+		
+		//#region: ctiBaseCommunicationViewModelResources
+		ctiBaseCommunicationViewModelResources.localizableImages.CallIcon = gkiResources.localizableImages.CallIcon;
+		//#endregion
+	
+		//#region: baseCommunicationViewModel
+		baseCommunicationViewModelResources.localizableImages.EmailIcon = gkiResources.localizableImages.EmailIcon;
+		baseCommunicationViewModelResources.localizableImages.WebIcon = gkiResources.localizableImages.WebIcon;
 		//#endregion
 	});

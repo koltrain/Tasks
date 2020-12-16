@@ -3,7 +3,7 @@
     "UId": "a573f98a-f239-4bf2-a33b-536b75893709",
     "PackageVersion": "7.16.0",
     "Name": "GPN.GKIStyles",
-    "ModifiedOnUtc": "\/Date(1606896399000)\/",
+    "ModifiedOnUtc": "\/Date(1607879222000)\/",
     "Maintainer": "Customer",
     "DependsOn": [
       {
@@ -45,6 +45,11 @@
         "UId": "7aba540c-a7dc-465e-8a22-54ef78fcb5a5",
         "PackageVersion": "7.8.0",
         "Name": "SocialMessagePublisher"
+      },
+      {
+        "UId": "82306a23-d5c6-420b-b81b-2d145f8e2f34",
+        "PackageVersion": "7.8.0",
+        "Name": "SSP"
       },
       {
         "UId": "a5ae219e-4519-4a0e-88b1-a172f834baa5",

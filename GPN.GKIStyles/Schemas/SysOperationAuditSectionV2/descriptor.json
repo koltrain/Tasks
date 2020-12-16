@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "73faee0a-ec4d-4250-866a-a444c7172375",
+    "Name": "SysOperationAuditSectionV2",
+    "ModifiedOnUtc": "\/Date(1607930260000)\/",
+    "Parent": {
+      "UId": "ad1d0944-3a96-4694-b653-9ff5844f9f0a",
+      "Name": "SysOperationAuditSectionV2"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "SysOperationAuditSectionV2"
+  }
+}

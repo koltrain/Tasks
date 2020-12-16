@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "59389dcd-891a-4302-bd68-c6809b15b7bc",
+    "Name": "GaugeDesigner",
+    "ModifiedOnUtc": "\/Date(1608031999000)\/",
+    "Parent": {
+      "UId": "4345e456-502c-44f1-92e9-29267ece597d",
+      "Name": "GaugeDesigner"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Дизайнер шкалы"
+  }
+}

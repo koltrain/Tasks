@@ -6,7 +6,9 @@ define("BootstrapModulesV2",
 	"GKIBaseProgressBarIndicator",
 	"GKIFolderManagerViewConfigGenerator",
 	"GKIResourcesSwapper",
-	"GKICircleSpinner"],
+	"GKICircleSpinner",
+	"GKIGaugeViewConfig",
+	"GKIServiceResourcesSwapper"],
 	function() {
 		return {};
 	});

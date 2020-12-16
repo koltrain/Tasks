@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="de-DE">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.a4b11c18-9e35-4bfe-ba14-6a62a3d8b1f1.Caption" Value="EnrichmentDefaultIcon" />
+			<Item Name="Images.cd6fb42c-38cc-49a3-8395-f28de0d676b2.Caption" Value="EnrichedDefaultIcon" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Caption" Value="CompletenessCaption" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Value" Value="Profilfertigstellung" />
+			<Item Name="LocalizableStrings.CompletenessHint.Value" Value="Vollstädigkeit des Profils in Prozent. Kilcken Sie auf den Indikator, um zu sehen, welche Proofildaten fehlen." />
+			<Item Name="LocalizableStrings.CompletenessLabel.Value" Value="Profil fertiggestellt" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Caption" Value="EnrichedDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Value" Value="Neue Daten gefunden ({0})" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Caption" Value="EnrichedDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Value" Value="Neue Daten für Anreicherung Acount-Profil zeigen" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Caption" Value="EnrichmentDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Value" Value="Daten anreichern" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Caption" Value="EnrichmentDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Value" Value="Neue Daten für Account suchen" />
+			<Item Name="LocalizableStrings.ESNTabCaption.Value" Value="Feed" />
+			<Item Name="LocalizableStrings.FillAccountQuestion.Value" Value="Für diese Aktion muss mindestens ein Soziales Netzwerkprofil für den Account spezifiziert sein." />
+			<Item Name="LocalizableStrings.FillAccountWithSocialNetworksDataActionCaption.Value" Value="Mit Daten der sozialen Netzwerke aktualisieren" />
+			<Item Name="LocalizableStrings.OpenAccountCardQuestion.Value" Value="Für diese Aktion muss mindestens ein Soziales Netzwerkprofil für den Account spezifiziert sein" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Caption" Value="RightsErrorMessage" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Value" Value="Ungenügende Rechte für Ausführen dieser Aktion. Kontaktieren Sie den Systemadministrator." />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Dem Feed folgen" />
+			<Item Name="LocalizableStrings.SubscribedInformationDialog.Value" Value="Sie folgen jetzt dem Feed: {0}" />
+			<Item Name="LocalizableStrings.TimelineTabCaption.Value" Value="Timeline" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="Feed nicht mehr folgen" />
+			<Item Name="LocalizableStrings.UnsubscribedInformationDialog.Value" Value="Sie folgen nicht mehr dem Feed: {0}" />
+		</Items>
+	</Group>
+</Resources>

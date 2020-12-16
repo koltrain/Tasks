@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="vi-VN">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.GenerateReportWithoutFiltersConfirmationMessage.Value" Value="Báo cáo sẽ được tạo cho tất cả các bản ghi trong phần, không có bộ lọc. Bạn có muốn tiếp tục?" />
+		</Items>
+	</Group>
+</Resources>

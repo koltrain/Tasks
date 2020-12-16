@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="he-IL">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.a4b11c18-9e35-4bfe-ba14-6a62a3d8b1f1.Caption" Value="EnrichmentDefaultIcon" />
+			<Item Name="Images.cd6fb42c-38cc-49a3-8395-f28de0d676b2.Caption" Value="EnrichedDefaultIcon" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Caption" Value="CompletenessCaption" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Value" Value="השלמת הפרופיל" />
+			<Item Name="LocalizableStrings.CompletenessHint.Value" Value="אחוז השלמת הפרופיל. לחץ על המחוון כדי להציג את הנתונים הדרושים להשלמת הפרופיל." />
+			<Item Name="LocalizableStrings.CompletenessLabel.Value" Value="פרופיל הושלם" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Caption" Value="EnrichedDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Value" Value="נמצאו נתונים חדשים ({0})" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Caption" Value="EnrichedDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Value" Value="הצג נתונים חדשים להעשרת פרופיל החברה" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Caption" Value="EnrichmentDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Value" Value="העשר נתונים" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Caption" Value="EnrichmentDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Value" Value="חפש נתונים חדשים להעשרת חברה" />
+			<Item Name="LocalizableStrings.ESNTabCaption.Value" Value="לוח הודעות" />
+			<Item Name="LocalizableStrings.FillAccountQuestion.Value" Value="יש לציין פרופיל רשת אחד לפחות עבור החברה כדי להריץ את הפעולה הזו." />
+			<Item Name="LocalizableStrings.FillAccountWithSocialNetworksDataActionCaption.Value" Value="עדכן מנתוני רשת חברתית" />
+			<Item Name="LocalizableStrings.OpenAccountCardQuestion.Value" Value="יש לציין פרופיל רשת אחד לפחות עבור החברה כדי להריץ את הפעולה הזו" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Caption" Value="RightsErrorMessage" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Value" Value="אין מספיק זכויות לביצוע פעולה זו. פנה למנהל המערכת שלך." />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="עקוב אחר לוח ההודעות" />
+			<Item Name="LocalizableStrings.SubscribedInformationDialog.Value" Value="אתה עוקב אחרי לוח ההודעות: {0}" />
+			<Item Name="LocalizableStrings.TimelineTabCaption.Value" Value="ציר זמן" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="בטל מעקב אחר לוח ההודועות" />
+			<Item Name="LocalizableStrings.UnsubscribedInformationDialog.Value" Value="הפסקת לעקוב אחרי לוח ההודעות: {0}" />
+		</Items>
+	</Group>
+</Resources>

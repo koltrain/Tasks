@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ar-SA">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.a4b11c18-9e35-4bfe-ba14-6a62a3d8b1f1.Caption" Value="EnrichmentDefaultIcon" />
+			<Item Name="Images.cd6fb42c-38cc-49a3-8395-f28de0d676b2.Caption" Value="EnrichedDefaultIcon" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Caption" Value="CompletenessCaption" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Value" Value="Profile completion" />
+			<Item Name="LocalizableStrings.CompletenessHint.Value" Value="نسبة اكتمال ملف التعريف. انقر فوق المؤشر لمعاينة البيانات التي تحتاج لإكمال ملف التعريف." />
+			<Item Name="LocalizableStrings.CompletenessLabel.Value" Value="ملف تعريف كامل" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Caption" Value="EnrichedDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Value" Value="New data found ({0})" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Caption" Value="EnrichedDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Value" Value="Show new data for account profile enrichment" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Caption" Value="EnrichmentDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Value" Value="Enrich data" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Caption" Value="EnrichmentDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Value" Value="Search new data for account enrichment" />
+			<Item Name="LocalizableStrings.ESNTabCaption.Value" Value="تغذية" />
+			<Item Name="LocalizableStrings.FillAccountQuestion.Value" Value="يجب تحديد ملف تعريف شبكة اجتماعية واحد على الأقل للحساب من أجل تشغيل هذا الإجراء." />
+			<Item Name="LocalizableStrings.FillAccountWithSocialNetworksDataActionCaption.Value" Value="تحديث مع بيانات الشبكات الاجتماعية" />
+			<Item Name="LocalizableStrings.OpenAccountCardQuestion.Value" Value="يجب تحديد ملف تعريف شبكة اجتماعية واحد على الأقل للحساب من أجل تشغيل هذا الإجراء" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Caption" Value="RightsErrorMessage" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Value" Value="الصلاحيات غير كافية لتنفيذ هذا الإجراء. اتصل بمدير نظامك." />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="متابعة التغذية" />
+			<Item Name="LocalizableStrings.SubscribedInformationDialog.Value" Value="أنت الآن متابع للتغذية: {0}" />
+			<Item Name="LocalizableStrings.TimelineTabCaption.Value" Value="Timeline" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="إلغاء متابعة التغذية" />
+			<Item Name="LocalizableStrings.UnsubscribedInformationDialog.Value" Value="لقد قمت بايقاف التغذية التالية: {0}" />
+		</Items>
+	</Group>
+</Resources>

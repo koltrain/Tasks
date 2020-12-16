@@ -1,0 +1,10 @@
+= MetaData.Schema.UId "1ebce708-1c35-4151-9f62-6523e1fb174d"
+= MetaData.Schema.A5 "249e34f5-3141-496f-93a0-cf2687e6816e"
+= MetaData.Schema.B6 "a573f98a-f239-4bf2-a33b-536b75893709"
+= MetaData.Schema.B7 true
+= MetaData.Schema.B8 "7.16.4.1731"
+= MetaData.Schema.HD1 "2db64a17-3f13-4925-8764-c82689da5d79"
+= MetaData.Schema.HD8.["286772f8-9789-4467-b9d4-9d79e56456ba"].A4 "1ebce708-1c35-4151-9f62-6523e1fb174d"
+= MetaData.Schema.HD8.["98d02051-4581-408a-a1a0-95b6313ffd76"].A4 "1ebce708-1c35-4151-9f62-6523e1fb174d"
+= MetaData.Schema.HD8.["1977f9a4-b7fe-43c8-a8a5-d013a935f4c5"].A4 "1ebce708-1c35-4151-9f62-6523e1fb174d"
++ MetaData.Schema.B7 true

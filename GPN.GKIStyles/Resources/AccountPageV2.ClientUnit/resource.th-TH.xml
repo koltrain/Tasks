@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="th-TH">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.a4b11c18-9e35-4bfe-ba14-6a62a3d8b1f1.Caption" Value="EnrichmentDefaultIcon" />
+			<Item Name="Images.cd6fb42c-38cc-49a3-8395-f28de0d676b2.Caption" Value="EnrichedDefaultIcon" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Caption" Value="CompletenessCaption" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Value" Value="ความครบถ้วนของโปรไฟล์" />
+			<Item Name="LocalizableStrings.CompletenessHint.Value" Value="ร้อยละของความสมบูรณ์ของโปร์ไฟล์ คลิกที่ตัวชี้เพื่อดูว่ามีข้อมูลไหนบ้างที่คุณต้องทำโปรไฟล์ให้สมบูรณ์." />
+			<Item Name="LocalizableStrings.CompletenessLabel.Value" Value="โปรไฟล์เสร็จสมบูรณ์" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Caption" Value="EnrichedDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Value" Value="พบข้อมูลใหม่ ({0})" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Caption" Value="EnrichedDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Value" Value="แสดงข้อมูลใหม่สำหรับการเพิ่มประสิทธิภาพโปรไฟล์ลูกค้า" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Caption" Value="EnrichmentDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Value" Value="เพิ่มประสิทธิภาพข้อมูล" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Caption" Value="EnrichmentDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Value" Value="ค้นหาข้อมูลใหม่สำหรับการเพิ่มประสิทธิภาพลูกค้า" />
+			<Item Name="LocalizableStrings.ESNTabCaption.Value" Value="ฟีด" />
+			<Item Name="LocalizableStrings.FillAccountQuestion.Value" Value="ต้องระบุโปรไฟล์โซเชียลเนตเวิต์กอย่างน้อยหนึ่งโปรไฟล์สำหรับบัญชีนี้เพื่อให้ดำเนินการนี้ได้." />
+			<Item Name="LocalizableStrings.FillAccountWithSocialNetworksDataActionCaption.Value" Value="อัพเดตด้วยข้อมูลโซเชียลเนตเวิต์ก" />
+			<Item Name="LocalizableStrings.OpenAccountCardQuestion.Value" Value="ต้องระบุโปร์ไฟล์โซเชียลเนตเวิต์กอย่างน้อยหนึ่งโปรไฟล์สำหรับบัญชีนี้เพื่อให้ดำเนินการนี้ได้" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Caption" Value="RightsErrorMessage" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Value" Value="สิทธิไม่เพียงพอที่จะทำการนี้ ให้ติดต่อผู้ดูแลระบบของคุณ." />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="ติดตามฟีด" />
+			<Item Name="LocalizableStrings.SubscribedInformationDialog.Value" Value="ตอนนี้คุณกำลังติดตามฟีด: {0}" />
+			<Item Name="LocalizableStrings.TimelineTabCaption.Value" Value="ไทมไลน์" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="ยกเลิกการติดตามฟีด" />
+			<Item Name="LocalizableStrings.UnsubscribedInformationDialog.Value" Value="คุณได้หยุดติดตามฟีด: {0}" />
+		</Items>
+	</Group>
+</Resources>

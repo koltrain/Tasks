@@ -1,0 +1,196 @@
+= MetaData.Schema.UId "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+= MetaData.Schema.A2 "GKIStartPageV2"
+= MetaData.Schema.A5 "26bac5d8-a1c9-4c6b-a94a-6d308dd454d2"
++ MetaData.Schema.B2 {
+  "UId": "20f2734e-7b35-4e1a-87a3-befed11cd76e",
+  "A2": "GoalButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "554660be-0908-4a59-a930-a23a21652881"
+}
++ MetaData.Schema.B2 {
+  "UId": "effce4a1-fd06-4947-8bbd-404b2a478829",
+  "A2": "DivisionMapButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "554660be-0908-4a59-a930-a23a21652881"
+}
++ MetaData.Schema.B2 {
+  "UId": "0ead2b95-748f-4816-8cd5-d71aa3f70ddd",
+  "A2": "ReportButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "554660be-0908-4a59-a930-a23a21652881"
+}
++ MetaData.Schema.B2 {
+  "UId": "26f02136-d431-4f40-9779-b4ba80dcf4b2",
+  "A2": "AssessmentButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "554660be-0908-4a59-a930-a23a21652881"
+}
++ MetaData.Schema.B2 {
+  "UId": "1801346c-49d1-469d-ae24-52ff34a29c42",
+  "A2": "SubGoalButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "08ac0b46-788e-421b-b58a-83723c2dca97"
+}
++ MetaData.Schema.B2 {
+  "UId": "dea983a9-0add-4d58-92b9-9f311720e345",
+  "A2": "SubAssessmentButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "08ac0b46-788e-421b-b58a-83723c2dca97"
+}
++ MetaData.Schema.B2 {
+  "UId": "dcd89c17-8dfa-4627-9559-c0aad645f8c3",
+  "A2": "ProdContractButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "08ac0b46-788e-421b-b58a-83723c2dca97"
+}
++ MetaData.Schema.B2 {
+  "UId": "ae4d56ea-d9ee-4e17-a020-02cbf8c6af27",
+  "A2": "EvaluationOwnerButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "08ac0b46-788e-421b-b58a-83723c2dca97"
+}
++ MetaData.Schema.B2 {
+  "UId": "3062a7aa-612f-448f-b1dd-92672491b6e6",
+  "A2": "CompositionKOVButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "08ac0b46-788e-421b-b58a-83723c2dca97"
+}
++ MetaData.Schema.B2 {
+  "UId": "89bc319d-63b2-47f7-b6b0-aa3ce6c0cc19",
+  "A2": "MeetingKOVButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "08ac0b46-788e-421b-b58a-83723c2dca97"
+}
++ MetaData.Schema.B2 {
+  "UId": "5f8f7e8c-e991-4eed-9818-2a64ccd736b7",
+  "A2": "KFIRequestButtonCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "08ac0b46-788e-421b-b58a-83723c2dca97"
+}
++ MetaData.Schema.B2 {
+  "UId": "48268e9e-150b-45db-9003-45475127413e",
+  "A2": "NewsCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "90c7f3af-bdfe-440d-9405-4035fc6a21bb"
+}
++ MetaData.Schema.B2 {
+  "UId": "c054395e-9ce8-428a-bc67-71f19d430b5a",
+  "A2": "TSMonitoringResultCaption",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A5": "c8e9449f-e9db-4408-8dc7-cf5f7ed455bc"
+}
+~ MetaData.Schema.B2 ["f7b9fe23-7644-4a73-9fc8-49cedceb36ad","29a8e1d9-565a-4843-bc94-ad3311a87a83","9a029453-9911-4047-b8f1-b070f6afe2f8","b6cbd6af-ad81-4e79-9799-9b2dce6e9b56","ab75c822-298a-42c1-a903-be5c0d8e2d78","68dfe6f0-c78e-4e6b-a283-036007cd8656","c238cf6a-0446-470b-9a40-d93d935913dd","edffc983-3d93-4cf3-8c95-fb0ab491ef08","453a501c-05d5-4d6c-8136-482ed052e1df","b5b83d2c-a1cc-41a7-a216-401111e410ca","88a32f01-4e10-4b7c-9f29-72b6ea57d53d","65cd4415-aed9-4262-b711-f1ef421dbfc8","3b4a3456-e524-4ab6-a484-5569be87ea7a","2b0d1281-eabc-4118-902f-1c8b634d750f","46dac25e-4fa8-4f72-8c34-39c8dc81c249","01573f27-2d5e-42e1-8a4b-40c731436889","3ca7d285-95f9-4b11-9875-3756bc6ce338","1cb6f709-54d7-45ec-b54e-6d8ee49c6e15","e17df80d-4dab-4e8d-b684-9497e7a0d359","9fc59657-1841-457c-a5b5-4f1cb2f89ba2","4e209066-7d2d-44f3-b8c0-b45201a71000","c09e2d3a-5c92-48bc-8909-8887037acb9f","71ebf586-3665-413c-b8e0-6da339c6b13a","f81bd61d-f478-486e-8505-449ab3bd84e9","51ea6ac1-886b-447a-80aa-64d8b59c51cf","931e85c7-a9b5-45a8-a0c1-5c84c02d9532","61532009-2657-4613-85cd-1863f7770b03","b13a4850-f078-4c51-9179-e70991d3998b","3f19152d-dac7-4c98-bd3a-60650892ee63","675bb084-0a12-4b4a-80bd-2c4545843322","f2ef5086-a408-4edc-8be8-9bccbcca6dfb","c504e4dd-2d93-4436-b292-a6f4b7a966f9","1957a979-6d9f-4824-be59-9fc2041ca5ba","64ae31c6-bf95-4fe7-9aa8-ed533210f14a","67028ead-a4cf-4da5-9ee9-d1bcca3387f9","b7369f67-ca20-42c9-a51f-75ee424b7f50","c8b4bdde-707a-4bed-9bd4-7231e0842a30","55c0c3cb-737e-4afb-a27d-b48368603861","30014a10-a707-48e1-b381-97d6c61c8774","20f2734e-7b35-4e1a-87a3-befed11cd76e","effce4a1-fd06-4947-8bbd-404b2a478829","0ead2b95-748f-4816-8cd5-d71aa3f70ddd","26f02136-d431-4f40-9779-b4ba80dcf4b2","1801346c-49d1-469d-ae24-52ff34a29c42","dea983a9-0add-4d58-92b9-9f311720e345","dcd89c17-8dfa-4627-9559-c0aad645f8c3","ae4d56ea-d9ee-4e17-a020-02cbf8c6af27","3062a7aa-612f-448f-b1dd-92672491b6e6","89bc319d-63b2-47f7-b6b0-aa3ce6c0cc19","5f8f7e8c-e991-4eed-9818-2a64ccd736b7","48268e9e-150b-45db-9003-45475127413e","c054395e-9ce8-428a-bc67-71f19d430b5a"]
+= MetaData.Schema.B6 "1e5110cd-beac-4eae-8d0e-091242ae99bc"
+= MetaData.Schema.B8 "7.14.0.597"
++ MetaData.Schema.HD8 {
+  "UId": "84fb65c8-4476-422d-8081-42c9b777fc5e",
+  "A2": "ArrowIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "ea4169cd-d8df-472f-9414-6f18c2690def",
+  "A2": "TargetIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "f00b34aa-55c0-4be8-b0f9-bd75e4c0b91b",
+  "A2": "NewsImage",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "5cc53981-a4a5-49be-bdc1-aa7f05ea6a2e",
+  "A2": "GoalButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "9ef83912-788a-414d-a6f8-8a71491c3a7f",
+  "A2": "KFIRequestButtonIcon1",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "ee728e0c-f78e-43ed-a2d5-e99ba6e3df84",
+  "A2": "AssessmentButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "9ec13f98-9076-47d0-b6f9-59a6d2025905",
+  "A2": "ReportButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "220df9c7-f04d-4081-9de5-a851e7bf6f1a",
+  "A2": "DivisionMapButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "ee5db85b-9347-4145-95a2-d82bfcd1b7cd",
+  "A2": "SubGoalButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "f8618252-250f-4421-90ad-35e1703e3b38",
+  "A2": "SubAssessmentButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "9dcceb3d-9cbc-45b4-adb7-258c3c18130f",
+  "A2": "ProdContractButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "3e05f3ec-ac9a-4320-98a9-e1c8b9b90b9d",
+  "A2": "CompositionKOVButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "a2a315df-e190-4c24-ad92-7e1c523fe350",
+  "A2": "MeetingKOVButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "58fa0f03-f8fc-4704-ba02-7434ff171132",
+  "A2": "EvaluationOwnerButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "86c656d4-23f2-4185-8a09-4a4bbb6fa437",
+  "A2": "ImageListSchemaItem",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
++ MetaData.Schema.HD8 {
+  "UId": "f1a9fb61-a082-4126-b1d3-6ea80e4d612e",
+  "A2": "KFIRequestButtonIcon",
+  "A3": "155be769-483a-419f-8cba-ba1f2e9ae0ac",
+  "A4": "155be769-483a-419f-8cba-ba1f2e9ae0ac"
+}
+~ MetaData.Schema.HD8 ["5155b76a-100a-4799-81d2-203a5b4e2fbb","be815bad-a31b-4068-aad7-2c9e658fdfb6","a8e7977a-6952-465d-912b-80aa2941e0c2","fd5250b2-477c-460f-9707-f8c7bf36c54e","3dbceeb4-4ec1-432a-ab36-2cf9ea73db34","3d0e757a-6b77-4cbe-9ed0-1d588472a33a","84fb65c8-4476-422d-8081-42c9b777fc5e","ea4169cd-d8df-472f-9414-6f18c2690def","f00b34aa-55c0-4be8-b0f9-bd75e4c0b91b","5cc53981-a4a5-49be-bdc1-aa7f05ea6a2e","9ef83912-788a-414d-a6f8-8a71491c3a7f","ee728e0c-f78e-43ed-a2d5-e99ba6e3df84","9ec13f98-9076-47d0-b6f9-59a6d2025905","220df9c7-f04d-4081-9de5-a851e7bf6f1a","ee5db85b-9347-4145-95a2-d82bfcd1b7cd","f8618252-250f-4421-90ad-35e1703e3b38","9dcceb3d-9cbc-45b4-adb7-258c3c18130f","3e05f3ec-ac9a-4320-98a9-e1c8b9b90b9d","a2a315df-e190-4c24-ad92-7e1c523fe350","58fa0f03-f8fc-4704-ba02-7434ff171132","86c656d4-23f2-4185-8a09-4a4bbb6fa437","f1a9fb61-a082-4126-b1d3-6ea80e4d612e"]
+- MetaData.Schema.B7
++ MetaData.Schema.B7 false

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ro-RO">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.a4b11c18-9e35-4bfe-ba14-6a62a3d8b1f1.Caption" Value="EnrichmentDefaultIcon" />
+			<Item Name="Images.cd6fb42c-38cc-49a3-8395-f28de0d676b2.Caption" Value="EnrichedDefaultIcon" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Caption" Value="CompletenessCaption" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Value" Value="Finalizare profil" />
+			<Item Name="LocalizableStrings.CompletenessHint.Value" Value="Procent de finalizare a profilului. Accesati indicatorul pentru a vizualiza ce date mai sunt necesare pentru a finaliza profilul." />
+			<Item Name="LocalizableStrings.CompletenessLabel.Value" Value="Profil finalizat" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Caption" Value="EnrichedDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Value" Value="Date noi gasite ({0})" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Caption" Value="EnrichedDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Value" Value="Arata datele noi pentru imbunatatire profil cont" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Caption" Value="EnrichmentDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Value" Value="Imbogateste date" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Caption" Value="EnrichmentDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Value" Value="Cauta noi date pentru imbogatire cont" />
+			<Item Name="LocalizableStrings.ESNTabCaption.Value" Value="Alimentare" />
+			<Item Name="LocalizableStrings.FillAccountQuestion.Value" Value="Cel putin un profil de retea sociala trebuie specificat pentru cont pentru a rula aceasta actiune." />
+			<Item Name="LocalizableStrings.FillAccountWithSocialNetworksDataActionCaption.Value" Value="Actualizati cu datele retelelor sociale" />
+			<Item Name="LocalizableStrings.OpenAccountCardQuestion.Value" Value="Cel putin un profil de retea sociala trebuie specificat pentru cont pentru a rula aceasta actiune" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Caption" Value="RightsErrorMessage" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Value" Value="Drepturi insuficiente pentru a executa aceasta actiune. Contactati administratorul de sistem." />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Urmati alimentarea" />
+			<Item Name="LocalizableStrings.SubscribedInformationDialog.Value" Value="In acest moment urmati alimentarea: {0}" />
+			<Item Name="LocalizableStrings.TimelineTabCaption.Value" Value="Timeline" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="Renuntati la urmarirea alimentarii" />
+			<Item Name="LocalizableStrings.UnsubscribedInformationDialog.Value" Value="Ati renuntat la urmarirea alimentarii: {0}" />
+		</Items>
+	</Group>
+</Resources>

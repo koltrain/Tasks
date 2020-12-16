@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "0239a245-120d-4964-82fa-e31d456eb065",
+    "Name": "SysAdminUnitSectionV2",
+    "ModifiedOnUtc": "\/Date(1607878143000)\/",
+    "Parent": {
+      "UId": "03bd5572-3acc-4077-a4a8-b2bc8a1af353",
+      "Name": "SysAdminUnitSectionV2"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Разделы организационная структура и функциональные роли"
+  }
+}

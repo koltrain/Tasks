@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.2eb14044-0c3f-4cee-8da4-898b85b2361a.Caption" Value="ShowMapButtonImage" />
+			<Item Name="Images.2eb14044-0c3f-4cee-8da4-898b85b2361a.Image" Type="Image" ContentType="Data" FileExtension=".svg" Value="PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDMyIDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6bm9uZTt9DQoJLnN0MXtmaWxsOiMwMDk3ZDg7fQ0KPC9zdHlsZT4NCjxyZWN0IGNsYXNzPSJzdDAiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIvPg0KPHBhdGggY2xhc3M9InN0MSIgZD0iTTE2LDcuOWMtMy4zLDAtNS45LDIuNi01LjksNS45YzAsMC40LDAsMC4zLDAsMC43YzAsMy4zLDUuOSw5LjcsNS45LDkuN3M1LjktNi40LDUuOS05LjdjMC0wLjQsMC0wLjMsMC0wLjcNCglDMjEuOSwxMC41LDE5LjMsNy45LDE2LDcuOXogTTE2LDE2LjdjLTEuNiwwLTMtMS4zLTMtM2MwLTEuNiwxLjMtMywzLTNjMS42LDAsMywxLjMsMywzQzE5LDE1LjQsMTcuNiwxNi43LDE2LDE2Ljd6Ii8+DQo8L3N2Zz4=" />
+		</Items>
+	</Group>
+</Resources>

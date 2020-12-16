@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="cs-CZ">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.a4b11c18-9e35-4bfe-ba14-6a62a3d8b1f1.Caption" Value="EnrichmentDefaultIcon" />
+			<Item Name="Images.cd6fb42c-38cc-49a3-8395-f28de0d676b2.Caption" Value="EnrichedDefaultIcon" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Caption" Value="CompletenessCaption" />
+			<Item Name="LocalizableStrings.CompletenessCaption.Value" Value="Vyplnění profilu" />
+			<Item Name="LocalizableStrings.CompletenessHint.Value" Value="Procento vyplnění profilu. Klikněte na ukazatel abyste se dozvěděli, jaká data Vám zatím chybí." />
+			<Item Name="LocalizableStrings.CompletenessLabel.Value" Value="Profil vyplněn" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Caption" Value="EnrichedDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonCaption.Value" Value="Byly nalezeny nové údaje ({0})" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Caption" Value="EnrichedDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichedDefaultButtonHint.Value" Value="Zobrazit nové údaje pro obohacení profilu firmy" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Caption" Value="EnrichmentDefaultButtonCaption" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonCaption.Value" Value="Obohatit údaje" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Caption" Value="EnrichmentDefaultButtonHint" />
+			<Item Name="LocalizableStrings.EnrichmentDefaultButtonHint.Value" Value="Vyhledat nová data pro obohacení profilu firmy" />
+			<Item Name="LocalizableStrings.ESNTabCaption.Value" Value="Sociální síť" />
+			<Item Name="LocalizableStrings.FillAccountQuestion.Value" Value="Pro spuštění této akci minimálně jeden profil kontaktu na sociálních sítích musí byt specifikován." />
+			<Item Name="LocalizableStrings.FillAccountWithSocialNetworksDataActionCaption.Value" Value="Načíst ze sociálních sítí" />
+			<Item Name="LocalizableStrings.OpenAccountCardQuestion.Value" Value="Pro spuštění této akci minimálně jeden profil kontaktu na sociálních sítích musí byt specifikován" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Caption" Value="RightsErrorMessage" />
+			<Item Name="LocalizableStrings.RightsErrorMessage.Value" Value="Nemáte dostatečná oprávnění pro tuto akci. Obraťte se prosím na správce." />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Sledovat kanál" />
+			<Item Name="LocalizableStrings.SubscribedInformationDialog.Value" Value="Nyní sledujete kanál: {0}" />
+			<Item Name="LocalizableStrings.TimelineTabCaption.Value" Value="Časová osa" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="Přestat sledovat" />
+			<Item Name="LocalizableStrings.UnsubscribedInformationDialog.Value" Value="Přestali jste sledovat tento kanál: {0}" />
+		</Items>
+	</Group>
+</Resources>

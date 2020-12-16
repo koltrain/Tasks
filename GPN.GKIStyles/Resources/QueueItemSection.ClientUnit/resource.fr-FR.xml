@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="fr-FR">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.GenerateReportWithoutFiltersConfirmationMessage.Value" Value="Le rapport sera généré pour tous les enregistrements de la section, sans filtres. Voulez-vous continuer?" />
+		</Items>
+	</Group>
+</Resources>

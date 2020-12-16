@@ -7,7 +7,7 @@ function(resources,iconHelper, ConfigurationConstants) {
 		mixins: {},
 		methods: {
 			onHomeClick: function(){
-				this.openHomePage();
+				this.sandbox.publish("PushHistoryState", {hash: "IntroPage/GKIStartPageV2"});
 			},
 		},
 		diff: [
