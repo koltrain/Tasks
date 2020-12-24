@@ -1,5 +1,6 @@
 define("BootstrapModulesV2",
-	["GKILeftPanelTopMenuModule",
+	["GKIBaseViewModule",
+	"GKILeftPanelTopMenuModule",
 	"GKIColorMenuItem",
 	"GKIDcmSchemaStage",
 	"GKICompletenessIndicator",

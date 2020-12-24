@@ -142,6 +142,19 @@
 			"DisplayValue": "Единое окно.svg"
 		  }
 		]
-	}
+	},
+	{
+		"Row": [
+		  {
+			"SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+			"Value": "302a835d-fb19-4335-a9a4-ef9cd7df6006"
+		  },
+		  {
+			"SchemaColumnUId": "63f1eb37-455a-4a53-ace2-fa5ef4c3d10f",
+			"Value": "37c043b7-4b22-473a-9948-60189c0717ea",
+			"DisplayValue": "Обращения.svg"
+		  }
+		]
+	},
   ]
 }

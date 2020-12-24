@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "8bb00c54-363f-4f6d-a99f-a91035d04a16",
+    "Name": "BaseModulePageV2",
+    "ModifiedOnUtc": "\/Date(1608289905000)\/",
+    "Parent": {
+      "UId": "d62293c0-7f14-44b1-b547-735fb40499cd",
+      "Name": "BaseModulePageV2"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "BaseModulePageV2"
+  }
+}

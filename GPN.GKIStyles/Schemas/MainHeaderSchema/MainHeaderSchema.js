@@ -1,14 +1,144 @@
-define("MainHeaderSchema", ["MainHeaderSchemaResources", "IconHelper", "ConfigurationConstants", "GKIDashboardWidgetCustomization", "css!GKIGPNStyles"], 
-function(resources,iconHelper, ConfigurationConstants) {
-
+define("MainHeaderSchema", ["MainHeaderSchemaResources", "IconHelper", "ConfigurationConstants", "ServiceHelper", "GKIDashboardWidgetCustomization", "css!GKIGPNStyles"], 
+function(resources,iconHelper, ConfigurationConstants, serviceHelper) {
 	return {
-		attributes: {},
+		attributes: {
+			"GKIHomeModule": {
+				"dataValueType": this.Terrasoft.DataValueType.TEXT,
+				"type": this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				"value": ""
+			},
+		},
 		messages: {},
 		mixins: {},
 		methods: {
-			onHomeClick: function(){
-				this.sandbox.publish("PushHistoryState", {hash: "IntroPage/GKIStartPageV2"});
+			/**
+			 * @inheritdoc Terrasoft.BaseSchemaViewModel#init
+			 * @overridden
+			 */
+			init: function() {
+				this.callParent(arguments);
+				this.GKIinitHomePage();
 			},
+
+			/**
+			 * Sets homepage for current user.
+			 * @public
+			 */
+			GKIinitHomePage: function() {
+				this.initHomePage();
+			},
+
+			
+			/**
+			 * Opens home page by home button.
+			 * @public
+			 */
+			onHomeClick: function(){
+				this.openHomePage();
+			},
+
+			/**
+			 * Opens home page.
+			 * @overridden
+			 * @protected
+			 */
+			openHomePage: function() {
+				this.sandbox.publish("PushHistoryState", {
+					hash: this.getHomePagePath(),
+					stateObj: {forceNotInChain: true}
+				});
+			},
+			
+			/**
+			 * Init code of the home page for the current user.
+			 * @inheritDoc Terrasoft.configuration.GKIBaseViewModule
+			 * @protected
+			 */
+			initHomePage: function() {
+				serviceHelper.callService({
+					serviceName: "CurrentUserService",
+					methodName: "GetCurrentUserHomePage",
+					callback: function(response, success) {
+						if (success && response && response.homePage) {
+							this.set("GKIHomeModule", response.homePage);
+						} else {
+							if (Terrasoft.isCurrentUserSsp()) {
+								this.initHomePageFromSysSettings();
+								return;
+							}
+							this.initHomePageFromSysSettingsAllEmployees();
+							return;
+						}
+					},
+					scope: this
+				});
+			},
+	
+			/**
+			 * Initializes code of the home page for the current user from system settings.
+			 * @inheritDoc Terrasoft.configuration.GKIBaseViewModule
+			 * @protected
+			 */
+			initHomePageFromSysSettingsAllEmployees: function() {
+				const sysSettingsCodes = ["GKIMainPage"];
+				Terrasoft.SysSettings.querySysSettings(sysSettingsCodes, function (sysSettings) {
+					if (sysSettings) {
+						const sysSettingsGKIMainPage = sysSettings.GKIMainPage;
+						const mainPageModuleId = sysSettingsGKIMainPage.value;
+						Terrasoft.each(Terrasoft.configuration.ModuleStructure, function(module) {
+							if (module.moduleId === mainPageModuleId) {
+								this.set("GKIHomeModule", module.entitySchemaName);
+								return false;
+							}
+							this.set("GKIHomeModule", ConfigurationConstants.DefaultHomeModule);
+						}, this);
+					} else {
+						this.set("GKIHomeModule", ConfigurationConstants.DefaultHomeModule);
+					}
+				}, this);
+			},
+			/**
+			 * Initializes code of the home page for the current user from system settings.
+			 * @inheritDoc Terrasoft.configuration.BaseViewModule
+			 * @protected
+			 */
+			initHomePageFromSysSettings: function() {
+				const sysSettingsCodes = ["SSPMainPage"];
+				Terrasoft.SysSettings.querySysSettings(sysSettingsCodes, function (sysSettings) {
+					if (sysSettings) {
+						const sysSettingsSSPMainPage = sysSettings.SSPMainPage;
+						const mainPageModuleId = sysSettingsSSPMainPage.value;
+						Terrasoft.each(Terrasoft.configuration.ModuleStructure, function(module) {
+							if (module.moduleId === mainPageModuleId) {
+								this.set("GKIHomeModule", module.entitySchemaName);
+								return false;
+							}
+						}, this);
+					} else {
+						this.set("GKIHomeModule", ConfigurationConstants.DefaultHomeModule);
+					}
+				}, this);
+			},
+			/**
+			 * Returns the path to the home page.
+			 * @inheritDoc Terrasoft.configuration.BaseViewModule
+			 * @protected
+			 * @return {String}
+			 */
+			getHomePagePath: function() {
+				const module = Terrasoft.configuration.ModuleStructure[this.get("GKIHomeModule")];
+				const path = module
+					? Terrasoft.combinePath(module.sectionModule, module.sectionSchema)
+					: this.getHomeModulePath();
+				return path;
+			},
+			/**
+			 * @inheritDoc Terrasoft.configuration.BaseViewModule
+			 * @public
+			 */
+			getHomeModulePath: function() {
+				return this.Terrasoft.combinePath(ConfigurationConstants.DefaultHomeModule, Terrasoft.configuration.defaultIntroPageName);
+			}
 		},
 		diff: [
 			
