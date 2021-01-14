@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Resources Culture="en-US">
-	<Group Type="String">
-		<Items>
-			<Item Name="Images.3f14aa4c-1347-4806-aeb1-ac37e24737ba.Image" Type="Image" ContentType="Data" FileExtension=".svg" Value="DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI4MCA1IiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI4MCA1Ij48cGF0aCBkPSJNMCwwaDEwNnY1SDBWMHoiIGZpbGw9IiNBMURBRjgiLz48cGF0aCBkPSJNMTc0LDBoMTA2djVIMTcwVjB6IiBmaWxsPSIjMDA2RkJBIi8+PHBhdGggZD0ibTEwNiAwaDY4djVoLTY4di01IiBmaWxsPSIjMkNCNEU5Ii8+PC9zdmc+" />
-			<Item Name="Images.bc84c121-eff8-44fb-9218-2f4bd2c81538.Image" Type="Image" ContentType="Data" FileExtension=".svg" Value="DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI4MCA1IiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI4MCA1Ij48cGF0aCBkPSJNMCwwaDEwNnY1SDBWMHoiIGZpbGw9IiMwMDZGQkEiLz48cGF0aCBkPSJNMTc0LDBoMTA2djVIMTcwVjB6IiBmaWxsPSIjQTFEQUY4Ii8+PHBhdGggZD0ibTEwNiAwaDY4djVoLTY4di01IiBmaWxsPSIjMkNCNEU5Ii8+PC9zdmc+" />
-		</Items>
-	</Group>
-</Resources>

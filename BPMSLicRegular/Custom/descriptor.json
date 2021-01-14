@@ -1,0 +1,564 @@
+﻿{
+  "Descriptor": {
+    "UId": "a00051f4-cde3-4f3f-b08e-c5ad1a5c735a",
+    "Name": "Custom",
+    "ModifiedOnUtc": "\/Date(1606404279000)\/",
+    "Maintainer": "Customer",
+    "Description": "Custom Package",
+    "DependsOn": [
+      {
+        "UId": "003be62f-2ffc-4b4f-a2a7-60f101277377",
+        "PackageVersion": "7.8.0",
+        "Name": "ML"
+      },
+      {
+        "UId": "00fddb09-8590-4099-bd2a-922074864dea",
+        "PackageVersion": "7.8.0",
+        "Name": "WebitelCollaborations"
+      },
+      {
+        "UId": "02947595-4670-48e3-80ea-f278e3c9391c",
+        "PackageVersion": "7.8.0",
+        "Name": "MLBase"
+      },
+      {
+        "UId": "02abeaad-7dcc-4f15-86c9-cd6090362e82",
+        "PackageVersion": "7.8.0",
+        "Name": "AnalyticsDashboard"
+      },
+      {
+        "UId": "05e3bd13-d61c-4610-af15-eb6e6173ef60",
+        "PackageVersion": "7.8.0",
+        "Name": "ProductCoreMessagePublishers"
+      },
+      {
+        "UId": "062de047-62f1-4580-85e2-0417d450a3a8",
+        "PackageVersion": "7.8.0",
+        "Name": "BaseScoring"
+      },
+      {
+        "UId": "08c80cf3-52f3-43fa-b450-d1815fb07619",
+        "PackageVersion": "7.8.0",
+        "Name": "EmailMessagePublisher"
+      },
+      {
+        "UId": "0ab01e6b-1fc8-97ca-4a85-e8c9842d6aac",
+        "Name": "GPN.GKILicensing.Regular"
+      },
+      {
+        "UId": "0fbe5e70-0ba1-4c52-b35d-ca1c4a3acde7",
+        "PackageVersion": "7.8.0",
+        "Name": "GoogleTagManagerMeasurements"
+      },
+      {
+        "UId": "10cb6199-40c6-4b6d-9d0e-500310d45f57",
+        "PackageVersion": "7.8.0",
+        "Name": "Case"
+      },
+      {
+        "UId": "148ab29f-ee31-44cb-9d3d-883c69ca3d1e",
+        "PackageVersion": "7.8.0",
+        "Name": "SspKnowledgeBase"
+      },
+      {
+        "UId": "19ffbb3e-f1b4-4636-999c-1e2c57d86eb6",
+        "PackageVersion": "7.8.0",
+        "Name": "Message"
+      },
+      {
+        "UId": "1aae3320-3dcd-4847-a711-a794854269bc",
+        "PackageVersion": "7.8.0",
+        "Name": "MobileDesignerTools"
+      },
+      {
+        "UId": "1f513d05-8e3f-4989-92ce-3af40e5127d6",
+        "PackageVersion": "7.8.0",
+        "Name": "CaseService"
+      },
+      {
+        "UId": "22c5e4a0-49e8-4e6b-97e8-c22ed249b85a",
+        "PackageVersion": "7.8.0",
+        "Name": "CTIVirtualProvider"
+      },
+      {
+        "UId": "2a38dfee-ddf9-4e0f-9e97-47a4c6c42f29",
+        "PackageVersion": "7.8.0",
+        "Name": "SspWorkplace"
+      },
+      {
+        "UId": "2fabaf6c-0f92-4530-aef8-40345c021da2",
+        "PackageVersion": "7.8.0",
+        "Name": "ProductCore"
+      },
+      {
+        "UId": "3218e5ec-25c1-472b-9de0-1673e071a79f",
+        "PackageVersion": "7.8.0",
+        "Name": "Platform"
+      },
+      {
+        "UId": "32986af5-84d9-4842-854e-9e8187522253",
+        "PackageVersion": "7.8.0",
+        "Name": "LinkPreview"
+      },
+      {
+        "UId": "39d703cc-a16f-4e81-8304-304288ac685a",
+        "PackageVersion": "7.8.0",
+        "Name": "ServiceDesigner"
+      },
+      {
+        "UId": "3c96cb19-b67a-4f3c-8b37-b6df5776ca84",
+        "PackageVersion": "7.8.0",
+        "Name": "FastReportEngine"
+      },
+      {
+        "UId": "468413c6-da9a-4bae-a3e9-31456fea166d",
+        "PackageVersion": "7.8.0",
+        "Name": "EmailMining"
+      },
+      {
+        "UId": "48469596-f6ef-4712-b715-6351ea63a2c3",
+        "PackageVersion": "7.8.0",
+        "Name": "PortalMessage"
+      },
+      {
+        "UId": "48e0ca36-a7b4-40c2-a3b8-abb48d3affe4",
+        "PackageVersion": "7.8.0",
+        "Name": "Change"
+      },
+      {
+        "UId": "4ad85a1f-fce6-4063-9374-57b542964388",
+        "PackageVersion": "7.8.0",
+        "Name": "ServiceModel"
+      },
+      {
+        "UId": "4e9b7aff-71f7-46eb-bad9-60cfdc0a54c2",
+        "PackageVersion": "7.8.0",
+        "Name": "CallMessagePublisher"
+      },
+      {
+        "UId": "5048abef-9ed6-4a50-97bd-e91dea4ac632",
+        "PackageVersion": "7.8.0",
+        "Name": "CTIBase"
+      },
+      {
+        "UId": "516f7ad2-afe0-4d38-bdc6-9e3e15a172ef",
+        "PackageVersion": "7.8.0",
+        "Name": "BaseProcessDesigner"
+      },
+      {
+        "UId": "5287f356-5147-466d-af37-d408f89e5466",
+        "PackageVersion": "7.8.0",
+        "Name": "IntegrationV2"
+      },
+      {
+        "UId": "540d903b-32bd-427f-8069-250ef5c97912",
+        "PackageVersion": "7.8.0",
+        "Name": "Problem"
+      },
+      {
+        "UId": "5496275d-2f56-4810-b46b-7098f10815d5",
+        "PackageVersion": "7.8.0",
+        "Name": "MLRegression"
+      },
+      {
+        "UId": "5932ac85-0d31-43c8-aeef-8b7dc5b56f60",
+        "PackageVersion": "7.8.0",
+        "Name": "FileImport"
+      },
+      {
+        "UId": "5be3998b-c5c3-42bb-a01c-2e4149059a97",
+        "PackageVersion": "7.8.0",
+        "Name": "Base"
+      },
+      {
+        "UId": "5ccda9f8-70d4-449b-8fc1-9aa8f6fe02c1",
+        "PackageVersion": "7.8.0",
+        "Name": "CaseITIL"
+      },
+      {
+        "UId": "5d7eac18-85f9-4e44-8f46-03a07f2acb3a",
+        "PackageVersion": "7.8.0",
+        "Name": "ServiceDefSettings"
+      },
+      {
+        "UId": "5e8400f1-2850-4048-bcfe-d1ac195bbe9e",
+        "PackageVersion": "7.8.0",
+        "Name": "ProcessLibrary"
+      },
+      {
+        "UId": "613fd913-be03-46ce-909b-f44e4225469e",
+        "PackageVersion": "7.8.0",
+        "Name": "UIv2"
+      },
+      {
+        "UId": "6651f29c-3f6e-4519-a8f4-127deb7515e2",
+        "PackageVersion": "7.8.0",
+        "Name": "WebForm"
+      },
+      {
+        "UId": "6688415a-fadb-494e-a018-5618e8b6926e",
+        "PackageVersion": "7.8.0",
+        "Name": "CalendarBase"
+      },
+      {
+        "UId": "692a159e-9044-4f75-85a8-855bdb86a76d",
+        "PackageVersion": "7.8.0",
+        "Name": "OperatorSingleWindow"
+      },
+      {
+        "UId": "6c904dc5-03d7-409a-aa98-dfa2ec97aa02",
+        "PackageVersion": "7.8.0",
+        "Name": "SLMITILService"
+      },
+      {
+        "UId": "6d396402-080c-4da0-a028-78959ddb2412",
+        "PackageVersion": "7.8.0",
+        "Name": "OldEmailIntegration"
+      },
+      {
+        "UId": "6f46362b-0d60-47d7-b211-fc5e4117aecb",
+        "PackageVersion": "7.8.0",
+        "Name": "ProcessDesigner"
+      },
+      {
+        "UId": "7252c5e2-120b-47c9-bcf7-260367039743",
+        "PackageVersion": "7.8.0",
+        "Name": "DcmDesigner"
+      },
+      {
+        "UId": "76c2f1ba-2917-4eea-8bd0-e2cfd8cc3dde",
+        "PackageVersion": "7.8.0",
+        "Name": "Completeness"
+      },
+      {
+        "UId": "76d633dd-63f4-4955-b36c-e6042cb74dfd",
+        "PackageVersion": "7.8.0",
+        "Name": "IncidentManagement"
+      },
+      {
+        "UId": "77bed8af-9708-4ab9-9a7d-dc6f243c3fe0",
+        "PackageVersion": "7.8.0",
+        "Name": "WebitelCore"
+      },
+      {
+        "UId": "77e888d2-c4a4-45ce-a906-ac00adb364a2",
+        "PackageVersion": "7.8.0",
+        "Name": "Translation"
+      },
+      {
+        "UId": "7aba540c-a7dc-465e-8a22-54ef78fcb5a5",
+        "PackageVersion": "7.8.0",
+        "Name": "SocialMessagePublisher"
+      },
+      {
+        "UId": "7abbbf20-b753-485c-a542-a305574ec2b3",
+        "PackageVersion": "7.8.0",
+        "Name": "CaseMobile"
+      },
+      {
+        "UId": "7af58b18-f77d-4661-a3f9-889bd0e62c92",
+        "PackageVersion": "7.8.0",
+        "Name": "WebCaseForm"
+      },
+      {
+        "UId": "7ecd2886-795a-4933-9ffb-5358f353a555",
+        "PackageVersion": "7.8.0",
+        "Name": "Mobile"
+      },
+      {
+        "UId": "82306a23-d5c6-420b-b81b-2d145f8e2f34",
+        "PackageVersion": "7.8.0",
+        "Name": "SSP"
+      },
+      {
+        "UId": "864d1545-a641-46c3-b866-e57bd6d39579",
+        "PackageVersion": "7.8.0",
+        "Name": "BpmonlineCloudIntegration"
+      },
+      {
+        "UId": "86855550-4426-427b-be00-b859353b97a8",
+        "PackageVersion": "7.8.0",
+        "Name": "Portal"
+      },
+      {
+        "UId": "8bbee491-7461-4bb3-86e3-e2dc29ae02df",
+        "PackageVersion": "7.8.0",
+        "Name": "EmailTemplate"
+      },
+      {
+        "UId": "8cefda2b-889f-4b69-bed1-f33bf7f6d00c",
+        "PackageVersion": "7.8.0",
+        "Name": "TwitterIntegration"
+      },
+      {
+        "UId": "90cfe1be-635b-4ea1-8558-c0bb5ba4ee86",
+        "PackageVersion": "7.8.0",
+        "Name": "Calendar"
+      },
+      {
+        "UId": "90ef497e-6e18-440d-b80e-d28f2f133509",
+        "PackageVersion": "7.8.0",
+        "Name": "ESN"
+      },
+      {
+        "UId": "90f7bc4e-bfce-44f6-99ce-41d02274d4f5",
+        "PackageVersion": "7.8.0",
+        "Name": "OAuth20Integration"
+      },
+      {
+        "UId": "926d8678-32f2-4b39-bcd1-fcc5382accbb",
+        "PackageVersion": "7.8.0",
+        "Name": "Enrichment"
+      },
+      {
+        "UId": "9310225d-1ff8-45f2-9f34-9faf094d635a",
+        "PackageVersion": "7.8.0",
+        "Name": "Timeline"
+      },
+      {
+        "UId": "9349cc70-f6f3-4751-8414-c10a1e5ba62a",
+        "PackageVersion": "7.8.0",
+        "Name": "ExternalAccess"
+      },
+      {
+        "UId": "99707b27-fb9d-4a8d-a9ce-313a68e7423f",
+        "PackageVersion": "7.8.0",
+        "Name": "ServiceEnterpriseSoftkey"
+      },
+      {
+        "UId": "99e69b3f-057b-4163-9247-fdd98287561f",
+        "PackageVersion": "7.8.0",
+        "Name": "Managers"
+      },
+      {
+        "UId": "9bfe909c-0232-477a-a09e-2da114404c7a",
+        "PackageVersion": "7.8.0",
+        "Name": "PortalITILService"
+      },
+      {
+        "UId": "9dcadb21-84b9-478a-b8f5-05f1208e874a",
+        "PackageVersion": "7.8.0",
+        "Name": "ExchangeListener"
+      },
+      {
+        "UId": "9e46f14d-4cea-4d67-987a-e74ae0330c25",
+        "PackageVersion": "7.8.0",
+        "Name": "OAuth20"
+      },
+      {
+        "UId": "a17aca5a-e9c2-4c5b-a385-df9a3c0837e6",
+        "PackageVersion": "7.8.0",
+        "Name": "OSM"
+      },
+      {
+        "UId": "a5a348dd-9124-4571-8072-06d3c0f3aa94",
+        "PackageVersion": "7.8.0",
+        "Name": "PortalCustomerService"
+      },
+      {
+        "UId": "a5ae219e-4519-4a0e-88b1-a172f834baa5",
+        "PackageVersion": "7.8.0",
+        "Name": "TaskMessagePublisher"
+      },
+      {
+        "UId": "a613d152-0fec-4a58-9f9e-df4b7244f72c",
+        "PackageVersion": "7.8.0",
+        "Name": "JunkFilter"
+      },
+      {
+        "UId": "a7d9c356-450c-46d7-bc85-72dca4e280ba",
+        "PackageVersion": "7.8.0",
+        "Name": "NUI"
+      },
+      {
+        "UId": "ae73ba70-bd5e-4c4b-9977-df0e3e782102",
+        "PackageVersion": "7.8.0",
+        "Name": "GlobalSearch"
+      },
+      {
+        "UId": "ae8519c2-2aac-4a00-aa61-b0ffaac99ea3",
+        "PackageVersion": "7.8.0",
+        "Name": "ActionsDashboard"
+      },
+      {
+        "UId": "b1eb54a2-9569-45de-81cb-a24654c09264",
+        "PackageVersion": "7.8.0",
+        "Name": "DcmLibrary"
+      },
+      {
+        "UId": "b3453ab1-aec4-40a6-87ef-ffe4ef3ae4ee",
+        "PackageVersion": "7.8.0",
+        "Name": "FacebookIntegration"
+      },
+      {
+        "UId": "b349edb3-5bd4-47cf-8269-e9d4145aa896",
+        "PackageVersion": "7.8.0",
+        "Name": "WordReporting"
+      },
+      {
+        "UId": "b5967e5d-641c-4d1f-ad1d-a02f69fcc776",
+        "PackageVersion": "7.8.0",
+        "Name": "Deduplication"
+      },
+      {
+        "UId": "b744c875-151e-4d37-840b-74e6435a2a1a",
+        "PackageVersion": "7.8.0",
+        "Name": "ServiceEnterpriseMobile"
+      },
+      {
+        "UId": "b8c22230-2173-426f-959e-be736709a63f",
+        "PackageVersion": "7.8.0",
+        "Name": "Exchange"
+      },
+      {
+        "UId": "b8cdfd48-aed0-412f-89a1-5b3e8450cccc",
+        "PackageVersion": "7.8.0",
+        "Name": "Release"
+      },
+      {
+        "UId": "b8d3cee8-bfe1-4989-8461-886fff0dee74",
+        "PackageVersion": "7.8.0",
+        "Name": "RelationshipDesigner"
+      },
+      {
+        "UId": "ba038084-6061-460d-9c37-f5cfac38591f",
+        "PackageVersion": "7.8.0",
+        "Name": "FastReport"
+      },
+      {
+        "UId": "bab1ebf8-7634-4906-8f23-49bcf30552e7",
+        "PackageVersion": "7.8.0",
+        "Name": "CTIProcessActions"
+      },
+      {
+        "UId": "bb1e143e-f3ee-4316-9450-851ddd02d999",
+        "PackageVersion": "7.8.0",
+        "Name": "LDAP"
+      },
+      {
+        "UId": "bf9c447b-e2a3-4a79-9d22-9b4d344be89e",
+        "PackageVersion": "7.8.0",
+        "Name": "PortalMessageFeed"
+      },
+      {
+        "UId": "c2518826-60a9-40d4-bd14-6add9d35d320",
+        "PackageVersion": "7.8.0",
+        "Name": "DesignerTools"
+      },
+      {
+        "UId": "c3748e81-246e-4293-85a1-d88d3ab9ff4d",
+        "PackageVersion": "7.8.0",
+        "Name": "Wizards"
+      },
+      {
+        "UId": "c3887e9c-ceb4-497a-8efb-e174aa1bf5c4",
+        "PackageVersion": "7.8.0",
+        "Name": "SLM"
+      },
+      {
+        "UId": "ca913451-6567-42ea-a53d-63b841c80e2b",
+        "PackageVersion": "7.8.0",
+        "Name": "MLScoring"
+      },
+      {
+        "UId": "cbc7d8fb-0ab5-42a1-bc8c-60da507c44c4",
+        "PackageVersion": "7.8.0",
+        "Name": "ServiceEnterpriseDefSettings"
+      },
+      {
+        "UId": "cdb56ffb-07c3-4603-9014-7c383fad59c2",
+        "PackageVersion": "7.8.0",
+        "Name": "EmailsSearch"
+      },
+      {
+        "UId": "d429c9dd-a910-4165-aa66-0cd1f3693649",
+        "PackageVersion": "7.8.0",
+        "Name": "EmailMessage"
+      },
+      {
+        "UId": "d6d45b89-09e8-468a-ae9d-3db6774b82a2",
+        "PackageVersion": "7.8.0",
+        "Name": "MessagePublisher"
+      },
+      {
+        "UId": "d8f3315b-0e23-4f20-a2e6-483c4aa8ca56",
+        "PackageVersion": "7.8.0",
+        "Name": "CMDB"
+      },
+      {
+        "UId": "da38393b-cb46-4fa6-92b9-e4358bcf9f48",
+        "Name": "MkpNotifications"
+      },
+      {
+        "UId": "dc36f898-47d7-4597-865d-0f1bcab7bf9c",
+        "PackageVersion": "7.8.0",
+        "Name": "SocialNetworkIntegration"
+      },
+      {
+        "UId": "e16ad5af-f2b8-4128-ab85-84768b536fe3",
+        "PackageVersion": "7.8.0",
+        "Name": "OperatorCustomerEngagementCenter"
+      },
+      {
+        "UId": "e4d60e92-f11e-472c-98fc-0651d5891aba",
+        "PackageVersion": "7.8.0",
+        "Name": "MLangContent"
+      },
+      {
+        "UId": "e91fc624-f834-474b-a0ac-875f8b399332",
+        "PackageVersion": "7.8.0",
+        "Name": "MLCaseClassification"
+      },
+      {
+        "UId": "eb74c841-b4d1-4bf3-a489-300c0a0f7133",
+        "PackageVersion": "7.8.0",
+        "Name": "KnowledgeBase"
+      },
+      {
+        "UId": "ec658e0b-8f59-4907-995e-b8f2a97c235d",
+        "PackageVersion": "7.8.0",
+        "Name": "PortalMessagePublisher"
+      },
+      {
+        "UId": "eecb832f-8a1b-4436-b726-1fb17d010e12",
+        "PackageVersion": "7.8.0",
+        "Name": "SocialMessage"
+      },
+      {
+        "UId": "eeed3091-51d9-472d-be26-eca02cd3a7d1",
+        "PackageVersion": "7.8.0",
+        "Name": "Reports"
+      },
+      {
+        "UId": "ef306273-a4ba-46d8-92a8-4cd424a3c932",
+        "PackageVersion": "7.8.0",
+        "Name": "EmailMessageMining"
+      },
+      {
+        "UId": "f665ef60-4483-4af1-acec-1b4a85d79e1c",
+        "PackageVersion": "7.8.0",
+        "Name": "Workplace"
+      },
+      {
+        "UId": "f7fa275a-2b5a-43d8-89cf-b0063b3a7ee9",
+        "PackageVersion": "7.8.0",
+        "Name": "ContentBuilder"
+      },
+      {
+        "UId": "f9a361ad-8965-4c55-922a-d13d1bac8c39",
+        "PackageVersion": "7.8.0",
+        "Name": "OmnichannelMessaging"
+      },
+      {
+        "UId": "fbf9dd14-92d2-4e35-b193-e69ced12ae44",
+        "PackageVersion": "7.8.0",
+        "Name": "PivotTable"
+      },
+      {
+        "UId": "fe796806-0eeb-4518-bf7e-c0e325851a24",
+        "PackageVersion": "7.8.0",
+        "Name": "LocalMessage"
+      }
+    ]
+  }
+}

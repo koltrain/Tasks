@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "e1137bb0-cc6a-bcc0-239c-77ea2481894d",
+    "Name": "GKILicensingRegularService",
+    "ModifiedOnUtc": "\/Date(1606405258000)\/",
+    "ManagerName": "SourceCodeSchemaManager",
+    "Caption": "GKILicensingRegularService",
+    "DependsOn": []
+  }
+}
