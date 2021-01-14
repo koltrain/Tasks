@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "02c2d074-ab6c-496b-b1ac-6ea64b4531e9",
+    "Name": "UserPageV2",
+    "ModifiedOnUtc": "\/Date(1607880577000)\/",
+    "Parent": {
+      "UId": "e39f556f-de8b-49a7-8845-9458541a5b1f",
+      "Name": "UserPageV2"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Edit page - User"
+  }
+}

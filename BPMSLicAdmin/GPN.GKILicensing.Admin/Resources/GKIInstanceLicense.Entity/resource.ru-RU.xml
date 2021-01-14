@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Лицензии приложения" />
+			<Item Name="Columns.GKICount.Caption" Value="Остаток" />
+			<Item Name="Columns.GKICountUsed.Caption" Value="Распределено" />
+			<Item Name="Columns.GKIInstance.Caption" Value="Приложение" />
+			<Item Name="Columns.GKILic.Caption" Value="Лицензия" />
+			<Item Name="Columns.GKILimit.Caption" Value="Лимит лицензии приложения" />
+			<Item Name="Columns.GKILimitVIP.Caption" Value="Лимит VIP пользователей" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

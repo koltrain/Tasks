@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Страница редактирования: &quot;Пользователи платформы&quot;" />
+			<Item Name="LocalizableStrings.GKIInstanceLicUserDetailDetailCaptionOnPage.Value" Value="Приложения пользователя" />
+			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailcae8122eDetailCaptionOnPage.Value" Value="Лицензии пользователей платформы" />
+			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Лицензии пользователя" />
+			<Item Name="LocalizableStrings.LicensesTabCaption.Value" Value="Лицензии" />
+		</Items>
+	</Group>
+</Resources>

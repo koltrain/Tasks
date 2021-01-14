@@ -1,0 +1,104 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5a147f2f-0906-4c3e-b075-aa2967fadea0"
+        },
+        {
+          "SchemaColumnUId": "fb750eb9-35b6-463e-b3b8-1a69ec871e43",
+          "Value": "[{\"layout\":{\"column\":0,\"row\":0,\"colSpan\":12,\"rowSpan\":6},\"name\":\"Chartb16d8a4c630d\",\"itemType\":4}]"
+        },
+        {
+          "SchemaColumnUId": "78ed4015-b81f-49fc-9d50-847cf8df5e6c",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "9eedf8ab-d02e-4a4a-9f9d-19ede1c873bc",
+          "Value": "89d82ad7-1c9d-4845-82a6-e3cc01d375ca",
+          "DisplayValue": "Лицензии платформы"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1607067158125+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "df336076-9964-4b4b-9527-4ee9aadb1d83"
+        },
+        {
+          "SchemaColumnUId": "fb750eb9-35b6-463e-b3b8-1a69ec871e43",
+          "Value": "[{\"layout\":{\"column\":12,\"row\":5,\"colSpan\":12,\"rowSpan\":5},\"name\":\"Charta11ac2fc61ad\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":0,\"colSpan\":9,\"rowSpan\":5},\"name\":\"Gauge96c9e61b13a6\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":5,\"colSpan\":6,\"rowSpan\":5},\"name\":\"Indicatord341eebd8fd3\",\"itemType\":4},{\"layout\":{\"column\":6,\"row\":5,\"colSpan\":6,\"rowSpan\":5},\"name\":\"Indicatord736e9298c0a\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":10,\"colSpan\":12,\"rowSpan\":7},\"name\":\"Chart598877b7a0e9\",\"itemType\":4},{\"layout\":{\"column\":9,\"row\":0,\"colSpan\":15,\"rowSpan\":5},\"name\":\"Chart92897f225293\",\"itemType\":4}]"
+        },
+        {
+          "SchemaColumnUId": "78ed4015-b81f-49fc-9d50-847cf8df5e6c",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "9eedf8ab-d02e-4a4a-9f9d-19ede1c873bc",
+          "Value": "23961eb5-4035-4458-86b5-c9deb0869059",
+          "DisplayValue": "Приложения платформы"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1607546240554+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "a4942dc0-4e57-45b3-884d-45be01679c00"
+        },
+        {
+          "SchemaColumnUId": "fb750eb9-35b6-463e-b3b8-1a69ec871e43",
+          "Value": "[{\"layout\":{\"column\":0,\"row\":0,\"colSpan\":12,\"rowSpan\":5},\"name\":\"Chart4f3cbdef717e\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":5,\"colSpan\":12,\"rowSpan\":5},\"name\":\"DashboardGrida63cb82234a4\",\"itemType\":4},{\"layout\":{\"column\":12,\"row\":5,\"colSpan\":12,\"rowSpan\":5},\"name\":\"DashboardGrid2b255630d16d\",\"itemType\":4},{\"layout\":{\"column\":12,\"row\":0,\"colSpan\":12,\"rowSpan\":5},\"name\":\"Chart386414d7add8\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":10,\"colSpan\":12,\"rowSpan\":6},\"name\":\"DashboardGridefcf43de0d33\",\"itemType\":4}]"
+        },
+        {
+          "SchemaColumnUId": "78ed4015-b81f-49fc-9d50-847cf8df5e6c",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "9eedf8ab-d02e-4a4a-9f9d-19ede1c873bc",
+          "Value": "1d36f7e6-c35a-4259-b386-eebd00dfa7c3",
+          "DisplayValue": "Пользователи платформы"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1607020718795+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "abcc4370-d1fc-44f0-93bd-01fb1250f646"
+        },
+        {
+          "SchemaColumnUId": "fb750eb9-35b6-463e-b3b8-1a69ec871e43",
+          "Value": "[{\"layout\":{\"column\":0,\"row\":0,\"colSpan\":6,\"rowSpan\":3},\"name\":\"Indicatorefcbe850ae45\",\"itemType\":4},{\"layout\":{\"column\":6,\"row\":0,\"colSpan\":6,\"rowSpan\":3},\"name\":\"Indicatoraa39dc38f27a\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":3,\"colSpan\":12,\"rowSpan\":6},\"name\":\"Chart8e76c425f68d\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":9,\"colSpan\":12,\"rowSpan\":6},\"name\":\"Chart043466133cb0\",\"itemType\":4},{\"layout\":{\"column\":12,\"row\":0,\"colSpan\":12,\"rowSpan\":9},\"name\":\"Chart4f8c1db35100\",\"itemType\":4},{\"layout\":{\"column\":12,\"row\":9,\"colSpan\":12,\"rowSpan\":6},\"name\":\"Chart0f9f6c9bc400\",\"itemType\":4}]"
+        },
+        {
+          "SchemaColumnUId": "78ed4015-b81f-49fc-9d50-847cf8df5e6c",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "9eedf8ab-d02e-4a4a-9f9d-19ede1c873bc",
+          "Value": "1d36f7e6-c35a-4259-b386-eebd00dfa7c3",
+          "DisplayValue": "Пользователи платформы"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1607621156393+0300)\/"
+        }
+      ]
+    }
+  ]
+}

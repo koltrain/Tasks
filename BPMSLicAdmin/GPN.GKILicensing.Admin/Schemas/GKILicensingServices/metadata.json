@@ -1,0 +1,31 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "SourceCodeSchemaManager",
+      "UId": "1d439f5f-621f-0a7c-0d43-07531650c45c",
+      "A2": "GKILicensingServices",
+      "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
+      "B1": [],
+      "B2": [
+        {
+          "UId": "de34acc0-98ca-4259-a432-7e1406f68ed4",
+          "A2": "GKITlsInstallError",
+          "A3": "1d439f5f-621f-0a7c-0d43-07531650c45c",
+          "A4": "1d439f5f-621f-0a7c-0d43-07531650c45c",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "43743a0a-1c2c-4c5e-ae21-7517905617c8",
+          "A2": "GKITlsInstallSuccess",
+          "A3": "1d439f5f-621f-0a7c-0d43-07531650c45c",
+          "A4": "1d439f5f-621f-0a7c-0d43-07531650c45c",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        }
+      ],
+      "B3": [],
+      "B6": "3716e58e-ad82-22ae-4451-78d83916585d",
+      "B8": "7.17.0.2164",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3"
+    }
+  }
+}

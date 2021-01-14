@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Приложения платформы" />
+			<Item Name="Columns.GKIApplicationStatus.Caption" Value="Статус" />
+			<Item Name="Columns.GKIName.Caption" Value="Название" />
+			<Item Name="Columns.GKINotes.Caption" Value="Заметки" />
+			<Item Name="Columns.GKITlsFile.Caption" Value="Файл tls" />
+			<Item Name="Columns.GKIUrl.Caption" Value="Адрес" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

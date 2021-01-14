@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "220a944f-6d41-4bf2-b673-941d918448bd",
+    "Name": "GKILicUser",
+    "ModifiedOnUtc": "\/Date(1610461125000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Пользователь платформы"
+  }
+}

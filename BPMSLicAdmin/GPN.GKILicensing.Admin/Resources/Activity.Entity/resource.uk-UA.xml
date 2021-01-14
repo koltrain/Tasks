@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="uk-UA">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.GKIGKICustomerID.Caption" Value="Базовий довідник" />
+			<Item Name="Columns.GKIGKIInstance.Caption" Value="Базовий об'єкт" />
+			<Item Name="Columns.GKIGKILicUser.Caption" Value="Базовий об'єкт" />
+		</Items>
+	</Group>
+</Resources>

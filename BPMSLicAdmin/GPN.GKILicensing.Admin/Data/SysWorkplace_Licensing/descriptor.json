@@ -1,0 +1,56 @@
+﻿{
+  "Descriptor": {
+    "UId": "fc8bc000-b4bf-8f17-48d2-7845fc2f0203",
+    "Name": "SysWorkplace_Licensing",
+    "ModifiedOnUtc": "\/Date(1607606991000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "f54121e1-d75d-42e0-b790-bc8aa0bb216c",
+      "Name": "SysWorkplace"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "215e82ee-20b0-4aa2-af3b-ff06cbc6da52",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "CreatedOn",
+        "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+      },
+      {
+        "ColumnUId": "8fe2b261-a69f-4846-bf82-f36e564d0aa4",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "LoaderId",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "445c4583-2f21-4d2b-a6ba-c33108797ae0",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SysApplicationClientType",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "dae36990-bfb4-4f13-ae18-1b18b6081983",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Type",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+	"ChatSettings": {
+		"ChatWindow": {
+			"AcceptChatButton": "Accept chat",
+			"NewMessages": "New messages",
+			"ChatIsCompleted": "Chat is completed",
+			"AcademyLink": "https://academy.creatio.com/",
+			"BlankSlates": {
+				"Default": {
+					"reason": "Chat channels are not configured",
+					"textStart": "Please contact your system administrator and request to set up a channel. Learn more about working with chats in the ",
+					"academyLink": {
+						"displayText": "Academy"
+					}
+				},
+				"HasRightsAndNoChannel": {
+					"reason": "Chat channels are not configured",
+					"textStart": "Please ",
+					"splitTextLink": {
+						"href": "/ClientApp/#/ChatSettings",
+						"displayText": "add"
+					},
+					"academyLink": {
+						"displayText": "Academy"
+					},
+					"textEnd": " a new channel. Learn more about working with chats in the "
+				},
+				"HasRightsAndChannelButInactive": {
+					"reason": "New chats are not distributed to inactive agents",
+					"textStart": "Please change your status to \"Active.\" Learn more about working with chats in the ",
+					"academyLink": {
+						"displayText": "Academy"
+					}
+				},
+				"HasRightsAndChanneAndIsActive": {
+					"reason": "There are no queued chats",
+					"textStart": "Learn more about working with chats in the ",
+					"academyLink": {
+						"displayText": "Academy"
+					}
+				},
+				"HasNotRightsAndHasChanneAndInactive": {
+					"reason": "New chats are not distributed to inactive agents",
+					"textStart": "Please change your status to \"Active.\" Learn more about working with chats in the ",
+					"academyLink": {
+						"displayText": "Academy"
+					}
+				},
+				"HasNotRightsAndHasChanneAndIsActive": {
+					"reason": "There are no queued chats",
+					"textStart": "Learn more about working with chats in the Academy ",
+					"academyLink": {
+						"displayText": "Academy"
+					}
+				}
+			},
+			"Actions": {
+				"Complete": "Complete chat",
+				"ProcessesDivider": "Processes"
+			},
+			"ChatListTitle": "Active chats",
+			"Tips": {
+				"BackToChats": "Back to list"
+			},
+			"OversizeFiles": "25 MB maximum file size limit exceeded in the following file(s)\n{0}"
+		},
+		"History": {
+			"Captions": {
+				"StartDate": "Chat started: {0} by",
+				"EndDate": "Chat completed: {0} by"
+			}
+		},
+		"PreChatSummary": {
+			"Caption": "Pre-chat summary",
+			"Fields": {
+				"Source": "Source"
+			}
+		},
+		"Deduplication": {
+			"DuplicatesFoundTemplate": "Found {0} similar contacts",
+			"DuplicatesNotFound": "No similar contacts found",
+			"FindDuplication": "Find similar contacts"
+		}
+	},
+	"InfoDialog": {
+		"OK": "OK"
+	}
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "04f6be54-6785-431d-b221-1b4f35be0545",
+    "Name": "GKIInstanceFile",
+    "ModifiedOnUtc": "\/Date(1606325315000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Файл и ссылка объекта Приложения платформы",
+    "DependsOn": []
+  }
+}

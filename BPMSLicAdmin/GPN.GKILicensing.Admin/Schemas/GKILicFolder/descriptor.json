@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "8871bb7d-7f2a-4077-a809-daf2ec255682",
+    "Name": "GKILicFolder",
+    "ModifiedOnUtc": "\/Date(1606305040000)\/",
+    "Parent": {
+      "UId": "d602bf96-d029-4b07-9755-63c8f5cb5ed5",
+      "Name": "BaseFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Группа Лицензии платформы",
+    "DependsOn": []
+  }
+}

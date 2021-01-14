@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "a1709ce2-b192-41f6-ad44-2e88fedfe168",
+    "Name": "GKIInstanceLicensePage",
+    "ModifiedOnUtc": "\/Date(1607943559000)\/",
+    "Parent": {
+      "UId": "d3cc497c-f286-4f13-99c1-751c468733c0",
+      "Name": "BasePageV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Карточка схемы: \"Лицензии приложения\""
+  }
+}

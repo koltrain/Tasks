@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Приложения платформы в группе" />
+			<Item Name="Columns.Folder.Caption" Value="Группа Приложения платформы" />
+			<Item Name="Columns.GKIInstance.Caption" Value="Приложения платформы" />
+		</Items>
+	</Group>
+</Resources>

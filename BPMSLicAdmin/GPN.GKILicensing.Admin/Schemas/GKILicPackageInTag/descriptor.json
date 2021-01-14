@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "0c08954d-4f29-4fe1-999f-be6214f4fa2d",
+    "Name": "GKILicPackageInTag",
+    "ModifiedOnUtc": "\/Date(1606338009000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Продукты лицензирования"
+  }
+}

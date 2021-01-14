@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Лицензии платформы" />
+			<Item Name="Columns.GKIAvailableCount.Caption" Value="Остаток доступных лицензий" />
+			<Item Name="Columns.GKICount.Caption" Value="Количество" />
+			<Item Name="Columns.GKICustomerID.Caption" Value="Идентификатор компании" />
+			<Item Name="Columns.GKIExpirationDate.Caption" Value="Дата окончания" />
+			<Item Name="Columns.GKILicPackage.Caption" Value="Продукт лицензирования" />
+			<Item Name="Columns.GKILicStatus.Caption" Value="Статус" />
+			<Item Name="Columns.GKILicType.Caption" Value="Тип лицензии" />
+			<Item Name="Columns.GKIName.Caption" Value="Название" />
+			<Item Name="Columns.GKINotes.Caption" Value="Заметки" />
+			<Item Name="Columns.GKIStartDate.Caption" Value="Дата начала" />
+			<Item Name="Columns.GKIUsedCount.Caption" Value="Фактически использовано" />
+		</Items>
+	</Group>
+</Resources>

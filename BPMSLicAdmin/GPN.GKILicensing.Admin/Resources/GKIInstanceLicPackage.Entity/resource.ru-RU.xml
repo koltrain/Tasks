@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Продукт лицензирования приложения" />
+			<Item Name="Columns.GKIInstance.Caption" Value="Приложение" />
+			<Item Name="Columns.GKILicPackage.Caption" Value="Продукт лицензирования платформы" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

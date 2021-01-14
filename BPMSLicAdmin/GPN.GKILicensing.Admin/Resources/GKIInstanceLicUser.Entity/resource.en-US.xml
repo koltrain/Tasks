@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Пользователь приложения" />
+			<Item Name="Columns.GKIActive.Caption" Value="Активен" />
+			<Item Name="Columns.GKIInstance.Caption" Value="Приложение" />
+			<Item Name="Columns.GKILastActivityDateTime.Caption" Value="Дата последней активности" />
+			<Item Name="Columns.GKILicSyncSource.Caption" Value="Источник добавления" />
+			<Item Name="Columns.GKILicUser.Caption" Value="Пользователь платформы" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Страница редактирования: &quot;Приложения платформы&quot;" />
+			<Item Name="LocalizableStrings.GeneralInfoTabCaption.Value" Value="Основная информация" />
+			<Item Name="LocalizableStrings.GKIInstanceLicPackageDetail04d4df69DetailCaptionOnPage.Value" Value="Установленные лицензии" />
+			<Item Name="LocalizableStrings.GKIInstanceLicUserDetailDetailCaptionOnPage.Value" Value="Пользователи приложения" />
+			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailf4638732DetailCaptionOnPage.Value" Value="Пользователи приложения" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "70f43070-004c-43ff-9868-2d6365ed3790",
+    "Name": "GKILicUserFile",
+    "ModifiedOnUtc": "\/Date(1606317453000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Файл и ссылка объекта Пользователи платформы",
+    "DependsOn": []
+  }
+}

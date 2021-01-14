@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Section schema: &quot;Журнал управления лицензиями&quot;" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Журнал управления лицензиями" />
+			<Item Name="LocalizableStrings.GKITlrRequestButtonCaption.Value" Value="Запросить лицензии" />
+			<Item Name="LocalizableStrings.GKITlsDownloadButtonCaption.Value" Value="Загрузить лицензии" />
+			<Item Name="LocalizableStrings.GKITlsInstallButtonCaption.Value" Value="Установить лицензии" />
+		</Items>
+	</Group>
+</Resources>

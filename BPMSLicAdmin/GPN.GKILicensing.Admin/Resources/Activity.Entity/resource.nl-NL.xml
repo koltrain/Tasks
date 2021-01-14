@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="nl-NL">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.GKIGKICustomerID.Caption" Value="Basis selectieveld" />
+			<Item Name="Columns.GKIGKIInstance.Caption" Value="Basis object" />
+			<Item Name="Columns.GKIGKILicUser.Caption" Value="Basis object" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Пользователь платформы" />
+			<Item Name="Columns.GKIActive.Caption" Value="Активен на приложениях" />
+			<Item Name="Columns.GKILastLicDistributionDateTime.Caption" Value="Дата последней раздачи лицензии" />
+			<Item Name="Columns.GKIMSADActive.Caption" Value="Существует в MS AD" />
+			<Item Name="Columns.GKIMSADEMail.Caption" Value="Email" />
+			<Item Name="Columns.GKIMSADFullName.Caption" Value="Полное имя" />
+			<Item Name="Columns.GKIMSADId.Caption" Value="Id в MS AD" />
+			<Item Name="Columns.GKIMSADJobTitle.Caption" Value="Должность" />
+			<Item Name="Columns.GKIMSADLogin.Caption" Value="Логин MS AD" />
+			<Item Name="Columns.GKIMSADPhone.Caption" Value="Телефон" />
+			<Item Name="Columns.GKIName.Caption" Value="Логин" />
+			<Item Name="Columns.GKINotes.Caption" Value="Заметки" />
+			<Item Name="Columns.GKIPlatformActive.Caption" Value="Имеет доступ к приложениям" />
+			<Item Name="Columns.GKISyncedState.Caption" Value="Факт раздачи лицензии на платформе" />
+		</Items>
+	</Group>
+</Resources>

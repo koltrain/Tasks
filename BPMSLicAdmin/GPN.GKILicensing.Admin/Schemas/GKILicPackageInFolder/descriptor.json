@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "8aa4fb68-5693-4c35-8952-d196ef6471e6",
+    "Name": "GKILicPackageInFolder",
+    "ModifiedOnUtc": "\/Date(1606338006000)\/",
+    "Parent": {
+      "UId": "4f63bafb-e9e7-4082-b92e-66b97c14017c",
+      "Name": "BaseItemInFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Продукты лицензирования в группе"
+  }
+}

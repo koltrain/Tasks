@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Тег в записи раздела Идентификатор компании" />
+			<Item Name="Columns.Entity.Caption" Value="Базовый справочник" />
+			<Item Name="Columns.Tag.Caption" Value="Тег раздела Идентификатор компании" />
+		</Items>
+	</Group>
+</Resources>

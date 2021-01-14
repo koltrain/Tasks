@@ -1,6 +1,0 @@
-= MetaData.Schema.UId "e095aae4-3736-43c1-a567-60b8b8c7c14c"
-= MetaData.Schema.B7 true
-= MetaData.Schema.HD1 "569aaf1a-5943-4f87-ab47-948d941e4920"
-= MetaData.Schema.HD8.["e633a51d-f5b8-4f81-9d51-67c07eae2237"].A4 "e095aae4-3736-43c1-a567-60b8b8c7c14c"
-- MetaData.Schema.HD12
-+ MetaData.Schema.B7 true

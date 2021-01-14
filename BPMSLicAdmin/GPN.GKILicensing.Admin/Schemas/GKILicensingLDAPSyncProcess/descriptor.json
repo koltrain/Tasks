@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "8ffea68d-c297-4377-9488-0217cb7bbc75",
+    "Name": "GKILicensingLDAPSyncProcess",
+    "ModifiedOnUtc": "\/Date(1610527066000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Синхронизация пользователей платформы с LDAP"
+  }
+}

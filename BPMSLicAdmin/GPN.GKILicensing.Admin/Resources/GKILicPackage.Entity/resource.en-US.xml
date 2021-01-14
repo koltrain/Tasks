@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Продукт лицензирования платформы" />
+			<Item Name="Columns.GKIDescription.Caption" Value="Описание" />
+			<Item Name="Columns.GKILicPackageStatus.Caption" Value="Статус" />
+			<Item Name="Columns.GKIName.Caption" Value="Название" />
+			<Item Name="Columns.GKINotes.Caption" Value="Заметки" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

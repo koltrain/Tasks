@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Section schema: &quot;Пользователи платформы&quot;" />
+			<Item Name="Images.27823e50-286c-4925-8ba3-79e01442306d.Image" Type="Image" ContentType="Data" FileExtension=".svg" Value="PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAgMjAiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgwOTViMyIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIj48cGF0aCBkPSJtNi41IDEzdi0yLjVoMTB2NGgtMy41Ii8+PHBhdGggZD0ibTMuNSAxMi41aDEwdjRoLTEweiIvPjxwYXRoIGQ9Im02LjUgNXYtMi41aDEwdjRoLTMuNSIvPjxwYXRoIGQ9Im0zLjUgNC41aDEwdjRoLTEweiIvPjwvZz48L3N2Zz4=" />
+			<Item Name="LocalizableStrings.BeginProcessButtonMenuItemCaption.Caption" Value="Start process" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Пользователи платформы" />
+			<Item Name="LocalizableStrings.ContinueProcessButtonMenuItemCaption.Caption" Value="Continue process" />
+			<Item Name="LocalizableStrings.DuplicatesActionCaptionPattern.Value" Value="Show duplicate '{0}'" />
+			<Item Name="LocalizableStrings.GenerateReportWithoutFiltersConfirmationMessage.Value" Value="The report will be generated for all records in the section, without filters. Do you wish to proceed?" />
+			<Item Name="LocalizableStrings.GKILicenseSyncRegularButtonCaption.Value" Value="Синхронизировать с экземплярами" />
+			<Item Name="LocalizableStrings.GKILicSyncLDAPButtonCaption.Value" Value="Синхронизировать с LDAP" />
+			<Item Name="LocalizableStrings.GKILicUserSyncButtonCaption.Value" Value="Обновить лицензии" />
+			<Item Name="LocalizableStrings.GKILicUserSyncConfirmation.Value" Value="Система обновит лицензии (назначит и отзовет) на всех приложениях. Вы уверены, что хотите продолжить?" />
+			<Item Name="LocalizableStrings.GKISyncComplete.Value" Value="Синхронизация завершена" />
+			<Item Name="LocalizableStrings.GKISyncIsInProcessReminder.Value" Value="Обновление начато. По окончании обновления каждого стенда вам будет приходить уведомление о его результате" />
+			<Item Name="LocalizableStrings.OpenNewSectionDesignerButtonCaption.Caption" Value="Message to user 1" />
+			<Item Name="LocalizableStrings.ProsessButtonCaption.Caption" Value="Process" />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Follow the feed" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="Unfollow the feed" />
+		</Items>
+	</Group>
+</Resources>

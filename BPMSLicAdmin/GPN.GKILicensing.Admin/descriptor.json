@@ -1,0 +1,20 @@
+﻿{
+  "Descriptor": {
+    "UId": "3716e58e-ad82-22ae-4451-78d83916585d",
+    "Name": "GPN.GKILicensing.Admin",
+    "ModifiedOnUtc": "\/Date(1606302380000)\/",
+    "Maintainer": "Customer",
+    "DependsOn": [
+      {
+        "UId": "5be3998b-c5c3-42bb-a01c-2e4149059a97",
+        "PackageVersion": "7.8.0",
+        "Name": "Base"
+      },
+      {
+        "UId": "bb1e143e-f3ee-4316-9450-851ddd02d999",
+        "PackageVersion": "7.8.0",
+        "Name": "LDAP"
+      }
+    ]
+  }
+}

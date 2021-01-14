@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="ЖЦ карточки раздела Журнал управления лицензиями" />
+			<Item Name="NotificationCaption.Caption" Value="Заголовок экземпляра процесса" />
+			<Item Name="NotificationCaption.DisplayValue" Value="[#Название процесса#]" />
+			<Item Name="Stages.Stage1.Caption" Value="Ожидает обновления" />
+			<Item Name="Stages.Stage2.Caption" Value="Сформирован запрос в ТП" />
+			<Item Name="Stages.Stage3.Caption" Value="Получены лицензии" />
+			<Item Name="Stages.Stage4.Caption" Value="Лицензии загружены" />
+			<Item Name="Stages.Stage5.Caption" Value="Лицензии установлены" />
+			<Item Name="Stages.Stage6.Caption" Value="Лицензии не установлены" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Идентификатор компании" />
+			<Item Name="Columns.GKILicPackageStatus.Caption" Value="Статус" />
+			<Item Name="Columns.GKINotes.Caption" Value="Заметки" />
+		</Items>
+	</Group>
+</Resources>

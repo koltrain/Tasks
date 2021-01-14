@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "5b0f0ad1-8f09-4de5-94e7-cd20feb6bb03",
+    "Name": "GKILicFile",
+    "ModifiedOnUtc": "\/Date(1606305036000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Файл и ссылка объекта Лицензии платформы",
+    "DependsOn": []
+  }
+}

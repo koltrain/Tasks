@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Базовый справочник в группе" />
+			<Item Name="Columns.GKICustomerID.Caption" Value="Базовый справочник" />
+		</Items>
+	</Group>
+</Resources>

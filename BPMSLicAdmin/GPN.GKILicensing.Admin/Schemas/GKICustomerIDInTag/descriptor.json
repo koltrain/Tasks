@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "5d81a361-9425-4b05-a1d0-c1102c659157",
+    "Name": "GKICustomerIDInTag",
+    "ModifiedOnUtc": "\/Date(1608278547000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Идентификатор компании"
+  }
+}

@@ -1,0 +1,40 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "70a694f3-e3a9-4dfe-a261-b1d93934ff6b"
+        },
+        {
+          "SchemaColumnUId": "b96bb4ca-a133-44f1-aa7d-24495d89e278",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        },
+        {
+          "SchemaColumnUId": "d5cfaf4a-0900-4ef9-aee8-2ede7f9d97fb",
+          "Value": "176d645b-a02a-4888-bd10-4637dbab22aa",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "697a1782-449a-4a38-9831-6196c5c063e9"
+        },
+        {
+          "SchemaColumnUId": "b96bb4ca-a133-44f1-aa7d-24495d89e278",
+          "Value": "a4b65f4b-e504-419c-a811-9e399f347af2",
+          "DisplayValue": "Аудитор информационной безопасности"
+        },
+        {
+          "SchemaColumnUId": "d5cfaf4a-0900-4ef9-aee8-2ede7f9d97fb",
+          "Value": "176d645b-a02a-4888-bd10-4637dbab22aa",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    }
+  ]
+}

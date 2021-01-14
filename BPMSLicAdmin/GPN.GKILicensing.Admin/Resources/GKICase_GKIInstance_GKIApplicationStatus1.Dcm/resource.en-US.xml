@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Статус приложения" />
+			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
+			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
+			<Item Name="Stages.Stage1.Caption" Value="Новый" />
+			<Item Name="Stages.Stage2.Caption" Value="Ожидает обновления лицензий" />
+			<Item Name="Stages.Stage3.Caption" Value="Ожидает установки лицензий" />
+			<Item Name="Stages.Stage4.Caption" Value="Лицензии установлены" />
+			<Item Name="Stages.Stage5.Caption" Value="Лицензии не установлены" />
+			<Item Name="Stages.Stage6.Caption" Value="Сформирован запрос в ТП" />
+			<Item Name="Stages.Stage7.Caption" Value="Лицензии получены" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Страница редактирования: &quot;Продукты лицензирования&quot;" />
+			<Item Name="LocalizableStrings.GKIInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Приложения с лицензией" />
+			<Item Name="LocalizableStrings.GKILicDetailDetailCaptionOnPage.Value" Value="Лицензии" />
+			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Пользователи с лицензией" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "154793be-4d85-4444-8c22-7c75b64fdbb2",
+    "Name": "GKILicInTag",
+    "ModifiedOnUtc": "\/Date(1606305046000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Лицензии платформы",
+    "DependsOn": []
+  }
+}

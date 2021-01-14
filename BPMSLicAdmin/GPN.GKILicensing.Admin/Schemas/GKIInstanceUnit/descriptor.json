@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "61fb3cac-6d61-61fe-e534-a7744e3c4bd5",
+    "Name": "GKIInstanceUnit",
+    "ModifiedOnUtc": "\/Date(1606997680000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Экземпляр платформы"
+  }
+}

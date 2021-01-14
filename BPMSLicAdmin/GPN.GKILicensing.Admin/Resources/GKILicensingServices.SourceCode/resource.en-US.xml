@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="GKILicensingServices" />
+			<Item Name="LocalizableStrings.GKITlsInstallError.Value" Value="Загрузка лицензий завершена с ошибками. Описания ошибок указаны в поле &quot;Ошибки установки лицензий&quot; в записи каждого приложения" />
+			<Item Name="LocalizableStrings.GKITlsInstallSuccess.Value" Value="Загрузка лицензий на экземпляры выполнена успешно" />
+		</Items>
+	</Group>
+</Resources>

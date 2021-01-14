@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "68ba6027-d0b3-4f80-a61f-08a27398ae68",
+    "Name": "GKILicUserInstanceLicPackagePage",
+    "ModifiedOnUtc": "\/Date(1606381089000)\/",
+    "Parent": {
+      "UId": "d3cc497c-f286-4f13-99c1-751c468733c0",
+      "Name": "BasePageV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Карточка схемы: \"Лицензии пользователей платформы\""
+  }
+}

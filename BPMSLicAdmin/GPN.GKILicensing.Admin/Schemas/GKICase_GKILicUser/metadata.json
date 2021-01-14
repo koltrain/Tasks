@@ -1,0 +1,72 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "DcmSchemaManager",
+      "UId": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
+      "A2": "GKICase_GKILicUser",
+      "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "3716e58e-ad82-22ae-4451-78d83916585d",
+      "B8": "7.17.0.2164",
+      "FJ1": [],
+      "IJ1": true,
+      "BK8": "51b280eb-d8a3-4932-81b9-ef61a0877aab",
+      "IJ10": true,
+      "EntitySchemaUId": "220a944f-6d41-4bf2-b673-941d918448bd",
+      "BK15": [],
+      "BK37": {
+        "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+        "UId": "cdd58be7-2dba-4a5e-869b-1ad5d6d7513a",
+        "A2": "NotificationCaption",
+        "A3": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
+        "A4": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
+        "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+        "L8": {
+          "GS1": 3,
+          "GS2": "[#[PropertyValue:Caption]#]"
+        }
+      },
+      "Stages": [
+        {
+          "BL1": "Terrasoft.Core.DcmProcess.DcmSchemaStage",
+          "UId": "d7e7e334-11b2-4113-9e1d-57471ad69ba4",
+          "A2": "Stage1",
+          "A3": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
+          "A4": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
+          "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
+          "Color": "#8ecb60",
+          "StageRecordId": "976115be-b5cb-4e07-9e69-2f0d675bd025",
+          "Elements": []
+        },
+        {
+          "BL1": "Terrasoft.Core.DcmProcess.DcmSchemaStage",
+          "UId": "94753e8f-d85a-4dab-abfa-9f384cdd8878",
+          "A2": "Stage3",
+          "A3": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
+          "A4": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
+          "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
+          "Color": "#c73920",
+          "StageRecordId": "cc6f7010-a1a1-4f45-bd1a-3281f6cc81cd",
+          "Elements": []
+        }
+      ],
+      "Transitions": [],
+      "StageConnections": {
+        "Connections": [
+          {
+            "Source": "94753e8f-d85a-4dab-abfa-9f384cdd8878",
+            "Target": "d7e7e334-11b2-4113-9e1d-57471ad69ba4"
+          },
+          {
+            "Source": "d7e7e334-11b2-4113-9e1d-57471ad69ba4",
+            "Target": "94753e8f-d85a-4dab-abfa-9f384cdd8878"
+          }
+        ]
+      },
+      "StageColumnUId": "950f182d-7b97-475e-9867-65cdb8cd833b",
+      "SystemElements": []
+    }
+  }
+}

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.ChatMenuSeparator.Value" Value="Chat" />
+			<Item Name="LocalizableStrings.CompanyProfileCaption.Value" Value="Organization" />
+			<Item Name="LocalizableStrings.ExtendedUserProfileCaption.Value" Value="Settings" />
+			<Item Name="LocalizableStrings.SspProfileCaption.Value" Value="Profile" />
+			<Item Name="LocalizableStrings.TelephonyMenuSeparator.Value" Value="Telephony" />
+		</Items>
+	</Group>
+</Resources>

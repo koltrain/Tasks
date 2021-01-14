@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "146f3152-2ffa-4de6-85b5-1b3ea62247cf",
+    "Name": "GKIInstanceTag",
+    "ModifiedOnUtc": "\/Date(1606325322000)\/",
+    "Parent": {
+      "UId": "9e3f203c-e905-4de5-9468-335b193f2439",
+      "Name": "BaseTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег раздела Приложения платформы",
+    "DependsOn": []
+  }
+}

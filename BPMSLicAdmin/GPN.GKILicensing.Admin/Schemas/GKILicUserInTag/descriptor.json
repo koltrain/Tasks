@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "ec80a660-1bc6-4a39-bde8-7f94a3161c12",
+    "Name": "GKILicUserInTag",
+    "ModifiedOnUtc": "\/Date(1606317461000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Пользователи платформы",
+    "DependsOn": []
+  }
+}

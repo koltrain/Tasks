@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "64ffa8c7-1df8-454d-b5fd-f253f5689552",
+    "Name": "GKIInstanceSection",
+    "ModifiedOnUtc": "\/Date(1607607482000)\/",
+    "Parent": {
+      "UId": "7912fb69-4fee-429f-8b23-93943c35d66d",
+      "Name": "BaseSectionV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Section schema: \"Приложения платформы\""
+  }
+}

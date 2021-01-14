@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="es-ES">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.GKIGKICustomerID.Caption" Value="Diccionario base" />
+			<Item Name="Columns.GKIGKIInstance.Caption" Value="Objeto base" />
+			<Item Name="Columns.GKIGKILicUser.Caption" Value="Objeto base" />
+		</Items>
+	</Group>
+</Resources>

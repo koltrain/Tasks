@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="th-TH">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.GKIGKICustomerID.Caption" Value="การค้นหาฐาน" />
+			<Item Name="Columns.GKIGKIInstance.Caption" Value="ออบเจ็กต์ฐาน" />
+			<Item Name="Columns.GKIGKILicUser.Caption" Value="ออบเจ็กต์ฐาน" />
+		</Items>
+	</Group>
+</Resources>

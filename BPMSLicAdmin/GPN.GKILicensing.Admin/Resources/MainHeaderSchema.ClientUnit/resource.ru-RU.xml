@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.ChatMenuSeparator.Value" Value="Чат" />
+			<Item Name="LocalizableStrings.CompanyProfileCaption.Value" Value="Профиль организации" />
+			<Item Name="LocalizableStrings.ExtendedUserProfileCaption.Value" Value="Настройки" />
+			<Item Name="LocalizableStrings.SspProfileCaption.Value" Value="Профиль" />
+			<Item Name="LocalizableStrings.TelephonyMenuSeparator.Value" Value="Телефония" />
+		</Items>
+	</Group>
+</Resources>

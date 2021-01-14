@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Статус приложения" />
+			<Item Name="Stages.Stage2.Caption" Value="Ожидает обновления лицензий" />
+			<Item Name="Stages.Stage3.Caption" Value="Лицензии загружены" />
+			<Item Name="Stages.Stage6.Caption" Value="Сформирован запрос в ТП" />
+			<Item Name="Stages.Stage7.Caption" Value="Лицензии получены" />
+		</Items>
+	</Group>
+</Resources>

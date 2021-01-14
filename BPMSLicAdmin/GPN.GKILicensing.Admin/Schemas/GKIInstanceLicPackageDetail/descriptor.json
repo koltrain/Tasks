@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "1b858917-09a9-4ae6-ba66-f9b669ae5740",
+    "Name": "GKIInstanceLicPackageDetail",
+    "ModifiedOnUtc": "\/Date(1608223649000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Detail schema: \"Продукт лицензирования приложения\""
+  }
+}
