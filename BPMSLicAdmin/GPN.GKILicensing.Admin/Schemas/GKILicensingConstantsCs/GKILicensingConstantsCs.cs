@@ -26,6 +26,7 @@ namespace Terrasoft.Configuration
 			public static readonly Guid Inactive = new Guid(("34034c4e-f1b5-4fec-8962-6167726e3819").ToUpper());
 			public static readonly Guid DidntEnter = new Guid(("221b20f6-ed14-4bb8-8875-3bb962c64ab2").ToUpper());
 			public static readonly Guid HaventEnteredInTheTimespan = new Guid(("0781c2de-db17-4718-8c5d-ccf0a4790b34").ToUpper());
+			public static readonly Guid LDAP = new Guid(("d8756a62-f37a-458b-a134-515fb8495615").ToUpper());
 		}
 	}
 }

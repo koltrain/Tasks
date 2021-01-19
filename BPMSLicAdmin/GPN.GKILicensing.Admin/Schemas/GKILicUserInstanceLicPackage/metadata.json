@@ -6,16 +6,127 @@
 = MetaData.Schema.EG1.UId "8f495d10-561f-4a6a-99ce-dfbf5f487a35"
 = MetaData.Schema.EG1.A2 "GKIEntity_90d7af3EventsProcess"
 = MetaData.Schema.EG1.A5 "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+= MetaData.Schema.EG1.B6 "3716e58e-ad82-22ae-4451-78d83916585d"
 + MetaData.Schema.EG1.B8 "7.17.0.2164"
 = MetaData.Schema.EG1.BK8 "7bb7d6a5-e7a3-4837-83bc-7f785d688165"
 = MetaData.Schema.EG1.BK37.A3 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
 = MetaData.Schema.EG1.BK37.A4 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
++ MetaData.Schema.EG1.BK3 {
+  "BL1": "Terrasoft.Core.Process.ProcessSchemaLaneSet",
+  "UId": "548a612f-451d-46b6-8fbd-d7d2149c4f17",
+  "A2": "LaneSet_548a612f451d46b68fbdd7d2149c4f17",
+  "A3": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+  "A4": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+  "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
+  "BL3": "0;5",
+  "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
+  "BL8": "7bb7d6a5-e7a3-4837-83bc-7f785d688165",
+  "BL9": "EntitySchemaManager",
+  "BM1": 0,
+  "BM4": [
+    {
+      "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
+      "UId": "b52bb31e-de15-4122-9a11-087b324c1190",
+      "A2": "Lane_b52bb31ede1541229a11087b324c1190",
+      "A3": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+      "A4": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+      "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
+      "IL2": "548a612f-451d-46b6-8fbd-d7d2149c4f17",
+      "BL7": "abcd74b9-5912-414b-82ac-f1aa4dcd554e",
+      "BL8": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+      "BL9": "EntitySchemaManager",
+      "CD1": [],
+      "CD2": [],
+      "CD4": "548a612f-451d-46b6-8fbd-d7d2149c4f17",
+      "CD7": []
+    }
+  ]
+}
+~ MetaData.Schema.EG1.BK3 ["619c2403-5046-4076-b4ec-5421200d9785","548a612f-451d-46b6-8fbd-d7d2149c4f17"]
 = MetaData.Schema.EG1.BK4.["08594d74-60b0-45ce-bf17-bac1a8b127f7"].CK2.["496d4a3c-b644-4a65-b0ed-2534d9236da5"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["90027ac8-c9c3-4d21-a4f9-da1cde752cd1"].CK2.["d8b8410f-5c8a-4ddc-8fc2-353483452aed"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["5f3bfbbe-1820-44ca-92f1-6f993169b2dd"].CK2.["d7c806b7-a29b-4ce5-9167-b3319472e772"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["dbf48103-dcf6-4f53-a052-d727a95ea0b4"].CK2.["933bf2fc-d052-40c8-a3e0-bf60049da5d8"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["f0646c74-f291-474f-9a10-143ee868f1c9"].CK2.["b3d5b61f-7afe-48b5-a8cc-40317ea9c428"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
++ MetaData.Schema.EG1.BK4 {
+  "BL1": "Terrasoft.Core.Process.ProcessSchemaEventSubProcess",
+  "UId": "4f30b876-cc6f-4b7f-b6c3-337d4104da93",
+  "A2": "EventSubProcess3_4f30b876cc6f4b7fb6c3337d4104da93",
+  "A3": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+  "A4": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+  "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
+  "IL2": "b52bb31e-de15-4122-9a11-087b324c1190",
+  "BL3": "551;152",
+  "BL7": "0824af03-1340-47a3-8787-ef542f566992",
+  "BL8": "7bb7d6a5-e7a3-4837-83bc-7f785d688165",
+  "BL9": "EntitySchemaManager",
+  "BN1": true,
+  "BN2": "300;300",
+  "BP2": [],
+  "CK1": true,
+  "CK2": [
+    {
+      "BL1": "Terrasoft.Core.Process.ProcessSchemaStartMessageEvent",
+      "UId": "e7eac4e1-9286-4468-afde-8b42b7959eac",
+      "A2": "StartMessage3_e7eac4e192864468afde8b42b7959eac",
+      "A3": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+      "A4": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+      "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
+      "IL2": "4f30b876-cc6f-4b7f-b6c3-337d4104da93",
+      "BL3": "20;135",
+      "BL7": "429178f5-d44a-40d6-8b74-e72cad04ee73",
+      "BL8": "7bb7d6a5-e7a3-4837-83bc-7f785d688165",
+      "BL9": "EntitySchemaManager",
+      "BN2": "31;31",
+      "FC1": [],
+      "ED1": false,
+      "CJ1": "GKILicUserInstanceLicPackageInserted"
+    },
+    {
+      "BL1": "Terrasoft.Core.Process.ProcessSchemaScriptTask",
+      "UId": "0129549d-77d7-4509-b7b1-cb704738da76",
+      "A2": "ScriptTask1_0129549d77d74509b7b1cb704738da76",
+      "A3": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+      "A4": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+      "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
+      "IL2": "4f30b876-cc6f-4b7f-b6c3-337d4104da93",
+      "BL3": "198;123",
+      "BL7": "0e490dda-e140-4441-b600-6f5c64d024df",
+      "BL8": "7bb7d6a5-e7a3-4837-83bc-7f785d688165",
+      "BL9": "EntitySchemaManager",
+      "BN2": "69;55",
+      "BP2": [],
+      "CL2": "FFFFFFFF",
+      "CH1": "var userLicId = Entity.GetTypedColumnValue<Guid>(\"GKILicUserId\");\nvar licActive = Entity.GetTypedColumnValue<bool>(\"GKIActive\");\nvar licInstance = Entity.GetTypedColumnValue<Guid>(\"GKIInstanceId\");\nvar licPackage = Entity.GetTypedColumnValue<Guid>(\"GKILicPackageId\");\nvar licSynced = Entity.GetTypedColumnValue<bool>(\"GKISyncedState\");\n\nvar insertLicPackageUser = new Insert(UserConnection).Into(\"GKILicPackageUser\").Set(\"Id\", Column.Parameter(Guid.NewGuid()))\n\t\t\t\t\t.Set(\"CreatedOn\", new QueryParameter(DateTime.UtcNow))\n\t\t\t\t\t.Set(\"ModifiedOn\", new QueryParameter(DateTime.UtcNow))\n\t\t\t\t\t.Set(\"GKIActive\", new QueryParameter(licActive))\n\t\t\t\t\t.Set(\"GKISyncedState\", new QueryParameter(licSynced))\n\t\t\t\t\t.Set(\"GKILicPackageId\", Column.Parameter(licPackage))\n\t\t\t\t\t.Set(\"GKILicUserId\", Column.Parameter(userLicId));\n\t\t\tinsertLicPackageUser.Execute();\t\t\nreturn true;",
+      "CH2": true
+    }
+  ],
+  "CK3": []
+}
++ MetaData.Schema.EG1.BK4 {
+  "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+  "UId": "a9ce4351-70fb-43c8-8cab-858b75ec76d1",
+  "A2": "SequenceFlow4_a9ce435170fb43c88cab858b75ec76d1",
+  "A3": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+  "A4": "8f495d10-561f-4a6a-99ce-dfbf5f487a35",
+  "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
+  "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+  "BL8": "7bb7d6a5-e7a3-4837-83bc-7f785d688165",
+  "BL9": "EntitySchemaManager",
+  "CI1": "e7eac4e1-9286-4468-afde-8b42b7959eac",
+  "CI2": "0129549d-77d7-4509-b7b1-cb704738da76",
+  "CI3": "null",
+  "CI5": "FF939598",
+  "CI6": 1,
+  "CI11": "602;303",
+  "CI12": "749;303"
+}
+~ MetaData.Schema.EG1.BK4 ["08594d74-60b0-45ce-bf17-bac1a8b127f7","90027ac8-c9c3-4d21-a4f9-da1cde752cd1","5f3bfbbe-1820-44ca-92f1-6f993169b2dd","dbf48103-dcf6-4f53-a052-d727a95ea0b4","f0646c74-f291-474f-9a10-143ee868f1c9","8140d7e7-fb91-4999-8347-543345440efb","4f30b876-cc6f-4b7f-b6c3-337d4104da93","db2f2393-5d29-47cf-a756-8e26392d342f","60ca0a5b-c2b5-4ee3-acd8-f25e9e91ec44","7feb971a-3b75-486d-bb0b-92352f82a420","2f317c63-b9de-4594-befc-1e8413c1ddfe","8a5a0739-a2a3-4581-9476-2909c2e98c39","a53d2c03-849b-47b6-9032-066c63d26056","76ca325d-c9c6-4992-b7d6-11b890506ae3","a9ce4351-70fb-43c8-8cab-858b75ec76d1"]
++ MetaData.Schema.EG1.JC1 {
+  "UId": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94"
+}
+~ MetaData.Schema.EG1.JC1 ["44d1f3fc-7d57-48ad-ae95-4edfc8381c94"]
 = MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
 + MetaData.Schema.D2 {
   "UId": "b953747e-c63c-99c2-758a-1d88354a8551",
@@ -115,14 +226,11 @@
 }
 ~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","b953747e-c63c-99c2-758a-1d88354a8551","b76d91dc-6b3b-b1c2-14cf-cfe5474c66e8","5d7a826b-a095-a59e-50a1-5f78a6f77343","9c0f7bfb-3b90-9a90-142b-bc8d0f05cad5","8a2cbb99-8180-c401-901e-0d1f4f32ccdb","c238e705-257a-d44f-5c2f-291f75b50eb5","acd52ba5-3edf-7e73-3aec-0571aee5160b","bff4e972-a1ba-4508-9bf1-19b8b77b54a9","2f2cc2d4-98e9-80e7-89f8-0645872e1746","690cf569-8d5f-1349-b3ec-d65df2b3a82c"]
 = MetaData.Schema.D20.A2 "GKILicUserInstanceLicPackageEvents"
-- MetaData.Schema.EG1.B6
-- MetaData.Schema.EG1.BK29
 - MetaData.Schema.EG1.BK30
 - MetaData.Schema.D1
 - MetaData.Schema.D20.A5
 - MetaData.Schema.D20.FA4
 - MetaData.Schema.D20.FA5
-- MetaData.Schema.D20.FA6
 - MetaData.Schema.D20.FA7
 - MetaData.Schema.D20.FA11
 - MetaData.Schema.D20.FA12

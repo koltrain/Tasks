@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "e0fe3b6e-8c0e-946c-d05b-66a1de6d2724",
+    "Name": "GKILicPackageUser",
+    "ModifiedOnUtc": "\/Date(1610612343000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Продукт лицензирования пользователя"
+  }
+}

@@ -34,6 +34,14 @@ define("GKILicUserPage", ["ServiceHelper"], function(ServiceHelper) {
 					"detailColumn": "GKILicUser",
 					"masterColumn": "Id"
 				}
+			},
+			"GKILicPackageUserDetail":{
+				"schemaName": "GKILicPackageDetailWithEdit",
+				"entitySchemaName": "GKILicPackageUser",
+				"filter": {
+					"detailColumn": "GKILicUser",
+					"masterColumn": "Id"
+				}
 			}
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
@@ -97,7 +105,7 @@ define("GKILicUserPage", ["ServiceHelper"], function(ServiceHelper) {
 						"textClass": [
 							"actions-button-margin-right"
 						],
-						"wrapperClass": [
+						"wrapperClass": [ 
 							"actions-button-margin-right"
 						]
 					}
@@ -121,6 +129,17 @@ define("GKILicUserPage", ["ServiceHelper"], function(ServiceHelper) {
 			},
 			{
 				"operation": "insert",
+				"name": "GKILicPackageUserDetail",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "LicensesTab",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "GKILicUserInstanceLicPackageDetail",
 				"values": {
 					"itemType": 2,
@@ -139,7 +158,7 @@ define("GKILicUserPage", ["ServiceHelper"], function(ServiceHelper) {
 				},
 				"parentName": "LicensesTab",
 				"propertyName": "items",
-				"index": 0
+				"index": 2
 			},
 			{
 				"operation": "insert",

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Продукт лицензирования пользователя" />
+			<Item Name="Columns.GKIActive.Caption" Value="Лицензия активна" />
+			<Item Name="Columns.GKICustomerID.Caption" Value="Идентификатор" />
+			<Item Name="Columns.GKILicPackage.Caption" Value="Продукт" />
+			<Item Name="Columns.GKILicReserved.Caption" Value="Лицензия забронирована" />
+			<Item Name="Columns.GKILicUser.Caption" Value="Пользователь" />
+			<Item Name="Columns.GKISyncedState.Caption" Value="Лицензия распределена" />
+			<Item Name="EventsProcessSchema.Caption" Value="Продукт лицензирования пользователя" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_89a948c076a04c5cadae487ea1b227d4.Caption" Value="LaneSet 1" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_89a948c076a04c5cadae487ea1b227d4.Lanes.Lane_b64e3a2418ef40b79483c38567a07405.Caption" Value="Lane 1" />
+			<Item Name="EventsProcessSchema.Parameters.DcmEntityUtil.Caption" Value="DcmEntityUtil" />
+			<Item Name="EventsProcessSchema.Parameters.ProcessSchemaListeners.Caption" Value="ProcessSchemaListeners" />
+		</Items>
+	</Group>
+</Resources>

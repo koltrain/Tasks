@@ -4,6 +4,7 @@
 		<Items>
 			<Item Name="Caption" Value="Страница редактирования: &quot;Пользователи платформы&quot;" />
 			<Item Name="LocalizableStrings.GKIInstanceLicUserDetailDetailCaptionOnPage.Value" Value="Приложения пользователя" />
+			<Item Name="LocalizableStrings.GKILicPackageUserDetailCaption.Value" Value="Продукт лицензирования пользователя " />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailcae8122eDetailCaptionOnPage.Value" Value="Лицензии пользователей платформы" />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Лицензии пользователя" />
 			<Item Name="LocalizableStrings.LicensesTabCaption.Value" Value="Лицензии" />

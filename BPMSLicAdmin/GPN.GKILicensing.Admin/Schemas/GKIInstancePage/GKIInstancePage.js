@@ -27,7 +27,31 @@ define("GKIInstancePage", [], function() {
 					"detailColumn": "GKIInstance",
 					"masterColumn": "Id"
 				}
-			}
+			},
+			"GKIInstanceGroupADDetail": {
+				"schemaName": "GKIInstanceGroupADDetail",
+				"entitySchemaName": "GKIInstanceGroupAD",
+				"filter": {
+					"detailColumn": "GKIInstance",
+					"masterColumn": "Id"
+				}
+			},
+			"GKIGroupADUsersDetail": {
+				"schemaName": "GKIGroupADUsersDetail",
+				"entitySchemaName": "GKIGroupADUsers",
+				"filter": {
+					"detailColumn": "GKIInstance",
+					"masterColumn": "Id"
+				}
+			},
+			"GKIGroupADInstanceLicenseDetail": {
+				"schemaName": "GKIGroupADInstanceLicenseDetail",
+				"entitySchemaName": "GKIGroupADInstanceLicense",
+				"filter": {
+					"detailColumn": "GKIInstance",
+					"masterColumn": "Id"
+				}
+			},
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {},
@@ -239,7 +263,54 @@ define("GKIInstancePage", [], function() {
 				"parentName": "NotesControlGroup",
 				"propertyName": "items",
 				"index": 0
-			}
+			},
+			{
+				"operation": "insert",
+				"name": "GKIADGroupsTab",
+				"values": {
+					"caption": {
+						"bindTo": "Resources.Strings.GKIADGroupsTabCaption"
+					},
+					"items": [],
+					"order": 0
+				},
+				"parentName": "Tabs",
+				"propertyName": "tabs",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GKIInstanceGroupADDetail",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "GKIADGroupsTab",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GKIGroupADInstanceLicenseDetail",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "GKIADGroupsTab",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GKIGroupADUsersDetail",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "GKIADGroupsTab",
+				"propertyName": "items",
+				"index": 2
+			},
 		]/**SCHEMA_DIFF*/
 	};
 });

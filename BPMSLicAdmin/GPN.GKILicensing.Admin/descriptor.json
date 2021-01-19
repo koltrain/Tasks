@@ -2,13 +2,23 @@
   "Descriptor": {
     "UId": "3716e58e-ad82-22ae-4451-78d83916585d",
     "Name": "GPN.GKILicensing.Admin",
-    "ModifiedOnUtc": "\/Date(1606302380000)\/",
+    "ModifiedOnUtc": "\/Date(1610529381000)\/",
     "Maintainer": "Customer",
     "DependsOn": [
       {
         "UId": "5be3998b-c5c3-42bb-a01c-2e4149059a97",
         "PackageVersion": "7.8.0",
         "Name": "Base"
+      },
+      {
+        "UId": "613fd913-be03-46ce-909b-f44e4225469e",
+        "PackageVersion": "7.8.0",
+        "Name": "UIv2"
+      },
+      {
+        "UId": "a7d9c356-450c-46d7-bc85-72dca4e280ba",
+        "PackageVersion": "7.8.0",
+        "Name": "NUI"
       },
       {
         "UId": "bb1e143e-f3ee-4316-9450-851ddd02d999",

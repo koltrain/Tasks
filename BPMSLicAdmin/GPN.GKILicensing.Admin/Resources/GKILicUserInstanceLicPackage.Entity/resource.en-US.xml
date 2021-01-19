@@ -13,7 +13,13 @@
 			<Item Name="Columns.GKILicUser.Caption" Value="Пользователь" />
 			<Item Name="Columns.GKISyncedState.Caption" Value="Распределено" />
 			<Item Name="Columns.GKISyncError.Caption" Value="Ошибка распределения" />
-			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+			<Item Name="EventsProcessSchema.BaseElements.ScriptTask1_0129549d77d74509b7b1cb704738da76.Caption" Value="UpdateLicPackageUserDetail" />
+			<Item Name="EventsProcessSchema.BaseElements.StartMessage3_e7eac4e192864468afde8b42b7959eac.Caption" Value="GKILicUserInstanceLicPackageInserted" />
+			<Item Name="EventsProcessSchema.Caption" Value="Лицензии пользователей платформы" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_548a612f451d46b68fbdd7d2149c4f17.Caption" Value="LaneSet 1" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_548a612f451d46b68fbdd7d2149c4f17.Lanes.Lane_b52bb31ede1541229a11087b324c1190.Caption" Value="Lane 1" />
+			<Item Name="EventsProcessSchema.Parameters.DcmEntityUtil.Caption" Value="DcmEntityUtil" />
+			<Item Name="EventsProcessSchema.Parameters.ProcessSchemaListeners.Caption" Value="ProcessSchemaListeners" />
 		</Items>
 	</Group>
 </Resources>

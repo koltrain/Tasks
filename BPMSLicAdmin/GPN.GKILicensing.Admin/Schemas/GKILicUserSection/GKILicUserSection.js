@@ -1,4 +1,4 @@
-define("GKILicUserSection", ["ServiceHelper"], function(ServiceHelper) {
+define("GKILicUserSection", ["ServiceHelper", "ProcessModuleUtilities"], function(ServiceHelper, ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "GKILicUser",
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
@@ -73,6 +73,12 @@ define("GKILicUserSection", ["ServiceHelper"], function(ServiceHelper) {
 			 * @desc: вызывает синхронизацию с LDAP
 			 */
 			onGKILicSyncLDAPButtonClick: function() {
+				var args = {
+					sysProcessName: "GKILicensingLDAPSyncProcess",
+					parameters: null
+				};
+				ProcessModuleUtilities.executeProcess(args);
+				this.showInformationDialog(this.get("Resources.Strings.GKILdapSyncIsInProcessReminder"));
 				return;
 			},
 

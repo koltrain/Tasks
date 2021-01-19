@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "4398fea5-be09-4469-b3e4-4c805df02298",
+    "Name": "GKIGroupADUsersPage",
+    "ModifiedOnUtc": "\/Date(1610719222000)\/",
+    "Parent": {
+      "UId": "d3cc497c-f286-4f13-99c1-751c468733c0",
+      "Name": "BasePageV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Карточка схемы: \"Пользователи группы AD\""
+  }
+}

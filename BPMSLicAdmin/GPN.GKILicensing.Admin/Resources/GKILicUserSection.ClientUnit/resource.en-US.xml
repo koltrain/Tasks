@@ -9,6 +9,7 @@
 			<Item Name="LocalizableStrings.ContinueProcessButtonMenuItemCaption.Caption" Value="Continue process" />
 			<Item Name="LocalizableStrings.DuplicatesActionCaptionPattern.Value" Value="Show duplicate '{0}'" />
 			<Item Name="LocalizableStrings.GenerateReportWithoutFiltersConfirmationMessage.Value" Value="The report will be generated for all records in the section, without filters. Do you wish to proceed?" />
+			<Item Name="LocalizableStrings.GKILdapSyncIsInProcessReminder.Value" Value="Процесс синхронизации с LDAP запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели" />
 			<Item Name="LocalizableStrings.GKILicenseSyncRegularButtonCaption.Value" Value="Синхронизировать с экземплярами" />
 			<Item Name="LocalizableStrings.GKILicSyncLDAPButtonCaption.Value" Value="Синхронизировать с LDAP" />
 			<Item Name="LocalizableStrings.GKILicUserSyncButtonCaption.Value" Value="Обновить лицензии" />

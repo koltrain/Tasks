@@ -4,6 +4,7 @@
 		<Items>
 			<Item Name="Caption" Value="Страница редактирования: &quot;Приложения платформы&quot;" />
 			<Item Name="LocalizableStrings.GeneralInfoTabCaption.Value" Value="Основная информация" />
+			<Item Name="LocalizableStrings.GKIADGroupsTabCaption.Value" Value="Группы AD" />
 			<Item Name="LocalizableStrings.GKIInstanceLicPackageDetail04d4df69DetailCaptionOnPage.Value" Value="Установленные лицензии" />
 			<Item Name="LocalizableStrings.GKIInstanceLicUserDetailDetailCaptionOnPage.Value" Value="Пользователи приложения" />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailf4638732DetailCaptionOnPage.Value" Value="Пользователи приложения" />
