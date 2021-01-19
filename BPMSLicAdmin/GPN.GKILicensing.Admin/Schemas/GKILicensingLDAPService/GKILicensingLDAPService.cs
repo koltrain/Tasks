@@ -60,7 +60,7 @@ namespace Terrasoft.Configuration
 
 				List<KeyValuePair<Guid, Guid>> ldapGroupRelatedInstanceUserIds = new List<KeyValuePair<Guid, Guid>>(); //instanceId, UserId
 				
-				var groupFilter = ReplaceSpecialCharacters(groupItem.Dn);
+				var groupFilter = groupItem.Dn;
 				string activeFilter = "(!(userAccountControl:1.2.840.113556.1.4.803:=2))";
 				fullReport += String.Concat(". Group: ", groupFilter);
 				DateTime? ldapModifiedDate = default(DateTime?); // TODO: filter by modified date for performance reasons. methods CheckUsersInGroup and GetMinModifiedDateOfNewUsers
