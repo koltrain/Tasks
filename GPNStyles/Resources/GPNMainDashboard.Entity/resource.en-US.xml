@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Стартовая страница" />
+			<Item Name="Columns.GPNName.Caption" Value="Название" />
+			<Item Name="Columns.GPNNotes.Caption" Value="Заметки" />
+		</Items>
+	</Group>
+</Resources>

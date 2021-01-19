@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "e65420bd-072e-4556-ab8a-c25e7ad8908f",
+    "Name": "GPNMainDashboardSection",
+    "ModifiedOnUtc": "\/Date(1608212799000)\/",
+    "Parent": {
+      "UId": "22e2cf10-98b4-4c3c-bc28-346238e15c21",
+      "Name": "BaseDataView"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема раздела: \"Стартовая страница\""
+  }
+}

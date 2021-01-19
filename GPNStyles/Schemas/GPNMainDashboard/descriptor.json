@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "79ff9284-756a-4052-bd82-2fbf14578b3d",
+    "Name": "GPNMainDashboard",
+    "ModifiedOnUtc": "\/Date(1608210618000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Стартовая страница"
+  }
+}

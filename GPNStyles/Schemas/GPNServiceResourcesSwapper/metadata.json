@@ -1,0 +1,35 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ClientUnitSchemaManager",
+      "UId": "4f3c4051-a45b-4f88-8aab-85fdc12666ba",
+      "A2": "GPNServiceResourcesSwapper",
+      "A5": "a2b32cf8-189d-4a1d-9c22-4ad126370330",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "a573f98a-f239-4bf2-a33b-536b75893709",
+      "B8": "7.16.4.1731",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3",
+      "HD4": 1,
+      "HD6": "null",
+      "HD5": [],
+      "HD7": [],
+      "HD8": [
+        {
+          "UId": "2868ed3f-fa1c-4738-93a6-51dbb1e654d3",
+          "A2": "PortalMessageTabImage",
+          "A3": "4f3c4051-a45b-4f88-8aab-85fdc12666ba",
+          "A4": "4f3c4051-a45b-4f88-8aab-85fdc12666ba"
+        },
+        {
+          "UId": "fecbd4eb-cfdd-41bd-99b7-8218755859ae",
+          "A2": "QueuesSettingsDataViewIcon",
+          "A3": "4f3c4051-a45b-4f88-8aab-85fdc12666ba",
+          "A4": "4f3c4051-a45b-4f88-8aab-85fdc12666ba"
+        }
+      ],
+      "HD11": []
+    }
+  }
+}

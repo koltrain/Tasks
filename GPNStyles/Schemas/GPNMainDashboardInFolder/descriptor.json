@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "ba32584b-f8a5-4feb-9bb6-68a4f70042c2",
+    "Name": "GPNMainDashboardInFolder",
+    "ModifiedOnUtc": "\/Date(1608210625000)\/",
+    "Parent": {
+      "UId": "4f63bafb-e9e7-4082-b92e-66b97c14017c",
+      "Name": "BaseItemInFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Стартовая страница в группе"
+  }
+}

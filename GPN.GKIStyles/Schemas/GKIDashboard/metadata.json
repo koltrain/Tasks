@@ -1,7 +1,0 @@
-= MetaData.Schema.UId "c281e4f7-9561-476a-93f6-4e5b419cf8c9"
-= MetaData.Schema.A2 "GKIDashboard"
-= MetaData.Schema.A5 "7137fb68-f6b8-454a-81b5-ddddfdc831a8"
-= MetaData.Schema.B6 "a573f98a-f239-4bf2-a33b-536b75893709"
-= MetaData.Schema.B8 "7.16.0.4461"
-- MetaData.Schema.B7
-+ MetaData.Schema.B7 false

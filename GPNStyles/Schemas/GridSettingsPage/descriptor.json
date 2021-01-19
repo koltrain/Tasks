@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "62d6de9f-3ffa-4811-bfb5-e0e48e3d8f0c",
+    "Name": "GridSettingsPage",
+    "ModifiedOnUtc": "\/Date(1610533851000)\/",
+    "Parent": {
+      "UId": "3627e186-b93e-4970-901b-a740c3e07b4a",
+      "Name": "GridSettingsPage"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "GridSettingsPage"
+  }
+}
