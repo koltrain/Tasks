@@ -1,17 +1,14 @@
 namespace Terrasoft.Configuration
 {
-	using Newtonsoft.Json;
 	using System;
 	using System.Collections.Generic;
 	using System.Collections.ObjectModel;
 	using System.Linq;
 	using System.IO;
-	using System.Net;
 	using System.Text;
 	using System.ServiceModel;
 	using System.ServiceModel.Activation;
 	using System.ServiceModel.Web;
-	using System.Web;
 	using Terrasoft.Common;
 	using Terrasoft.Core;
 	using Terrasoft.Core.DB;
@@ -29,7 +26,14 @@ namespace Terrasoft.Configuration
 		ResponseFormat = WebMessageFormat.Json)]
 		public GKILicUserSyncResult GKIAddLicense(List<LicUserData> userLicensePair)
 		{
-			//TODO: eligible user check
+			if (!GKIIsSysAdmin())
+            {
+				GKILicUserSyncResult errorResult = new GKILicUserSyncResult { 
+					ErrMsg = "Provided user has no System administrator rights. Operation has been aborted",
+					Success = false,
+					LicUserSyncResults = null} ;
+				return errorResult;
+			}
 			GKILicUserSyncResult licUserSyncResult = GKIAddOrRemoveLicense(userLicensePair, true);
 			return licUserSyncResult;
 		}
@@ -39,7 +43,16 @@ namespace Terrasoft.Configuration
 		ResponseFormat = WebMessageFormat.Json)]
 		public GKILicUserSyncResult GKIRemoveLicense(List<LicUserData> userLicensePair)
 		{
-			//TODO: eligible user check
+			if (!GKIIsSysAdmin())
+			{
+				GKILicUserSyncResult errorResult = new GKILicUserSyncResult
+				{
+					ErrMsg = "Provided user has no System administrator rights. Operation has been aborted",
+					Success = false,
+					LicUserSyncResults = null
+				};
+				return errorResult;
+			}
 			GKILicUserSyncResult licUserSyncResult = GKIAddOrRemoveLicense(userLicensePair, false);
 			return licUserSyncResult;
 		}
@@ -188,6 +201,16 @@ namespace Terrasoft.Configuration
 		ResponseFormat = WebMessageFormat.Json)]
 		public UsersSyncResult GKIUsersSync()
 		{
+			if (!GKIIsSysAdmin())
+			{
+				UsersSyncResult errorResult = new UsersSyncResult
+				{
+					ErrMsg = "Provided user has no System administrator rights. Operation has been aborted",
+					Success = false,
+					UserSyncResultSysAdminUnit = null
+				};
+				return errorResult;
+			}
 			UsersSyncResult usersSyncResult = new UsersSyncResult();
 			try
 			{
@@ -261,7 +284,13 @@ namespace Terrasoft.Configuration
         {
 			LicenseInfoResult licenseInfoResult = new LicenseInfoResult();
 			licenseInfoResult.LicenseInfoList = new List<LicenseInfo>();
-			
+			if (!GKIIsSysAdmin())
+			{
+				licenseInfoResult.ErrMsg = "Provided user has no System administrator rights. Operation has been aborted";
+				licenseInfoResult.Success = false;
+				licenseInfoResult.LicenseInfoList = null;
+				return licenseInfoResult;
+			}
 			//Active
 			var sysLicESQ = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "SysLic");
 			sysLicESQ.UseAdminRights = false;
@@ -326,6 +355,12 @@ namespace Terrasoft.Configuration
 		public TlsCustomInstallResult GKIInstallLicenses(TlsLicData tlsLicData)
 		{
 			TlsCustomInstallResult tlsCustomInstallResult = new TlsCustomInstallResult();
+			if (!GKIIsSysAdmin())
+			{
+				tlsCustomInstallResult.errorInfo = "Provided user has no System administrator rights. Operation has been aborted";
+				tlsCustomInstallResult.success = false;
+				return tlsCustomInstallResult;
+			}
 			bool success;
 			try
 			{
@@ -405,6 +440,23 @@ namespace Terrasoft.Configuration
 			return licenseNames;
 		}
 
+		private bool GKIIsSysAdmin()
+        {
+			var userId = UserConnection.CurrentUser.Id;
+			if (userId == null || userId == Guid.Empty)
+            {
+				return false;
+            }
+			var sysAdminid = BaseConsts.SystemAdministratorsSysAdminUnitId;
+			var schema = UserConnection.EntitySchemaManager.GetInstanceByName("SysUserInRole");
+			var entity = schema.CreateEntity(UserConnection);
+			entity.UseAdminRights = false;
+			var sysCondition = new Dictionary<string, object> {
+				{ "SysUser", userId },
+				{ "SysRole", sysAdminid }
+			};
+			return entity.ExistInDB(sysCondition);
+		}
 		public class TlsCustomInstallResult
 		{
 			public string errorInfo { get; set; }
