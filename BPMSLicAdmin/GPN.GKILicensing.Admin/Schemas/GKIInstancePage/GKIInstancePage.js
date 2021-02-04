@@ -164,6 +164,23 @@ define("GKIInstancePage", [], function() {
 			},
 			{
 				"operation": "insert",
+				"name": "GKIIsLimitApllied",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 4,
+						"layoutName": "Header"
+					},
+					"bindTo": "GKIIsLimitApllied"
+				},
+				"parentName": "Header",
+				"propertyName": "items",
+				"index": 6
+			},
+			{
+				"operation": "insert",
 				"name": "GeneralInfoTab",
 				"values": {
 					"caption": {

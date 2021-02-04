@@ -9,6 +9,7 @@
 			<Item Name="Columns.GKILicSyncSource.Caption" Value="Источник добавления" />
 			<Item Name="Columns.GKILicUser.Caption" Value="Пользователь платформы" />
 			<Item Name="Columns.GKIMSADActive.Caption" Value="Активен на приложениях в MS AD" />
+			<Item Name="Columns.GKIRegistrationDate.Caption" Value="Дата регистрации" />
 			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
 		</Items>
 	</Group>

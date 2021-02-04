@@ -3,6 +3,20 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="GKILicensingServices" />
+			<Item Name="LocalizableStrings.GKILicenseGetUsersToDeactivateProcessError.Value" Value="При поиске претендентов на деактивацию возникла критическая ошибка. Выявленная ошибка доступна для просмотра в журнале процессов." />
+			<Item Name="LocalizableStrings.GKILicenseSyncRegularError.Value" Value="Синхронизация с экземплярами завершена. Описания ошибок указаны в поле &quot;Последняя ошибка&quot; в записи каждого приложения" />
+			<Item Name="LocalizableStrings.GKILicenseSyncRegularProcessError.Value" Value="При синхронизации с экземплярами возникла критическая ошибка. Выявленная ошибка доступна для просмотра в журнале процессов." />
+			<Item Name="LocalizableStrings.GKILicenseSyncRegularSuccess.Value" Value="Синхронизация с экземплярами успешно завершена" />
+			<Item Name="LocalizableStrings.GKILicUserSyncProcessError.Value" Value="Процесс обновления лицензий завершен с ошибкой. Выявленная ошибка доступна для просмотра в журнале процессов." />
+			<Item Name="LocalizableStrings.GKILicUserSyncSuccess.Value" Value="Процесс обновления лицензий завершен успешно" />
+			<Item Name="LocalizableStrings.GKISendActivityEmailNoMailBoxError.Value" Value="Не указан имейл для отправки в системной настройке &quot;Почтовый ящик для отправки уведомлений службы по управлению лицензиями&quot;" />
+			<Item Name="LocalizableStrings.GKISendActivityEmailNoRecipientError.Value" Value="Не указан email-адрес для отправки в системной настройке &quot;Email для отправки вопроса технической поддержке&quot;" />
+			<Item Name="LocalizableStrings.GKITlrRequestEmailNotSentError.Value" Value="Файл загружен, но email в техподдержку не отправлен" />
+			<Item Name="LocalizableStrings.GKITlrRequestEmailTemplateError.Value" Value="Получение файла(ов) лицензий" />
+			<Item Name="LocalizableStrings.GKITlrRequestError.Value" Value="Запрос файлов завершен с ошибками. Описания ошибок указаны в поле &quot;Ошибка формирования файла-запроса лицензий&quot; в записи каждого приложения" />
+			<Item Name="LocalizableStrings.GKITlrRequestProcessError.Value" Value="Процесс запроса лицензий завершен с ошибкой. Выявленная ошибка доступна для просмотра в журнале процессов." />
+			<Item Name="LocalizableStrings.GKITlrRequestSuccess.Value" Value="Запрос файлов выполнен успешно" />
+			<Item Name="LocalizableStrings.GKITlrRequestWrongCIDError.Value" Value="Некорректное значение ID компании для лицензирования" />
 			<Item Name="LocalizableStrings.GKITlsInstallError.Value" Value="Загрузка лицензий завершена с ошибками. Описания ошибок указаны в поле &quot;Ошибки установки лицензий&quot; в записи каждого приложения" />
 			<Item Name="LocalizableStrings.GKITlsInstallSuccess.Value" Value="Загрузка лицензий на экземпляры выполнена успешно" />
 		</Items>

@@ -11,11 +11,12 @@
 			<Item Name="LocalizableStrings.GenerateReportWithoutFiltersConfirmationMessage.Value" Value="The report will be generated for all records in the section, without filters. Do you wish to proceed?" />
 			<Item Name="LocalizableStrings.GKILdapSyncIsInProcessReminder.Value" Value="Процесс синхронизации с LDAP запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели" />
 			<Item Name="LocalizableStrings.GKILicenseSyncRegularButtonCaption.Value" Value="Синхронизировать с экземплярами" />
+			<Item Name="LocalizableStrings.GKILicenseSyncRegularProcessReminder.Value" Value="Синхронизация начата. По окончании вам отобразится уведомление в коммуникационной панели" />
 			<Item Name="LocalizableStrings.GKILicSyncLDAPButtonCaption.Value" Value="Синхронизировать с LDAP" />
 			<Item Name="LocalizableStrings.GKILicUserSyncButtonCaption.Value" Value="Обновить лицензии" />
-			<Item Name="LocalizableStrings.GKILicUserSyncConfirmation.Value" Value="Система обновит лицензии (назначит и отзовет) на всех приложениях. Вы уверены, что хотите продолжить?" />
+			<Item Name="LocalizableStrings.GKILicUserSyncConfirmation.Value" Value="Инициирован запуск процесса обновления лицензий пользователей приложений платформы. Вы подтверждаете запуск процесса?" />
 			<Item Name="LocalizableStrings.GKISyncComplete.Value" Value="Синхронизация завершена" />
-			<Item Name="LocalizableStrings.GKISyncIsInProcessReminder.Value" Value="Обновление начато. По окончании обновления каждого стенда вам будет приходить уведомление о его результате" />
+			<Item Name="LocalizableStrings.GKISyncIsInProcessReminder.Value" Value="Процесс обновления лицензий пользователей запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели." />
 			<Item Name="LocalizableStrings.OpenNewSectionDesignerButtonCaption.Caption" Value="Message to user 1" />
 			<Item Name="LocalizableStrings.ProsessButtonCaption.Caption" Value="Process" />
 			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Follow the feed" />

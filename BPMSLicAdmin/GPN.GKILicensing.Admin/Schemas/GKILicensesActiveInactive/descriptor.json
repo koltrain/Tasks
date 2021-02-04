@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "53f42ab9-d0f4-4949-9ef3-62e86d8a4233",
     "Name": "GKILicensesActiveInactive",
-    "ModifiedOnUtc": "\/Date(1607854628000)\/",
+    "ModifiedOnUtc": "\/Date(1612165361000)\/",
     "ManagerName": "ProcessSchemaManager",
     "Caption": "Set licenses Active or Inactive"
   }

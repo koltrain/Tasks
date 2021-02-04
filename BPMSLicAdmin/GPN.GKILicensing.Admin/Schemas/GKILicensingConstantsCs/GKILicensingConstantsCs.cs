@@ -28,5 +28,9 @@ namespace Terrasoft.Configuration
 			public static readonly Guid HaventEnteredInTheTimespan = new Guid(("0781c2de-db17-4718-8c5d-ccf0a4790b34").ToUpper());
 			public static readonly Guid LDAP = new Guid(("d8756a62-f37a-458b-a134-515fb8495615").ToUpper());
 		}
+		public static class Misc
+		{
+			public static readonly Guid TlrRequestEmailTemplate = new Guid(("1f16b3ad-97de-4ae1-969b-443b8df06a1c").ToUpper());
+		}
 	}
 }

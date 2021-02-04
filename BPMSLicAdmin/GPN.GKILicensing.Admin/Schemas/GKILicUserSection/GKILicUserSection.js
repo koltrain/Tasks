@@ -11,36 +11,18 @@ define("GKILicUserSection", ["ServiceHelper", "ProcessModuleUtilities"], functio
 		methods: {
 			/**
 			 * @public
-			 * @desc: вызывает сервис, который обновляет информацию со стендов
+			 * @desc: вызывает процесс, который обновляет информацию со стендов
 			 */
 			onGKILicenseSyncRegularButtonClick: function() {
-				this.showBodyMask();
-				ServiceHelper.callService("GKILicensingAdminService", "GKILicenseSyncRegular",  function(response) {
-					var responseMessage = "";
-					if (!response.GKILicenseSyncRegularResult) {
-						if (response.responseText) {
-							console.log(response.responseText);
-						}
-						if (response.message){
-							responseMessage = response.message;
-						}
-						else if (response.statusText) {
-							responseMessage = response.statusText;
-						}
-						else {
-							responseMessage = "Unknown error";
-						}
-						this.hideBodyMask();
-						this.showInformationDialog(responseMessage);
-						return;
+				var args = {
+					name: "GKILicenseSyncRegularProcess",
+					parameters: {
+						instanceIdFilter: Terrasoft.GUID_EMPTY
 					}
-					else {
-						console.log(response.GKILicenseSyncRegularResult);
-						this.reloadGridData();
-						this.hideBodyMask();
-						this.showInformationDialog(this.get("Resources.Strings.GKISyncComplete"));
-					}
-				}, null, this);
+				};
+				ProcessModuleUtilities.startBusinessProcess(args);
+				this.showInformationDialog(this.get("Resources.Strings.GKILicenseSyncRegularProcessReminder"));
+				return;
 			},
 
 			/**
@@ -61,11 +43,16 @@ define("GKILicUserSection", ["ServiceHelper", "ProcessModuleUtilities"], functio
 
 			/**
 			 * @public
-			 * @desc: вызывает сервис, который синхронизирует лицензии
+			 * @desc: вызывает бизнес-процесс, который синхронизирует лицензии
 			 */
 			GKILicUserSyncServiceCall: function() {
+				var args = {
+					name: "GKILicensingLicUserSyncProcess",
+					parameters: null
+				};
+				ProcessModuleUtilities.startBusinessProcess(args);
 				this.showInformationDialog(this.get("Resources.Strings.GKISyncIsInProcessReminder"));
-				ServiceHelper.callService("GKILicensingAdminService", "GKILicUserSyncAll",  function(response) {}, null, this);
+				return;
 			},
 
 			/**
@@ -74,10 +61,10 @@ define("GKILicUserSection", ["ServiceHelper", "ProcessModuleUtilities"], functio
 			 */
 			onGKILicSyncLDAPButtonClick: function() {
 				var args = {
-					sysProcessName: "GKILicensingLDAPSyncProcess",
+					name: "GKILicensingLDAPSyncProcess",
 					parameters: null
 				};
-				ProcessModuleUtilities.executeProcess(args);
+				ProcessModuleUtilities.startBusinessProcess(args);
 				this.showInformationDialog(this.get("Resources.Strings.GKILdapSyncIsInProcessReminder"));
 				return;
 			},

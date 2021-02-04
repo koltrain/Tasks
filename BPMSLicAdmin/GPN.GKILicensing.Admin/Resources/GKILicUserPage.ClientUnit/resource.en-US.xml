@@ -8,7 +8,7 @@
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailcae8122eDetailCaptionOnPage.Value" Value="Categories" />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Лицензии пользователя" />
 			<Item Name="LocalizableStrings.GKILicUserSyncButtonCaption.Value" Value="Обновить лицензии" />
-			<Item Name="LocalizableStrings.GKISyncHasStarted.Value" Value="Обновление начато. По завершении вам отобразится уведомление" />
+			<Item Name="LocalizableStrings.GKISyncHasStarted.Value" Value="Процесс обновления лицензий пользователя запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели." />
 			<Item Name="LocalizableStrings.LicensesTabCaption.Value" Value="Лицензии" />
 		</Items>
 	</Group>

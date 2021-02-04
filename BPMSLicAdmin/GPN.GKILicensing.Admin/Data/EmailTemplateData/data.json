@@ -1,0 +1,33 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "1f16b3ad-97de-4ae1-969b-443b8df06a1c"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1611334658250+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "26bd9f25-0d50-4c47-829f-8b286576317c",
+          "Value": "null",
+          "DisplayValue": ""
+        },
+        {
+          "SchemaColumnUId": "54425b16-8b5b-40a1-baf1-3997560a6b0e",
+          "Value": "Добрый день!<br>\nПросьба прислать файл(ы) с лицензиями в соответствии с вложенным(и) файлом(ами) запроса лицензий.\n<br><br>Спасибо!"
+        },
+        {
+          "SchemaColumnUId": "698c2960-3832-4ba4-ad56-8a6489b32ad4",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "2e7c35e3-0774-4a4a-bea5-6ce4c8de1465",
+          "Value": "Получение файла(ов) лицензий"
+        }
+      ]
+    }
+  ]
+}

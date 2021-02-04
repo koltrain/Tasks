@@ -6,7 +6,9 @@
 			<Item Name="LocalizableStrings.GeneralInfoTabCaption.Value" Value="Информация" />
 			<Item Name="LocalizableStrings.GKILicDetailDetailCaptionOnPage.Value" Value="Зарегистрированные лицензии" />
 			<Item Name="LocalizableStrings.GKITlrRequestButtonCaption.Value" Value="Запросить лицензии" />
+			<Item Name="LocalizableStrings.GKITlrRequestProcessReminder.Value" Value="Операция начата. По окончании вам отобразится уведомление" />
 			<Item Name="LocalizableStrings.GKITlsDownloadButtonCaption.Value" Value="Загрузить лицензии" />
+			<Item Name="LocalizableStrings.GKITlsInstallationHasStarted.Value" Value="Установка начата. По окончании вам отобразится уведомление" />
 			<Item Name="LocalizableStrings.GKITlsInstallButtonCaption.Value" Value="Установить лицензии" />
 			<Item Name="LocalizableStrings.GKITooManyFilesSelected.Value" Value="Пожалуйста, выберите только один файл" />
 			<Item Name="LocalizableStrings.GKIWrongFileFormat.Value" Value="Неверный формат файла" />

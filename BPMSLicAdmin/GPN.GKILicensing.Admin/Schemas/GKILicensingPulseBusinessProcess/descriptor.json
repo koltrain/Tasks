@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "e249cc8d-2100-4378-a8b9-d10475bb794a",
+    "Name": "GKILicensingPulseBusinessProcess",
+    "ModifiedOnUtc": "\/Date(1611832126000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Пульс подчиненных экземпляров"
+  }
+}

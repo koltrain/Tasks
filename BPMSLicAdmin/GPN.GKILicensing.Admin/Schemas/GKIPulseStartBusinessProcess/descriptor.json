@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "f835c208-0567-42db-b0a2-e829143a5d04",
+    "Name": "GKIPulseStartBusinessProcess",
+    "ModifiedOnUtc": "\/Date(1611823142000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Старт пульса подчиненных экземпляров"
+  }
+}

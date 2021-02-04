@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "fee6aaa7-f848-430d-a0a3-8d9620b7532e",
+    "Name": "GKITlrRequestProcess",
+    "ModifiedOnUtc": "\/Date(1611571308000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Запрос лицензий (tlr)"
+  }
+}

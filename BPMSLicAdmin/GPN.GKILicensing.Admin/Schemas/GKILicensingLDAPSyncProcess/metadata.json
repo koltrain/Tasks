@@ -81,7 +81,6 @@
           "A4": "8ffea68d-c297-4377-9488-0217cb7bbc75",
           "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
           "IL2": "a7a9d37a-efef-4343-a96e-e9b2f35907ac",
-          "IL3": true,
           "BL3": "50;184",
           "BL7": "53818048-7868-48f6-ada0-0ebaa65af628",
           "BL8": "8ffea68d-c297-4377-9488-0217cb7bbc75",
@@ -120,7 +119,7 @@
           "BO3": true,
           "BP2": [],
           "CL2": "FFFFFFFF",
-          "CH1": "var uc = Get<UserConnection>(\"UserConnection\");\nvar sysUC = uc.AppConnection.SystemUserConnection;\nvar GKILicensingLDAPService = new Terrasoft.Configuration.GKILicensingLDAPService(sysUC);\nSet(\"result1\", GKILicensingLDAPService.GKILDAPSync());\nreturn true;",
+          "CH1": "var GKILicensingLDAPService = new Terrasoft.Configuration.GKILicensingLDAPService();\nSet(\"result1\", GKILicensingLDAPService.GKILDAPSync());\nreturn true;",
           "CH2": true
         },
         {

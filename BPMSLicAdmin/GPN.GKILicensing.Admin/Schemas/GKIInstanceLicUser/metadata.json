@@ -77,7 +77,15 @@
   "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
   "S2": "90b65bf8-0ffc-4141-8779-2420877af907"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","3773e77c-c6df-ad22-b726-fb7e7c4ca1bd","b26ac24d-a67a-2ff3-7e48-d35d4bd16e5e","1bc1c6a2-4b45-1631-683c-86b836b9d59a","28061208-db9a-63ff-d216-8d09098a0441","540573f4-1657-3d61-4e45-5b4f10c7feab","28889ba8-8c96-6053-d27a-1c5ff50b5c55"]
++ MetaData.Schema.D2 {
+  "UId": "af1bdc8a-9f9b-75a0-6691-3e42969e2c20",
+  "A2": "GKIRegistrationDate",
+  "A3": "52a6c08c-f01b-552e-bc79-0745fbbf0f80",
+  "A4": "52a6c08c-f01b-552e-bc79-0745fbbf0f80",
+  "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
+  "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","3773e77c-c6df-ad22-b726-fb7e7c4ca1bd","b26ac24d-a67a-2ff3-7e48-d35d4bd16e5e","1bc1c6a2-4b45-1631-683c-86b836b9d59a","28061208-db9a-63ff-d216-8d09098a0441","540573f4-1657-3d61-4e45-5b4f10c7feab","28889ba8-8c96-6053-d27a-1c5ff50b5c55","af1bdc8a-9f9b-75a0-6691-3e42969e2c20"]
 = MetaData.Schema.D20.A2 "GKIInstanceLicUserEvents"
 - MetaData.Schema.EG1.B6
 - MetaData.Schema.EG1.BK29

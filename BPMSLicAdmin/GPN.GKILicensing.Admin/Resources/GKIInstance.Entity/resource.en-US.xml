@@ -6,11 +6,14 @@
 			<Item Name="Columns.GKIApplicationStatus.Caption" Value="Статус" />
 			<Item Name="Columns.GKICustomerID.Caption" Value="Идентификатор компании" />
 			<Item Name="Columns.GKIInstanceUnit.Caption" Value="Экземпляр" />
+			<Item Name="Columns.GKIIsLimitApllied.Caption" Value="Учитывать лимит" />
 			<Item Name="Columns.GKILastSyncError.Caption" Value="Последняя ошибка" />
 			<Item Name="Columns.GKILastSyncSuccess.Caption" Value="Последняя синхронизация успешна?" />
+			<Item Name="Columns.GKILastTlrInstallError.Caption" Value="Ошибка формирования файла-запроса лицензий" />
 			<Item Name="Columns.GKILastTlsInstallError.Caption" Value="Последняя ошибка установки файла лицензий" />
 			<Item Name="Columns.GKIName.Caption" Value="Название" />
 			<Item Name="Columns.GKINotes.Caption" Value="Заметки" />
+			<Item Name="Columns.GKITlrFile.Caption" Value="Файл tlr" />
 			<Item Name="Columns.GKITlsFile.Caption" Value="Файл tls" />
 			<Item Name="Columns.GKIUrl.Caption" Value="Адрес" />
 			<Item Name="Columns.GKIVersion.Caption" Value="Версия приложения" />

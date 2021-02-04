@@ -3,6 +3,10 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="GKILicensingLDAPService" />
+			<Item Name="LocalizableStrings.ExceptionRemindingDescription.Value" Value="Выявленная ошибка доступна для просмотра в журнале процессов." />
+			<Item Name="LocalizableStrings.ExceptionRemindingSubject.Value" Value="Процесс синхронизации с LDAP завершен с ошибкой. " />
+			<Item Name="LocalizableStrings.SuccessRemindingDescription.Value" Value="Данные раздела “Пользователи платформы” обновлены." />
+			<Item Name="LocalizableStrings.SuccessRemindingSubject.Value" Value="Процесс синхронизации с LDAP завершен успешно." />
 		</Items>
 	</Group>
 </Resources>

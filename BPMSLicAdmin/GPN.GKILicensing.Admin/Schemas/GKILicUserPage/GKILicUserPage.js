@@ -1,4 +1,4 @@
-define("GKILicUserPage", ["ServiceHelper"], function(ServiceHelper) {
+define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities"], function(ServiceHelper, ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "GKILicUser",
 		attributes: {},
@@ -60,17 +60,18 @@ define("GKILicUserPage", ["ServiceHelper"], function(ServiceHelper) {
 
 			/**
 			 * @public
-			 * @desc вызывает сервис обновления лицензий для одного пользователя
+			 * @desc вызывает процесс обновления лицензий для одного пользователя
 			 */
 			onGKILicUserSyncButtonClick: function() {
-				var serviceData = {
-					licPackageIds: null, 
-					instanceIds: null, 
-					licUserIds: [this.get("Id")]
+				var args = {
+					name: "GKILicensingLicUserSyncFilterProcess",
+					parameters: {
+						licUserId: this.get("Id")
+					}
 				};
-				ServiceHelper.callService("GKILicensingAdminService", "GKIGoMakeThemChangeLicenseQueueFilterMethod",  
-					function(response) {}, serviceData, this);
+				ProcessModuleUtilities.startBusinessProcess(args);
 				this.showInformationDialog(this.get("Resources.Strings.GKISyncHasStarted"));
+				return;
 			},
 
 			// getGKILicUserInstanceLicPackageDetailFilter: function() {

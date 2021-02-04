@@ -8,6 +8,7 @@
 			<Item Name="LocalizableStrings.GKILicDetailDetailCaptionOnPage.Value" Value="Зарегистрированные лицензии" />
 			<Item Name="LocalizableStrings.GKINoSuitableInstances.Value" Value="Нет подходящих приложений для загрузки" />
 			<Item Name="LocalizableStrings.GKITlrRequestButtonCaption.Value" Value="Запросить лицензии" />
+			<Item Name="LocalizableStrings.GKITlrRequestProcessReminder.Value" Value="Операция начата. По окончании вам отобразится уведомление" />
 			<Item Name="LocalizableStrings.GKITlsDownloadButtonCaption.Value" Value="Загрузить лицензии" />
 			<Item Name="LocalizableStrings.GKITlsInstallationHasStarted.Value" Value="Установка начата. По окончании вам отобразится уведомление" />
 			<Item Name="LocalizableStrings.GKITlsInstallButtonCaption.Value" Value="Установить лицензии" />

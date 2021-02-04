@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "162248bc-d4ea-440c-bc60-04fd4c864e24",
+    "Name": "GKILicenseCheckThePulseProcess",
+    "ModifiedOnUtc": "\/Date(1611829885000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Проверка пульса подчиненных экземпляров"
+  }
+}

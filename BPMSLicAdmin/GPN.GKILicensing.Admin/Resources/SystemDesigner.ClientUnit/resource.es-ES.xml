@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Resources Culture="es-ES">
-	<Group Type="String">
-		<Items>
-			<Item Name="LocalizableStrings.LdapLinkCaption.Value" Value="Esquema de la página principal - ITIL Service Enterprise" />
-		</Items>
-	</Group>
-</Resources>

@@ -10,6 +10,7 @@
 			<Item Name="Columns.GKILastSyncDateTime.Caption" Value="Дата распределения" />
 			<Item Name="Columns.GKILicPackage.Caption" Value="Продукт" />
 			<Item Name="Columns.GKILicUser.Caption" Value="Пользователь" />
+			<Item Name="Columns.GKIReserved.Caption" Value="Лицензия забронирована" />
 			<Item Name="Columns.GKISyncedState.Caption" Value="Распределено" />
 			<Item Name="Columns.GKISyncError.Caption" Value="Ошибки при распределении" />
 			<Item Name="EventsProcessSchema.BaseElements.ScriptTask1_0129549d77d74509b7b1cb704738da76.Caption" Value="UpdateLicPackageUserDetail" />

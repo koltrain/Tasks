@@ -1,4 +1,4 @@
-define("GKICustomerIDPage", ["ServiceHelper"], function(ServiceHelper) {
+define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities"], function(ServiceHelper, ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "GKICustomerID",
 		attributes: {
@@ -111,33 +111,15 @@ define("GKICustomerIDPage", ["ServiceHelper"], function(ServiceHelper) {
 			 * @desc формирование запроса на tlr-файл
 			 */
 			onGKITlrRequestButtonClick: function() {
-				this.showBodyMask();
-				var serviceData = {
-					recordId: this.get("Id")
+				var args = {
+					name: "GKITlrRequestProcess",
+					parameters: {
+						CustomerId: this.get("Id")
+					}
 				};
-				ServiceHelper.callService("GKILicensingAdminService", "GKITlrRequest",  function(response) {
-					this.hideBodyMask();
-					var responseMessage = "";
-					if (!response.GKITlrRequestResult) {
-						if (response.responseText) {
-							console.log(response.responseText);
-						}
-						if (response.message){
-							responseMessage = response.message;
-						}
-						else if (response.statusText) {
-							responseMessage = response.statusText;
-						}
-						else {
-							responseMessage = "Unknown error";
-						}
-						return;
-					}
-					else {
-						responseMessage = response.GKITlrRequestResult;
-					}
-					this.showInformationDialog(responseMessage);
-				}, serviceData, this);
+				ProcessModuleUtilities.startBusinessProcess(args);
+				this.showInformationDialog(this.get("Resources.Strings.GKITlrRequestProcessReminder"));
+				return;
 			},
 			
 			/**

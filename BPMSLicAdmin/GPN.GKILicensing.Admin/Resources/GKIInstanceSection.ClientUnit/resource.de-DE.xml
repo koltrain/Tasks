@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Resources Culture="de-DE">
-	<Group Type="String">
-		<Items>
-			<Item Name="LocalizableStrings.AddChartButtonCaption.Caption" Value="Neues Chart" />
-		</Items>
-	</Group>
-</Resources>

@@ -7,6 +7,7 @@
 			<Item Name="LocalizableStrings.GKILicPackageUserDetailCaption.Value" Value="Продукт лицензирования пользователя " />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailcae8122eDetailCaptionOnPage.Value" Value="Лицензии пользователей платформы" />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Лицензии пользователя" />
+			<Item Name="LocalizableStrings.GKISyncHasStarted.Value" Value="Процесс обновления лицензий пользователя запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели." />
 			<Item Name="LocalizableStrings.LicensesTabCaption.Value" Value="Лицензии" />
 		</Items>
 	</Group>

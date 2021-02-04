@@ -11,9 +11,11 @@
 			<Item Name="LocalizableStrings.GenerateReportWithoutFiltersConfirmationMessage.Value" Value="Отчет будет сформирован по всем записям раздела, без учета фильтров. Продолжить?" />
 			<Item Name="LocalizableStrings.GKILdapSyncIsInProcessReminder.Value" Value="Процесс синхронизации с LDAP запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели" />
 			<Item Name="LocalizableStrings.GKILicenseSyncRegularButtonCaption.Value" Value="Синхронизировать с экземплярами" />
+			<Item Name="LocalizableStrings.GKILicenseSyncRegularProcessReminder.Value" Value="Синхронизация начата. По окончании вам отобразится уведомление в коммуникационной панели" />
 			<Item Name="LocalizableStrings.GKILicSyncLDAPButtonCaption.Value" Value="Синхронизировать с LDAP" />
+			<Item Name="LocalizableStrings.GKILicUserSyncConfirmation.Value" Value="Инициирован запуск процесса обновления лицензий пользователей приложений платформы. Вы подтверждаете запуск процесса?" />
 			<Item Name="LocalizableStrings.GKISyncComplete.Value" Value="Синхронизация завершена" />
-			<Item Name="LocalizableStrings.GKISyncIsInProcessReminder.Value" Value="Обновление начато. По окончании обновления каждого стенда вам будет приходить уведомление о его результате" />
+			<Item Name="LocalizableStrings.GKISyncIsInProcessReminder.Value" Value="Процесс обновления лицензий пользователей запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели." />
 			<Item Name="LocalizableStrings.OpenNewSectionDesignerButtonCaption.Caption" Value="Message to user 1" />
 			<Item Name="LocalizableStrings.ProsessButtonCaption.Caption" Value="Процесс" />
 			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Подписаться на обновление ленты" />

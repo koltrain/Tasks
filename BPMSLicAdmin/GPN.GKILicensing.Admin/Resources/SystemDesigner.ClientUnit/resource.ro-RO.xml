@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Resources Culture="ro-RO">
-	<Group Type="String">
-		<Items>
-			<Item Name="LocalizableStrings.LdapLinkCaption.Value" Value="Setare integrare LDAP" />
-		</Items>
-	</Group>
-</Resources>

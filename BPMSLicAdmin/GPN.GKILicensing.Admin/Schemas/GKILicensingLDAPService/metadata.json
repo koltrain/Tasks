@@ -6,7 +6,36 @@
       "A2": "GKILicensingLDAPService",
       "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
       "B1": [],
-      "B2": [],
+      "B2": [
+        {
+          "UId": "71bca27c-9282-46fd-679f-153af25fe9f3",
+          "A2": "SuccessRemindingDescription",
+          "A3": "8ea622cf-3c03-bf6a-cfea-a478dc98261c",
+          "A4": "8ea622cf-3c03-bf6a-cfea-a478dc98261c",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "3b31f16f-049f-5c91-f143-e2eaf9b296af",
+          "A2": "SuccessRemindingSubject",
+          "A3": "8ea622cf-3c03-bf6a-cfea-a478dc98261c",
+          "A4": "8ea622cf-3c03-bf6a-cfea-a478dc98261c",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "1d7ab056-7177-e707-5eb0-c35b0e645fd8",
+          "A2": "ExceptionRemindingDescription",
+          "A3": "8ea622cf-3c03-bf6a-cfea-a478dc98261c",
+          "A4": "8ea622cf-3c03-bf6a-cfea-a478dc98261c",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "413575b6-c774-5aa9-2260-4bc0bbf940f0",
+          "A2": "ExceptionRemindingSubject",
+          "A3": "8ea622cf-3c03-bf6a-cfea-a478dc98261c",
+          "A4": "8ea622cf-3c03-bf6a-cfea-a478dc98261c",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        }
+      ],
       "B3": [],
       "B6": "3716e58e-ad82-22ae-4451-78d83916585d",
       "B8": "7.17.0.2164",

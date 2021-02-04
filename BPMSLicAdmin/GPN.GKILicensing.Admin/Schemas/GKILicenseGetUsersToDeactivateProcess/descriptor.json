@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "b7f73e55-a789-4932-b3ae-6c50f12fb0fd",
+    "Name": "GKILicenseGetUsersToDeactivateProcess",
+    "ModifiedOnUtc": "\/Date(1611660852000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Поиск претендентов на деактивацию лицензий"
+  }
+}

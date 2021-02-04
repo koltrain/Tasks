@@ -17,76 +17,87 @@ namespace Terrasoft.Configuration
 			base.OnUpdating(sender, e);
 			var entity = (Entity)sender;
 			var userConnection = entity.UserConnection;
-
-			var oldStatus = entity.GetTypedOldColumnValue<bool>("GKIActive");
-			var curStatus = entity.GetTypedColumnValue<bool>("GKIActive");
-			#region GKILicUserInstanceLicPackageQueue
 			try
 			{
-				if (oldStatus != curStatus)
+				var oldStatus = entity.GetTypedOldColumnValue<bool>("GKIActive");
+				var curStatus = entity.GetTypedColumnValue<bool>("GKIActive");
+				var oldBySyncStatus = entity.GetTypedOldColumnValue<bool>("GKIDeactivatedBySync");
+				var curBySyncStatus = entity.GetTypedColumnValue<bool>("GKIDeactivatedBySync");
+				#region GKILicUserInstanceLicPackageQueue
+				try
 				{
-					var rootSchema = userConnection.EntitySchemaManager.GetInstanceByName("GKILicUserInstanceLicPackageQueue");
-					Entity queueEntity = rootSchema.CreateEntity(userConnection);
-					if (!queueEntity.FetchFromDB("GKILicUserInstanceLicPackage", entity.GetTypedOldColumnValue<Guid>("Id")))
+					if (oldStatus != curStatus)
 					{
-						queueEntity.SetDefColumnValues();
-						queueEntity.SetColumnValue("GKILicUserInstanceLicPackageId", entity.GetTypedOldColumnValue<Guid>("Id"));
-						queueEntity.Save();
+						var rootSchema = userConnection.EntitySchemaManager.GetInstanceByName("GKILicUserInstanceLicPackageQueue");
+						Entity queueEntity = rootSchema.CreateEntity(userConnection);
+						if (!queueEntity.FetchFromDB("GKILicUserInstanceLicPackage", entity.GetTypedOldColumnValue<Guid>("Id")))
+						{
+							queueEntity.SetDefColumnValues();
+							queueEntity.SetColumnValue("GKILicUserInstanceLicPackageId", entity.GetTypedOldColumnValue<Guid>("Id"));
+							queueEntity.Save();
+						}
+
+						//if it's not auto deactivation anymore
+						if (curBySyncStatus == oldBySyncStatus && curBySyncStatus == true)
+						{
+							entity.SetColumnValue("GKIDeactivatedBySync", false);
+							entity.SetColumnValue("GKIDeactivationReasonLookupId", null);
+						}
 					}
-
-					//it's not auto deactivation anymore
-					entity.SetColumnValue("GKIDeactivatedBySync", false);
-					entity.SetColumnValue("GKIDeactivationReasonLookupId", null);
 				}
+				catch (Exception ex)
+				{
+					Console.Write(ex.Message);
+				}
+				#endregion
+				#region GKILicUser
+				// GKILicUser.GKISyncedState is deprecated
+				/* 
+				try
+				{
+					bool aggrStatus;
+					if (curStatus != true)
+					{
+						//this record isn't active anymore, so we're looking for any other record to be active
+						//is there any active record at all except this one? (because it is still active! it's not saved!)
+						var rootSchema = userConnection.EntitySchemaManager.FindInstanceByName("GKILicUserInstanceLicPackage");
+						var esqActive = new EntitySchemaQuery(rootSchema);
+						EntitySchemaQueryColumn countActive = esqActive.AddColumn("Id");
+						countActive.SummaryType = AggregationType.Count;
+						esqActive.Filters.Add(
+							esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKISyncedState", true));
+						esqActive.Filters.Add(
+							esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicUser", entity.GetTypedColumnValue<Guid>("GKILicUserId")));
+						esqActive.Filters.Add(
+							esqActive.CreateFilterWithParameters(FilterComparisonType.NotEqual, "Id", entity.GetTypedColumnValue<Guid>("Id")));
+						Entity summaryEntity = esqActive.GetSummaryEntity(userConnection);
+
+						int activeRecs = summaryEntity.GetTypedColumnValue<int>(countActive.Name);
+						aggrStatus = activeRecs > 0 ? true : false;
+					}
+					else
+					{
+						//if ar least one record is active (in this case our record), then the GKILicUser should be active
+						aggrStatus = curStatus;
+					}
+					//update
+					var GKILicUserUpdate = new EntitySchemaQuery(userConnection.EntitySchemaManager, "GKILicUser");
+					GKILicUserUpdate.AddColumn("GKISyncedState");
+					var GKILicUserUpdateEntity = GKILicUserUpdate.GetEntity(userConnection, entity.GetTypedColumnValue<Guid>("GKILicUserId"));
+					GKILicUserUpdateEntity.SetColumnValue("GKISyncedState", aggrStatus);
+					GKILicUserUpdateEntity.Save();
+				}
+				catch (Exception ex)
+				{
+					Console.Write(ex.Message);
+				}
+				*/
+				#endregion
 			}
-			catch (Exception ex)
-			{
+            catch (Exception ex)
+            {
 				Console.Write(ex.Message);
 			}
-			#endregion
-			#region GKILicUser
-			// GKILicUser.GKISyncedState is deprecated
-			/* 
-			try
-			{
-				bool aggrStatus;
-				if (curStatus != true)
-				{
-					//this record isn't active anymore, so we're looking for any other record to be active
-					//is there any active record at all except this one? (because it is still active! it's not saved!)
-					var rootSchema = userConnection.EntitySchemaManager.FindInstanceByName("GKILicUserInstanceLicPackage");
-					var esqActive = new EntitySchemaQuery(rootSchema);
-					EntitySchemaQueryColumn countActive = esqActive.AddColumn("Id");
-					countActive.SummaryType = AggregationType.Count;
-					esqActive.Filters.Add(
-						esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKISyncedState", true));
-					esqActive.Filters.Add(
-						esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicUser", entity.GetTypedColumnValue<Guid>("GKILicUserId")));
-					esqActive.Filters.Add(
-						esqActive.CreateFilterWithParameters(FilterComparisonType.NotEqual, "Id", entity.GetTypedColumnValue<Guid>("Id")));
-					Entity summaryEntity = esqActive.GetSummaryEntity(userConnection);
-
-					int activeRecs = summaryEntity.GetTypedColumnValue<int>(countActive.Name);
-					aggrStatus = activeRecs > 0 ? true : false;
-				}
-				else
-				{
-					//if ar least one record is active (in this case our record), then the GKILicUser should be active
-					aggrStatus = curStatus;
-				}
-				//update
-				var GKILicUserUpdate = new EntitySchemaQuery(userConnection.EntitySchemaManager, "GKILicUser");
-				GKILicUserUpdate.AddColumn("GKISyncedState");
-				var GKILicUserUpdateEntity = GKILicUserUpdate.GetEntity(userConnection, entity.GetTypedColumnValue<Guid>("GKILicUserId"));
-				GKILicUserUpdateEntity.SetColumnValue("GKISyncedState", aggrStatus);
-				GKILicUserUpdateEntity.Save();
-			}
-			catch (Exception ex)
-			{
-				Console.Write(ex.Message);
-			}
-			*/
-			#endregion
 		}
 	}
 
