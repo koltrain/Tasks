@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Resources Culture="en-US">
+<Resources Culture="ru-RU">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="GKILicensingRegularService" />
 			<Item Name="LocalizableStrings.PulseAuditLogDescBeginningRu.Value" Value="Отказ авторизации пользователя " />
 			<Item Name="LocalizableStrings.PulseAuditLogDescEndingRu.Value" Value=". IP-адрес" />
-			<Item Name="LocalizableStrings.PulseAuditLogDescRu.Value" Value="нет лицензии" />
+			<Item Name="LocalizableStrings.PulseAuditLogDescRu.Value" Value="%нет лицензии%" />
 		</Items>
 	</Group>
 </Resources>

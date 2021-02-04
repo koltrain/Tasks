@@ -6,7 +6,29 @@
       "A2": "GKILicensingRegularService",
       "A5": "bb83d3ce-9dea-4e28-98ab-6cf4a6110371",
       "B1": [],
-      "B2": [],
+      "B2": [
+        {
+          "UId": "2cc2ef89-cff4-85b3-f952-b282e532b215",
+          "A2": "PulseAuditLogDescEndingRu",
+          "A3": "e1137bb0-cc6a-bcc0-239c-77ea2481894d",
+          "A4": "e1137bb0-cc6a-bcc0-239c-77ea2481894d",
+          "A5": "bb83d3ce-9dea-4e28-98ab-6cf4a6110371"
+        },
+        {
+          "UId": "3124bfe7-6e88-a091-5f8c-489005384ce8",
+          "A2": "PulseAuditLogDescBeginningRu",
+          "A3": "e1137bb0-cc6a-bcc0-239c-77ea2481894d",
+          "A4": "e1137bb0-cc6a-bcc0-239c-77ea2481894d",
+          "A5": "bb83d3ce-9dea-4e28-98ab-6cf4a6110371"
+        },
+        {
+          "UId": "daff84cc-774f-1ad4-01e6-ee5d2ee470ba",
+          "A2": "PulseAuditLogDescRu",
+          "A3": "e1137bb0-cc6a-bcc0-239c-77ea2481894d",
+          "A4": "e1137bb0-cc6a-bcc0-239c-77ea2481894d",
+          "A5": "bb83d3ce-9dea-4e28-98ab-6cf4a6110371"
+        }
+      ],
       "B3": [],
       "B6": "0ab01e6b-1fc8-97ca-4a85-e8c9842d6aac",
       "B8": "7.17.0.2164",

@@ -3,6 +3,7 @@ namespace Terrasoft.Configuration
 	using System;
 	using System.Collections.Generic;
 	using System.Collections.ObjectModel;
+	using System.Data;
 	using System.Linq;
 	using System.IO;
 	using System.Text;
@@ -27,11 +28,11 @@ namespace Terrasoft.Configuration
 		public GKILicUserSyncResult GKIAddLicense(List<LicUserData> userLicensePair)
 		{
 			if (!GKIIsSysAdmin())
-            {
-				GKILicUserSyncResult errorResult = new GKILicUserSyncResult { 
-					ErrMsg = "Provided user has no System administrator rights. Operation has been aborted",
+			{
+				GKILicUserSyncResult errorResult = new GKILicUserSyncResult {
+					ErrMsg = GKINoAdminRightsError,
 					Success = false,
-					LicUserSyncResults = null} ;
+					LicUserSyncResults = null };
 				return errorResult;
 			}
 			GKILicUserSyncResult licUserSyncResult = GKIAddOrRemoveLicense(userLicensePair, true);
@@ -47,7 +48,7 @@ namespace Terrasoft.Configuration
 			{
 				GKILicUserSyncResult errorResult = new GKILicUserSyncResult
 				{
-					ErrMsg = "Provided user has no System administrator rights. Operation has been aborted",
+					ErrMsg = GKINoAdminRightsError,
 					Success = false,
 					LicUserSyncResults = null
 				};
@@ -127,8 +128,8 @@ namespace Terrasoft.Configuration
 								});
 							}
 						}
-                        else
-                        {
+						else
+						{
 							//have license already been removed?
 							var sysLicUserESQ = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "SysLicUser");
 							sysLicUserESQ.UseAdminRights = false;
@@ -184,7 +185,7 @@ namespace Terrasoft.Configuration
 			}
 		}
 		private int GKIRemoveLicensesRequest(Guid userIdGuid, string licenseName)
-        {
+		{
 			var delete = new Delete(UserConnection).From("SysLicUser")
 				.Where("SysUserId").IsEqual(Column.Parameter(userIdGuid))
 				.And("SysLicPackageId").In(
@@ -205,7 +206,7 @@ namespace Terrasoft.Configuration
 			{
 				UsersSyncResult errorResult = new UsersSyncResult
 				{
-					ErrMsg = "Provided user has no System administrator rights. Operation has been aborted",
+					ErrMsg = GKINoAdminRightsError,
 					Success = false,
 					UserSyncResultSysAdminUnit = null
 				};
@@ -225,29 +226,33 @@ namespace Terrasoft.Configuration
 				var SysLicPackageNameClm = sysLicUserESQ.AddColumn("SysLicPackage.Name").Name;
 				//TODO: filter by LDAPEntryId is not empty?
 				var sysLicUserESQCollection = sysLicUserESQ.GetEntityCollection(UserConnection);
-				List<Entity> sysLicUserESQCollectionList = sysLicUserESQCollection.ToList(); 
+				List<Entity> sysLicUserESQCollectionList = sysLicUserESQCollection.ToList();
 
 				var sysAdminUnitESQ = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "SysAdminUnit");
 				sysAdminUnitESQ.UseAdminRights = false;
 				sysAdminUnitESQ.AddAllSchemaColumns();
-				var lastActivityDateTimeColumn = sysAdminUnitESQ.AddColumn(sysAdminUnitESQ.CreateAggregationFunction(AggregationTypeStrict.Max, "[SysUserSession:SysUser].SessionStartDate"));
+				var lastActivityDateTimeColumn = sysAdminUnitESQ.AddColumn(sysAdminUnitESQ.CreateAggregationFunction(AggregationTypeStrict.Max,
+					"[SysUserSession:SysUser].SessionStartDate"));
 				sysAdminUnitESQ.Filters.Add(sysAdminUnitESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysAdminUnitTypeValue", 4)); //users
-				//TODO: filter by LDAPEntryId is not empty?
+																																				 //TODO: filter by LDAPEntryId is not empty?
 				var sysAdminUnitESQCollection = sysAdminUnitESQ.GetEntityCollection(UserConnection);
 				usersSyncResult.UserSyncResultSysAdminUnit = new List<UserSyncResultSysAdminUnit>();
 
 				foreach (Entity sysAdminUnitEntity in sysAdminUnitESQCollection)
-                {
+				{
 					UserSyncResultSysAdminUnit userSAU = new UserSyncResultSysAdminUnit();
 					userSAU.Active = sysAdminUnitEntity.GetTypedColumnValue<bool>("Active");
 					userSAU.Name = sysAdminUnitEntity.GetTypedColumnValue<string>("Name");
 					DateTime? lastActivityDateTime = sysAdminUnitEntity.GetTypedColumnValue<DateTime>(lastActivityDateTimeColumn.Name);
 					if (lastActivityDateTime != null && lastActivityDateTime > DateTime.MinValue)
 						userSAU.LastActivityDateTime = lastActivityDateTime;
+					DateTime? registrationDateTime = sysAdminUnitEntity.GetTypedColumnValue<DateTime>("CreatedOn");
+					if (registrationDateTime != null && registrationDateTime > DateTime.MinValue)
+						userSAU.RegistrationDateTime = registrationDateTime;
 					userSAU.UserSyncResultSysLicUser = new List<UserSyncResultSysLicUser>();
 					usersSyncResult.UserSyncResultSysAdminUnit.Add(userSAU);
 					foreach (Entity sysLicPackage in sysLicPackageESQCollection)
-                    {
+					{
 						UserSyncResultSysLicUser userSLU = new UserSyncResultSysLicUser();
 						userSLU.SysLicPackageName = sysLicPackage.GetTypedColumnValue<string>("Name");
 						userSLU.Active = sysLicUserESQCollectionList.Find(c => (c.GetTypedColumnValue<Guid>("SysUserId") == sysAdminUnitEntity.GetTypedColumnValue<Guid>("Id")) &&
@@ -273,7 +278,7 @@ namespace Terrasoft.Configuration
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
 		ResponseFormat = WebMessageFormat.Json)]
 		public string GKIAuthCheck()
-        {
+		{
 			return "ok";
 		}
 
@@ -281,12 +286,12 @@ namespace Terrasoft.Configuration
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare,
 		ResponseFormat = WebMessageFormat.Json)]
 		public LicenseInfoResult GKIGetInstalledLicensesInfo()
-        {
+		{
 			LicenseInfoResult licenseInfoResult = new LicenseInfoResult();
 			licenseInfoResult.LicenseInfoList = new List<LicenseInfo>();
 			if (!GKIIsSysAdmin())
 			{
-				licenseInfoResult.ErrMsg = "Provided user has no System administrator rights. Operation has been aborted";
+				licenseInfoResult.ErrMsg = GKINoAdminRightsError;
 				licenseInfoResult.Success = false;
 				licenseInfoResult.LicenseInfoList = null;
 				return licenseInfoResult;
@@ -303,8 +308,8 @@ namespace Terrasoft.Configuration
 			sysLicESQ.Filters.Add(
 				sysLicESQ.CreateFilterWithParameters(FilterComparisonType.Greater, "DueDate", DateTime.Now));
 			var sysLicESQCollection = sysLicESQ.GetEntityCollection(UserConnection);
-			foreach(Entity sysLicEntity in sysLicESQCollection)
-            {
+			foreach (Entity sysLicEntity in sysLicESQCollection)
+			{
 				licenseInfoResult.LicenseInfoList.Add(new LicenseInfo
 				{
 					SysLicPackageName = sysLicEntity.GetTypedColumnValue<string>(SysLicPackageNameColumn),
@@ -357,7 +362,7 @@ namespace Terrasoft.Configuration
 			TlsCustomInstallResult tlsCustomInstallResult = new TlsCustomInstallResult();
 			if (!GKIIsSysAdmin())
 			{
-				tlsCustomInstallResult.errorInfo = "Provided user has no System administrator rights. Operation has been aborted";
+				tlsCustomInstallResult.errorInfo = GKINoAdminRightsError;
 				tlsCustomInstallResult.success = false;
 				return tlsCustomInstallResult;
 			}
@@ -409,6 +414,79 @@ namespace Terrasoft.Configuration
 			return tlsCustomInstallResult;
 		}
 
+		[OperationContract]
+		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare,
+		ResponseFormat = WebMessageFormat.Json)]
+		public PulseData GKIPulse()
+		{
+			PulseData pulseData = new PulseData();
+			if (!GKIIsSysAdmin())
+			{
+				pulseData.isSuccess = false;
+				pulseData.errorMsg = GKINoAdminRightsError;
+				return pulseData;
+			}
+
+			//outgoing list
+			pulseData.pulseLicUserNames = new List<string>();
+
+			string pulseAuditLogDescBeginningRu = new LocalizableString(UserConnection.Workspace.ResourceStorage,
+						"GKILicensingRegularService",
+						"LocalizableStrings.PulseAuditLogDescBeginningRu.Value");
+			string pulseAuditLogDescEndingRu = new LocalizableString(UserConnection.Workspace.ResourceStorage,
+						"GKILicensingRegularService",
+						"LocalizableStrings.PulseAuditLogDescEndingRu.Value");
+			string pulseAuditLogDescRu = new LocalizableString(UserConnection.Workspace.ResourceStorage,
+						"GKILicensingRegularService",
+						"LocalizableStrings.PulseAuditLogDescRu.Value");
+			
+			DateTime searchFromDateTime = Terrasoft.Core.Configuration.SysSettings.GetValue(UserConnection, "GKILicensingLastPulseDateTime", DateTime.MinValue);
+			Terrasoft.Core.Configuration.SysSettings.SetDefValue(UserConnection, "GKILicensingLastPulseDateTime", DateTime.UtcNow);
+			//audit log select
+			var auditSelect =
+				new Select(UserConnection)
+					.Column("Description")
+				.From("SysOperationAudit")
+				.Where("ResultId").IsEqual(Column.Parameter(sysOperationResultAuthorizationDeniedId))
+				.And("TypeId").IsEqual(Column.Parameter(sysOperationTypeUserAuthorizationId))
+				.And("OwnerId").IsNull()
+				.And("CreatedOn").IsGreaterOrEqual(Column.Parameter(searchFromDateTime))
+				.And().OpenBlock("Description").IsLike(Column.Parameter(pulseAuditLogDescEn))
+				.Or("Description").IsLike(Column.Parameter(pulseAuditLogDescRu)).CloseBlock()
+				as Select;
+			using (DBExecutor dbExecutor = UserConnection.EnsureDBConnection())
+			{
+				using (IDataReader dr = auditSelect.ExecuteReader(dbExecutor))
+				{
+					string bufferString;
+					while (dr.Read())
+					{
+						bufferString = dr.GetString(0);
+						if (bufferString.StartsWith(pulseAuditLogDescBeginningEn) || bufferString.StartsWith(pulseAuditLogDescBeginningRu))
+						{
+							if (bufferString.StartsWith(pulseAuditLogDescBeginningEn))
+							{
+								bufferString = bufferString.Substring(pulseAuditLogDescBeginningEn.Length,
+									bufferString.IndexOf(pulseAuditLogDescEndingEn) - (pulseAuditLogDescBeginningEn.Length));
+							}
+							if (bufferString.StartsWith(pulseAuditLogDescBeginningRu))
+							{
+								bufferString = bufferString.Substring(pulseAuditLogDescBeginningRu.Length,
+									bufferString.IndexOf(pulseAuditLogDescEndingRu) - (pulseAuditLogDescBeginningRu.Length));
+							}
+
+							if (!pulseData.pulseLicUserNames.Contains(bufferString))
+								pulseData.pulseLicUserNames.Add(bufferString);
+						}
+					}
+				}
+			}
+
+			pulseData.isSuccess = true;
+			pulseData.errorMsg = String.Empty;
+			return pulseData;
+		}
+
 		private List<string> GetMissingLicenses(IEnumerable<string> grantedLicenses, IEnumerable<string> licenses)
 		{
 			return licenses.Except(grantedLicenses).ToList();
@@ -441,12 +519,12 @@ namespace Terrasoft.Configuration
 		}
 
 		private bool GKIIsSysAdmin()
-        {
+		{
 			var userId = UserConnection.CurrentUser.Id;
 			if (userId == null || userId == Guid.Empty)
-            {
+			{
 				return false;
-            }
+			}
 			var sysAdminid = BaseConsts.SystemAdministratorsSysAdminUnitId;
 			var schema = UserConnection.EntitySchemaManager.GetInstanceByName("SysUserInRole");
 			var entity = schema.CreateEntity(UserConnection);
@@ -457,6 +535,21 @@ namespace Terrasoft.Configuration
 			};
 			return entity.ExistInDB(sysCondition);
 		}
+
+		public class PulseData
+		{
+			public bool isSuccess { get; set; }
+			public string errorMsg { get; set; }
+			public List<string> pulseLicUserNames { get; set; } = null;
+		}
+
+		public class TlrLicData
+		{
+			public string licData { get; set; }
+			public string errorInfo { get; set; }
+			public bool success { get; set; }
+		}
+
 		public class TlsCustomInstallResult
 		{
 			public string errorInfo { get; set; }
@@ -471,10 +564,10 @@ namespace Terrasoft.Configuration
 		{
 			public bool Success { get; set; }
 			public string ErrMsg { get; set; }
-			public List<LicenseInfo> LicenseInfoList { get; set;}
-        }
+			public List<LicenseInfo> LicenseInfoList { get; set; }
+		}
 		public class LicenseInfo
-        {
+		{
 			public string SysLicPackageName { get; set; }
 			public DateTime StartDate { get; set; }
 			public int LicType { get; set; }
@@ -482,7 +575,7 @@ namespace Terrasoft.Configuration
 			public int Count { get; set; }
 			public int CountUsed { get; set; }
 			public bool Active { get; set; }
-        }
+		}
 		public class LicUserSyncResult
 		{
 			public string LicUserName { get; set; }
@@ -506,6 +599,7 @@ namespace Terrasoft.Configuration
 			public string Name { get; set; }
 			public bool Active { get; set; }
 			public DateTime? LastActivityDateTime { get; set; }
+			public DateTime? RegistrationDateTime { get; set; }
 			public List<UserSyncResultSysLicUser> UserSyncResultSysLicUser { get; set; }
 		}
 		public class UserSyncResultSysLicUser
@@ -521,6 +615,12 @@ namespace Terrasoft.Configuration
 			public string ErrMsg { get; set; }
 		}
 
-		string GKITlsInstallRegularServiceUrl = "/0/ServiceModel/LicenseService.svc/UploadLicenses";
+		public static readonly string GKITlsInstallRegularServiceUrl = "/0/ServiceModel/LicenseService.svc/UploadLicenses";
+		public static readonly string GKINoAdminRightsError = "Provided user has no System administrator rights. Operation has been aborted";
+		public static readonly Guid sysOperationTypeUserAuthorizationId = new Guid(("1c128638-0dbc-45f7-a6d2-77600296b854").ToUpper());
+		public static readonly Guid sysOperationResultAuthorizationDeniedId = new Guid(("247ad3fe-c5e9-4ee9-b3d6-b1ec2ed12fa2").ToUpper());
+		public static readonly string pulseAuditLogDescEn = "%license is missing or expired%";
+		public static readonly string pulseAuditLogDescBeginningEn = "Authorization denied for user ";
+		public static readonly string pulseAuditLogDescEndingEn = ". IP Address";
 	}
 }
