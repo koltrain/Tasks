@@ -1,0 +1,28 @@
+﻿{
+  "Descriptor": {
+    "UId": "a4450e30-c53b-4700-837b-c3f89abe7cd3",
+    "Name": "SysModule",
+    "ModifiedOnUtc": "\/Date(1612465985000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "2b2ed767-0b4b-4a7b-9de2-d48e14a2c0c5",
+      "Name": "SysModule"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "dedaabd6-732d-47ac-b229-50a8ee02292c",
+        "IsForceUpdate": true,
+        "IsKey": false,
+        "ColumnName": "IsSystem",
+        "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
+      }
+    ]
+  }
+}

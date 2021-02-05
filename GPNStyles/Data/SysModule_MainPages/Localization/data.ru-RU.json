@@ -1,0 +1,61 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
+          "Value": "08d7dcf9-9bd0-4900-8832-1ad46e9414e2"
+        },
+        {
+          "SchemaColumnUId": "3da3c3b2-02fb-4cca-80c3-7946d4e8f565",
+          "ColumnName": "Caption",
+          "Value": "Главная страница портала"
+        },
+        {
+          "SchemaColumnUId": "7b904e78-84bf-408c-a7a1-1287e66837d3",
+          "ColumnName": "ModuleHeader",
+          "Value": ""
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
+          "Value": "199c794c-14fe-4b22-a11a-20e941e3458d"
+        },
+        {
+          "SchemaColumnUId": "3da3c3b2-02fb-4cca-80c3-7946d4e8f565",
+          "ColumnName": "Caption",
+          "Value": "Главная страница"
+        },
+        {
+          "SchemaColumnUId": "7b904e78-84bf-408c-a7a1-1287e66837d3",
+          "ColumnName": "ModuleHeader",
+          "Value": ""
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
+          "Value": "bd15c9c5-fb2a-4b29-9b99-f6b3f9f97613"
+        },
+        {
+          "SchemaColumnUId": "3da3c3b2-02fb-4cca-80c3-7946d4e8f565",
+          "ColumnName": "Caption",
+          "Value": "Главная страница системы"
+        },
+        {
+          "SchemaColumnUId": "7b904e78-84bf-408c-a7a1-1287e66837d3",
+          "ColumnName": "ModuleHeader",
+          "Value": ""
+        }
+      ]
+    }
+  ]
+}

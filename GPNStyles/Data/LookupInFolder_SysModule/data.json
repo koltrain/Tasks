@@ -1,0 +1,22 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "f1586469-ae5f-42f7-a995-2301e6c5d610",
+          "DisplayValue": "Управление стартовой страницей"
+        },
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "8568beda-87ff-4808-8bf4-621499067be1"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "3a177637-cac0-457d-83c2-6d1d4cf092c0",
+          "DisplayValue": "Раздел"
+        }
+      ]
+    }
+  ]
+}

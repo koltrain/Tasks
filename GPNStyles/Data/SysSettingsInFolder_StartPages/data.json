@@ -1,0 +1,40 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "e3e4ebd3-19ec-4277-b2c6-a033aa09d094",
+          "DisplayValue": "Управление стартовой страницей"
+        },
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "0f4f3cd9-86cd-4723-b056-da595b6b817f"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "68478bb7-ec38-4301-a129-9d5d2efe3c39",
+          "DisplayValue": "Главная страница системы"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "e3e4ebd3-19ec-4277-b2c6-a033aa09d094",
+          "DisplayValue": "Управление стартовой страницей"
+        },
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "d4200d32-bd8c-4321-84a8-2287c4035577"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "2e878b70-644b-4c2b-8c6a-8e8528af7e47",
+          "DisplayValue": "Стартовая страница портала"
+        }
+      ]
+    }
+  ]
+}
