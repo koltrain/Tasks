@@ -2,6 +2,7 @@
 <Resources Culture="ru-RU">
 	<Group Type="String">
 		<Items>
+			<Item Name="LocalizableStrings.GKILicensingLinkCaption.Value" Value="Настройка службы лицензирования" />
 			<Item Name="LocalizableStrings.LdapLinkCaption.Value" Value="Настройка интеграции с LDAP" />
 		</Items>
 	</Group>

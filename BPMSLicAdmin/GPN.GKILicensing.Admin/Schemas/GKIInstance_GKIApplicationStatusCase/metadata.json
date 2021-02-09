@@ -3,7 +3,7 @@
     "Schema": {
       "ManagerName": "DcmSchemaManager",
       "UId": "486c9f77-540d-41ff-a6e1-3df0ce68f97f",
-      "A2": "GKICase_GKIInstance_GKIApplicationStatus1",
+      "A2": "GKIInstance_GKIApplicationStatusCase",
       "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
       "B1": [],
       "B2": [],

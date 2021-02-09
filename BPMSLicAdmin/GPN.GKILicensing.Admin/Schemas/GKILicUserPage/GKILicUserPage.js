@@ -1,7 +1,14 @@
-define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities"], function(ServiceHelper, ProcessModuleUtilities) {
+define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtilities"], 
+	function(ServiceHelper, ProcessModuleUtilities, RightUtilities) {
 	return {
 		entitySchemaName: "GKILicUser",
-		attributes: {},
+		attributes: {
+			"isGKIButtonsEnabled": {
+				dataValueType: Terrasoft.DataValueType.BOOLEAN,
+				type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				value: false
+			},
+		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		messages: {
 			"GKILicUserSyncCombinedMessage": {
@@ -25,7 +32,7 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities"], function(S
 					"detailColumn": "GKILicUser",
 					"masterColumn": "Id"
 				}
-                //"filterMethod": "getGKILicUserInstanceLicPackageDetailFilter"
+				//"filterMethod": "getGKILicUserInstanceLicPackageDetailFilter"
 			},
 			"GKIInstanceLicUserDetail": {
 				"schemaName": "GKIInstanceLicUserDetail",
@@ -35,7 +42,7 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities"], function(S
 					"masterColumn": "Id"
 				}
 			},
-			"GKILicPackageUserDetail":{
+			"GKILicPackageUserDetail": {
 				"schemaName": "GKILicPackageDetailWithEdit",
 				"entitySchemaName": "GKILicPackageUser",
 				"filter": {
@@ -57,6 +64,13 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities"], function(S
 					this.sandbox.id.indexOf("_CardModuleV2") < 1 ? 
 					this.sandbox.id.length : this.sandbox.id.indexOf("_CardModuleV2"))]);
 			},
+			/**
+			 * @overridden
+			 */
+			init: function() {
+				this.callParent(arguments);
+				this.isGKIButtonsEnabledMethod();
+			},
 
 			/**
 			 * @public
@@ -73,7 +87,17 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities"], function(S
 				this.showInformationDialog(this.get("Resources.Strings.GKISyncHasStarted"));
 				return;
 			},
-
+			/**
+			 * @private
+			 * @desc определение видимости кнопок по правам
+			 */
+			isGKIButtonsEnabledMethod: function() {
+				RightUtilities.checkCanExecuteOperation({
+					operation: "GKICanManageLicensingSettings"
+				}, function(result) {
+					this.set("isGKIButtonsEnabled", result);
+				}, this);
+			}
 			// getGKILicUserInstanceLicPackageDetailFilter: function() {
 			// 	const licStatusActive = "672f84f8-45de-4383-8220-a805b30b745e";
 			// 	var UserId = this.get("Id");
@@ -101,18 +125,178 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities"], function(S
 						"bindTo": "onGKILicUserSyncButtonClick"
 					},
 					"visible": true,
-					"enabled": true,
+					"enabled": {"bindTo": "isGKIButtonsEnabled"},
 					"classes": {
 						"textClass": [
 							"actions-button-margin-right"
 						],
-						"wrapperClass": [ 
+						"wrapperClass": [
 							"actions-button-margin-right"
 						]
 					}
 				},
 				"parentName": "LeftContainer",
 				"propertyName": "items",
+				"index": 7
+			},
+			{
+				"operation": "insert",
+				"name": "GKIMSADFullName",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 0,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "GKIMSADFullName",
+					"enabled": false
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GKIName",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 1,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "GKIName",
+					"enabled": false
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "GKIMSADPhone",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 2,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "GKIMSADPhone"
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "GKIMSADEMail",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 3,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "GKIMSADEMail"
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "GKIMSADJobTitle",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 4,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "GKIMSADJobTitle"
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "GKIPlatformActive",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 5,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "GKIPlatformActive",
+					"enabled": false
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 5
+			},
+			{
+				"operation": "insert",
+				"name": "GKIActive",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 6,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "GKIActive",
+					"enabled": false
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 6
+			},
+			{
+				"operation": "insert",
+				"name": "GKIMSADActive",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 7,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "GKIMSADActive",
+					"enabled": false
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 7
+			},
+			{
+				"operation": "insert",
+				"name": "GKIIsVIP",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 8,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "GKIIsVIP",
+					"enabled": false
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 8
 			},
 			{
 				"operation": "insert",
@@ -226,172 +410,7 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities"], function(S
 				"parentName": "NotesControlGroup",
 				"propertyName": "items",
 				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "GKIMSADFullName",
-				"values": {
-					"layout": {
-						"colSpan": 24,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 0,
-						"layoutName": "Header"
-					},
-					"bindTo": "GKIMSADFullName"
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "insert",
-				"name": "GKIMSADLogin",
-				"values": {
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 1,
-						"layoutName": "Header"
-					},
-					"bindTo": "GKIMSADLogin",
-					"enabled": false
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "GKIName",
-				"values": {
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 12,
-						"row": 1,
-						"layoutName": "Header"
-					},
-					"bindTo": "GKIName",
-					"enabled": false
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 2
-			},
-			{
-				"operation": "insert",
-				"name": "GKIMSADEMail",
-				"values": {
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 2,
-						"layoutName": "Header"
-					},
-					"bindTo": "GKIMSADEMail"
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 3
-			},
-			{
-				"operation": "insert",
-				"name": "GKIMSADJobTitle",
-				"values": {
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 12,
-						"row": 2,
-						"layoutName": "Header"
-					},
-					"bindTo": "GKIMSADJobTitle"
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 4
-			},
-			{
-				"operation": "insert",
-				"name": "GKIMSADPhone",
-				"values": {
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 3,
-						"layoutName": "Header"
-					},
-					"bindTo": "GKIMSADPhone"
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 5
-			},
-			{
-				"operation": "insert",
-				"name": "GKIPlatformActive",
-				"values": {
-					"layout": {
-						"colSpan": 8,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 5,
-						"layoutName": "Header"
-					},
-					"bindTo": "GKIPlatformActive",
-					"enabled": false
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 6
-			},
-			{
-				"operation": "insert",
-				"name": "GKIActive",
-				"values": {
-					"layout": {
-						"colSpan": 8,
-						"rowSpan": 1,
-						"column": 8,
-						"row": 5,
-						"layoutName": "Header"
-					},
-					"bindTo": "GKIActive",
-					"enabled": false
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 7
-			},
-			{
-				"operation": "insert",
-				"name": "GKIMSADActive",
-				"values": {
-					"layout": {
-						"colSpan": 8,
-						"rowSpan": 1,
-						"column": 16,
-						"row": 5,
-						"layoutName": "Header"
-					},
-					"bindTo": "GKIMSADActive",
-					"enabled": false
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 8
-			},
-			{
-				"operation": "merge",
-				"name": "ESNTab",
-				"values": {
-					"order": 2
-				}
-			},
+			}
 		]/**SCHEMA_DIFF*/
 	};
 });

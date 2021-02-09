@@ -2,12 +2,13 @@
   "Descriptor": {
     "UId": "51315d45-4a9b-82b4-da23-3e0c17bb97e0",
     "Name": "GKIApplicationStatus",
-    "ModifiedOnUtc": "\/Date(1607608206000)\/",
+    "ModifiedOnUtc": "\/Date(1612540779000)\/",
     "Parent": {
       "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
       "Name": "BaseLookup"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Статус приложения"
+    "Caption": "Статус приложения",
+    "DependsOn": []
   }
 }

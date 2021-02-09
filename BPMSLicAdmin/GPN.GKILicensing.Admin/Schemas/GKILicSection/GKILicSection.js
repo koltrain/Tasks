@@ -2,7 +2,6 @@ define("GKILicSection", ["ConfigurationEnums"], function(ConfigurationEnums) {
 	return {
 		entitySchemaName: "GKILic",
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
-		diff: /**SCHEMA_DIFF*/[]/**SCHEMA_DIFF*/,
 		methods: {
 			/**
 			 * Opens edit page for record by primary column value.
@@ -27,7 +26,16 @@ define("GKILicSection", ["ConfigurationEnums"], function(ConfigurationEnums) {
 						break;
 				}
 			},
-
+			/**
+			 * @overridden
+			 * @desc удаление "Импорт данных" в меню "Действия"
+			 */
+			getDataImportMenuItemVisible: Terrasoft.emptyFn,
+			/**
+			 * @overridden
+			 * @desc удаление "Удалить" в меню "Действия"
+			 */
+			isVisibleDeleteAction: Terrasoft.emptyFn,
 			/**
 			 * @public
 			 * @desc Открытие страницы продукта лицензирования (GKILicPackage)
@@ -37,6 +45,23 @@ define("GKILicSection", ["ConfigurationEnums"], function(ConfigurationEnums) {
 				var primaryColumnValue = this.getActiveRow().get("GKILicPackage")?.value;
 				this.openCard(schemaName, ConfigurationEnums.CardStateV2.EDIT, primaryColumnValue);
 			}
-		}
+		},
+		diff: /**SCHEMA_DIFF*/[
+			{
+				"operation": "remove",
+				"name": "SeparateModeAddRecordButton",
+				"parentName": "SeparateModeActionButtonsContainer"
+			},
+			{ 
+				"operation": "remove",
+				"name": "DataGridActiveRowCopyAction",
+				"parentName": "DataGrid",
+			},
+			{ 
+				"operation": "remove",
+				"name": "DataGridActiveRowDeleteAction",
+				"parentName": "DataGrid",
+			}
+		]/**SCHEMA_DIFF*/
 	};
 });

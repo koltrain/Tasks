@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Схема детали: &quot;Лицензии пользователей платформы для деактивации&quot;" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Лицензии пользователей платформы для деактивации" />
+		</Items>
+	</Group>
+</Resources>

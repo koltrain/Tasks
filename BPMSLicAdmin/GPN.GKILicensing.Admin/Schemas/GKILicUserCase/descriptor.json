@@ -1,8 +1,8 @@
 ﻿{
   "Descriptor": {
     "UId": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
-    "Name": "GKICase_GKILicUser",
-    "ModifiedOnUtc": "\/Date(1609235555000)\/",
+    "Name": "GKILicUserCase",
+    "ModifiedOnUtc": "\/Date(1612422363000)\/",
     "ManagerName": "DcmSchemaManager",
     "Caption": "ЖЦ Карточки Пользователя платформы"
   }

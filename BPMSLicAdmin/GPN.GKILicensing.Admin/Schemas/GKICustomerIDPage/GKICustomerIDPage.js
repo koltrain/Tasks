@@ -1,16 +1,17 @@
-define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities"], function(ServiceHelper, ProcessModuleUtilities) {
+define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtilities"],
+	function(ServiceHelper, ProcessModuleUtilities, RightUtilities) {
 	return {
 		entitySchemaName: "GKICustomerID",
 		attributes: {
-			"GKITlsInstallButtonEnabled": {
-				"dataValueType": this.Terrasoft.DataValueType.BOOLEAN,
-				"type": this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
-				"value": false,
-			},
 			"GKITlsDownloadFixAttempt": {
 				"dataValueType": this.Terrasoft.DataValueType.BOOLEAN,
 				"type": this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
 				"value": false,
+			},
+			"isGKIButtonsEnabled": {
+				dataValueType: Terrasoft.DataValueType.BOOLEAN,
+				type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				value: false
 			},
 		},
 		messages: {
@@ -85,12 +86,19 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities"], functio
 			},
 
 			/**
+			 * @overridden
+			 */
+			updateButtonsVisibility: function() {
+				this.callParent(arguments);
+				this.GKIShowCloseButton();
+			},
+
+			/**
 			 * @public
 			 * @desc enabled и visible кнопок
 			 */
 			GKIButtonsValidating: function() {
-				this.onGKITlsInstallButtonEnabled();
-				this.GKIPublishAttributesMsg();
+				this.isGKIButtonsEnabledMethod(this.GKIPublishAttributesMsg, this);
 			},
 
 			/**
@@ -100,8 +108,8 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities"], functio
 			GKIPublishAttributesMsg: function() {
 				this.sandbox.publish("GKIPublishAttributesMsg", [
 					{
-						name: "GKITlsInstallButtonEnabled",
-						value: this.get("GKITlsInstallButtonEnabled")
+						name: "isGKIButtonsEnabled",
+						value: this.get("isGKIButtonsEnabled")
 					},
 				], [this.sandbox.id]);
 			},
@@ -185,14 +193,6 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities"], functio
 				}, serviceData, this);
 			},
 			/**
-			 * @public
-			 * @desc доступность кнопки установки лицензий
-			 */
-			onGKITlsInstallButtonEnabled: function() {
-				this.set("GKITlsInstallButtonEnabled", true); //доступность установки теперь проверяется после нажатия кнопки для каждого инстанса
-			},
-
-			/**
 			 * @private
 			 * @desc returns file config
 			 */
@@ -252,6 +252,40 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities"], functio
 					this.showInformationDialog(this.get("Resources.Strings.GKIFileHasBeenLoaded"));
 				}
 			},
+			/**
+			 * @private
+			 * @desc определение видимости кнопок по правам
+			 */
+			isGKIButtonsEnabledMethod: function(callback, scope) {
+				RightUtilities.checkCanExecuteOperation({
+					operation: "GKICanManageLicensingSettings"
+				}, function(result) {
+					this.set("isGKIButtonsEnabled", result);
+					if (callback){
+						Ext.callback(callback, scope || this);
+					}
+				}, this);
+			},
+			/**
+			 * @private
+			 * @desc определение видимости кнопки закрытия
+			 */
+			GKIShowCloseButton: function() {
+				this.set("ShowCloseButton", false);
+				var esq = this.Ext.create("Terrasoft.EntitySchemaQuery", {
+					rootSchemaName: "GKICustomerID"
+				});
+				esq.addColumn("Id");
+				esq.getEntityCollection(function(response) {
+					if (response.success && response.collection.getItems().length === 1 
+						&& response.collection.getItems()[0]) {
+							this.set("ShowCloseButton", false);
+					}
+					else{
+						this.set("ShowCloseButton", true);
+					}
+				}, this);
+			}
 		},
 		diff: /**SCHEMA_DIFF*/[
 			{
@@ -265,7 +299,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities"], functio
 					"caption": {"bindTo": "Resources.Strings.GKITlrRequestButtonCaption"},
 					"click": {"bindTo": "onGKITlrRequestButtonClick"},
 					"visible": true,
-					"enabled": true,
+					"enabled": {"bindTo": "isGKIButtonsEnabled"},
 					"classes": {
 						"textClass": ["actions-button-margin-right"],
 						"wrapperClass": ["actions-button-margin-right"]
@@ -287,7 +321,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities"], functio
 					},
 					"fileTypeFilter": [".tls"],
 					"visible": true,
-					"enabled": true,
+					"enabled": {"bindTo": "isGKIButtonsEnabled"},
 					"classes": {
 						"textClass": ["actions-button-margin-right"],
 						"wrapperClass": ["actions-button-margin-right"]
@@ -305,7 +339,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities"], functio
 					"caption": {"bindTo": "Resources.Strings.GKITlsInstallButtonCaption"},
 					"click": {"bindTo": "onGKITlsInstallButtonClick"},
 					"visible": true,
-					"enabled": {"bindTo": "GKITlsInstallButtonEnabled"},
+					"enabled": {"bindTo": "isGKIButtonsEnabled"},
 					"classes": {
 						"textClass": ["actions-button-margin-right"],
 						"wrapperClass": ["actions-button-margin-right"]

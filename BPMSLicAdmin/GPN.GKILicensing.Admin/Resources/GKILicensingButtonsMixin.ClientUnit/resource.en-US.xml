@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Миксин функций кнопок службы лицензирования" />
+			<Item Name="LocalizableStrings.GKILicUserSyncConfirmation.Value" Value="Инициирован запуск процесса обновления лицензий пользователей приложений платформы. Вы подтверждаете запуск процесса?" />
+			<Item Name="LocalizableStrings.GKISyncIsInProcessReminder.Value" Value="Процесс обновления лицензий пользователей запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели." />
+		</Items>
+	</Group>
+</Resources>

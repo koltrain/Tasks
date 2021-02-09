@@ -4,6 +4,7 @@
 		<Items>
 			<Item Name="Caption" Value="Пользователь платформы" />
 			<Item Name="Columns.GKIActive.Caption" Value="Активен на приложениях" />
+			<Item Name="Columns.GKIIsVIP.Caption" Value="VIP" />
 			<Item Name="Columns.GKILastLicDistributionDateTime.Caption" Value="Дата последней раздачи лицензии" />
 			<Item Name="Columns.GKIMSADActive.Caption" Value="Существует в MS AD" />
 			<Item Name="Columns.GKIMSADEMail.Caption" Value="Email" />

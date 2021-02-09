@@ -1,9 +1,9 @@
-define("GKICustomerIDSection", [], function() {
+define("GKICustomerIDSection", ["RightUtilities"], function(RightUtilities) {
 	return {
 		entitySchemaName: "GKICustomerID",
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
 		attributes: {
-			"GKITlsInstallButtonEnabled": {
+			"isGKIButtonsEnabled": {
 				"dataValueType": this.Terrasoft.DataValueType.BOOLEAN,
 				"type": this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
 				"value": false,
@@ -32,7 +32,7 @@ define("GKICustomerIDSection", [], function() {
 					"click": {"bindTo": "onGKISectionButtonClick"},
 					"tag": "GKITlrRequestButton",
 					"visible": true,
-					"enabled": true,
+					"enabled": {"bindTo": "isGKIButtonsEnabled"},
 					"classes": {
 						"textClass": ["actions-button-margin-right"],
 						"wrapperClass": ["actions-button-margin-right"]
@@ -54,7 +54,7 @@ define("GKICustomerIDSection", [], function() {
 					},
 					"fileTypeFilter": [".tls"],
 					"visible": true,
-					"enabled": true,
+					"enabled": {"bindTo": "isGKIButtonsEnabled"},
 					"classes": {
 						"textClass": ["actions-button-margin-right"],
 						"wrapperClass": ["actions-button-margin-right"]
@@ -73,7 +73,7 @@ define("GKICustomerIDSection", [], function() {
 					"click": {"bindTo": "onGKISectionButtonClick"},
 					"tag": "GKITlsInstallButton",
 					"visible": true,
-					"enabled": {"bindTo": "GKITlsInstallButtonEnabled"},
+					"enabled": {"bindTo": "isGKIButtonsEnabled"},
 					"classes": {
 						"textClass": ["actions-button-margin-right"],
 						"wrapperClass": ["actions-button-margin-right"]
@@ -82,6 +82,30 @@ define("GKICustomerIDSection", [], function() {
 			}
 		]/**SCHEMA_DIFF*/,
 		methods: {
+			/**
+			 * @overridden
+			 * @desc открывает страницу раздела, если она одна
+			 */
+			init: function() {
+				var parentMethod = this.getParentMethod();
+				var args = arguments;
+				var esq = this.Ext.create("Terrasoft.EntitySchemaQuery", {
+					rootSchemaName: "GKICustomerID"
+				});
+				esq.addColumn("Id");
+				esq.getEntityCollection(function(response) {
+					if (response.success && response.collection.getItems().length === 1 
+						&& response.collection.getItems()[0]) {
+						this.sandbox.publish("PushHistoryState", {
+							hash: "CardModuleV2/GKICustomerIDPage/edit/" + 
+								response.collection.getItems()[0].get("Id")
+						});
+					}
+					else{
+						parentMethod.apply(this, args);
+					}
+				}, this);
+			},
 			/**
 			 * @overridden
 			 */
@@ -120,7 +144,7 @@ define("GKICustomerIDSection", [], function() {
 			 */
 			onGKITlsDownloadButtonFilesLoaded: function(files) {
 				this.sandbox.publish("GKISectionButtonMessage", {buttonName: "GKITlsDownloadButton", files: files}, [this.sandbox.id]);
-			}
+			},
 		}
 	};
 });

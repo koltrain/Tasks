@@ -16,6 +16,7 @@
 = MetaData.Schema.EG1.BK4.["dbf48103-dcf6-4f53-a052-d727a95ea0b4"].CK2.["933bf2fc-d052-40c8-a3e0-bf60049da5d8"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["f0646c74-f291-474f-9a10-143ee868f1c9"].CK2.["b3d5b61f-7afe-48b5-a8cc-40317ea9c428"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
++ MetaData.Schema.D15 true
 = MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
 + MetaData.Schema.D4 "1d5b4259-8e51-ca3e-5d00-2cc2cca9ec16"
 - MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E15
@@ -69,6 +70,7 @@
   "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "6f8e22ee-f482-4f7a-6cff-adc2daf7e6bc",
+  "E2": 1,
   "E6": true,
   "E17": "GKICustomerIDId",
   "E18": "GKICustomerIDName"

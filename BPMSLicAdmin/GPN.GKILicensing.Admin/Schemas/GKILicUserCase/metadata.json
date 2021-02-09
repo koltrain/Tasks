@@ -3,7 +3,7 @@
     "Schema": {
       "ManagerName": "DcmSchemaManager",
       "UId": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
-      "A2": "GKICase_GKILicUser",
+      "A2": "GKILicUserCase",
       "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
       "B1": [],
       "B2": [],
@@ -47,6 +47,7 @@
           "A3": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
           "A4": "bc8cde82-cc4e-418e-a987-d0ab2d52b86a",
           "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
+          "ParentStageUId": "d7e7e334-11b2-4113-9e1d-57471ad69ba4",
           "Color": "#c73920",
           "StageRecordId": "cc6f7010-a1a1-4f45-bd1a-3281f6cc81cd",
           "Elements": []

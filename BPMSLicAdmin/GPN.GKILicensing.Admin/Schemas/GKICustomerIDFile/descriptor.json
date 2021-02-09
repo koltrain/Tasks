@@ -2,12 +2,13 @@
   "Descriptor": {
     "UId": "2b54c689-2699-4051-8e80-e3938c3b8494",
     "Name": "GKICustomerIDFile",
-    "ModifiedOnUtc": "\/Date(1608277591000)\/",
+    "ModifiedOnUtc": "\/Date(1612540955000)\/",
     "Parent": {
       "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
       "Name": "File"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Файл и ссылка объекта Идентификатор компании"
+    "Caption": "Файл и ссылка объекта Базовый справочник",
+    "DependsOn": []
   }
 }

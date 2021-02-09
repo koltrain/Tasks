@@ -1,11 +1,11 @@
-define("GKILicenseGetUsersToDeactivateProcessPage", [], function() {
+define("GKILicenseGetUsersToDeactivateProcessPage", ["GKILicensingButtonsMixin"], function() {
 	return {
 		entitySchemaName: "",
 		attributes: {},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
 			"GKILicUserInstanceLicPackageDetail": {
-				"schemaName": "GKILicUserInstanceLicPackageDetail",
+				"schemaName": "GKILicUserInstanceLicPackageDeactivationOnlyDetail",
 				"entitySchemaName": "GKILicUserInstanceLicPackage",
 				"filter": {
 					"detailColumn": "GKIDeactivatedBySync",
@@ -15,6 +15,9 @@ define("GKILicenseGetUsersToDeactivateProcessPage", [], function() {
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {},
+		mixins: {
+			GKILicensingButtonsMixin: "Terrasoft.GKILicensingButtonsMixin"
+		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
@@ -36,6 +39,25 @@ define("GKILicenseGetUsersToDeactivateProcessPage", [], function() {
 				"parentName": "ProcessActionButtons",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "GKILicUserSyncButton",
+				"parentName": "ProcessActionButtons",
+				"propertyName": "items",
+				"values": {
+					"itemType": Terrasoft.ViewItemType.BUTTON,
+					"style": Terrasoft.controls.ButtonEnums.style.DEFAULT,
+					"caption": {"bindTo": "Resources.Strings.GKILicUserSyncButtonCaption"},
+					"click": {"bindTo": "onGKILicUserSyncButtonClick"},
+					"visible": true,
+					"enabled": true,
+					"classes": {
+						"textClass": ["actions-button-margin-right"],
+						"wrapperClass": ["actions-button-margin-right"]
+					},
+				},
+				"index": 2
 			},
 			{
 				"operation": "merge",

@@ -2,12 +2,13 @@
   "Descriptor": {
     "UId": "672eedf9-9eb5-a7c7-6771-afb841f2bd4c",
     "Name": "GKIGroupADUsers",
-    "ModifiedOnUtc": "\/Date(1610718499000)\/",
+    "ModifiedOnUtc": "\/Date(1612541312000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Пользователи группы AD"
+    "Caption": "Пользователи группы AD",
+    "DependsOn": []
   }
 }

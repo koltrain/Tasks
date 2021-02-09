@@ -23,6 +23,8 @@ namespace Terrasoft.Configuration
 				var curStatus = entity.GetTypedColumnValue<bool>("GKIActive");
 				var oldBySyncStatus = entity.GetTypedOldColumnValue<bool>("GKIDeactivatedBySync");
 				var curBySyncStatus = entity.GetTypedColumnValue<bool>("GKIDeactivatedBySync");
+				var oldIsReservedStatus = entity.GetTypedOldColumnValue<bool>("GKIReserved");
+				var curIsReservedStatus = entity.GetTypedColumnValue<bool>("GKIReserved");
 				#region GKILicUserInstanceLicPackageQueue
 				try
 				{
@@ -50,52 +52,109 @@ namespace Terrasoft.Configuration
 					Console.Write(ex.Message);
 				}
 				#endregion
+			}
+			catch (Exception ex)
+            {
+				Console.Write(ex.Message);
+			}
+		}
+		public override void OnSaving(object sender, EntityBeforeEventArgs e)
+		{
+			base.OnSaving(sender, e);
+			var entity = (Entity)sender;
+			var userConnection = entity.UserConnection;
+			try
+			{
+				var oldIsReservedStatus = entity.GetTypedOldColumnValue<bool>("GKIReserved");
+				var curIsReservedStatus = entity.GetTypedColumnValue<bool>("GKIReserved");
 				#region GKILicUser
-				// GKILicUser.GKISyncedState is deprecated
-				/* 
 				try
 				{
-					bool aggrStatus;
-					if (curStatus != true)
+					if (oldIsReservedStatus != curIsReservedStatus)
 					{
-						//this record isn't active anymore, so we're looking for any other record to be active
-						//is there any active record at all except this one? (because it is still active! it's not saved!)
-						var rootSchema = userConnection.EntitySchemaManager.FindInstanceByName("GKILicUserInstanceLicPackage");
-						var esqActive = new EntitySchemaQuery(rootSchema);
-						EntitySchemaQueryColumn countActive = esqActive.AddColumn("Id");
-						countActive.SummaryType = AggregationType.Count;
-						esqActive.Filters.Add(
-							esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKISyncedState", true));
-						esqActive.Filters.Add(
-							esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicUser", entity.GetTypedColumnValue<Guid>("GKILicUserId")));
-						esqActive.Filters.Add(
-							esqActive.CreateFilterWithParameters(FilterComparisonType.NotEqual, "Id", entity.GetTypedColumnValue<Guid>("Id")));
-						Entity summaryEntity = esqActive.GetSummaryEntity(userConnection);
+						bool aggrStatus;
+						if (!curIsReservedStatus)
+						{
+							//this record isn't active anymore, so we're looking for any other record to be active
+							//is there any active record at all except this one? (because it is still active! it's not saved!)
+							var rootSchema = userConnection.EntitySchemaManager.FindInstanceByName("GKILicUserInstanceLicPackage");
+							var esqActive = new EntitySchemaQuery(rootSchema);
+							EntitySchemaQueryColumn countActive = esqActive.AddColumn("Id");
+							countActive.SummaryType = AggregationType.Count;
+							esqActive.Filters.Add(
+								esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKIReserved", true));
+							esqActive.Filters.Add(
+								esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicUser", entity.GetTypedColumnValue<Guid>("GKILicUserId")));
+							esqActive.Filters.Add(
+								esqActive.CreateFilterWithParameters(FilterComparisonType.NotEqual, "Id", entity.GetTypedColumnValue<Guid>("Id")));
+							Entity summaryEntity = esqActive.GetSummaryEntity(userConnection);
 
-						int activeRecs = summaryEntity.GetTypedColumnValue<int>(countActive.Name);
-						aggrStatus = activeRecs > 0 ? true : false;
+							int activeRecs = summaryEntity.GetTypedColumnValue<int>(countActive.Name);
+							aggrStatus = activeRecs > 0 ? true : false;
+
+						}
+						else
+						{
+							//if ar least one record is active (in this case our record), then the GKILicUser should be active
+							aggrStatus = curIsReservedStatus;
+						}
+						//update
+						var helperGKILicensingListenersHelper = new GKILicensingListenersHelper();
+						helperGKILicensingListenersHelper.GKILicUserIsVIPUpdate(userConnection, entity.GetTypedOldColumnValue<Guid>("GKILicUserId"), aggrStatus);
 					}
-					else
-					{
-						//if ar least one record is active (in this case our record), then the GKILicUser should be active
-						aggrStatus = curStatus;
-					}
-					//update
-					var GKILicUserUpdate = new EntitySchemaQuery(userConnection.EntitySchemaManager, "GKILicUser");
-					GKILicUserUpdate.AddColumn("GKISyncedState");
-					var GKILicUserUpdateEntity = GKILicUserUpdate.GetEntity(userConnection, entity.GetTypedColumnValue<Guid>("GKILicUserId"));
-					GKILicUserUpdateEntity.SetColumnValue("GKISyncedState", aggrStatus);
-					GKILicUserUpdateEntity.Save();
+
 				}
 				catch (Exception ex)
 				{
 					Console.Write(ex.Message);
 				}
-				*/
 				#endregion
 			}
-            catch (Exception ex)
-            {
+			catch (Exception ex)
+			{
+				Console.Write(ex.Message);
+			}
+		}
+		public override void OnDeleting(object sender, EntityBeforeEventArgs e)
+		{
+			base.OnDeleting(sender, e);
+			var entity = (Entity)sender;
+			var userConnection = entity.UserConnection;
+			try
+			{
+				#region GKILicUser
+				try
+				{
+					bool aggrStatus;
+					//this record isn't active anymore, so we're looking for any other record to be active
+					//is there any active record at all except this one? (because it is still active! it's not saved!)
+					var rootSchema = userConnection.EntitySchemaManager.FindInstanceByName("GKILicUserInstanceLicPackage");
+					var esqActive = new EntitySchemaQuery(rootSchema);
+					EntitySchemaQueryColumn countActive = esqActive.AddColumn("Id");
+					countActive.SummaryType = AggregationType.Count;
+					esqActive.Filters.Add(
+						esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKIReserved", true));
+					esqActive.Filters.Add(
+						esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicUser", entity.GetTypedOldColumnValue<Guid>("GKILicUserId")));
+					esqActive.Filters.Add(
+						esqActive.CreateFilterWithParameters(FilterComparisonType.NotEqual, "Id", entity.GetTypedOldColumnValue<Guid>("Id")));
+					Entity summaryEntity = esqActive.GetSummaryEntity(userConnection);
+
+					int activeRecs = summaryEntity.GetTypedColumnValue<int>(countActive.Name);
+					aggrStatus = activeRecs > 0 ? true : false;
+					//update
+					var helperGKILicensingListenersHelper = new GKILicensingListenersHelper();
+					helperGKILicensingListenersHelper.GKILicUserIsVIPUpdate(userConnection, entity.GetTypedOldColumnValue<Guid>("GKILicUserId"), aggrStatus);
+
+				}
+				catch (Exception ex)
+				{
+					Console.Write(ex.Message);
+				}
+				#endregion
+			}
+			catch (Exception ex)
+			{
 				Console.Write(ex.Message);
 			}
 		}
@@ -221,6 +280,46 @@ namespace Terrasoft.Configuration
 					}
 					#endregion
 				}
+			}
+			catch (Exception ex)
+			{
+				Console.Write(ex.Message);
+			}
+		}
+		public override void OnSaved(object sender, EntityAfterEventArgs e)
+		{
+			base.OnSaved(sender, e);
+			var entity = (Entity)sender;
+			var userConnection = entity.UserConnection;
+			try
+			{
+				#region GKILicUser
+				try
+				{
+					bool aggrStatus;
+					//this record isn't active anymore, so we're looking for any other record to be active
+					//is there any active record at all except this one? (because it is still active! it's not saved!)
+					var rootSchema = userConnection.EntitySchemaManager.FindInstanceByName("GKILicUserInstanceLicPackage");
+					var esqActive = new EntitySchemaQuery(rootSchema);
+					EntitySchemaQueryColumn countActive = esqActive.AddColumn("Id");
+					countActive.SummaryType = AggregationType.Count;
+					esqActive.Filters.Add(
+						esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKIReserved", true));
+					esqActive.Filters.Add(
+						esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicUser", entity.GetTypedColumnValue<Guid>("Id")));
+					Entity summaryEntity = esqActive.GetSummaryEntity(userConnection);
+
+					int activeRecs = summaryEntity.GetTypedColumnValue<int>(countActive.Name);
+					aggrStatus = activeRecs > 0 ? true : false;
+					//update
+					var helperGKILicensingListenersHelper = new GKILicensingListenersHelper();
+					helperGKILicensingListenersHelper.GKILicUserIsVIPUpdate(userConnection, entity.GetTypedColumnValue<Guid>("Id"), aggrStatus);
+				}
+				catch (Exception ex)
+				{
+					Console.Write(ex.Message);
+				}
+				#endregion
 			}
 			catch (Exception ex)
 			{
@@ -382,6 +481,17 @@ namespace Terrasoft.Configuration
 					Console.Write(ex.Message);
 				}
 			}
+		}
+
+		public bool GKILicUserIsVIPUpdate(UserConnection userConnection, Guid recordId, bool isVIP)
+        {
+			Update update = new Update(userConnection, "GKILicUser")
+				.Set("GKIIsVIP", Column.Parameter(isVIP))
+				.Where("Id")
+				.IsEqual(Column.Parameter(recordId))
+				as Update;
+			bool updateSuccess = update.Execute() > 0 ? true : false;
+			return updateSuccess;
 		}
 	}
 }

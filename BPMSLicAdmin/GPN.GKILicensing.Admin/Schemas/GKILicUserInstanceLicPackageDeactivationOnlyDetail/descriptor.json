@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "69c2f2a1-0a3b-427e-b250-9513ac53af41",
+    "Name": "GKILicUserInstanceLicPackageDeactivationOnlyDetail",
+    "ModifiedOnUtc": "\/Date(1612334592000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема детали: \"Лицензии пользователей платформы для деактивации\""
+  }
+}

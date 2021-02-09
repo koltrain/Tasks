@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "c71a170b-127c-4505-a4ef-77d8f71c2efc",
+    "Name": "GKILicensingButtonsMixin",
+    "ModifiedOnUtc": "\/Date(1612367097000)\/",
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Миксин функций кнопок службы лицензирования"
+  }
+}

@@ -54,7 +54,47 @@ define("GKIInstancePage", [], function() {
 			},
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
-		methods: {},
+		methods: {
+			/**
+			 * @overridden
+			 */
+			onEntityInitialized: function() {
+				this.callParent(arguments);
+				if (!this.get("GKICustomerID")){
+					this.GKIsetCustomerID();
+				}
+			},
+			/**
+			 * @public
+			 * @desc редактируемость поля Идентификатор клиента
+			 */
+			isGKICustomerIDEnabledMethod: function() {
+				if (!this.get("GKICustomerID")){
+					return true;
+				}
+				return false;
+			},
+			/**
+			 * @private
+			 * @desc устанавливает CustomerID в поле GKICustomerID, если существует только один CustomerID
+			 */
+			GKIsetCustomerID: function() {
+				var esq = this.Ext.create("Terrasoft.EntitySchemaQuery", {
+					rootSchemaName: "GKICustomerID"
+				});
+				esq.addColumn("Id");
+				esq.addColumn("Name");
+				esq.getEntityCollection(function(response) {
+					if (response.success && response.collection.getItems().length === 1 
+						&& response.collection.getItems()[0]) {
+							this.set("GKICustomerID", {
+								value: response.collection.getItems()[0].get("Id"),
+								displayValue: response.collection.getItems()[0].get("Name")
+							});
+					}
+				}, this);
+			}
+		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
@@ -139,7 +179,8 @@ define("GKIInstancePage", [], function() {
 						"row": 3,
 						"layoutName": "Header"
 					},
-					"bindTo": "GKICustomerID"
+					"bindTo": "GKICustomerID",
+					"enabled": {"bindTo": "isGKICustomerIDEnabledMethod"}
 				},
 				"parentName": "Header",
 				"propertyName": "items",

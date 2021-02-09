@@ -1,7 +1,7 @@
 ﻿{
   "Properties": {
     "CreatedInVersion": "7.17.0.2164",
-    "Enabled": "False",
+    "Enabled": "True",
     "EntitySchemaUId": "6f8e22ee-f482-4f7a-6cff-adc2daf7e6bc",
     "IsActiveVersion": "True",
     "IsTracing": "False",

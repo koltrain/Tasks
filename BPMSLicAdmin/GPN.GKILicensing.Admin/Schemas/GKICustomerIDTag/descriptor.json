@@ -8,6 +8,7 @@
       "Name": "BaseTag"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Тег раздела Идентификатор компании"
+    "Caption": "Тег раздела Базовый справочник",
+    "DependsOn": []
   }
 }

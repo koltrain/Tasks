@@ -160,7 +160,8 @@ define("GKILicPackagePage", [], function() {
 						"layoutName": "Header"
 					},
 					"bindTo": "GKIName",
-					"enabled": false
+					"enabled": false,
+					"isRequired": false
 				},
 				"parentName": "Header",
 				"propertyName": "items",
