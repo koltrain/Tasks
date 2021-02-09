@@ -94,7 +94,7 @@ namespace Terrasoft.Configuration
 								LicUserName = userLogin,
 								LicPackageName = licenseName,
 								isSuccess = false,
-								ErrorMsg = sysadminunitEntities.Count < 1 ? "Not any users was found with this login" : "There are more than one user with this login"
+								ErrorMsg = sysadminunitEntities.Count < 1 ? "There are no users with this login" : "There are more than one user with this login"
 							});
 							continue;
 						}
@@ -184,18 +184,6 @@ namespace Terrasoft.Configuration
 				return licUserSyncResult;
 			}
 		}
-		private int GKIRemoveLicensesRequest(Guid userIdGuid, string licenseName)
-		{
-			var delete = new Delete(UserConnection).From("SysLicUser")
-				.Where("SysUserId").IsEqual(Column.Parameter(userIdGuid))
-				.And("SysLicPackageId").In(
-					new Select(UserConnection).Column("Id")
-					.From("SysLicPackage")
-					.Where("Name")
-					.IsEqual(Column.Parameter(licenseName)));
-			var deleteResult = delete.Execute();
-			return deleteResult;
-		}
 
 		[OperationContract]
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
@@ -234,7 +222,7 @@ namespace Terrasoft.Configuration
 				var lastActivityDateTimeColumn = sysAdminUnitESQ.AddColumn(sysAdminUnitESQ.CreateAggregationFunction(AggregationTypeStrict.Max,
 					"[SysUserSession:SysUser].SessionStartDate"));
 				sysAdminUnitESQ.Filters.Add(sysAdminUnitESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysAdminUnitTypeValue", 4)); //users
-																																				 //TODO: filter by LDAPEntryId is not empty?
+				//TODO: filter by LDAPEntryId is not empty?
 				var sysAdminUnitESQCollection = sysAdminUnitESQ.GetEntityCollection(UserConnection);
 				usersSyncResult.UserSyncResultSysAdminUnit = new List<UserSyncResultSysAdminUnit>();
 
@@ -487,10 +475,24 @@ namespace Terrasoft.Configuration
 			return pulseData;
 		}
 
+		private int GKIRemoveLicensesRequest(Guid userIdGuid, string licenseName)
+		{
+			var delete = new Delete(UserConnection).From("SysLicUser")
+				.Where("SysUserId").IsEqual(Column.Parameter(userIdGuid))
+				.And("SysLicPackageId").In(
+					new Select(UserConnection).Column("Id")
+					.From("SysLicPackage")
+					.Where("Name")
+					.IsEqual(Column.Parameter(licenseName)));
+			var deleteResult = delete.Execute();
+			return deleteResult;
+		}
+
 		private List<string> GetMissingLicenses(IEnumerable<string> grantedLicenses, IEnumerable<string> licenses)
 		{
 			return licenses.Except(grantedLicenses).ToList();
 		}
+		
 		private List<string> GetGrantedLicenseNames(Collection<Guid> licenses)
 		{
 			var licenseNames = new List<string>();
