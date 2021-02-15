@@ -1,4 +1,5 @@
-define("MainHeaderSchema", ["MainHeaderSchemaResources", "IconHelper", "ConfigurationConstants", "ServiceHelper", "GPNDashboardWidgetCustomization", "css!GPNGPNStyles"], 
+define("MainHeaderSchema", ["MainHeaderSchemaResources", "IconHelper", "ConfigurationConstants", "ServiceHelper", 
+"GPNDashboardWidgetCustomization", "css!GPNGPNStyles"], 
 function(resources,iconHelper, ConfigurationConstants, serviceHelper) {
 	return {
 		attributes: {
@@ -6,6 +7,11 @@ function(resources,iconHelper, ConfigurationConstants, serviceHelper) {
 				"dataValueType": this.Terrasoft.DataValueType.TEXT,
 				"type": this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
 				"value": ""
+			},
+			"GPNHomePage": {
+				"dataValueType": this.Terrasoft.DataValueType.TEXT,
+				"type": this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				"value": "SimpleIntro"
 			},
 		},
 		messages: {},
@@ -137,7 +143,7 @@ function(resources,iconHelper, ConfigurationConstants, serviceHelper) {
 			 * @public
 			 */
 			getHomeModulePath: function() {
-				return this.Terrasoft.combinePath(ConfigurationConstants.DefaultHomeModule, Terrasoft.configuration.defaultIntroPageName);
+				return this.Terrasoft.combinePath(ConfigurationConstants.DefaultHomeModule, Terrasoft.configuration.defaultIntroPageName ?? this.get("GPNHomePage"));
 			}
 		},
 		diff: [

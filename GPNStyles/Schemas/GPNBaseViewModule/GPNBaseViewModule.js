@@ -41,7 +41,7 @@ define("GPNBaseViewModule", ["ServiceHelper"],
 			initHomePageFromSysSettingsAllEmployees: function(callback, scope) {
 				const sysSettingsCodes = ["GPNMainPage"];
 				Terrasoft.SysSettings.querySysSettings(sysSettingsCodes, function (sysSettings) {
-					if (sysSettings) {
+					if (sysSettings && sysSettings.GPNMainPage) {
 						const sysSettingsGPNMainPage = sysSettings.GPNMainPage;
 						const mainPageModuleId = sysSettingsGPNMainPage.value;
 						Terrasoft.each(Terrasoft.configuration.ModuleStructure, function(module) {

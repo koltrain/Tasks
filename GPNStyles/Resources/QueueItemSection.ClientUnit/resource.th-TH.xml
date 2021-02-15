@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Resources Culture="th-TH">
-	<Group Type="String">
-		<Items>
-			<Item Name="LocalizableStrings.GenerateReportWithoutFiltersConfirmationMessage.Value" Value="The report will be generated for all records in the section, without filters. Do you wish to proceed?" />
-		</Items>
-	</Group>
-</Resources>
