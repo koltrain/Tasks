@@ -20,6 +20,16 @@ define("GKICustomerIDSection", ["RightUtilities"], function(RightUtilities) {
 			}
 		},
 		diff: /**SCHEMA_DIFF*/[
+			{ 
+				"operation": "remove",
+				"name": "DataGridActiveRowCopyAction",
+				"parentName": "DataGrid",
+			},
+			{ 
+				"operation": "remove",
+				"name": "DataGridActiveRowDeleteAction",
+				"parentName": "DataGrid",
+			},
 			{
 				"operation": "insert",
 				"name": "GKITlrRequestButton",
@@ -106,6 +116,7 @@ define("GKICustomerIDSection", ["RightUtilities"], function(RightUtilities) {
 					}
 				}, this);
 			},
+			
 			/**
 			 * @overridden
 			 */
@@ -115,7 +126,13 @@ define("GKICustomerIDSection", ["RightUtilities"], function(RightUtilities) {
 					this.GKIUpdateAttributeFromPage(args);
 				}, this, [this.sandbox.id + "_CardModuleV2"]);
 			},
-			
+
+			/**
+			 * @overridden
+			 * @desc удаление "Удалить" в меню "Действия"
+			 */
+			isVisibleDeleteAction: Terrasoft.emptyFn,
+
 			/**
 			 * 
 			 * @public

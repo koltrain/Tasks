@@ -5,25 +5,6 @@
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
           "ColumnName": "Id",
-          "Value": "5a147f2f-0906-4c3e-b075-aa2967fadea0"
-        },
-        {
-          "SchemaColumnUId": "a215f575-7283-41bd-8852-b2415a935051",
-          "ColumnName": "Caption",
-          "Value": "Утилизация лицензий"
-        },
-        {
-          "SchemaColumnUId": "551ce105-25dc-4a76-b318-cf37635e88c3",
-          "ColumnName": "Items",
-          "Value": "{\"Chartb16d8a4c630d\":{\"parameters\":{\"seriesConfig\":[],\"orderBy\":\"GroupByField\",\"orderDirection\":\"Ascending\",\"dateTimeFormat\":null,\"caption\":\"Утилизируется по продуктам\",\"sectionId\":\"89d82ad7-1c9d-4845-82a6-e3cc01d375ca\",\"xAxisDefaultCaption\":null,\"yAxisDefaultCaption\":null,\"useEmptyValue\":false,\"isStackedChart\":false,\"primaryColumnName\":\"Id\",\"yAxisConfig\":{\"position\":0},\"schemaName\":\"GKILic\",\"sectionBindingColumn\":\"Id\",\"func\":1,\"isPercentageMode\":false,\"type\":\"pie\",\"xAxisColumn\":\"GKILicPackage\",\"yAxisColumn\":null,\"YAxisCaption\":\"шт.\",\"styleColor\":\"widget-green\",\"filterData\":\"{\\\"className\\\":\\\"Terrasoft.FilterGroup\\\",\\\"items\\\":{\\\"c301bdd4-6b06-4ba7-968d-4f26665604d2\\\":{\\\"className\\\":\\\"Terrasoft.InFilter\\\",\\\"filterType\\\":4,\\\"comparisonType\\\":3,\\\"isEnabled\\\":true,\\\"trimDateTimeParameterToDate\\\":false,\\\"leftExpression\\\":{\\\"className\\\":\\\"Terrasoft.ColumnExpression\\\",\\\"expressionType\\\":0,\\\"columnPath\\\":\\\"GKILicStatus\\\"},\\\"isAggregative\\\":false,\\\"key\\\":\\\"c301bdd4-6b06-4ba7-968d-4f26665604d2\\\",\\\"dataValueType\\\":10,\\\"leftExpressionCaption\\\":\\\"Статус\\\",\\\"referenceSchemaName\\\":\\\"GKILicStatus\\\",\\\"rightExpressions\\\":[{\\\"className\\\":\\\"Terrasoft.ParameterExpression\\\",\\\"expressionType\\\":2,\\\"parameter\\\":{\\\"className\\\":\\\"Terrasoft.Parameter\\\",\\\"dataValueType\\\":10,\\\"value\\\":{\\\"Name\\\":\\\"Активен\\\",\\\"Id\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"value\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"displayValue\\\":\\\"Активен\\\"}}}]}},\\\"logicalOperation\\\":0,\\\"isEnabled\\\":true,\\\"filterType\\\":6,\\\"rootSchemaName\\\":\\\"GKILic\\\",\\\"key\\\":\\\"\\\"}\",\"format\":{\"thousandSeparator\":\" \",\"type\":4,\"dateFormat\":\"d.m.Y\"},\"isLegendEnabled\":false},\"widgetType\":\"Chart\"},\"Indicatorba7489c4f831\":{\"parameters\":{\"caption\":\"Всего лицензий имеется\",\"sectionBindingColumn\":\"Id\",\"sectionId\":\"89d82ad7-1c9d-4845-82a6-e3cc01d375ca\",\"entitySchemaName\":\"GKILic\",\"filterData\":\"{\\\"className\\\":\\\"Terrasoft.FilterGroup\\\",\\\"items\\\":{},\\\"logicalOperation\\\":0,\\\"isEnabled\\\":true,\\\"filterType\\\":6,\\\"rootSchemaName\\\":\\\"GKILic\\\",\\\"key\\\":\\\"\\\"}\",\"aggregationType\":1,\"format\":{\"textDecorator\":\"{0} шт.\",\"type\":4,\"decimalPrecision\":0},\"style\":\"widget-blue\",\"fontStyle\":\"big-indicator-font-size\"},\"widgetType\":\"Indicator\"},\"Indicator3b8a88627bd5\":{\"parameters\":{\"caption\":\"Свободных лицензий\",\"sectionBindingColumn\":\"Id\",\"sectionId\":\"89d82ad7-1c9d-4845-82a6-e3cc01d375ca\",\"entitySchemaName\":\"GKILic\",\"filterData\":\"{\\\"className\\\":\\\"Terrasoft.FilterGroup\\\",\\\"items\\\":{\\\"a1f2b688-4031-44ba-93cf-67a0821fa11e\\\":{\\\"className\\\":\\\"Terrasoft.InFilter\\\",\\\"filterType\\\":4,\\\"comparisonType\\\":4,\\\"isEnabled\\\":true,\\\"trimDateTimeParameterToDate\\\":false,\\\"leftExpression\\\":{\\\"className\\\":\\\"Terrasoft.ColumnExpression\\\",\\\"expressionType\\\":0,\\\"columnPath\\\":\\\"GKILicStatus\\\"},\\\"isAggregative\\\":false,\\\"key\\\":\\\"a1f2b688-4031-44ba-93cf-67a0821fa11e\\\",\\\"dataValueType\\\":10,\\\"leftExpressionCaption\\\":\\\"Статус\\\",\\\"referenceSchemaName\\\":\\\"GKILicStatus\\\",\\\"rightExpressions\\\":[{\\\"className\\\":\\\"Terrasoft.ParameterExpression\\\",\\\"expressionType\\\":2,\\\"parameter\\\":{\\\"className\\\":\\\"Terrasoft.Parameter\\\",\\\"dataValueType\\\":10,\\\"value\\\":{\\\"Name\\\":\\\"Активен\\\",\\\"Id\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"value\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"displayValue\\\":\\\"Активен\\\"}}}]}},\\\"logicalOperation\\\":0,\\\"isEnabled\\\":true,\\\"filterType\\\":6,\\\"rootSchemaName\\\":\\\"GKILic\\\",\\\"key\\\":\\\"\\\"}\",\"aggregationType\":1,\"columnName\":null,\"format\":{\"textDecorator\":\"{0} шт.\",\"type\":4,\"decimalPrecision\":0},\"style\":\"widget-navy\",\"fontStyle\":\"big-indicator-font-size\"},\"widgetType\":\"Indicator\"}}"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "ColumnName": "Id",
           "Value": "df336076-9964-4b4b-9527-4ee9aadb1d83"
         },
         {
@@ -35,6 +16,25 @@
           "SchemaColumnUId": "551ce105-25dc-4a76-b318-cf37635e88c3",
           "ColumnName": "Items",
           "Value": ""
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
+          "Value": "5a147f2f-0906-4c3e-b075-aa2967fadea0"
+        },
+        {
+          "SchemaColumnUId": "a215f575-7283-41bd-8852-b2415a935051",
+          "ColumnName": "Caption",
+          "Value": "Утилизация лицензий"
+        },
+        {
+          "SchemaColumnUId": "551ce105-25dc-4a76-b318-cf37635e88c3",
+          "ColumnName": "Items",
+          "Value": "{\"Chartb16d8a4c630d\":{\"parameters\":{\"seriesConfig\":[],\"orderBy\":\"GroupByField\",\"orderDirection\":\"Ascending\",\"dateTimeFormat\":null,\"caption\":\"Утилизируется по продуктам\",\"sectionId\":\"89d82ad7-1c9d-4845-82a6-e3cc01d375ca\",\"xAxisDefaultCaption\":null,\"yAxisDefaultCaption\":null,\"useEmptyValue\":false,\"isStackedChart\":false,\"primaryColumnName\":\"Id\",\"yAxisConfig\":{\"position\":0},\"schemaName\":\"GKILic\",\"sectionBindingColumn\":\"Id\",\"func\":1,\"isPercentageMode\":false,\"type\":\"pie\",\"xAxisColumn\":\"GKILicPackage\",\"yAxisColumn\":null,\"YAxisCaption\":\"шт.\",\"styleColor\":\"widget-green\",\"filterData\":\"{\\\"className\\\":\\\"Terrasoft.FilterGroup\\\",\\\"items\\\":{\\\"c301bdd4-6b06-4ba7-968d-4f26665604d2\\\":{\\\"className\\\":\\\"Terrasoft.InFilter\\\",\\\"filterType\\\":4,\\\"comparisonType\\\":3,\\\"isEnabled\\\":true,\\\"trimDateTimeParameterToDate\\\":false,\\\"leftExpression\\\":{\\\"className\\\":\\\"Terrasoft.ColumnExpression\\\",\\\"expressionType\\\":0,\\\"columnPath\\\":\\\"GKILicStatus\\\"},\\\"isAggregative\\\":false,\\\"key\\\":\\\"c301bdd4-6b06-4ba7-968d-4f26665604d2\\\",\\\"dataValueType\\\":10,\\\"leftExpressionCaption\\\":\\\"Статус\\\",\\\"referenceSchemaName\\\":\\\"GKILicStatus\\\",\\\"rightExpressions\\\":[{\\\"className\\\":\\\"Terrasoft.ParameterExpression\\\",\\\"expressionType\\\":2,\\\"parameter\\\":{\\\"className\\\":\\\"Terrasoft.Parameter\\\",\\\"dataValueType\\\":10,\\\"value\\\":{\\\"Name\\\":\\\"Активен\\\",\\\"Id\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"value\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"displayValue\\\":\\\"Активен\\\"}}}]}},\\\"logicalOperation\\\":0,\\\"isEnabled\\\":true,\\\"filterType\\\":6,\\\"rootSchemaName\\\":\\\"GKILic\\\",\\\"key\\\":\\\"\\\"}\",\"format\":{\"thousandSeparator\":\" \",\"type\":4,\"dateFormat\":\"d.m.Y\"},\"isLegendEnabled\":false},\"widgetType\":\"Chart\"},\"Indicatorba7489c4f831\":{\"parameters\":{\"caption\":\"Всего лицензий имеется\",\"sectionBindingColumn\":\"Id\",\"sectionId\":\"89d82ad7-1c9d-4845-82a6-e3cc01d375ca\",\"entitySchemaName\":\"GKILic\",\"filterData\":\"{\\\"className\\\":\\\"Terrasoft.FilterGroup\\\",\\\"items\\\":{},\\\"logicalOperation\\\":0,\\\"isEnabled\\\":true,\\\"filterType\\\":6,\\\"rootSchemaName\\\":\\\"GKILic\\\",\\\"key\\\":\\\"\\\"}\",\"aggregationType\":1,\"format\":{\"textDecorator\":\"{0} шт.\",\"type\":4,\"decimalPrecision\":0},\"style\":\"widget-blue\",\"fontStyle\":\"big-indicator-font-size\"},\"widgetType\":\"Indicator\"},\"Indicator3b8a88627bd5\":{\"parameters\":{\"caption\":\"Свободных лицензий\",\"sectionBindingColumn\":\"Id\",\"sectionId\":\"89d82ad7-1c9d-4845-82a6-e3cc01d375ca\",\"entitySchemaName\":\"GKILic\",\"filterData\":\"{\\\"className\\\":\\\"Terrasoft.FilterGroup\\\",\\\"items\\\":{\\\"a1f2b688-4031-44ba-93cf-67a0821fa11e\\\":{\\\"className\\\":\\\"Terrasoft.InFilter\\\",\\\"filterType\\\":4,\\\"comparisonType\\\":4,\\\"isEnabled\\\":true,\\\"trimDateTimeParameterToDate\\\":false,\\\"leftExpression\\\":{\\\"className\\\":\\\"Terrasoft.ColumnExpression\\\",\\\"expressionType\\\":0,\\\"columnPath\\\":\\\"GKILicStatus\\\"},\\\"isAggregative\\\":false,\\\"key\\\":\\\"a1f2b688-4031-44ba-93cf-67a0821fa11e\\\",\\\"dataValueType\\\":10,\\\"leftExpressionCaption\\\":\\\"Статус\\\",\\\"referenceSchemaName\\\":\\\"GKILicStatus\\\",\\\"rightExpressions\\\":[{\\\"className\\\":\\\"Terrasoft.ParameterExpression\\\",\\\"expressionType\\\":2,\\\"parameter\\\":{\\\"className\\\":\\\"Terrasoft.Parameter\\\",\\\"dataValueType\\\":10,\\\"value\\\":{\\\"Name\\\":\\\"Активен\\\",\\\"Id\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"value\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"displayValue\\\":\\\"Активен\\\"}}}]}},\\\"logicalOperation\\\":0,\\\"isEnabled\\\":true,\\\"filterType\\\":6,\\\"rootSchemaName\\\":\\\"GKILic\\\",\\\"key\\\":\\\"\\\"}\",\"aggregationType\":1,\"columnName\":null,\"format\":{\"textDecorator\":\"{0} шт.\",\"type\":4,\"decimalPrecision\":0},\"style\":\"widget-navy\",\"fontStyle\":\"big-indicator-font-size\"},\"widgetType\":\"Indicator\"}}"
         }
       ]
     },

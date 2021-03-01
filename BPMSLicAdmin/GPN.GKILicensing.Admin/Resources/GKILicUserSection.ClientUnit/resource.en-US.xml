@@ -14,12 +14,19 @@
 			<Item Name="LocalizableStrings.GKIIsToShowGKIMSADActiveOnlyFilterCaption.Value" Value="Существуют в MS AD" />
 			<Item Name="LocalizableStrings.GKILdapSyncIsInProcessReminder.Value" Value="Процесс синхронизации с LDAP запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели" />
 			<Item Name="LocalizableStrings.GKILicenseSyncRegularButtonCaption.Value" Value="Синхронизировать с экземплярами" />
+			<Item Name="LocalizableStrings.GKILicenseSyncRegularButtonHint.Value" Value="Запуск процесса синхронизации данных всех пользователей приложений платформы" />
 			<Item Name="LocalizableStrings.GKILicenseSyncRegularProcessReminder.Value" Value="Синхронизация начата. По окончании вам отобразится уведомление в коммуникационной панели" />
 			<Item Name="LocalizableStrings.GKILicSyncLDAPButtonCaption.Value" Value="Синхронизировать с LDAP" />
+			<Item Name="LocalizableStrings.GKILicSyncLDAPButtonHint.Value" Value="Запуск процесса синхронизации пользователей Active Directory" />
 			<Item Name="LocalizableStrings.GKILicUserSyncButtonCaption.Value" Value="Обновить лицензии" />
+			<Item Name="LocalizableStrings.GKILicUserSyncButtonHint.Value" Value="Запуск процесса обновления лицензий выбранных/всех пользователей приложений платформы" />
+			<Item Name="LocalizableStrings.GKILicUserSyncCombinedButtonHint.Value" Value="Запуск процесса обновления лицензий текущего пользователя" />
 			<Item Name="LocalizableStrings.GKILicUserSyncConfirmation.Value" Value="Инициирован запуск процесса обновления лицензий пользователей приложений платформы. Вы подтверждаете запуск процесса?" />
 			<Item Name="LocalizableStrings.GKISyncComplete.Value" Value="Синхронизация завершена" />
 			<Item Name="LocalizableStrings.GKISyncIsInProcessReminder.Value" Value="Процесс обновления лицензий пользователей запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели." />
+			<Item Name="LocalizableStrings.LicenseSyncRegularButtonHint.Value" Value="Запуск процесса синхронизации данных всех пользователей приложений платформы" />
+			<Item Name="LocalizableStrings.LicSyncLDAPButtonHint.Value" Value="Запуск процесса синхронизации пользователей Active Directory" />
+			<Item Name="LocalizableStrings.LicUserSyncButtonHint.Value" Value="Запуск процесса обновления лицензий выбранных/всех пользователей приложений платформы" />
 			<Item Name="LocalizableStrings.OpenNewSectionDesignerButtonCaption.Caption" Value="Message to user 1" />
 			<Item Name="LocalizableStrings.ProsessButtonCaption.Caption" Value="Process" />
 			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Follow the feed" />

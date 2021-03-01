@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "52a6c08c-f01b-552e-bc79-0745fbbf0f80",
     "Name": "GKIInstanceLicUser",
-    "ModifiedOnUtc": "\/Date(1612541411000)\/",
+    "ModifiedOnUtc": "\/Date(1614357521000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"

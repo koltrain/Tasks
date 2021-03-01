@@ -3,11 +3,13 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Страница редактирования: &quot;Приложения платформы&quot;" />
+			<Item Name="LocalizableStrings.CustomerIDHint.Value" Value="Идентификатор компании для запроса и установки лицензий" />
 			<Item Name="LocalizableStrings.GeneralInfoTabCaption.Value" Value="Основная информация" />
 			<Item Name="LocalizableStrings.GKIADGroupsTabCaption.Value" Value="Группы AD" />
 			<Item Name="LocalizableStrings.GKIInstanceLicPackageDetail04d4df69DetailCaptionOnPage.Value" Value="Продукт лицензирования приложения" />
 			<Item Name="LocalizableStrings.GKIInstanceLicUserDetailDetailCaptionOnPage.Value" Value="Пользователи приложения" />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailf4638732DetailCaptionOnPage.Value" Value="Лицензии пользователей платформы" />
+			<Item Name="LocalizableStrings.IsLimitAplliedHint.Value" Value="Осуществляет запуск процесса учета лимита VIP-пользователей приложения" />
 		</Items>
 	</Group>
 </Resources>

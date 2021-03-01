@@ -3,13 +3,18 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Страница редактирования: &quot;Пользователи платформы&quot;" />
+			<Item Name="LocalizableStrings.ActiveHint.Value" Value="Активен хотя бы на одном приложении" />
 			<Item Name="LocalizableStrings.GKIInstanceLicUserDetailDetailCaptionOnPage.Value" Value="Приложения пользователя" />
 			<Item Name="LocalizableStrings.GKILicPackageUserDetailCaption.Value" Value="Продукт лицензирования пользователя " />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailcae8122eDetailCaptionOnPage.Value" Value="Categories" />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Лицензии пользователя" />
 			<Item Name="LocalizableStrings.GKILicUserSyncButtonCaption.Value" Value="Обновить лицензии" />
 			<Item Name="LocalizableStrings.GKISyncHasStarted.Value" Value="Процесс обновления лицензий пользователя запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели." />
+			<Item Name="LocalizableStrings.IsVIPHint.Value" Value="Является VIP-пользователем хотя бы на одном приложении" />
 			<Item Name="LocalizableStrings.LicensesTabCaption.Value" Value="Лицензии" />
+			<Item Name="LocalizableStrings.LicUserSyncButtonHint.Value" Value="Запуск процесса обновления лицензий текущего пользователя" />
+			<Item Name="LocalizableStrings.MSADActiveHint.Value" Value="Существует в каталоге групп пользователей Active Directory" />
+			<Item Name="LocalizableStrings.PlatformActiveHint.Value" Value="Существует хотя бы на одном приложении" />
 		</Items>
 	</Group>
 </Resources>

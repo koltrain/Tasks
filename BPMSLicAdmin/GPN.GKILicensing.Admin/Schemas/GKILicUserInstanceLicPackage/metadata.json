@@ -126,6 +126,8 @@
   "UId": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94"
 }
 ~ MetaData.Schema.EG1.JC1 ["44d1f3fc-7d57-48ad-ae95-4edfc8381c94"]
++ MetaData.Schema.D24 true
++ MetaData.Schema.D15 true
 = MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
 + MetaData.Schema.D2 {
   "UId": "b953747e-c63c-99c2-758a-1d88354a8551",
@@ -136,6 +138,7 @@
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "5cec432d-65ee-fe69-4dec-e798dfc33055",
   "E6": true,
+  "E16": true,
   "E17": "GKIInstanceId",
   "E18": "GKIInstanceGKIName"
 }
@@ -148,6 +151,7 @@
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "220a944f-6d41-4bf2-b673-941d918448bd",
   "E6": true,
+  "E16": true,
   "E17": "GKILicUserId",
   "E18": "GKILicUserGKIName"
 }
@@ -160,6 +164,7 @@
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "d7e36eec-7b63-4fed-2ffc-f8c33849a8a7",
   "E6": true,
+  "E16": true,
   "E17": "GKILicPackageId",
   "E18": "GKILicPackageGKIName"
 }
@@ -169,7 +174,8 @@
   "A3": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A4": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
-  "S2": "90b65bf8-0ffc-4141-8779-2420877af907"
+  "S2": "90b65bf8-0ffc-4141-8779-2420877af907",
+  "E16": true
 }
 + MetaData.Schema.D2 {
   "UId": "8a2cbb99-8180-c401-901e-0d1f4f32ccdb",
@@ -177,7 +183,8 @@
   "A3": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A4": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
-  "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+  "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44",
+  "E16": true
 }
 + MetaData.Schema.D2 {
   "UId": "c238e705-257a-d44f-5c2f-291f75b50eb5",
@@ -185,7 +192,8 @@
   "A3": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A4": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
-  "S2": "c0f04627-4620-4bc0-84e5-9419dc8516b1"
+  "S2": "c0f04627-4620-4bc0-84e5-9419dc8516b1",
+  "E16": true
 }
 + MetaData.Schema.D2 {
   "UId": "acd52ba5-3edf-7e73-3aec-0571aee5160b",
@@ -193,7 +201,8 @@
   "A3": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A4": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
-  "S2": "90b65bf8-0ffc-4141-8779-2420877af907"
+  "S2": "90b65bf8-0ffc-4141-8779-2420877af907",
+  "E16": true
 }
 + MetaData.Schema.D2 {
   "UId": "bff4e972-a1ba-4508-9bf1-19b8b77b54a9",
@@ -201,7 +210,8 @@
   "A3": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A4": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
-  "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+  "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44",
+  "E16": true
 }
 + MetaData.Schema.D2 {
   "UId": "2f2cc2d4-98e9-80e7-89f8-0645872e1746",
@@ -209,7 +219,8 @@
   "A3": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A4": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
-  "S2": "90b65bf8-0ffc-4141-8779-2420877af907"
+  "S2": "90b65bf8-0ffc-4141-8779-2420877af907",
+  "E16": true
 }
 + MetaData.Schema.D2 {
   "UId": "690cf569-8d5f-1349-b3ec-d65df2b3a82c",
@@ -220,6 +231,7 @@
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "7e8e518f-ee67-d33b-ba74-0c62f27408a3",
   "E6": true,
+  "E16": true,
   "E17": "GKIDeactivationReasonLookupId",
   "E18": "GKIDeactivationReasonLookupName"
 }
@@ -229,7 +241,8 @@
   "A3": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A4": "44d1f3fc-7d57-48ad-ae95-4edfc8381c94",
   "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
-  "S2": "90b65bf8-0ffc-4141-8779-2420877af907"
+  "S2": "90b65bf8-0ffc-4141-8779-2420877af907",
+  "E16": true
 }
 ~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","b953747e-c63c-99c2-758a-1d88354a8551","b76d91dc-6b3b-b1c2-14cf-cfe5474c66e8","5d7a826b-a095-a59e-50a1-5f78a6f77343","9c0f7bfb-3b90-9a90-142b-bc8d0f05cad5","8a2cbb99-8180-c401-901e-0d1f4f32ccdb","c238e705-257a-d44f-5c2f-291f75b50eb5","acd52ba5-3edf-7e73-3aec-0571aee5160b","bff4e972-a1ba-4508-9bf1-19b8b77b54a9","2f2cc2d4-98e9-80e7-89f8-0645872e1746","690cf569-8d5f-1349-b3ec-d65df2b3a82c","d28b1166-89a2-c9f1-0666-90c32f272089"]
 = MetaData.Schema.D20.A2 "GKILicUserInstanceLicPackageEvents"

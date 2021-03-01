@@ -2,7 +2,53 @@ define("GKIInstancePage", [], function() {
 	return {
 		entitySchemaName: "GKIInstance",
 		attributes: {},
-		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
+		modules: /**SCHEMA_MODULES*/{
+			"Indicator81ddd525-e83e-4dff-bf03-a9adba819e86": {
+				"moduleId": "Indicator81ddd525-e83e-4dff-bf03-a9adba819e86",
+				"moduleName": "CardWidgetModule",
+				"config": {
+					"parameters": {
+						"viewModelConfig": {
+							"widgetKey": "Indicator81ddd525-e83e-4dff-bf03-a9adba819e86",
+							"recordId": "971c0d63-3e46-4edd-98aa-4e29688416b4",
+							"primaryColumnValue": {
+								"getValueMethod": "getPrimaryColumnValue"
+							}
+						}
+					}
+				}
+			},
+			"Indicatorb1d303da-be3c-49ed-843b-c9939571e083": {
+				"moduleId": "Indicatorb1d303da-be3c-49ed-843b-c9939571e083",
+				"moduleName": "CardWidgetModule",
+				"config": {
+					"parameters": {
+						"viewModelConfig": {
+							"widgetKey": "Indicatorb1d303da-be3c-49ed-843b-c9939571e083",
+							"recordId": "971c0d63-3e46-4edd-98aa-4e29688416b4",
+							"primaryColumnValue": {
+								"getValueMethod": "getPrimaryColumnValue"
+							}
+						}
+					}
+				}
+			},
+			"Indicator5b260bc0-9bb0-4a51-8cad-7cd0c7a790d8": {
+				"moduleId": "Indicator5b260bc0-9bb0-4a51-8cad-7cd0c7a790d8",
+				"moduleName": "CardWidgetModule",
+				"config": {
+					"parameters": {
+						"viewModelConfig": {
+							"widgetKey": "Indicator5b260bc0-9bb0-4a51-8cad-7cd0c7a790d8",
+							"recordId": "971c0d63-3e46-4edd-98aa-4e29688416b4",
+							"primaryColumnValue": {
+								"getValueMethod": "getPrimaryColumnValue"
+							}
+						}
+					}
+				}
+			}
+		}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
 			"Files": {
 				"schemaName": "FileDetailV2",
@@ -51,7 +97,7 @@ define("GKIInstancePage", [], function() {
 					"detailColumn": "GKIInstance",
 					"masterColumn": "Id"
 				}
-			},
+			}
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {
@@ -97,6 +143,75 @@ define("GKIInstancePage", [], function() {
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
+			{
+				"operation": "insert",
+				"name": "Indicator81ddd525-e83e-4dff-bf03-a9adba819e86",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 4,
+						"column": 0,
+						"row": 0,
+						"layoutName": "ProfileContainer",
+						"useFixedColumnHeight": true
+					},
+					"itemType": 4,
+					"classes": {
+						"wrapClassName": [
+							"card-widget-grid-layout-item"
+						]
+					}
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Indicatorb1d303da-be3c-49ed-843b-c9939571e083",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 4,
+						"column": 0,
+						"row": 4,
+						"layoutName": "ProfileContainer",
+						"useFixedColumnHeight": true
+					},
+					"itemType": 4,
+					"classes": {
+						"wrapClassName": [
+							"card-widget-grid-layout-item"
+						]
+					}
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "Indicator5b260bc0-9bb0-4a51-8cad-7cd0c7a790d8",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 4,
+						"column": 0,
+						"row": 8,
+						"layoutName": "ProfileContainer",
+						"useFixedColumnHeight": true
+					},
+					"itemType": 4,
+					"classes": {
+						"wrapClassName": [
+							"card-widget-grid-layout-item"
+						]
+					}
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 2
+			},
 			{
 				"operation": "insert",
 				"name": "GKIName",
@@ -172,6 +287,7 @@ define("GKIInstancePage", [], function() {
 				"operation": "insert",
 				"name": "GKICustomerID",
 				"values": {
+                  	"hint" : {"bindTo": "Resources.Strings.CustomerIDHint"},
 					"layout": {
 						"colSpan": 12,
 						"rowSpan": 1,
@@ -180,7 +296,9 @@ define("GKIInstancePage", [], function() {
 						"layoutName": "Header"
 					},
 					"bindTo": "GKICustomerID",
-					"enabled": {"bindTo": "isGKICustomerIDEnabledMethod"}
+					"enabled": {
+						"bindTo": "isGKICustomerIDEnabledMethod"
+					}
 				},
 				"parentName": "Header",
 				"propertyName": "items",
@@ -207,6 +325,7 @@ define("GKIInstancePage", [], function() {
 				"operation": "insert",
 				"name": "GKIIsLimitApllied",
 				"values": {
+                  	"hint" : {"bindTo": "Resources.Strings.IsLimitAplliedHint"},
 					"layout": {
 						"colSpan": 12,
 						"rowSpan": 1,
@@ -264,7 +383,7 @@ define("GKIInstancePage", [], function() {
 						"bindTo": "Resources.Strings.NotesAndFilesTabCaption"
 					},
 					"items": [],
-					"order": 1
+					"order": 2
 				},
 				"parentName": "Tabs",
 				"propertyName": "tabs",
@@ -330,7 +449,7 @@ define("GKIInstancePage", [], function() {
 						"bindTo": "Resources.Strings.GKIADGroupsTabCaption"
 					},
 					"items": [],
-					"order": 0
+					"order": 1
 				},
 				"parentName": "Tabs",
 				"propertyName": "tabs",
@@ -368,7 +487,7 @@ define("GKIInstancePage", [], function() {
 				"parentName": "GKIADGroupsTab",
 				"propertyName": "items",
 				"index": 2
-			},
+			}
 		]/**SCHEMA_DIFF*/
 	};
 });

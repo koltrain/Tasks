@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "1aa7031c-2a71-4e19-9d94-729de607b393",
+    "Name": "GKIInstanceUnitPage",
+    "ModifiedOnUtc": "\/Date(1614166215000)\/",
+    "Parent": {
+      "UId": "d62293c0-7f14-44b1-b547-735fb40499cd",
+      "Name": "BaseModulePageV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Страница редактирования: \"Базовый справочник\""
+  }
+}

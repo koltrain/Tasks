@@ -3,6 +3,20 @@ define("GKILicSection", ["ConfigurationEnums"], function(ConfigurationEnums) {
 		entitySchemaName: "GKILic",
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
 		methods: {
+			/*
+			* Переопределение цета записи с остатком лицензий 0
+			* @overridden
+			*/
+			prepareResponseCollectionItem: function(item) {
+                this.callParent(arguments);
+                item.customStyle = null;
+                var availableCount = item.get("GKIAvailableCount");
+                if (availableCount == 0) {
+                    item.customStyle = {
+                        "background": "#FFB100"
+                    };
+                }
+			},
 			/**
 			 * Opens edit page for record by primary column value.
 			 * @overridden

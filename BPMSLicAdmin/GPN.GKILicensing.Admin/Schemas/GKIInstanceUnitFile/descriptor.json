@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "7043a3af-bc27-487e-a4e5-cbc76c27f381",
+    "Name": "GKIInstanceUnitFile",
+    "ModifiedOnUtc": "\/Date(1613465562000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Файл и ссылка объекта Базовый справочник"
+  }
+}

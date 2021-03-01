@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "08166228-52d0-4b28-9757-3b442775a45b",
+    "Name": "GKIGetVIPUsersProcess",
+    "ModifiedOnUtc": "\/Date(1613465237000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Получение VIP-пользователей"
+  }
+}

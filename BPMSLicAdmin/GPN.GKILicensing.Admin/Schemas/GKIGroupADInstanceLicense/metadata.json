@@ -16,6 +16,7 @@
 = MetaData.Schema.EG1.BK4.["dbf48103-dcf6-4f53-a052-d727a95ea0b4"].CK2.["933bf2fc-d052-40c8-a3e0-bf60049da5d8"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["f0646c74-f291-474f-9a10-143ee868f1c9"].CK2.["b3d5b61f-7afe-48b5-a8cc-40317ea9c428"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
++ MetaData.Schema.D24 true
 + MetaData.Schema.D15 true
 = MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
 + MetaData.Schema.D2 {
@@ -27,6 +28,7 @@
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "d7e36eec-7b63-4fed-2ffc-f8c33849a8a7",
   "E6": true,
+  "E16": true,
   "E17": "GKILicPackageId",
   "E18": "GKILicPackageGKIName"
 }
@@ -39,6 +41,7 @@
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "2975a03d-e367-43de-805f-02f5e22b935b",
   "E6": true,
+  "E16": true,
   "E17": "GKIGroupADId",
   "E18": "GKIGroupADName"
 }
@@ -51,6 +54,7 @@
   "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
   "S4": "5cec432d-65ee-fe69-4dec-e798dfc33055",
   "E6": true,
+  "E16": true,
   "E17": "GKIInstanceId",
   "E18": "GKIInstanceGKIName"
 }

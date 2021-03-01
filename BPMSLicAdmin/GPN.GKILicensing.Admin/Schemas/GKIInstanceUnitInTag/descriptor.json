@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "631c59a2-6e0c-4c56-9352-c39c71ad4990",
+    "Name": "GKIInstanceUnitInTag",
+    "ModifiedOnUtc": "\/Date(1613465569000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Базовый справочник"
+  }
+}

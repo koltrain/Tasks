@@ -42,14 +42,15 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtili
 					"masterColumn": "Id"
 				}
 			},
-			"GKILicPackageUserDetail": {
+			//BPMS-203 скрыть деталь до выяснения необходимости ручного ввода
+			/*"GKILicPackageUserDetail": {
 				"schemaName": "GKILicPackageDetailWithEdit",
 				"entitySchemaName": "GKILicPackageUser",
 				"filter": {
 					"detailColumn": "GKILicUser",
 					"masterColumn": "Id"
 				}
-			}
+			}*/
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {
@@ -78,12 +79,13 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtili
 			 */
 			onGKILicUserSyncButtonClick: function() {
 				var args = {
-					name: "GKILicensingLicUserSyncFilterProcess",
+					sysProcessName: "GKILicensingLicUserSyncFilterProcess",
 					parameters: {
 						licUserId: this.get("Id")
 					}
 				};
-				ProcessModuleUtilities.startBusinessProcess(args);
+				ProcessModuleUtilities.executeProcess(args);
+				this.reloadEntity();
 				this.showInformationDialog(this.get("Resources.Strings.GKISyncHasStarted"));
 				return;
 			},
@@ -115,29 +117,21 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtili
 			{
 				"operation": "insert",
 				"name": "GKILicUserSyncButton",
+				"propertyName": "items",
+				"parentName": "LeftContainer",
 				"values": {
-					"itemType": 5,
-					"style": "default",
-					"caption": {
-						"bindTo": "Resources.Strings.GKILicUserSyncButtonCaption"
-					},
-					"click": {
-						"bindTo": "onGKILicUserSyncButtonClick"
-					},
+					"hint": { "bindTo": "Resources.Strings.LicUserSyncButtonHint" },
+					"style": Terrasoft.controls.ButtonEnums.style.DEFAULT,
+					"caption": { "bindTo": "Resources.Strings.GKILicUserSyncButtonCaption" },
+					"itemType": Terrasoft.ViewItemType.BUTTON,
+					"click": { "bindTo": "onGKILicUserSyncButtonClick" },
 					"visible": true,
 					"enabled": {"bindTo": "isGKIButtonsEnabled"},
 					"classes": {
-						"textClass": [
-							"actions-button-margin-right"
-						],
-						"wrapperClass": [
-							"actions-button-margin-right"
-						]
-					}
+						"textClass": ["actions-button-margin-right"],
+						"wrapperClass": ["actions-button-margin-right"]
+					},
 				},
-				"parentName": "LeftContainer",
-				"propertyName": "items",
-				"index": 7
 			},
 			{
 				"operation": "insert",
@@ -230,6 +224,7 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtili
 				"operation": "insert",
 				"name": "GKIPlatformActive",
 				"values": {
+                  	"hint" : {"bindTo" : "Resources.Strings.PlatformActiveHint"},
 					"layout": {
 						"colSpan": 24,
 						"rowSpan": 1,
@@ -248,6 +243,7 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtili
 				"operation": "insert",
 				"name": "GKIActive",
 				"values": {
+                  	"hint" : {"bindTo" : "Resources.Strings.ActiveHint"},
 					"layout": {
 						"colSpan": 24,
 						"rowSpan": 1,
@@ -266,6 +262,7 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtili
 				"operation": "insert",
 				"name": "GKIMSADActive",
 				"values": {
+                  	"hint" : {"bindTo" : "Resources.Strings.MSADActiveHint"},
 					"layout": {
 						"colSpan": 24,
 						"rowSpan": 1,
@@ -284,6 +281,7 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtili
 				"operation": "insert",
 				"name": "GKIIsVIP",
 				"values": {
+                  	"hint" : {"bindTo" : "Resources.Strings.IsVIPHint"},
 					"layout": {
 						"colSpan": 24,
 						"rowSpan": 1,
@@ -312,6 +310,8 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtili
 				"propertyName": "tabs",
 				"index": 0
 			},
+			//BPMS-203 скрыть деталь до выяснения необходимости ручного ввода
+			/*
 			{
 				"operation": "insert",
 				"name": "GKILicPackageUserDetail",
@@ -323,6 +323,7 @@ define("GKILicUserPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUtili
 				"propertyName": "items",
 				"index": 0
 			},
+			*/
 			{
 				"operation": "insert",
 				"name": "GKILicUserInstanceLicPackageDetail",

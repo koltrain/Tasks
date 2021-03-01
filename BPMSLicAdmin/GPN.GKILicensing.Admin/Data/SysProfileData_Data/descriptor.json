@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "634840ba-66c5-1a52-2e7b-dc7da30fdc14",
     "Name": "SysProfileData_Data",
-    "ModifiedOnUtc": "\/Date(1612363421000)\/",
+    "ModifiedOnUtc": "\/Date(1614155043000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "a3251d81-1788-4245-88f1-23ae03e4057b",
@@ -12,7 +12,7 @@
       {
         "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
         "IsForceUpdate": false,
-        "IsKey": true,
+        "IsKey": false,
         "ColumnName": "Id",
         "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
       },
@@ -26,7 +26,7 @@
       {
         "ColumnUId": "3bb9d182-ad73-4379-9d51-2003c862a90c",
         "IsForceUpdate": false,
-        "IsKey": false,
+        "IsKey": true,
         "ColumnName": "Key",
         "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
       },
@@ -60,8 +60,8 @@
       },
       {
         "ColumnUId": "fd26b95c-06ba-4595-915e-bc5657d10842",
-        "IsForceUpdate": true,
-        "IsKey": false,
+        "IsForceUpdate": false,
+        "IsKey": true,
         "ColumnName": "SysCulture",
         "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
       },
@@ -71,6 +71,13 @@
         "IsKey": false,
         "ColumnName": "ModifiedOn",
         "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+      },
+      {
+        "ColumnUId": "03a27b75-6d7f-4be4-b0fd-f03ffd8a7aab",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Contact",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
       }
     ]
   }

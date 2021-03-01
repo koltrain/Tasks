@@ -49,7 +49,7 @@ function(BusinessRulesApplierV2) {
 					],
 					"initActiveRowKeyMap": {"bindTo": "initActiveRowKeyMap"},
 					"activeRowAction": {"bindTo": "onActiveRowAction"},
-					"multiSelect": {"bindTo": "MultiSelect"}
+					"multiSelect": {"bindTo": "MultiSelect"}	
 				}
 			}
         ]/**SCHEMA_DIFF*/,

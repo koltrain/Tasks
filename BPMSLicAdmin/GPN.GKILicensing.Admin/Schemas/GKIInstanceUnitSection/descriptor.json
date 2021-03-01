@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "d287528f-f6d0-438e-ac3a-69b6fcc91ce8",
+    "Name": "GKIInstanceUnitSection",
+    "ModifiedOnUtc": "\/Date(1613465859000)\/",
+    "Parent": {
+      "UId": "7912fb69-4fee-429f-8b23-93943c35d66d",
+      "Name": "BaseSectionV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема раздела: \"Базовый справочник\""
+  }
+}

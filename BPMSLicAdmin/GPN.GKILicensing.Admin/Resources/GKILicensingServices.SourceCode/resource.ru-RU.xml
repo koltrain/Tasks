@@ -18,6 +18,7 @@
 			<Item Name="LocalizableStrings.GKITlrRequestSuccess.Value" Value="Запрос на отправку лицензий сформирован успешно" />
 			<Item Name="LocalizableStrings.GKITlrRequestWrongCIDError.Value" Value="Некорректное значение ID компании для лицензирования" />
 			<Item Name="LocalizableStrings.GKITlsInstallSuccess.Value" Value="Загрузка лицензий на экземпляры выполнена успешно" />
+			<Item Name="LocalizableStrings.GKIVIPLimitIsExceededMessage.Value" Value="Процесс проверки лимита VIP-пользователей завершен. В результате проверки выявлено превышение лимита по продукту {0} на {1} ." />
 		</Items>
 	</Group>
 </Resources>

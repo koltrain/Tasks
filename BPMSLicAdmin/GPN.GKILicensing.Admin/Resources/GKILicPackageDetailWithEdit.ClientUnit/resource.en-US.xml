@@ -5,6 +5,8 @@
 			<Item Name="Caption" Value="Деталь продукта лицензирования пользователя " />
 			<Item Name="Description" Value="Продукт лицензирования пользователя " />
 			<Item Name="LocalizableStrings.Caption.Value" Value="Продукт лицензирования пользователя " />
+			<Item Name="LocalizableStrings.DeselectAllCaption.Value" Value="Deselect all" />
+			<Item Name="LocalizableStrings.SelectAllCaption.Value" Value="Select all" />
 		</Items>
 	</Group>
 </Resources>

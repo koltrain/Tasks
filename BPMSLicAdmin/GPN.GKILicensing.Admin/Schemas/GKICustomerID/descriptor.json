@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "6f8e22ee-f482-4f7a-6cff-adc2daf7e6bc",
     "Name": "GKICustomerID",
-    "ModifiedOnUtc": "\/Date(1612540842000)\/",
+    "ModifiedOnUtc": "\/Date(1614357633000)\/",
     "Parent": {
       "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
       "Name": "BaseLookup"

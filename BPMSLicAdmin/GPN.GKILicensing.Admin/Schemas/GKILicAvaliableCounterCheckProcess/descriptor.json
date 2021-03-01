@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "98c40cb3-aba2-4614-b095-ea942bd9228b",
+    "Name": "GKILicAvaliableCounterCheckProcess",
+    "ModifiedOnUtc": "\/Date(1614585176000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Проверка количества оставшихся лицензий"
+  }
+}

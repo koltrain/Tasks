@@ -13,6 +13,139 @@
           "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
           "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
           "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "bd367a52-1926-41b0-a60e-b1eadb22c74d",
+          "A2": "CancelButtonCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "0dd142b0-723c-4d00-93da-3b510c386214",
+          "A2": "CommonSettingsGroupLabel",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "4306a083-6b7e-4c3b-908e-7f1c579235ba",
+          "A2": "SaveButtonCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "92365702-eca9-4659-8cd8-2c424294bcf4",
+          "A2": "GKISysLicUserInactivenessControlTimespanCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "323ef094-6dda-44e0-8e18-e7617b125b5b",
+          "A2": "GKILastMasterCheckInWaitMinutesCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "d2a8394d-2273-4544-81f9-9abda1266229",
+          "A2": "GKILicensingAdminToRegularRequestTimerCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "20aa759f-9778-47ef-9e5e-5d6b7d6f13ea",
+          "A2": "GKILicensingLDAPEntryMaxModifiedOnCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "cfba3a15-2ebc-4f61-9f71-b1173da44f21",
+          "A2": "GKILicensingLDAPEntryModifiedOnAttributeCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "e0946e1a-d3c7-4452-8290-7653c1b95883",
+          "A2": "GKILicensingLDAPUsersFilterCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "7a3acc99-cccf-405c-aa28-213d5e90b992",
+          "A2": "GKILicensingMailBoxCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "09ecf42a-2bf7-446f-8ba7-1f1c95ab4762",
+          "A2": "GKILicensingRegularLoginAuditIntervalCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "2872869a-161b-47df-875e-78fdff61af01",
+          "A2": "GKILicensingTerrasoftSupportAddressCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "b0e93a86-70e5-455a-9040-f551660e99b7",
+          "A2": "GKILicensingWinInstanceLoginCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "97a797ed-7614-4b55-a28c-ed93734d64f5",
+          "A2": "GKILicensingWinInstancePasswordCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "29551377-6958-41bd-85f8-7fc5ef8685d4",
+          "A2": "GKILicensingWinInstanceUrlCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "b7a2be57-fd32-46dc-a0c5-dac88c8965ed",
+          "A2": "GKISysLicUserInactivenessControlCooldownCaption",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "ec0dfc39-0133-400c-b537-0d00af2046ca",
+          "A2": "LDAPSettingsGroupLabel",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "bcb373dd-e851-4c66-b0f4-cc85f096b5b9",
+          "A2": "DeactivationSettingsGroupLabel",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "a25d3039-3108-4279-8c30-e5ba740402d4",
+          "A2": "EmailSettingsGroupLabel",
+          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
         }
       ],
       "B3": [],
@@ -23,14 +156,7 @@
       "HD6": "define('{0}Structure', ['{0}Resources'], function(resources) {{return {{schemaUId:'{2}',schemaName:'{3}',parentSchemaUId:'{4}',extendParent:{5},type:Terrasoft.SchemaType.EDIT_VIEW_MODEL_SCHEMA,entitySchema:'',name:'',extend:'Terrasoft.model.BaseViewModel',schema:{{leftPanel:[],rightPanel:[],actions:[],analytics:[]}},methods:{{}},controlsConfig:{{}},customBindings:{{}},bindings:{{}},schemaDifferences:function(){{\n{1}\n}}}};}});",
       "HD5": [],
       "HD7": [],
-      "HD8": [
-        {
-          "UId": "35af038c-998f-4bbc-a500-5fb192c367a9",
-          "A2": "UnderConstruction",
-          "A3": "2c538842-c865-4825-aca4-c7e9a272d98a",
-          "A4": "2c538842-c865-4825-aca4-c7e9a272d98a"
-        }
-      ],
+      "HD8": [],
       "HD11": []
     }
   }

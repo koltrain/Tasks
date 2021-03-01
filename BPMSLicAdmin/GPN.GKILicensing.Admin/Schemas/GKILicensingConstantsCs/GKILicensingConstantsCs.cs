@@ -28,9 +28,15 @@ namespace Terrasoft.Configuration
 			public static readonly Guid HaventEnteredInTheTimespan = new Guid(("0781c2de-db17-4718-8c5d-ccf0a4790b34").ToUpper());
 			public static readonly Guid LDAP = new Guid(("d8756a62-f37a-458b-a134-515fb8495615").ToUpper());
 		}
+		public static class SysAdminUnitRole
+		{
+			public static readonly Guid LicAdmin = new Guid(("b1aa7564-7e2b-4edf-8d4b-02ee011a5def").ToUpper());
+			public static readonly Guid SecurityAuditor = new Guid(("a4b65f4b-e504-419c-a811-9e399f347af2").ToUpper());
+		}
 		public static class Misc
 		{
 			public static readonly Guid TlrRequestEmailTemplate = new Guid(("1f16b3ad-97de-4ae1-969b-443b8df06a1c").ToUpper());
+			public static readonly int lastMasterCheckInWaitMinutes = 5;
 		}
 	}
 }

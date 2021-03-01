@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "b37caf16-cf07-404e-9e87-8f88b7ca748c",
+    "Name": "GKIInstanceUnitInFolder",
+    "ModifiedOnUtc": "\/Date(1613465567000)\/",
+    "Parent": {
+      "UId": "4f63bafb-e9e7-4082-b92e-66b97c14017c",
+      "Name": "BaseItemInFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Базовый справочник в группе"
+  }
+}

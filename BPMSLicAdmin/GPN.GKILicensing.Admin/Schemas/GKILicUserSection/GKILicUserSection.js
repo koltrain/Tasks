@@ -170,6 +170,7 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 				"parentName": "SeparateModeActionButtonsContainer",
 				"propertyName": "items",
 				"values": {
+                  	"hint": { "bindTo": "Resources.Strings.GKILicUserSyncButtonHint" },
 					"itemType": Terrasoft.ViewItemType.BUTTON,
 					"style": Terrasoft.controls.ButtonEnums.style.DEFAULT,
 					"caption": {"bindTo": "Resources.Strings.GKILicUserSyncButtonCaption"},
@@ -188,6 +189,7 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 				"parentName": "SeparateModeActionButtonsContainer",
 				"propertyName": "items",
 				"values": {
+                  	"hint": { "bindTo": "Resources.Strings.GKILicenseSyncRegularButtonHint" },
 					"itemType": Terrasoft.ViewItemType.BUTTON,
 					"style": Terrasoft.controls.ButtonEnums.style.DEFAULT,
 					"caption": {"bindTo": "Resources.Strings.GKILicenseSyncRegularButtonCaption"},
@@ -206,6 +208,7 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 				"parentName": "SeparateModeActionButtonsContainer",
 				"propertyName": "items",
 				"values": {
+                  	"hint": { "bindTo": "Resources.Strings.GKILicSyncLDAPButtonHint" },
 					"itemType": Terrasoft.ViewItemType.BUTTON,
 					"style": Terrasoft.controls.ButtonEnums.style.DEFAULT,
 					"caption": {"bindTo": "Resources.Strings.GKILicSyncLDAPButtonCaption"},
@@ -224,6 +227,7 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 				"parentName": "CombinedModeActionButtonsCardLeftContainer",
 				"propertyName": "items",
 				"values": {
+					"hint": { "bindTo": "Resources.Strings.GKILicUserSyncCombinedButtonHint" },
 					"itemType": Terrasoft.ViewItemType.BUTTON,
 					"style": Terrasoft.controls.ButtonEnums.style.DEFAULT,
 					"caption": {"bindTo": "Resources.Strings.GKILicUserSyncButtonCaption"},

@@ -12,7 +12,74 @@ namespace Terrasoft.Configuration
 	[EntityEventListener(SchemaName = "GKILicUserInstanceLicPackage")]
 	public class GKILicUserInstanceLicPackageEntityEventListener : BaseEntityEventListener
 	{
-		public override void OnUpdating(object sender, EntityBeforeEventArgs e)
+        public override void OnInserted(object sender, EntityAfterEventArgs e)
+        {
+            base.OnInserted(sender, e);
+            var entity = (Entity)sender;
+            var userConnection = entity.UserConnection;
+
+            try
+            {
+                //getting values
+                var userLicId = entity.GetTypedColumnValue<Guid>("GKILicUserId");
+                var licActive = entity.GetTypedColumnValue<bool>("GKIActive");
+                var licInstance = entity.GetTypedColumnValue<Guid>("GKIInstanceId");
+                var licPackage = entity.GetTypedColumnValue<Guid>("GKILicPackageId");
+                var licSynced = entity.GetTypedColumnValue<bool>("GKISyncedState");
+
+                var rootSchema = userConnection.EntitySchemaManager.FindInstanceByName("GKIInstance");
+                var esqActive = new EntitySchemaQuery(rootSchema);
+                esqActive.AddAllSchemaColumns();
+                esqActive.UseAdminRights = false;
+                esqActive.Filters.Add(
+                    esqActive.CreateFilterWithParameters(FilterComparisonType.Equal, "Id", licPackage));
+                Entity summaryEntity = esqActive.GetSummaryEntity(userConnection);
+                var customerId = summaryEntity.GetTypedColumnValue<Guid>("GKICustomerID");
+
+
+                var rootSchemaLicPackageUser = userConnection.EntitySchemaManager.FindInstanceByName("GKILicPackageUser");
+                var esqSchemaLicPackageUser = new EntitySchemaQuery(rootSchema);
+                esqSchemaLicPackageUser.AddAllSchemaColumns();
+                esqSchemaLicPackageUser.UseAdminRights = false;
+                esqSchemaLicPackageUser.Filters.Add(
+                    esqSchemaLicPackageUser.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicPackage", licPackage));
+                esqSchemaLicPackageUser.Filters.Add(
+                    esqSchemaLicPackageUser.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicUserId", userLicId));
+                esqSchemaLicPackageUser.Filters.Add(
+                    esqSchemaLicPackageUser.CreateFilterWithParameters(FilterComparisonType.Equal, "GKICustomerID", customerId));
+                EntityCollection entityLicPackageUser = esqSchemaLicPackageUser.GetEntityCollection(userConnection);
+
+                #region GKILicUserInstanceLicPackage
+
+                if (entityLicPackageUser.Count == 0)
+                {
+                    try
+                    {
+                        var insertLicPackageUser = new Insert(userConnection).Into("GKILicPackageUser")
+                                             .Set("Id", Column.Parameter(Guid.NewGuid()))
+                                            .Set("CreatedOn", new QueryParameter(DateTime.UtcNow))
+                                            .Set("ModifiedOn", new QueryParameter(DateTime.UtcNow))
+                                            .Set("GKIActive", new QueryParameter(licActive))
+                                            .Set("GKICustomerIDId", new QueryParameter(customerId))
+                                            .Set("GKISyncedState", new QueryParameter(licSynced))
+                                            .Set("GKILicPackageId", Column.Parameter(licPackage))
+                                            .Set("GKILicUserId", Column.Parameter(userLicId));
+
+                        insertLicPackageUser.Execute();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.Write(ex.Message);
+                    }
+                    #endregion
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+        }
+        public override void OnUpdating(object sender, EntityBeforeEventArgs e)
 		{
 			base.OnUpdating(sender, e);
 			var entity = (Entity)sender;
@@ -450,7 +517,57 @@ namespace Terrasoft.Configuration
 		}
 	}
 
-	public class GKILicensingListenersHelper
+    [EntityEventListener(SchemaName = "GKILicPackageUser")]
+    public class GKILicPackageUserEventListener : BaseEntityEventListener
+    {
+
+        public override void OnUpdating(object sender, EntityBeforeEventArgs e)
+        {
+            base.OnUpdating(sender, e);
+            var entity = (Entity)sender;
+            var userConnection = entity.UserConnection;
+
+            try
+            {
+                var oldLicActive = entity.GetTypedOldColumnValue<bool>("GKIActive");
+                var newLicActive = entity.GetTypedColumnValue<bool>("GKIActive");
+
+                var userLicId = entity.GetTypedColumnValue<Guid>("GKILicUserId");
+                var licInstance = entity.GetTypedColumnValue<Guid>("GKIInstanceId");
+                var licPackage = entity.GetTypedColumnValue<Guid>("GKILicPackageId");
+                var customerId = entity.GetTypedColumnValue<Guid>("GKICustomerIDId");
+
+                #region GKILicUserInstanceLicPackage
+                if (oldLicActive != newLicActive)
+                {
+                    try
+                    {
+                        var insertLicPackageUser = new Update(userConnection, "GKILicUserInstanceLicPackage")
+                                            .Set("GKIActive", new QueryParameter(newLicActive))
+                                            .Where("GKILicPackageId").IsEqual(Column.Parameter(licPackage))
+                                            .And("GKILicUserId").IsEqual(Column.Parameter(userLicId))
+                                            .And("GKIInstanceId").In(
+                            new Select(userConnection)
+                                .Column("Id")
+                                .From("GKIInstance")
+                                .Where("GKICustomerIDId").IsEqual(Column.Parameter(customerId))
+                                                );
+                        insertLicPackageUser.Execute();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.Write(ex.Message);
+                    }
+                    #endregion
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+        }
+    }
+    public class GKILicensingListenersHelper
 	{
 		public void GKIGroupADUsersDelete(UserConnection userConnection, Guid oldGroup, Guid oldInstance)
 		{
@@ -494,4 +611,6 @@ namespace Terrasoft.Configuration
 			return updateSuccess;
 		}
 	}
+
+
 }
