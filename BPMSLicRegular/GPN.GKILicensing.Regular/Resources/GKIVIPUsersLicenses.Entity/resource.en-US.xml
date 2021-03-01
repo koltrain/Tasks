@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Обязательные для лицензирования пользователи" />
+			<Item Name="Columns.GKIisVIP.Caption" Value="VIP" />
+			<Item Name="Columns.GKISysAdminUnit.Caption" Value="Пользователь" />
+			<Item Name="Columns.GKISysLicPackage.Caption" Value="Продукт" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

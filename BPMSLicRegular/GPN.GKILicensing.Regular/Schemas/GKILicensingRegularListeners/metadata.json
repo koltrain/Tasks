@@ -1,0 +1,31 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "SourceCodeSchemaManager",
+      "UId": "9c467517-e8c0-dfd9-9cbb-d57c94f095d6",
+      "A2": "GKILicensingRegularListeners",
+      "A5": "bb83d3ce-9dea-4e28-98ab-6cf4a6110371",
+      "B1": [],
+      "B2": [
+        {
+          "UId": "f574af5e-027d-144e-2627-97e2971d1d03",
+          "A2": "GKIVIPUsersLicensesLimitExceeded",
+          "A3": "9c467517-e8c0-dfd9-9cbb-d57c94f095d6",
+          "A4": "9c467517-e8c0-dfd9-9cbb-d57c94f095d6",
+          "A5": "bb83d3ce-9dea-4e28-98ab-6cf4a6110371"
+        },
+        {
+          "UId": "b4440032-8c8c-0621-4d63-9d6cfcc49726",
+          "A2": "GKIVIPUsersLicensesLimitRecordDoesntExist",
+          "A3": "9c467517-e8c0-dfd9-9cbb-d57c94f095d6",
+          "A4": "9c467517-e8c0-dfd9-9cbb-d57c94f095d6",
+          "A5": "bb83d3ce-9dea-4e28-98ab-6cf4a6110371"
+        }
+      ],
+      "B3": [],
+      "B6": "0ab01e6b-1fc8-97ca-4a85-e8c9842d6aac",
+      "B8": "7.17.0.2164",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3"
+    }
+  }
+}

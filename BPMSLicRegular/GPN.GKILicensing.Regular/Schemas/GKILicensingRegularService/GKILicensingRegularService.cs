@@ -1,5 +1,6 @@
 namespace Terrasoft.Configuration
 {
+	using Newtonsoft.Json;
 	using System;
 	using System.Collections.Generic;
 	using System.Collections.ObjectModel;
@@ -21,12 +22,22 @@ namespace Terrasoft.Configuration
 	[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
 	public class GKILicensingRegularService : BaseService
 	{
+		private static Dictionary<Guid, int> dictGKIVIPLicenses = new Dictionary<Guid, int>();
+		private static DateTime? lastMasterCheckInDateTime;
+		private static int? lastMasterCheckInWaitMinutes;
+		private static DateTime? lastUnknowStatusDateTime;
 
 		[OperationContract]
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare,
 		ResponseFormat = WebMessageFormat.Json)]
 		public GKILicUserSyncResult GKIAddLicense(List<LicUserData> userLicensePair)
 		{
+			try
+			{
+				SetLastMasterCheckIn();
+			}
+			catch (Exception)
+			{ }
 			if (!GKIIsSysAdmin())
 			{
 				GKILicUserSyncResult errorResult = new GKILicUserSyncResult {
@@ -44,6 +55,12 @@ namespace Terrasoft.Configuration
 		ResponseFormat = WebMessageFormat.Json)]
 		public GKILicUserSyncResult GKIRemoveLicense(List<LicUserData> userLicensePair)
 		{
+			try
+			{
+				SetLastMasterCheckIn();
+			}
+			catch (Exception)
+			{ }
 			if (!GKIIsSysAdmin())
 			{
 				GKILicUserSyncResult errorResult = new GKILicUserSyncResult
@@ -104,9 +121,17 @@ namespace Terrasoft.Configuration
 						var licenseString = new Collection<string>();
 						licenseString.Add(licenseName);
 
+						//esq for calculating have the license been removed or granted already
+						var sysLicUserESQ = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "SysLicUser");
+						sysLicUserESQ.UseAdminRights = false;
+						sysLicUserESQ.AddAllSchemaColumns();
+						sysLicUserESQ.Filters.Add(sysLicUserESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysUser.Name", userLogin));
+						sysLicUserESQ.Filters.Add(sysLicUserESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysLicPackage.Name", licenseName));
+						var sysLicUserESQCollection = sysLicUserESQ.GetEntityCollection(UserConnection);
+
 						if (isAddLicense) {
 							var grantedLicenses = UserConnection.LicHelper.AddUserAvailableLicences(userIdGuid, licenseString);
-							if (grantedLicenses == null || grantedLicenses.Count < 1)
+							if (sysLicUserESQCollection.Count == 0 && (grantedLicenses == null || grantedLicenses.Count < 1))
 							{
 								syncResults.Add(new LicUserSyncResult()
 								{
@@ -130,13 +155,6 @@ namespace Terrasoft.Configuration
 						}
 						else
 						{
-							//have license already been removed?
-							var sysLicUserESQ = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "SysLicUser");
-							sysLicUserESQ.UseAdminRights = false;
-							sysLicUserESQ.AddAllSchemaColumns();
-							sysLicUserESQ.Filters.Add(sysLicUserESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysUser.Name", userLogin));
-							sysLicUserESQ.Filters.Add(sysLicUserESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysLicPackage.Name", licenseName));
-							var sysLicUserESQCollection = sysLicUserESQ.GetEntityCollection(UserConnection);
 							if (sysLicUserESQCollection.Count > 0)
 							{
 
@@ -190,6 +208,12 @@ namespace Terrasoft.Configuration
 		ResponseFormat = WebMessageFormat.Json)]
 		public UsersSyncResult GKIUsersSync()
 		{
+			try
+			{
+				SetLastMasterCheckIn();
+			}
+			catch (Exception)
+			{ }
 			if (!GKIIsSysAdmin())
 			{
 				UsersSyncResult errorResult = new UsersSyncResult
@@ -222,7 +246,7 @@ namespace Terrasoft.Configuration
 				var lastActivityDateTimeColumn = sysAdminUnitESQ.AddColumn(sysAdminUnitESQ.CreateAggregationFunction(AggregationTypeStrict.Max,
 					"[SysUserSession:SysUser].SessionStartDate"));
 				sysAdminUnitESQ.Filters.Add(sysAdminUnitESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysAdminUnitTypeValue", 4)); //users
-				//TODO: filter by LDAPEntryId is not empty?
+																																				 //TODO: filter by LDAPEntryId is not empty?
 				var sysAdminUnitESQCollection = sysAdminUnitESQ.GetEntityCollection(UserConnection);
 				usersSyncResult.UserSyncResultSysAdminUnit = new List<UserSyncResultSysAdminUnit>();
 
@@ -267,6 +291,12 @@ namespace Terrasoft.Configuration
 		ResponseFormat = WebMessageFormat.Json)]
 		public string GKIAuthCheck()
 		{
+			try
+			{
+				SetLastMasterCheckIn();
+			}
+			catch (Exception)
+			{ }
 			return "ok";
 		}
 
@@ -275,6 +305,12 @@ namespace Terrasoft.Configuration
 		ResponseFormat = WebMessageFormat.Json)]
 		public LicenseInfoResult GKIGetInstalledLicensesInfo()
 		{
+			try
+			{
+				SetLastMasterCheckIn();
+			}
+			catch (Exception)
+			{ }
 			LicenseInfoResult licenseInfoResult = new LicenseInfoResult();
 			licenseInfoResult.LicenseInfoList = new List<LicenseInfo>();
 			if (!GKIIsSysAdmin())
@@ -291,6 +327,7 @@ namespace Terrasoft.Configuration
 			var SysLicPackageNameColumn = sysLicESQ.AddColumn("SysLicPackage.Name").Name;
 			EntitySchemaQuery subEsq = null;
 			var countUsedColumn = sysLicESQ.AddColumn("[SysLicUser:SysLicPackage:SysLicPackage].Id", AggregationTypeStrict.Count, out subEsq).Name;
+			var licTypeColumn = sysLicESQ.AddColumn("SysLicPackage.Operations").Name;
 			sysLicESQ.Filters.Add(
 				sysLicESQ.CreateFilterWithParameters(FilterComparisonType.LessOrEqual, "StartDate", DateTime.Now));
 			sysLicESQ.Filters.Add(
@@ -302,7 +339,7 @@ namespace Terrasoft.Configuration
 				{
 					SysLicPackageName = sysLicEntity.GetTypedColumnValue<string>(SysLicPackageNameColumn),
 					StartDate = sysLicEntity.GetTypedColumnValue<DateTime>("StartDate"),
-					LicType = sysLicEntity.GetTypedColumnValue<int>("LicType"),
+					LicType = sysLicEntity.GetTypedColumnValue<string>(licTypeColumn).Contains("IsServerLicPackage") ? 1 : 0,
 					DueDate = sysLicEntity.GetTypedColumnValue<DateTime>("DueDate"),
 					Count = sysLicEntity.GetTypedColumnValue<int>("Count"),
 					CountUsed = sysLicEntity.GetTypedColumnValue<int>(countUsedColumn),
@@ -405,8 +442,14 @@ namespace Terrasoft.Configuration
 		[OperationContract]
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare,
 		ResponseFormat = WebMessageFormat.Json)]
-		public PulseData GKIPulse()
+		public PulseData GKIPulse(PulseIncomingData pulseIncomingData)
 		{
+			try
+			{
+				SetLastMasterCheckIn();
+			}
+			catch (Exception)
+			{ }
 			PulseData pulseData = new PulseData();
 			if (!GKIIsSysAdmin())
 			{
@@ -414,6 +457,17 @@ namespace Terrasoft.Configuration
 				pulseData.errorMsg = GKINoAdminRightsError;
 				return pulseData;
 			}
+
+			try
+			{
+				AssignVIPLimits(pulseIncomingData.vipLicensesLimits);
+			}
+			catch (Exception ex)
+			{
+				pulseData.vipLimitsErrorMsg = ex.Message;
+			}
+
+			AssignLastMasterCheckInWaitMinutes(pulseIncomingData.lastMasterCheckInWaitMinutes);
 
 			//outgoing list
 			pulseData.pulseLicUserNames = new List<string>();
@@ -427,7 +481,7 @@ namespace Terrasoft.Configuration
 			string pulseAuditLogDescRu = new LocalizableString(UserConnection.Workspace.ResourceStorage,
 						"GKILicensingRegularService",
 						"LocalizableStrings.PulseAuditLogDescRu.Value");
-			
+
 			DateTime searchFromDateTime = Terrasoft.Core.Configuration.SysSettings.GetValue(UserConnection, "GKILicensingLastPulseDateTime", DateTime.MinValue);
 			Terrasoft.Core.Configuration.SysSettings.SetDefValue(UserConnection, "GKILicensingLastPulseDateTime", DateTime.UtcNow);
 			//audit log select
@@ -472,7 +526,484 @@ namespace Terrasoft.Configuration
 
 			pulseData.isSuccess = true;
 			pulseData.errorMsg = String.Empty;
+			pulseData.vipLimitsErrorMsg = String.Empty;
 			return pulseData;
+		}
+
+		[OperationContract]
+		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
+		ResponseFormat = WebMessageFormat.Json)]
+		public List<GKIVIPUsersLicensesData> GetUserGKIVIPLicPackages(Guid userId)
+		{
+			List<GKIVIPUsersLicensesData> listGKIVIPUsersLicensesData = new List<GKIVIPUsersLicensesData>();
+			if (GKIIsSysAdmin())
+			{
+				var dictGKIVIPLicensesUsedCount = GetUsedVIPCount();
+				var queryParamListGKIVIPLicensesEnum = GetVIPLicensesFilter();
+				var enrolledSysLicPackages = new List<Guid>();
+
+				var listGKIVIPUsersLicensesDataSelect =
+					new Select(UserConnection)
+					.Column("Id")
+					.Column(
+						new Select(UserConnection)
+						.Column("Name")
+						.From("SysLicPackage")
+						.Where("Id")
+						.IsEqual("GKISysLicPackageId"))
+					.Column("GKIisVIP")
+					.Column("GKISysLicPackageId")
+					.From("GKIVIPUsersLicenses")
+					.Where("GKISysAdminUnitId").IsEqual(Column.Parameter(userId))
+					.And("GKISysLicPackageId").In(queryParamListGKIVIPLicensesEnum) as Select;
+				using (DBExecutor dbExecutor = UserConnection.EnsureDBConnection())
+				{
+					using (IDataReader dr = listGKIVIPUsersLicensesDataSelect.ExecuteReader(dbExecutor))
+					{
+						while (dr.Read())
+						{
+							int available = dictGKIVIPLicenses[dr.GetGuid(3)] - dictGKIVIPLicensesUsedCount[dr.GetGuid(3)];
+							if (!enrolledSysLicPackages.Contains(dr.GetGuid(3)))
+							{
+								enrolledSysLicPackages.Add(dr.GetGuid(3));
+							}
+							listGKIVIPUsersLicensesData.Add(new GKIVIPUsersLicensesData
+							{
+								Id = dr.GetGuid(0),
+								Caption = dr.GetString(1),
+								Checked = (bool)dr.GetValue(2),
+								Enabled = available > 0 || (bool)dr.GetValue(2) ? true : false,
+								Available = available,
+								Limit = dictGKIVIPLicenses[dr.GetGuid(3)]
+							});
+						}
+					}
+				}
+
+				//adding missing records
+				IEnumerable<Guid> enrolledSysLicPackagesEnum = enrolledSysLicPackages.AsEnumerable();
+				var missingSysLicPackages = dictGKIVIPLicenses.Keys.ToList().Except(enrolledSysLicPackagesEnum);
+				if (missingSysLicPackages.Count() > 0)
+				{
+					var schemaGKIVIPUsersLicenses = UserConnection.EntitySchemaManager.GetInstanceByName("GKIVIPUsersLicenses");
+					var schemaSysLicPackage = UserConnection.EntitySchemaManager.GetInstanceByName("SysLicPackage");
+
+					foreach (Guid missingSysLicPackage in missingSysLicPackages)
+					{
+						Entity entitySysLicPackage = schemaSysLicPackage.CreateEntity(UserConnection);
+						entitySysLicPackage.FetchFromDB("Id", missingSysLicPackage);
+						string licPackageName = entitySysLicPackage.GetTypedColumnValue<string>("Name");
+
+						var entityGKIVIPUsersLicenses = schemaGKIVIPUsersLicenses.CreateEntity(UserConnection);
+						entityGKIVIPUsersLicenses.SetDefColumnValues();
+						entityGKIVIPUsersLicenses.SetColumnValue("GKIisVIP", false);
+						entityGKIVIPUsersLicenses.SetColumnValue("GKISysAdminUnitId", userId);
+						entityGKIVIPUsersLicenses.SetColumnValue("GKISysLicPackageId", missingSysLicPackage);
+						entityGKIVIPUsersLicenses.Save();
+
+						int availableMissing = dictGKIVIPLicenses[missingSysLicPackage] - dictGKIVIPLicensesUsedCount[missingSysLicPackage];
+						listGKIVIPUsersLicensesData.Add(new GKIVIPUsersLicensesData
+						{
+							Id = entityGKIVIPUsersLicenses.GetTypedColumnValue<Guid>("Id"),
+							Caption = licPackageName,
+							Checked = false,
+							Enabled = availableMissing > 0 ? true : false,
+							Available = availableMissing,
+							Limit = dictGKIVIPLicenses[missingSysLicPackage]
+						});
+					}
+				}
+
+				listGKIVIPUsersLicensesData = listGKIVIPUsersLicensesData.OrderBy(x => x.Caption).ToList();
+			}
+			return listGKIVIPUsersLicensesData;
+		}
+
+		[OperationContract]
+		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
+		ResponseFormat = WebMessageFormat.Json)]
+		public string SaveGKIVIPChanges(string licenseItems)
+		{
+			try
+			{
+				if (!GKIIsSysAdmin())
+				{
+					throw new Exception(GKINoAdminRightsError);
+				}
+				Dictionary<string, bool> licenses = Terrasoft.Common.Json.Json.Deserialize<Dictionary<string, bool>>(licenseItems);
+				var sb = new StringBuilder();
+				foreach (KeyValuePair<string, bool> licItem in licenses)
+				{
+					var recordId = new Guid(licItem.Key);
+					try
+					{
+						var schemaGKIVIPUsersLicenses = UserConnection.EntitySchemaManager.GetInstanceByName("GKIVIPUsersLicenses");
+						Entity entityGKIVIPUsersLicenses = schemaGKIVIPUsersLicenses.CreateEntity(UserConnection);
+						if (entityGKIVIPUsersLicenses.FetchFromDB("Id", recordId))
+						{
+							entityGKIVIPUsersLicenses.SetColumnValue("GKIisVIP", licItem.Value);
+							entityGKIVIPUsersLicenses.Save();
+						}
+					}
+					catch (Exception ex)
+					{
+						sb.Append(ex.Message);
+					}
+				}
+				if (sb.Length > 0)
+				{
+					return string.Format(
+						new LocalizableString(UserConnection.Workspace.ResourceStorage,
+							"GKILicensingRegularService",
+							"LocalizableStrings.GKIVIPChangesErrors.Value"),
+						sb);
+				}
+			}
+			catch (Exception ex)
+			{
+				return ex.Message;
+			}
+			return string.Empty;
+		}
+
+		[OperationContract]
+		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare,
+		ResponseFormat = WebMessageFormat.Json)]
+		public GKIVIPUsers GKIGetVIPUsers()
+		{
+			try
+			{
+				SetLastMasterCheckIn();
+			}
+			catch (Exception)
+			{ }
+			GKIVIPUsers vipUsers = new GKIVIPUsers();
+			try
+			{
+				if (!GKIIsSysAdmin())
+				{
+					throw new Exception(GKINoAdminRightsError);
+				}
+				vipUsers.vipUsers = new Dictionary<string, List<string>>();
+				var esqGKIVIPUsersLicenses = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "GKIVIPUsersLicenses");
+				esqGKIVIPUsersLicenses.UseAdminRights = false;
+				var sysPackageNameColumn = esqGKIVIPUsersLicenses.AddColumn("GKISysLicPackage.Name");
+				var userNameColumn = esqGKIVIPUsersLicenses.AddColumn("GKISysAdminUnit.Name");
+				esqGKIVIPUsersLicenses.Filters.Add(
+					esqGKIVIPUsersLicenses.CreateFilterWithParameters(FilterComparisonType.Equal, "GKIisVIP", true));
+				var esqGKIVIPUsersLicensesCollection = esqGKIVIPUsersLicenses.GetEntityCollection(UserConnection);
+				foreach (var entityGKIVIPUsersLicenses in esqGKIVIPUsersLicensesCollection)
+				{
+					string sysPackageName = entityGKIVIPUsersLicenses.GetTypedColumnValue<string>(sysPackageNameColumn.Name);
+					string sysUserName = entityGKIVIPUsersLicenses.GetTypedColumnValue<string>(userNameColumn.Name);
+					if (!vipUsers.vipUsers.ContainsKey(sysPackageName) || vipUsers.vipUsers[sysPackageName].IsNullOrEmpty())
+					{
+						vipUsers.vipUsers[sysPackageName] = new List<string>();
+					}
+					vipUsers.vipUsers[sysPackageName].Add(sysUserName);
+				}
+
+				vipUsers.isSuccess = true;
+				vipUsers.errorMsg = String.Empty;
+			}
+			catch (Exception ex)
+			{
+				vipUsers.isSuccess = false;
+				vipUsers.errorMsg = ex.Message;
+				vipUsers.vipUsers = null;
+			}
+			return vipUsers;
+		}
+
+		[OperationContract]
+		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare,
+		ResponseFormat = WebMessageFormat.Json)]
+		public bool GKIIsTheSlaveFree()
+		{
+			try
+			{
+				if (GKIIsSysAdmin())
+				{
+					lastMasterCheckInWaitMinutes = lastMasterCheckInWaitMinutes ?? lastMasterCheckInWaitMinutesDefault;
+					if (lastMasterCheckInDateTime != null)
+                    {
+						bool isFree = (DateTime.Now - lastMasterCheckInDateTime.Value).TotalMinutes > lastMasterCheckInWaitMinutes
+							? true
+							: false;
+						return isFree;
+					}
+					if (lastMasterCheckInDateTime == null && lastUnknowStatusDateTime == null)
+					{
+						lastUnknowStatusDateTime = DateTime.Now;
+						return false;
+					}
+					if (lastMasterCheckInDateTime == null && lastUnknowStatusDateTime != null)
+					{
+						bool isFree = (DateTime.Now - lastUnknowStatusDateTime.Value).TotalMinutes > lastMasterCheckInWaitMinutes
+							? true
+							: false;
+						return isFree;
+					}
+					return false;
+				}
+				return false;
+			}
+			catch (Exception)
+			{
+				return false;
+			}
+		}
+
+		[OperationContract]
+		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
+		ResponseFormat = WebMessageFormat.Json)]
+		public GKIDistributeVIPLicensesResult GKIDistributeVIPLicenses(Guid[] userIds, Guid[] packageIds)
+		{
+			GKIDistributeVIPLicensesResult vipLicensesResult = new GKIDistributeVIPLicensesResult();
+			vipLicensesResult.SysLicPackageErrors = new Dictionary<string, int>();
+			try
+			{
+				if (!GKIIsSysAdmin())
+				{
+					throw new Exception(GKINoAdminRightsError);
+				}
+				//assess the volume
+				var schemaSysLicPackage = UserConnection.EntitySchemaManager.GetInstanceByName("SysLicPackage");
+				List<Guid> validPackages = new List<Guid>();
+				int countUsers = userIds.Length;
+				
+				foreach (Guid sysPackage in packageIds)
+                {
+					int limit = GKIGetVIPLimit(sysPackage);
+					int usedCount = GetUsedVIPCount(sysPackage);
+					if (countUsers > limit - usedCount)
+                    {
+						Entity entitySysLicPackage = schemaSysLicPackage.CreateEntity(UserConnection);
+						entitySysLicPackage.FetchFromDB("Id", sysPackage);
+						string packageName = entitySysLicPackage.GetTypedColumnValue<string>("Name");
+						vipLicensesResult.SysLicPackageErrors[packageName] = limit - usedCount;
+					}
+                    else
+                    {
+						validPackages.Add(sysPackage);
+					}
+				}
+
+				foreach(Guid licPackage in validPackages)
+                {
+					//missing records insert
+					var insertIntoGKIVIPUsersLicenses = new InsertSelect(UserConnection)
+						.Into("GKIVIPUsersLicenses")
+						.Set("GKISysAdminUnitId")
+						.Set("GKISysLicPackageId")
+						.FromSelect(
+							new Select(UserConnection)
+								.Column("Id")
+								.Column(Column.Const(licPackage))
+									.From("SysAdminUnit")
+									.Where("Id").Not().In(
+										new Select(UserConnection)
+										.Column("GKISysAdminUnitId")
+										.From("GKIVIPUsersLicenses")
+										.Where("GKISysLicPackageId")
+										.IsEqual(Column.Parameter(licPackage))
+									)
+						as Select);
+					insertIntoGKIVIPUsersLicenses.Execute();
+
+					//existing records update
+					IEnumerable<QueryParameter> usersEnum = userIds.ToList().ConvertAll(x => new QueryParameter(x));
+
+					Update updateGKIVIPUsersLicenses = new Update(UserConnection, "GKIVIPUsersLicenses")
+						.Set("GKIisVIP", Column.Parameter(true))
+						.Where("GKISysLicPackageId")
+						.IsEqual(Column.Parameter(licPackage))
+						.And("GKISysAdminUnitId").In(usersEnum)
+						.And("GKIisVIP").IsEqual(Column.Parameter(false))
+						as Update;
+					updateGKIVIPUsersLicenses.Execute();
+
+					
+				}
+				vipLicensesResult.IsSuccess = true;
+			}
+			catch (Exception ex)
+			{
+				vipLicensesResult.IsSuccess = false;
+				vipLicensesResult.ErrorMsg = ex.Message;
+				return vipLicensesResult;
+			}
+			return vipLicensesResult;
+		}
+		[OperationContract]
+		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
+		ResponseFormat = WebMessageFormat.Json)]
+		public string GKIWithdrawVIPLicenses(Guid[] userIds, Guid[] packageIds)
+		{
+			try
+			{
+				if (!GKIIsSysAdmin())
+				{
+					throw new Exception(GKINoAdminRightsError);
+				}
+				//existing records update
+				IEnumerable<QueryParameter> usersEnum = userIds.ToList().ConvertAll(x => new QueryParameter(x));
+				IEnumerable<QueryParameter> licPackagesEnum = packageIds.ToList().ConvertAll(x => new QueryParameter(x));
+
+				Update updateGKIVIPUsersLicenses = new Update(UserConnection, "GKIVIPUsersLicenses")
+					.Set("GKIisVIP", Column.Parameter(false))
+					.Where("GKISysLicPackageId").In(licPackagesEnum)
+					.And("GKISysAdminUnitId").In(usersEnum)
+					.And("GKIisVIP").IsEqual(Column.Parameter(true))
+					as Update;
+				updateGKIVIPUsersLicenses.Execute();
+			}
+			catch (Exception ex)
+			{
+				return ex.Message;
+			}
+			return "ok";
+		}
+		public int GKIGetVIPLimit(Guid sysLicPackageId)
+        {
+			int value = dictGKIVIPLicenses.ContainsKey(sysLicPackageId) ? dictGKIVIPLicenses[sysLicPackageId] : 0;
+			return value;
+		}
+		private void AssignLastMasterCheckInWaitMinutes(int lastMasterCheckInWaitMinutesToSet)
+        {
+			lastMasterCheckInWaitMinutes = lastMasterCheckInWaitMinutesToSet;
+		}
+
+		private void SetLastMasterCheckIn()
+		{
+			lastMasterCheckInDateTime = DateTime.Now;
+			lastUnknowStatusDateTime = null;
+		}
+
+		private void AssignVIPLimits(Dictionary<string, int> vipLicensesLimits = null)
+        {
+			if (dictGKIVIPLicenses == null)
+            {
+				dictGKIVIPLicenses = new Dictionary<Guid, int>();
+			}
+
+			if (vipLicensesLimits.IsNullOrEmpty())
+            {
+				dictGKIVIPLicenses.Clear();
+				DeleteAllGKIVIPUsersLicenses();
+				return;
+            }
+
+			List<Guid> sysLicPackagesFound = new List<Guid>();
+			//search SysLicPackages by their names
+			foreach (var vipLicenseLimitName in vipLicensesLimits.Keys)
+            {
+				var schemaSysLicPackage = UserConnection.EntitySchemaManager.GetInstanceByName("SysLicPackage");
+				Entity entitySysLicPackage = schemaSysLicPackage.CreateEntity(UserConnection);
+				if (entitySysLicPackage.FetchFromDB("Name", vipLicenseLimitName))
+				{
+					Guid recordId = entitySysLicPackage.GetTypedColumnValue<Guid>("Id");
+					sysLicPackagesFound.Add(recordId);
+					dictGKIVIPLicenses[recordId] = vipLicensesLimits[vipLicenseLimitName];
+				}
+			}
+
+			//remove redundant keys
+			IEnumerable<Guid> sysLicPackagesFoundEnum = sysLicPackagesFound.AsEnumerable();
+			var missingSysLicPackages = dictGKIVIPLicenses.Keys.ToList().Except(sysLicPackagesFoundEnum);
+			foreach (var missingKey in missingSysLicPackages.ToList())
+			{
+				dictGKIVIPLicenses.Remove(missingKey);
+			}
+			DeleteGKIVIPUsersLicenses(missingSysLicPackages);
+		}
+
+		private void DeleteGKIVIPUsersLicenses(IEnumerable<Guid> missingSysLicPackages = null)
+        {
+			if (missingSysLicPackages != null && missingSysLicPackages.Count() > 0)
+			{
+				List<QueryParameter> packagesToDelete = new List<QueryParameter>();
+				foreach (Guid missingPackage in missingSysLicPackages)
+				{
+					packagesToDelete.Add(new QueryParameter(missingPackage));
+				}
+				IEnumerable<QueryParameter> packagesToDeleteEnum = packagesToDelete.AsEnumerable();
+				Delete requestRecordsDelete = new Delete(UserConnection)
+					.From("GKIVIPUsersLicenses")
+					.Where("GKISysLicPackageId")
+					.In(packagesToDeleteEnum)
+				as Delete;
+				requestRecordsDelete.Execute();
+			}
+		}
+		private void DeleteAllGKIVIPUsersLicenses()
+		{
+			Delete requestRecordsDelete = new Delete(UserConnection)
+				.From("GKIVIPUsersLicenses")
+			as Delete;
+			requestRecordsDelete.Execute();
+		}
+		public Dictionary<Guid, int> GetUsedVIPCount()
+        {
+			var dictGKIVIPLicensesUsedCount = new Dictionary<Guid, int>(dictGKIVIPLicenses);
+			foreach (var key in dictGKIVIPLicensesUsedCount.Keys.ToList())
+			{
+				dictGKIVIPLicensesUsedCount[key] = 0;
+			}
+			var queryParamListGKIVIPLicensesEnum = GetVIPLicensesFilter();
+			
+			var usedVIPLicensesSelect =
+				new Select(UserConnection)
+				.Column(Func.Count("Id"))
+				.Column("GKISysLicPackageId")
+				.From("GKIVIPUsersLicenses")
+				.Where("GKISysLicPackageId").In(queryParamListGKIVIPLicensesEnum)
+				.And("GKIisVIP").IsEqual(Column.Parameter(true))
+				.GroupBy("GKISysLicPackageId") as Select;
+			using (DBExecutor dbExecutor = UserConnection.EnsureDBConnection())
+			{
+				using (IDataReader dr = usedVIPLicensesSelect.ExecuteReader(dbExecutor))
+				{
+					while (dr.Read())
+					{
+						dictGKIVIPLicensesUsedCount[dr.GetGuid(1)] = dr.GetInt32(0);
+					}
+				}
+			}
+			return dictGKIVIPLicensesUsedCount;
+		}
+		public int GetUsedVIPCount(Guid sysLicPackageId)
+		{
+			int usedCount = 0;
+			var usedVIPLicensesSelect =
+				new Select(UserConnection)
+				.Column(Func.Count("Id"))
+				.Column("GKISysLicPackageId")
+				.From("GKIVIPUsersLicenses")
+				.Where("GKISysLicPackageId").IsEqual(Column.Parameter(sysLicPackageId))
+				.And("GKIisVIP").IsEqual(Column.Parameter(true))
+				.GroupBy("GKISysLicPackageId") as Select;
+			using (DBExecutor dbExecutor = UserConnection.EnsureDBConnection())
+			{
+				using (IDataReader dr = usedVIPLicensesSelect.ExecuteReader(dbExecutor))
+				{
+					while (dr.Read())
+					{
+						usedCount = dr.GetInt32(0);
+					}
+				}
+			}
+			return usedCount;
+		}
+		private IEnumerable<QueryParameter> GetVIPLicensesFilter()
+        {
+			List<QueryParameter> queryParamListGKIVIPLicenses = new List<QueryParameter>();
+			foreach (var GKIVIPLicense in dictGKIVIPLicenses)
+			{
+				queryParamListGKIVIPLicenses.Add(new QueryParameter(GKIVIPLicense.Key));
+			}
+			IEnumerable<QueryParameter> queryParamListGKIVIPLicensesEnum = queryParamListGKIVIPLicenses.AsEnumerable();
+			return queryParamListGKIVIPLicensesEnum;
 		}
 
 		private int GKIRemoveLicensesRequest(Guid userIdGuid, string licenseName)
@@ -538,10 +1069,46 @@ namespace Terrasoft.Configuration
 			return entity.ExistInDB(sysCondition);
 		}
 
+		public class GKIDistributeVIPLicensesResult
+        {
+			public bool IsSuccess { get; set; }
+			public string ErrorMsg { get; set; }
+			public Dictionary<string, int> SysLicPackageErrors { get; set; }
+		}
+
+		public class GKIVIPUsers
+		{
+			public bool isSuccess { get; set; }
+			public string errorMsg { get; set; }
+			public Dictionary<string, List<string>> vipUsers { get; set; } //product, logins
+		}
+
+		public class PulseIncomingData
+		{
+			public int lastMasterCheckInWaitMinutes { get; set; }
+			public Dictionary<string, int> vipLicensesLimits { get; set; }
+		}
+		public class GKIVIPUsersLicensesData
+		{
+			public Guid Id { get; set; }
+			public string Caption { get; set; }
+			public bool Checked { get; set; }
+			public bool Enabled { get; set; }
+			public int Available { get; set; }
+			public int Limit { get; set; }
+		}
+		public class GKIVIPLicenses
+		{
+			public Guid SysLicPackageId { get; set; }
+			public int Limit { get; set; }
+			public int Available { get; set; }
+		}
+
 		public class PulseData
 		{
 			public bool isSuccess { get; set; }
 			public string errorMsg { get; set; }
+			public string vipLimitsErrorMsg { get; set; }
 			public List<string> pulseLicUserNames { get; set; } = null;
 		}
 
@@ -624,5 +1191,6 @@ namespace Terrasoft.Configuration
 		public static readonly string pulseAuditLogDescEn = "%license is missing or expired%";
 		public static readonly string pulseAuditLogDescBeginningEn = "Authorization denied for user ";
 		public static readonly string pulseAuditLogDescEndingEn = ". IP Address";
+		public static readonly int lastMasterCheckInWaitMinutesDefault = 5;
 	}
 }

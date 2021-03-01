@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "bea422b4-f261-4828-8788-d48e7f974bf1",
+    "Name": "UsersSectionV2",
+    "ModifiedOnUtc": "\/Date(1613830627000)\/",
+    "Parent": {
+      "UId": "2db64a17-3f13-4925-8764-c82689da5d79",
+      "Name": "UsersSectionV2"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Раздел \"Пользователи\""
+  }
+}

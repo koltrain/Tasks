@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.GKIDistributeVIPLicensesError.Value" Value="Недостаточно лимита лицензий для предоставления выбранным пользователям:{0}Выберите меньшее количество пользователей или перераспределите имеющиеся в системе лицензии" />
+			<Item Name="LocalizableStrings.GKIDistributeVIPLicensesErrorLimits.Value" Value="{0}: доступно {1}" />
+			<Item Name="LocalizableStrings.GKIVIPAssignButtonCaption.Value" Value="Назначить VIP" />
+			<Item Name="LocalizableStrings.GKIVIPLicensesSuccess.Value" Value="Назначено успешно" />
+			<Item Name="LocalizableStrings.GKIVIPWithdrawButtonCaption.Value" Value="Отозвать VIP" />
+		</Items>
+	</Group>
+</Resources>

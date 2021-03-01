@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "aef58669-c60b-efb9-b234-20e7d206296e",
+    "Name": "GKIVIPUsersLicenses",
+    "ModifiedOnUtc": "\/Date(1612949208000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Обязательные для лицензирования пользователи"
+  }
+}

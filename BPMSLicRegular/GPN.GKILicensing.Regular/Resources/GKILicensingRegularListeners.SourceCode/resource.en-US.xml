@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="GKILicensingRegularListeners" />
+			<Item Name="LocalizableStrings.GKIVIPUsersLicensesLimitExceeded.Value" Value="Превышен лимит VIP-лицензий!" />
+			<Item Name="LocalizableStrings.GKIVIPUsersLicensesLimitRecordDoesntExist.Value" Value="Лимит по этой лицензии не существует!" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,70 @@
+﻿{
+  "Descriptor": {
+    "UId": "108d5c59-daca-81ee-b2ad-7678168e533c",
+    "Name": "SysProfileData",
+    "ModifiedOnUtc": "\/Date(1613751535000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "a3251d81-1788-4245-88f1-23ae03e4057b",
+      "Name": "SysProfileData"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "3bb9d182-ad73-4379-9d51-2003c862a90c",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Key",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "03a27b75-6d7f-4be4-b0fd-f03ffd8a7aab",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Contact",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "fd26b95c-06ba-4595-915e-bc5657d10842",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SysCulture",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "216b38f5-e2c3-462b-ae2e-1df80fc21b33",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SysUser",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "6851587b-0b7a-45cb-a5a5-31994420d81b",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "ObjectId",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "CreatedOn",
+        "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+      },
+      {
+        "ColumnUId": "9928edec-4272-425a-93bb-48743fee4b04",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "ModifiedOn",
+        "DataTypeValueUId": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+      }
+    ]
+  }
+}

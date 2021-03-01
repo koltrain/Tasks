@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="GKILicensingRegularService" />
+			<Item Name="LocalizableStrings.GKIVIPChangesErrors.Value" Value="При бронировании лицензии возникла ошибка: {0}" />
 			<Item Name="LocalizableStrings.PulseAuditLogDescBeginningRu.Value" Value="Отказ авторизации пользователя " />
 			<Item Name="LocalizableStrings.PulseAuditLogDescEndingRu.Value" Value=". IP-адрес" />
 			<Item Name="LocalizableStrings.PulseAuditLogDescRu.Value" Value="нет лицензии" />
