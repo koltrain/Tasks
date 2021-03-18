@@ -18,6 +18,7 @@ namespace Terrasoft.Configuration
 
 	using Terrasoft.Web.Http.Abstractions;
 	using Terrasoft.Web.Common;
+	using Terrasoft.Configuration.FileUpload;
 	using Terrasoft.Core;
 	using Terrasoft.Core.Entities;
 	using Terrasoft.Core.Factories;
@@ -388,33 +389,31 @@ namespace Terrasoft.Configuration
 		#endregion
 
 		#region Licensing
-		[OperationContract]
-		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
-			ResponseFormat = WebMessageFormat.Json)]
-		public void GKIImportTlsFile()
+[OperationContract]
+		[WebInvoke(Method = "POST", ResponseFormat = WebMessageFormat.Json)]
+		public void GKIImportTlsFile(Stream fileContent)
         {
 			GKIUserConnectionCheck();
-			var request = HttpContext.Current.Request;
-			var queryString = request.Form;
 
-			string fileName = queryString["fileName"];
-			Guid recordId = new Guid(queryString["parentColumnValue"]);
-			Stream fileStream = request.Files["files"].InputStream;
-			
+			//from FileApiService.Upload
+			IFileUploadInfo fileUploadInfo = ClassFactory.Get<FileUploadInfo>(
+				new ConstructorArgument("fileContent", fileContent),
+#if NETSTANDARD2_0
+				new ConstructorArgument("request", HttpContext.Current.Request),
+#else
+				new ConstructorArgument("request", new System.Web.HttpRequestWrapper(System.Web.HttpContext.Current.Request)),
+#endif
+				new ConstructorArgument("storage", UserConnection.Workspace.ResourceStorage));
+
+			Stream fileStream = fileUploadInfo.Content;
 			StreamReader streamReader = new StreamReader(fileStream);
 			string tlsString = streamReader.ReadToEnd();
 			TLSLicenses tlsLicenses = new TLSLicenses();
-			
+
 			fileStream.Seek(0, SeekOrigin.Begin);
 			byte[] fileBytes = StreamToByteArray(fileStream);
 
-			//validate the file
-			//extension
-			if (fileName.Substring(fileName.Length > 4 ? fileName.Length - 4 : 0) != ".tls")
-			{
-				throw new Exception("#ExceptionStart#Wrong file format#ExceptionEnd#");
-			}
-			//content
+			//validate the file content
 			try
 			{
 				XmlSerializer serializer = new XmlSerializer(typeof(TLSLicenses));
