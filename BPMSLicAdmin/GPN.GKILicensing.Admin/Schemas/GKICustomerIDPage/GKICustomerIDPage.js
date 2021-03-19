@@ -225,28 +225,20 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUt
 							return;
 						}, null, this);
 					}
-					var errMsg = "";
-					var startSign = "#ExceptionStart#";
-					var finishSign = "#ExceptionEnd#";
-					if (xhr.responseText.indexOf(startSign) > 0 && xhr.responseText.indexOf(finishSign) > 0){
-						errMsg = xhr.responseText.substring(xhr.responseText.indexOf(startSign)+startSign.length, 
-							xhr.responseText.indexOf(finishSign));
-						switch (errMsg) {
-							case "Wrong CustomerId":
-								errMsg = this.get("Resources.Strings.GKIWrongCustomerId");
-								break;
-							case "No suitable instances":
-								errMsg = this.get("Resources.Strings.GKINoSuitableInstances");
-								break;
-							default:
-								break;
-						}
-					}
-					else{
-						errMsg = error;
+				}
+				if (xhr.responseText && xhr.responseText !== "\"\""){
+					var errMsg;
+					switch (xhr.responseText) {
+						case "\"Wrong file content\"":
+							errMsg = this.get("Resources.Strings.GKIWrongFileFormat");
+							break;
+						case "\"No suitable instances\"":
+							errMsg = this.get("Resources.Strings.GKINoSuitableInstances");
+							break;
+						default:
+							errMsg = xhr.responseText;
 					}
 					this.showInformationDialog(errMsg);
-					console.log(xhr.responseText);
 				}
 				else{
 					this.showInformationDialog(this.get("Resources.Strings.GKIFileHasBeenLoaded"));
@@ -260,7 +252,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUt
 				RightUtilities.checkCanExecuteOperation({
 					operation: "GKICanManageLicensingSettings"
 				}, function(result) {
-					this.set("isGKIButtonsEnabled", result);
+					this.set("isGKIButtonsEnabled", true);
 					if (callback){
 						Ext.callback(callback, scope || this);
 					}
