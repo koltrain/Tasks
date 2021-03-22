@@ -36,6 +36,7 @@ namespace Terrasoft.Configuration
 		public static class Misc
 		{
 			public static readonly Guid TlrRequestEmailTemplate = new Guid(("1f16b3ad-97de-4ae1-969b-443b8df06a1c").ToUpper());
+			public static readonly Guid SlaveAndADNotInSyncEmailTemplate = new Guid(("245e82f3-f3f8-43b6-9071-dbcf86497484").ToUpper());
 			public static readonly int lastMasterCheckInWaitMinutes = 5;
 		}
 	}
