@@ -14,7 +14,7 @@ namespace Terrasoft.Configuration
     using System.ServiceModel.Web;
     using System.Text;
 	using System.Xml.Serialization;
-
+	
 	using Terrasoft.Configuration.FileUpload;
 	using Terrasoft.Web.Common.ServiceRouting;
 	using Terrasoft.Web.Http.Abstractions;
@@ -30,7 +30,6 @@ namespace Terrasoft.Configuration
 
 
 	#region Service
-
 	[ServiceContract]
 	[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
 	public class GKILicensingAdminService : BaseService
@@ -56,8 +55,7 @@ namespace Terrasoft.Configuration
 			GKIUserConnectionCheck();
 
 			var rootSchema = UserConnection.EntitySchemaManager.FindInstanceByName("GKILicUserInstanceLicPackage");
-			var esqEnhanced = new EntitySchemaQuery(rootSchema);
-			esqEnhanced.AddColumn("Id");
+			var esqEnhanced = new EntitySchemaQuery(rootSchema) { PrimaryQueryColumn = { IsAlwaysSelect = true } };
 			string GKIUrlClm = esqEnhanced.AddColumn("GKIInstance.GKIUrl").Name;
 			string GKILicUserNameClm = esqEnhanced.AddColumn("GKILicUser.GKIName").Name;
 			string GKILicPackageNameClm = esqEnhanced.AddColumn("GKILicPackage.GKIName").Name;
@@ -119,8 +117,7 @@ namespace Terrasoft.Configuration
 				var rootSchema = UserConnection.EntitySchemaManager.FindInstanceByName("GKILicUserInstanceLicPackage");
 
 				//GKIActive == true
-				var esqEnhancedIsAdd = new EntitySchemaQuery(rootSchema);
-				esqEnhancedIsAdd.AddColumn("Id");
+				var esqEnhancedIsAdd = new EntitySchemaQuery(rootSchema) { PrimaryQueryColumn = { IsAlwaysSelect = true } };
 				string GKIUrlClmIsAdd = esqEnhancedIsAdd.AddColumn("GKIInstance.GKIUrl").Name;
 				string GKILicUserNameClmIsAdd = esqEnhancedIsAdd.AddColumn("GKILicUser.GKIName").Name;
 				string GKILicPackageNameClmIsAdd = esqEnhancedIsAdd.AddColumn("GKILicPackage.GKIName").Name;
@@ -146,8 +143,7 @@ namespace Terrasoft.Configuration
 				var enhancedIsAddCollection = esqEnhancedIsAdd.GetEntityCollection(UserConnection);
 
 				//GKIActive == false
-				var esqEnhancedIsRemove = new EntitySchemaQuery(rootSchema);
-				esqEnhancedIsRemove.AddColumn("Id");
+				var esqEnhancedIsRemove = new EntitySchemaQuery(rootSchema) { PrimaryQueryColumn = { IsAlwaysSelect = true } };
 				string GKIUrlClmIsRemove = esqEnhancedIsRemove.AddColumn("GKIInstance.GKIUrl").Name;
 				string GKILicUserNameClmIsRemove = esqEnhancedIsRemove.AddColumn("GKILicUser.GKIName").Name;
 				string GKILicPackageNameClmIsRemove = esqEnhancedIsRemove.AddColumn("GKILicPackage.GKIName").Name;
@@ -388,8 +384,8 @@ namespace Terrasoft.Configuration
 			}
 			return;
 		}
-
-
+		
+		
 		#endregion
 
 		#region Licensing
@@ -528,7 +524,7 @@ namespace Terrasoft.Configuration
 				{
 					try
 					{
-						string installationResult = GKILicenseHttpRequest(GKIInstanceEntity.GetTypedColumnValue<Guid>(idColumnName), GKITlsInstallRegularServiceUrl, licMessage);
+						string installationResult = GKILicenseHttpRequest(baseUrl, GKITlsInstallRegularServiceUrl, licMessage);
 						TlsCustomInstallResult tlsInstallResult = JsonConvert.DeserializeObject<TlsCustomInstallResult>(installationResult);
 						if (tlsInstallResult.success != true)
                         {
@@ -652,7 +648,7 @@ namespace Terrasoft.Configuration
 					{
 						try
 						{
-							string fileString = GKILicenseHttpGetRequest(GKIInstanceEntity.GetTypedColumnValue<Guid>(idColumnName), GKITlrRequestUrl);
+							string fileString = GKILicenseHttpGetRequest(baseUrl, GKITlrRequestUrl);
 							TLRLicenses tlrLicenses;
 							string version = GKIInstanceEntity.GetTypedColumnValue<string>("GKIVersion");
 							XmlSerializer serializer = new XmlSerializer(typeof(TLRLicenses));
@@ -825,7 +821,7 @@ namespace Terrasoft.Configuration
 
 						//send pulse data
 						PulseData pulseData = JsonConvert.DeserializeObject<PulseData>(
-							GKILicenseHttpRequest(instanceId, GKIPulseUrl, message));
+							GKILicenseHttpRequest(baseUrl, GKIPulseUrl, message));
 						if (pulseData.vipLimitsErrorMsg != String.Empty)
 						{
 							returnMsg += String.Concat("\n", instanceName, ": VIP license error: ", pulseData.vipLimitsErrorMsg, ". ");
@@ -911,7 +907,7 @@ namespace Terrasoft.Configuration
 					try
 					{
 						GKIVIPUsers vipUsers;
-						string response = GKILicenseHttpRequest(instanceId, GKIVIPUsersUrl);
+						string response = GKILicenseHttpRequest(baseUrl, GKIVIPUsersUrl);
 						using (var ms = new MemoryStream(Encoding.Unicode.GetBytes(response)))
 						{
 							DataContractJsonSerializer deserializer = new DataContractJsonSerializer(typeof(GKIVIPUsers));
@@ -991,60 +987,6 @@ namespace Terrasoft.Configuration
 									as Select);
 				insertIntoQueue.Execute();
 			}
-		}
-
-		[OperationContract]
-		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
-			ResponseFormat = WebMessageFormat.Json)]
-		public string GKINewInstancePassword(Guid instanceId, string password)
-		{
-			try
-			{
-				var securityEngine = UserConnection.DBSecurityEngine;
-				securityEngine.CheckCanExecuteOperation("GKICanManageLicensingSettings");
-
-				var schemaGKIInstance = UserConnection.EntitySchemaManager.GetInstanceByName("GKIInstance");
-				Entity entityGKIInstance = schemaGKIInstance.CreateEntity(UserConnection);
-				if (entityGKIInstance.FetchFromDB("Id", instanceId))
-				{
-					entityGKIInstance.SetColumnValue("GKIPassword", password);
-					entityGKIInstance.Save();
-				}
-				else
-                {
-					throw new NullOrEmptyException();
-                }
-			}
-			catch(Exception ex)
-            {
-				return ex.Message;
-            }
-			return String.Empty;
-		}
-
-		public void GKISlaveAndADNotInSync()
-        {
-			Guid mailboxId = Terrasoft.Core.Configuration.SysSettings.GetValue(UserConnection, "GKILicensingMailBox", Guid.Empty);
-			GetSubjectAndBodyFromEmailTemplate(GKILicensingConstantsCs.Misc.SlaveAndADNotInSyncEmailTemplate, out string emailSubject, out string emailBody);
-			var esqGKIInstance = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "GKIInstance");
-			esqGKIInstance.UseAdminRights = false;
-			esqGKIInstance.AddColumn("Id");
-			esqGKIInstance.AddColumn("GKIAdminEmail");
-			esqGKIInstance.AddColumn("GKIName");
-			esqGKIInstance.Filters.Add(
-				esqGKIInstance.CreateFilterWithParameters(FilterComparisonType.Equal, "[GKIInstanceLicUser:GKIInstance:Id].GKIMSADActive", true));
-			esqGKIInstance.Filters.Add(
-				esqGKIInstance.CreateFilterWithParameters(FilterComparisonType.Equal, "[GKIInstanceLicUser:GKIInstance:Id].GKIActive", false));
-				
-			var esqGKIInstanceCollection = esqGKIInstance.GetEntityCollection(UserConnection);
-			foreach(var instanceEntity in esqGKIInstanceCollection)
-            {
-				if (instanceEntity.GetTypedColumnValue<string>("GKIAdminEmail").Length > 0)
-				{
-					string instanceEmailBody = emailBody.Replace("[#GKIName#]", instanceEntity.GetTypedColumnValue<string>("GKIName"));
-					GKISendActivityEmail(UserConnection, mailboxId, instanceEntity.GetTypedColumnValue<string>("GKIAdminEmail"), emailSubject, instanceEmailBody, null);
-				}
-            }
 		}
 
 		#endregion
@@ -1265,10 +1207,6 @@ namespace Terrasoft.Configuration
 			var userNameCol = esqGKILicUserInstanceLicPackage.AddColumn("GKILicUser.GKIName");
 			var packNameCol = esqGKILicUserInstanceLicPackage.AddColumn("GKILicPackage.GKIName");
 			esqGKILicUserInstanceLicPackage.AddColumn("GKIReserved");
-			esqGKILicUserInstanceLicPackage.AddColumn("GKILicUser");
-			esqGKILicUserInstanceLicPackage.AddColumn("GKILicPackage");
-			esqGKILicUserInstanceLicPackage.AddColumn("GKIInstance");
-
 			esqGKILicUserInstanceLicPackage.Filters.Add(
 				esqGKILicUserInstanceLicPackage.CreateFilterWithParameters(FilterComparisonType.Equal, "GKIInstance", instanceId));
 			esqGKILicUserInstanceLicPackage.Filters.Add(
@@ -1295,8 +1233,7 @@ namespace Terrasoft.Configuration
 					}
 					else
 					{
-						bool isEligible = GetUserGroupADLicenseEligible(esqGKILicUserInstanceLicPackageEntity);
-						if (licPackageAvailable[packName] > 0 && isEligible)
+						if (licPackageAvailable[packName] > 0)
 						{
 							licUserData.Add(new LicUserData { LicUserName = userName, LicPackageName = packName });
 							recordsToActivate.Add(new QueryParameter(recordId));
@@ -1319,29 +1256,10 @@ namespace Terrasoft.Configuration
 				//request to add licenses
 				if (licUserData.Count > 0)
 				{
-					GKILicenseAssignmentRequest(instanceId, true, licUserData);
+					GKILicenseAssignmentRequest(baseUrl, true, licUserData);
 				}
 			}
 		}
-
-		private bool GetUserGroupADLicenseEligible(Entity esqGKILicUserInstanceLicPackageEntity)
-        {
-			var esqGKIGroupAD = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "GKIGroupAD");
-			esqGKIGroupAD.UseAdminRights = false;
-			esqGKIGroupAD.AddColumn("Id");
-			esqGKIGroupAD.Filters.Add(
-				esqGKIGroupAD.CreateFilterWithParameters(FilterComparisonType.Equal, "[GKIGroupADUsers:GKIGroupAD:Id].GKIInstance", 
-					esqGKILicUserInstanceLicPackageEntity.GetTypedColumnValue<Guid>("GKIInstanceId")));
-			esqGKIGroupAD.Filters.Add(
-				esqGKIGroupAD.CreateFilterWithParameters(FilterComparisonType.Equal, "[GKIGroupADUsers:GKIGroupAD:Id].GKILicUser",
-					esqGKILicUserInstanceLicPackageEntity.GetTypedColumnValue<Guid>("GKILicUserId")));
-			esqGKIGroupAD.Filters.Add(
-				esqGKIGroupAD.CreateFilterWithParameters(FilterComparisonType.Equal, "[GKIGroupADInstanceLicense:GKIGroupAD:Id].GKILicPackage",
-					esqGKILicUserInstanceLicPackageEntity.GetTypedColumnValue<Guid>("GKILicPackageId")));
-			var esqGKIGroupADCollection = esqGKIGroupAD.GetEntityCollection(UserConnection);
-			bool result = esqGKIGroupADCollection != null && esqGKIGroupADCollection.Count > 0 ? true : false;
-			return result;
-        }
 
 		private Dictionary<string, int> GetVIPLicensesLimits(Guid instanceId)
         {
@@ -1409,13 +1327,13 @@ namespace Terrasoft.Configuration
 					GKIWriteLicUserInstanceLicPackageError(enhancedEntity.GetTypedColumnValue<Guid>("Id"), whosEmpty + " is empty");
 					continue;
 				}
-				Guid instanceId = enhancedEntity.GetTypedColumnValue<Guid>("Id");
+				string baseUrl = enhancedEntity.GetTypedColumnValue<string>(GKIUrlClm);
 				InstanceSyncData curInstance = new InstanceSyncData();
-				curInstance = instancesSyncData.Find(item => item.InstanceId == instanceId);
+				curInstance = instancesSyncData.Find(item => item.BaseUrl == baseUrl);
 				if (curInstance == null)
 				{
 					curInstance = new InstanceSyncData();
-					curInstance.InstanceId = instanceId;
+					curInstance.BaseUrl = baseUrl;
 					instancesSyncData.Add(curInstance);
 				}
 
@@ -1435,7 +1353,7 @@ namespace Terrasoft.Configuration
 			{
 				try
 				{
-					string userMessage = GKILicenseAssignmentRequest(instanceSyncData.InstanceId, isAddLicense, instanceSyncData.LicUserDataList);
+					string userMessage = GKILicenseAssignmentRequest(instanceSyncData.BaseUrl, isAddLicense, instanceSyncData.LicUserDataList);
 					continue;
 				}
 				catch (Exception ex)
@@ -1444,7 +1362,7 @@ namespace Terrasoft.Configuration
 					Update instanceUpdate = new Update(UserConnection, "GKIInstance")
 						.Set("GKILastSyncSuccess", Column.Parameter(false))
 						.Set("GKILastSyncError", Column.Parameter(ex.Message))
-						.Where("Id").IsEqual(Column.Parameter(instanceSyncData.InstanceId))
+						.Where("GKIUrl").IsEqual(Column.Parameter(instanceSyncData.BaseUrl))
 					as Update;
 					instanceUpdate.Execute();
 					continue;
@@ -1507,7 +1425,7 @@ namespace Terrasoft.Configuration
 		{
 			try
 			{
-				string bareLicenseInfoResult = GKILicenseHttpRequest(instanceId, GKIGetInstalledLicensesInfoServiceUrl);
+				string bareLicenseInfoResult = GKILicenseHttpRequest(baseUrl, GKIGetInstalledLicensesInfoServiceUrl);
 				LicenseInfoResult licenseInfoResult = JsonConvert.DeserializeObject<LicenseInfoResult>(bareLicenseInfoResult);
 				if (licenseInfoResult.Success == true)
 				{
@@ -1723,7 +1641,7 @@ namespace Terrasoft.Configuration
 		private string GKILicenseGetUsersToDeactivateRequest(string baseUrl, string serviceUrl, Guid instanceId)
 		{
 			string userMessage = "";
-			var msgResponseText = GKILicenseHttpRequest(instanceId, serviceUrl);
+			var msgResponseText = GKILicenseHttpRequest(baseUrl, serviceUrl);
 			GKIUsersSyncRoot syncResultObj = JsonConvert.DeserializeObject<GKIUsersSyncRoot>(msgResponseText);
 			GKIUsersSyncResult syncResult = syncResultObj.GKIUsersSyncResult;
 			if (syncResult != null)
@@ -1746,7 +1664,7 @@ namespace Terrasoft.Configuration
 		}
 		private string GKILicenseSyncRegularRequest(string baseUrl, string serviceUrl, Guid instanceId)
 		{
-			var msgResponseText = GKILicenseHttpRequest(instanceId, serviceUrl);
+			var msgResponseText = GKILicenseHttpRequest(baseUrl, serviceUrl);
 			string userMessage = "";
 			GKIUsersSyncRoot syncResultObj = JsonConvert.DeserializeObject<GKIUsersSyncRoot>(msgResponseText);
 			GKIUsersSyncResult syncResult = syncResultObj.GKIUsersSyncResult;
@@ -1910,7 +1828,7 @@ namespace Terrasoft.Configuration
 
 			return userMessage;
 		}
-		private string GKILicenseAssignmentRequest(Guid instanceId, bool isAddLicense, List<LicUserData> licUserDataList)
+		private string GKILicenseAssignmentRequest(string baseUrl, bool isAddLicense, List<LicUserData> licUserDataList)
 		{
 			string message = JsonConvert.SerializeObject(licUserDataList);
 			string serviceUrl = isAddLicense
@@ -1919,26 +1837,21 @@ namespace Terrasoft.Configuration
 			string userMessage = "";
 			try
 			{
-				var schemaGKIInstance = UserConnection.EntitySchemaManager.GetInstanceByName("GKIInstance");
-				Entity entityGKIInstance = schemaGKIInstance.CreateEntity(UserConnection);
-				entityGKIInstance.FetchFromDB("Id", instanceId);
-				string instanceName = entityGKIInstance.GetTypedColumnValue<string>("GKIName");
-
-				var msgResponseText = GKILicenseHttpRequest(instanceId, serviceUrl, message);
+				var msgResponseText = GKILicenseHttpRequest(baseUrl, serviceUrl, message);
 				GKILicUserSyncResult GKILicUserSyncResult = JsonConvert.DeserializeObject<GKILicUserSyncResult>(msgResponseText);
 				List<LicUserSyncResult> syncResults = GKILicUserSyncResult.LicUserSyncResults;
 				if (syncResults != null)
 				{
-					userMessage = String.Concat(instanceName, ": ", userMessage);
+					userMessage = String.Concat(baseUrl, ": ", userMessage);
 					userMessage = String.Concat(userMessage, GKILicUserSyncResult.Success == true ? "" : "Critical error occured! " + GKILicUserSyncResult.ErrMsg);
 
-					LicSyncResultProcessing(syncResults, isAddLicense, out userMessage, instanceId);
+					LicSyncResultProcessing(syncResults, isAddLicense, out userMessage, baseUrl);
 
 					//instance sync result
 					Update instanceUpdate = new Update(UserConnection, "GKIInstance")
 						.Set("GKILastSyncSuccess", Column.Parameter(GKILicUserSyncResult.Success))
 						.Set("GKILastSyncError", Column.Parameter(GKILicUserSyncResult.Success == true ? String.Empty : GKILicUserSyncResult.ErrMsg))
-						.Where("Id").IsEqual(Column.Parameter(instanceId))
+						.Where("GKIUrl").IsEqual(Column.Parameter(baseUrl))
 					as Update;
 					instanceUpdate.Execute();
 				}
@@ -1949,7 +1862,7 @@ namespace Terrasoft.Configuration
 					Update instanceUpdate = new Update(UserConnection, "GKIInstance")
 						.Set("GKILastSyncSuccess", Column.Parameter(GKILicUserSyncResult.Success))
 						.Set("GKILastSyncError", Column.Parameter(errorMsg))
-						.Where("Id").IsEqual(Column.Parameter(instanceId))
+						.Where("GKIUrl").IsEqual(Column.Parameter(baseUrl))
 					as Update;
 					instanceUpdate.Execute();
 
@@ -1964,7 +1877,7 @@ namespace Terrasoft.Configuration
 								.Set("GKILastErrorDateTime", Column.Parameter(DateTime.Now))
 								.Set("GKIDeactivatedBySync", Column.Parameter(false))
 								.Set("GKISyncError", Column.Parameter(errorMsg))
-								.Where("GKIInstanceId").IsEqual(Column.Parameter(instanceId))
+								.Where("GKIInstanceId").In(new Select(UserConnection).Column("Id").From("GKIInstance").Where("GKIUrl").IsEqual(Column.Parameter(baseUrl)))
 								.And("GKILicPackageId").In(new Select(UserConnection).Column("Id").From("GKILicPackage").Where("GKIName").IsEqual(Column.Parameter(licPackageName)))
 								.And("GKILicUserId").In(new Select(UserConnection).Column("Id").From("GKILicUser").Where("GKIName").In(syncedErrorUserNamesEnum))
 							as Update;
@@ -1973,7 +1886,7 @@ namespace Terrasoft.Configuration
 					}
 
 					userMessage = "Instance has not returned any user. ";
-					userMessage = String.Concat(instanceName, ": ", userMessage);
+					userMessage = String.Concat(baseUrl, ": ", userMessage);
 					userMessage = String.Concat(userMessage, GKILicUserSyncResult.Success == true ? "" : "Critical error occured! " + GKILicUserSyncResult.ErrMsg);
 				}
 			}
@@ -1983,7 +1896,7 @@ namespace Terrasoft.Configuration
 				Update instanceUpdate = new Update(UserConnection, "GKIInstance")
 					.Set("GKILastSyncSuccess", Column.Parameter(false))
 					.Set("GKILastSyncError", Column.Parameter(ex.Message))
-					.Where("Id").IsEqual(Column.Parameter(instanceId))
+					.Where("GKIUrl").IsEqual(Column.Parameter(baseUrl))
 				as Update;
 				instanceUpdate.Execute();
 
@@ -1995,7 +1908,7 @@ namespace Terrasoft.Configuration
 						.Set("GKILastErrorDateTime", Column.Parameter(DateTime.Now))
 						.Set("GKIDeactivatedBySync", Column.Parameter(false))
 						.Set("GKISyncError", Column.Parameter(ex.Message))
-						.Where("GKIInstanceId").IsEqual(Column.Parameter(instanceId))
+						.Where("GKIInstanceId").In(new Select(UserConnection).Column("Id").From("GKIInstance").Where("GKIUrl").IsEqual(Column.Parameter(baseUrl)))
 						.And("GKILicUserId").In(new Select(UserConnection).Column("Id").From("GKILicUser").Where("GKIName").In(syncedErrorUserNamesEnum))
 					as Update;
 					syncedUserErrorsUpdate.Execute();
@@ -2005,8 +1918,9 @@ namespace Terrasoft.Configuration
 			}
 			return userMessage;
 		}
-		private void LicSyncResultProcessing(List<LicUserSyncResult> syncResults, bool isAddLicense, out string userMessage, Guid instanceId)
+		private void LicSyncResultProcessing(List<LicUserSyncResult> syncResults, bool isAddLicense, out string userMessage, string baseUrl, Guid? instanceIdNullable = null)
         {
+			Guid instanceId = instanceIdNullable ?? Guid.Empty;
 
 			List<LicUserSyncResult> trueSyncResults = syncResults.FindAll(item => item.isSuccess == true);
 			List<LicUserSyncResult> errorSyncResults = syncResults.FindAll(item => item.isSuccess == false);
@@ -2030,7 +1944,10 @@ namespace Terrasoft.Configuration
 						.Set("GKISyncError", Column.Parameter(String.Empty))
 						.Set("GKIDeactivatedBySync", Column.Parameter(false))
 						.Set("GKILastSyncDateTime", Column.Parameter(DateTime.Now))
-						.Where("GKIInstanceId").IsEqual(Column.Parameter(instanceId))
+						.Where().OpenBlock("GKIInstanceId").IsEqual(Column.Parameter(instanceId))
+							.Or("GKIInstanceId").In(
+								new Select(UserConnection).Column("Id").From("GKIInstance").Where("GKIUrl").IsEqual(Column.Parameter(baseUrl)))
+							.CloseBlock()
 						.And("GKILicPackageId").In(new Select(UserConnection).Column("Id").From("GKILicPackage").Where("GKIName").IsEqual(Column.Parameter(licPackageName)))
 						.And("GKILicUserId").In(new Select(UserConnection).Column("Id").From("GKILicUser").Where("GKIName").In(syncedUserNamesEnum))
 					as Update;
@@ -2057,7 +1974,10 @@ namespace Terrasoft.Configuration
 						Update syncedUserErrorsUpdate = new Update(UserConnection, "GKILicUserInstanceLicPackage")
 							.Set("GKILastErrorDateTime", Column.Parameter(DateTime.Now))
 							.Set("GKISyncError", Column.Parameter(errorName))
-							.Where("GKIInstanceId").IsEqual(Column.Parameter(instanceId))
+							.Where().OpenBlock("GKIInstanceId").IsEqual(Column.Parameter(instanceId))
+								.Or("GKIInstanceId").In(
+									new Select(UserConnection).Column("Id").From("GKIInstance").Where("GKIUrl").IsEqual(Column.Parameter(baseUrl)))
+								.CloseBlock()
 							.And("GKILicPackageId").In(new Select(UserConnection).Column("Id").From("GKILicPackage").Where("GKIName").IsEqual(Column.Parameter(licPackageName)))
 							.And("GKILicUserId").In(new Select(UserConnection).Column("Id").From("GKILicUser").Where("GKIName").In(syncedErrorUserNamesEnum))
 						as Update;
@@ -2122,27 +2042,23 @@ namespace Terrasoft.Configuration
 		}
 		private void GKISendTlrEmail(List<byte[]> filesData)
         {
-			Guid mailboxId = Terrasoft.Core.Configuration.SysSettings.GetValue(UserConnection, "GKILicensingMailBox", Guid.Empty);
-			string recipientEmail = Terrasoft.Core.Configuration.SysSettings.GetValue(UserConnection, "GKILicensingTerrasoftSupportAddress", String.Empty);
-			GetSubjectAndBodyFromEmailTemplate(GKILicensingConstantsCs.Misc.TlrRequestEmailTemplate, out string emailSubject, out string emailBody);
-
-			GKISendActivityEmail(UserConnection, mailboxId, recipientEmail, emailSubject, emailBody, filesData, null, "LicenseRequest", ".tlr");
-		}
-
-		private void GetSubjectAndBodyFromEmailTemplate(Guid templateId, out string emailSubject, out string emailBody)
-        {
 			string emailTemplateErrorMsg = new LocalizableString(UserConnection.Workspace.ResourceStorage,
 				"GKILicensingServices",
 				"LocalizableStrings.GKITlrRequestEmailTemplateError.Value");
 
+			Guid mailboxId = Terrasoft.Core.Configuration.SysSettings.GetValue(UserConnection, "GKILicensingMailBox", Guid.Empty);
+			string recipientEmail = Terrasoft.Core.Configuration.SysSettings.GetValue(UserConnection, "GKILicensingTerrasoftSupportAddress", String.Empty);
+
 			var emailTemplateSchema = UserConnection.EntitySchemaManager.GetInstanceByName("EmailTemplate");
 			Entity emailTemplateEntity = emailTemplateSchema.CreateEntity(UserConnection);
-			if (!emailTemplateEntity.FetchFromDB("Id", templateId))
+			if (!emailTemplateEntity.FetchFromDB("Id", GKILicensingConstantsCs.Misc.TlrRequestEmailTemplate))
 			{
 				throw new Exception(emailTemplateErrorMsg);
 			}
-			emailSubject = emailTemplateEntity.GetTypedColumnValue<string>("Subject");
-			emailBody = emailTemplateEntity.GetTypedColumnValue<string>("Body");
+			string emailSubject = emailTemplateEntity.GetTypedColumnValue<string>("Subject");
+			string emailBody = emailTemplateEntity.GetTypedColumnValue<string>("Body");
+
+			GKISendActivityEmail(UserConnection, mailboxId, recipientEmail, emailSubject, emailBody, filesData, null, "LicenseRequest", ".tlr");
 		}
 
 		private void GKISendActivityEmail(UserConnection UserConnection, Guid mailboxId, string recipientEmail,
@@ -2184,21 +2100,18 @@ namespace Terrasoft.Configuration
 			activity.StatusId = ActivityConsts.NewStatusUId;
 			activity.Save();
 
-			if (filesData != null && filesData.Count > 0)
+			foreach (var fileData in filesData)
 			{
-				foreach (var fileData in filesData)
-				{
-					int curElementPosition = filesData.FindIndex(x => x == fileData);
-					string fileName = fileNames?.ElementAtOrDefault(curElementPosition) ?? String.Concat(defaultFileName,
-						curElementPosition == 0 ? String.Empty : String.Concat("(", curElementPosition.ToString(), ")"), defaultFileExtension);
-					var fileEntity = new ActivityFile(UserConnection);
-					fileEntity.SetDefColumnValues();
-					fileEntity.SetColumnValue("ActivityId", activity.Id);
-					fileEntity.SetColumnValue("TypeId", Terrasoft.WebApp.FileConsts.FileTypeUId);
-					fileEntity.SetColumnValue("Name", fileName);
-					fileEntity.SetColumnValue("Data", fileData);
-					fileEntity.Save();
-				}
+				int curElementPosition = filesData.FindIndex(x => x == fileData);
+				string fileName = fileNames?.ElementAtOrDefault(curElementPosition) ?? String.Concat(defaultFileName,
+					curElementPosition == 0 ? String.Empty : String.Concat("(", curElementPosition.ToString(), ")"), defaultFileExtension);
+				var fileEntity = new ActivityFile(UserConnection);
+				fileEntity.SetDefColumnValues();
+				fileEntity.SetColumnValue("ActivityId", activity.Id);
+				fileEntity.SetColumnValue("TypeId", Terrasoft.WebApp.FileConsts.FileTypeUId);
+				fileEntity.SetColumnValue("Name", fileName);
+				fileEntity.SetColumnValue("Data", fileData);
+				fileEntity.Save();
 			}
 
 			var emailClientFactory = ClassFactory.Get<EmailClientFactory>(new ConstructorArgument("UserConnection", UserConnection));
@@ -2296,23 +2209,10 @@ namespace Terrasoft.Configuration
 			update.Execute();
 		}
 
-		private string GKIAuthorize(Guid instanceId)
+		private string GKIAuthorize(string baseUrl)
 		{
-			var esqGKIInstance = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "GKIInstance");
-			esqGKIInstance.UseAdminRights = false;
-			esqGKIInstance.AddColumn("GKIUrl");
-			esqGKIInstance.AddColumn("GKIPassword");
-			var loginColumn = esqGKIInstance.AddColumn("GKILogin.GKIName");
-			esqGKIInstance.Filters.Add(
-				esqGKIInstance.CreateFilterWithParameters(FilterComparisonType.Equal, "Id", instanceId));
-			var esqGKIInstanceCollection = esqGKIInstance.GetEntityCollection(UserConnection);
-			var instanceEntity = esqGKIInstanceCollection.FirstOrDefault();
-			string baseUrl = instanceEntity.GetTypedColumnValue<string>("GKIUrl");
-			string login = instanceEntity.GetTypedColumnValue<string>(loginColumn.Name);
-			string password = instanceEntity.GetTypedColumnValue<string>("GKIPassword");
-
 			string authUrl = string.Concat(baseUrl, authServicePath);
-			string authMessage = String.Format(authTemplate, login, password);
+			string authMessage = (string)Terrasoft.Core.Configuration.SysSettings.GetValue(UserConnection, "GKILicensingCredentials");
 			
 			if (authMessage == String.Empty)
 			{
@@ -2356,7 +2256,7 @@ namespace Terrasoft.Configuration
 						string exceptionMsg = reader.ReadToEnd();
 						if (exceptionMsg.Contains("401"))
 						{
-							string authResult = GKIAuthorizeForced(baseUrl, authUrl, authMessage);
+							string authResult = GKIAuthorizeForced(baseUrl);
 							if (authResult != String.Empty)
 							{
 								return authResult;
@@ -2397,16 +2297,10 @@ namespace Terrasoft.Configuration
 
 			using (HttpWebResponse response = (HttpWebResponse)authrequest.GetResponse())
 			{
-				string authCookieValue = response.Cookies[authName]?.Value ?? String.Empty;
-				string crsfCookieValue = response.Cookies[crsfName]?.Value ?? String.Empty;
-				if (authCookieValue != String.Empty)
-				{
-					AuthCookies.Add(new Uri(baseUrl), new Cookie(authName, authCookieValue));
-				}
-				if (crsfCookieValue != String.Empty)
-				{
-					AuthCookies.Add(new Uri(baseUrl), new Cookie(crsfName, crsfCookieValue));
-				}
+				string authCookeValue = response.Cookies[authName].Value;
+				string crsfCookeValue = response.Cookies[crsfName].Value;
+				AuthCookies.Add(new Uri(baseUrl), new Cookie(authName, authCookeValue));
+				AuthCookies.Add(new Uri(baseUrl), new Cookie(crsfName, crsfCookeValue));
 				using (var streamReader = new StreamReader(response.GetResponseStream()))
 				{
 					responseText = streamReader.ReadToEnd();
@@ -2424,8 +2318,11 @@ namespace Terrasoft.Configuration
 				return String.Empty;
 			}
 		}
-		private string GKIAuthorizeForced(string baseUrl, string authUrl, string authMessage)
+		private string GKIAuthorizeForced(string baseUrl)
 		{
+			string authUrl = string.Concat(baseUrl, authServicePath);
+			string authMessage = (string)Terrasoft.Core.Configuration.SysSettings.GetValue(UserConnection, "GKILicensingCredentials");
+
 			if (authMessage == String.Empty)
 			{
 				return "Error: no authentification credentials in GKILicensingCredentials";
@@ -2451,16 +2348,10 @@ namespace Terrasoft.Configuration
 
 			using (HttpWebResponse response = (HttpWebResponse)authrequest.GetResponse())
 			{
-				string authCookieValue = response.Cookies[authName]?.Value ?? String.Empty;
-				string crsfCookieValue = response.Cookies[crsfName]?.Value ?? String.Empty;
-				if (authCookieValue != String.Empty)
-				{
-					AuthCookies.Add(new Uri(baseUrl), new Cookie(authName, authCookieValue));
-				}
-				if (crsfCookieValue != String.Empty)
-				{
-					AuthCookies.Add(new Uri(baseUrl), new Cookie(crsfName, crsfCookieValue));
-				}
+				string authCookeValue = response.Cookies[authName].Value;
+				string crsfCookeValue = response.Cookies[crsfName].Value;
+				AuthCookies.Add(new Uri(baseUrl), new Cookie(authName, authCookeValue));
+				AuthCookies.Add(new Uri(baseUrl), new Cookie(crsfName, crsfCookeValue));
 				using (var streamReader = new StreamReader(response.GetResponseStream()))
 				{
 					responseText = streamReader.ReadToEnd();
@@ -2478,10 +2369,9 @@ namespace Terrasoft.Configuration
 				return String.Empty;
 			}
 		}
-		private string GKILicenseHttpGetRequest(Guid instanceId, string serviceUrl)
+		private string GKILicenseHttpGetRequest(string baseUrl, string serviceUrl)
 		{
-			string baseUrl = GKIGetInstanceUrl(instanceId);
-			string authResult = GKIAuthorize(instanceId);
+			string authResult = GKIAuthorize(baseUrl);
 			if (authResult != String.Empty)
 			{
 				throw new Exception(authResult);
@@ -2507,10 +2397,9 @@ namespace Terrasoft.Configuration
 				}
 			}
 		}
-		private string GKILicenseHttpRequest(Guid instanceId, string serviceUrl)
+		private string GKILicenseHttpRequest(string baseUrl, string serviceUrl)
 		{
-			string baseUrl = GKIGetInstanceUrl(instanceId);
-			string authResult = GKIAuthorize(instanceId);
+			string authResult = GKIAuthorize(baseUrl);
 			if (authResult != String.Empty)
 			{
 				throw new Exception(authResult);
@@ -2536,10 +2425,9 @@ namespace Terrasoft.Configuration
 				}
 			}
 		}
-		private string GKILicenseHttpRequest(Guid instanceId, string serviceUrl, string message)
+		private string GKILicenseHttpRequest(string baseUrl, string serviceUrl, string message)
 		{
-			string baseUrl = GKIGetInstanceUrl(instanceId);
-			string authResult = GKIAuthorize(instanceId);
+			string authResult = GKIAuthorize(baseUrl);
 			if (authResult != String.Empty)
 			{
 				throw new Exception(authResult);
@@ -2570,10 +2458,9 @@ namespace Terrasoft.Configuration
 				}
 			}
 		}
-		private string GKIFileByteRequest(Guid instanceId, string serviceUrl, byte[] file)
+		private string GKIFileByteRequest(string baseUrl, string serviceUrl, byte[] file)
 		{
-			string baseUrl = GKIGetInstanceUrl(instanceId);
-			string authResult = GKIAuthorize(instanceId);
+			string authResult = GKIAuthorize(baseUrl);
 			if (authResult != String.Empty)
 			{
 				throw new Exception(authResult);
@@ -2603,22 +2490,6 @@ namespace Terrasoft.Configuration
 					return msgResponseText;
 				}
 			}
-		}
-
-		private string GKIGetInstanceUrl(Guid instanceId)
-        {
-			string baseUrl;
-			var schemaGKIInstance = UserConnection.EntitySchemaManager.GetInstanceByName("GKIInstance");
-			Entity entityGKIInstance = schemaGKIInstance.CreateEntity(UserConnection);
-			if (entityGKIInstance.FetchFromDB("Id", instanceId))
-			{
-				baseUrl = entityGKIInstance.GetTypedColumnValue<string>("GKIUrl");
-			}
-            else 
-			{
-				baseUrl = String.Empty;
-			}
-			return baseUrl;
 		}
 		private UserConnection GKIGetUserConnection()
 		{
@@ -2742,7 +2613,7 @@ namespace Terrasoft.Configuration
 		public class InstanceSyncData
         {
 			public List<LicUserData> LicUserDataList { get; set; }
-			public Guid InstanceId { get; set; }
+			public string BaseUrl { get; set; }
 		}
 		public class LicUserData
 		{
@@ -2812,7 +2683,6 @@ namespace Terrasoft.Configuration
 		public static readonly string authName = ".ASPXAUTH";
 		public static readonly string crsfName = "BPMCSRF";
 		public static readonly string authServicePath = "/ServiceModel/AuthService.svc/Login";
-		public static readonly string authTemplate = "{{\"UserName\": \"{0}\",\"UserPassword\": \"{1}\"}}";
 		public static readonly string GKIUsersSyncServiceUrl = "/0/rest/GKILicensingRegularService/GKIUsersSync";
 		public static readonly string GKIAddLicenseServiceUrl = "/0/rest/GKILicensingRegularService/GKIAddLicense";
 		public static readonly string GKIRemoveLicenseServiceUrl = "/0/rest/GKILicensingRegularService/GKIRemoveLicense";
