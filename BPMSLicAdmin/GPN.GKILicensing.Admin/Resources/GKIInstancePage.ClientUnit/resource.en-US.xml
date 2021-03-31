@@ -6,10 +6,20 @@
 			<Item Name="LocalizableStrings.CustomerIDHint.Value" Value="Идентификатор компании для запроса и установки лицензий" />
 			<Item Name="LocalizableStrings.GeneralInfoTabCaption.Value" Value="Основная информация" />
 			<Item Name="LocalizableStrings.GKIADGroupsTabCaption.Value" Value="Группы AD" />
+			<Item Name="LocalizableStrings.GKIChangePasswordButtonCaption.Value" Value="Изменить пароль" />
+			<Item Name="LocalizableStrings.GKIGroupADInstanceLicenseDetailHint.Value" Value="Деталь отражает информацию о продуктах лицензирования группы AD" />
+			<Item Name="LocalizableStrings.GKIGroupADUsersDetailHint.Value" Value="Деталь отражает информацию о пользователях группы AD" />
+			<Item Name="LocalizableStrings.GKIInstanceGroupADDetailHint.Value" Value="Деталь отражает информацию о группах AD приложения" />
+			<Item Name="LocalizableStrings.GKIInstanceLicenseDetailHint.Value" Value="Деталь отражает информацию о всех лицензиях текущего приложения" />
 			<Item Name="LocalizableStrings.GKIInstanceLicPackageDetail04d4df69DetailCaptionOnPage.Value" Value="Продукт лицензирования приложения" />
-			<Item Name="LocalizableStrings.GKIInstanceLicUserDetailDetailCaptionOnPage.Value" Value="Пользователи приложения" />
+			<Item Name="LocalizableStrings.GKIInstanceLicUserDetailDetailCaptionOnPage.Value" Value="Пользователи экземпляра" />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailf4638732DetailCaptionOnPage.Value" Value="Лицензии пользователей платформы" />
+			<Item Name="LocalizableStrings.GKILoginAdminGroupCaption.Value" Value="Администрирование" />
+			<Item Name="LocalizableStrings.GKILoginAdminTabCaption.Value" Value="Администрирование" />
+			<Item Name="LocalizableStrings.GKISavePasswordButtonCaption.Value" Value="Сохранить пароль" />
+			<Item Name="LocalizableStrings.GKISavePasswordSuccess.Value" Value="Пароль сохранен" />
 			<Item Name="LocalizableStrings.IsLimitAplliedHint.Value" Value="Осуществляет запуск процесса учета лимита VIP-пользователей приложения" />
+			<Item Name="LocalizableStrings.NewPasswordCaption.Value" Value="Новый пароль" />
 		</Items>
 	</Group>
 </Resources>

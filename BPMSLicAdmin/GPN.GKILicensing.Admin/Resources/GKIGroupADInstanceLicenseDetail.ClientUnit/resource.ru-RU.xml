@@ -3,7 +3,9 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Схема детали: &quot;Продукты лицензирования группы AD&quot;" />
+			<Item Name="Images.d1518d25-d55c-c17c-9ae3-a5300f4a10f9.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDwAACw8BkvkDpQAAATBJREFUOE+1U7FtwzAQVJ3KI3iEjKAiA6g0DDm4EVwqlAJoA3kDj5ARMkKKFClVukjhFXInnWgScrrkgAd05P/980QW/4IaTXlAOzDeHcMOzdbbv0NJKqinooAaXang2pExMs7AceP0HCp+Rvuxxyu8tALFeuWY5pg7hFhc46Ui/+b6NR2fIqcaoTedwcVKY5suRxl36Ld7hEfuxa5Av9FedhQqntLuc1H41HfFxFRAOKB704Sm0/g0ritNM1D4orObTtAR2OTm1UrRYPEXuz+ZRmjiTECKCtMITQU0D6YRq4lFZIxphCagQHaBFoNNb6AIjWwH0wmeIArIUBWnhkfo9+iSMOGc/vcFut76GxRdHTWDEmjqlV1obOB3fBPjPaPvQpfEvvANzG/CW3+NovgBSeOlkjoHxt4AAAAASUVORK5CYII=" />
 			<Item Name="LocalizableStrings.Caption.Value" Value="Продукты лицензирования группы AD" />
+			<Item Name="LocalizableStrings.InfoButton.Value" Value="Деталь отражает информацию о продуктах лицензирования группы AD" />
 		</Items>
 	</Group>
 </Resources>

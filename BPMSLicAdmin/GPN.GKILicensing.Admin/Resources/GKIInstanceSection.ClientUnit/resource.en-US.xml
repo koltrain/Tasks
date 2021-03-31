@@ -9,6 +9,17 @@
 			<Item Name="LocalizableStrings.ContinueProcessButtonMenuItemCaption.Caption" Value="Continue process" />
 			<Item Name="LocalizableStrings.DuplicatesActionCaptionPattern.Value" Value="Show duplicate '{0}'" />
 			<Item Name="LocalizableStrings.GenerateReportWithoutFiltersConfirmationMessage.Value" Value="The report will be generated for all records in the section, without filters. Do you wish to proceed?" />
+			<Item Name="LocalizableStrings.GKIInstanceSelectedNull.Value" Value="Вы не выбрали ни одной записи" />
+			<Item Name="LocalizableStrings.GKIInstanceSyncLDAPButtonCaption.Value" Value="Синхронизировать с LDAP" />
+			<Item Name="LocalizableStrings.GKIInstanceSyncLDAPButtonHint.Value" Value="Запуск процесса синхронизации пользователей платформы с LDAP по всем выбранным экземплярам" />
+			<Item Name="LocalizableStrings.GKIInstanceSyncLDAPButtonReminder.Value" Value="Процесс синхронизации с LDAP запущен. По окончании процесса вам будет выслано уведомление в коммуникационной панели" />
+			<Item Name="LocalizableStrings.GKIInstanceSyncProcessReminder.Value" Value="Синхронизация начата. По окончании вам отобразится уведомление в коммуникационной панели" />
+			<Item Name="LocalizableStrings.GKIInstanceSyncRegularButtonCaption.Value" Value="Синхронизировать с LDAP" />
+			<Item Name="LocalizableStrings.GKIInstanceSyncRegularButtonHint.Value" Value="Запуск процесса синхронизации по всем выбранным экземплярам" />
+			<Item Name="LocalizableStrings.GKIInstanceUpdateButtonCaption.Value" Value="Обновить лицензии" />
+			<Item Name="LocalizableStrings.GKIInstanceUpdateButtonHint.Value" Value="Запуск процесса обновления лицензий экземпляров платформы" />
+			<Item Name="LocalizableStrings.GKIInstanceUpdateProcessReminder.Value" Value="Обновление начато. По окончании вам отобразится уведомление в коммуникационной панели" />
+			<Item Name="LocalizableStrings.GKIInstanceUpdateSelectedConfirmation.Value" Value="Инициирован запуск процесса обновления лицензий пользователей приложений платформы. Вы подтверждаете запуск процесса?" />
 			<Item Name="LocalizableStrings.OpenNewSectionDesignerButtonCaption.Caption" Value="Message to user 1" />
 			<Item Name="LocalizableStrings.ProsessButtonCaption.Caption" Value="Process" />
 			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Follow the feed" />

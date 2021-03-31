@@ -3,7 +3,9 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Схема детали: &quot;Группы AD приложения&quot;" />
-			<Item Name="LocalizableStrings.Caption.Value" Value="Группы AD приложения" />
+			<Item Name="Images.c63f5f62-dbb6-2dda-fbd9-cf61056e8cf8.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvQAADr0BR/uQrQAAARRJREFUOE+lk11Kw1AQRgNiaXxUfC9qqdZNKboIf9ANWLoBcRWCqFvwTR+sT27Fc9ovaYK1VP3gwJ1vZpJ7byZFU+OXoy7swzk8wgRe4R7OwFw35XNhSg9svIVj6EMnuNYzZ4216UYxRnAC27G/yVxqbqBXmSVcwil0puYSWZPaCyg1hnAHW6mphfcpCWtZm56hwRU0DjQX/sIHKHvg2sUz9OO3hL8GGwlbssdeF++w8Oz4y3bgXUxcvMFPb1npAQ8wiN+SzZKwJfz6CP++xL98xs30HBpUg+SE/WaQ7Ckr01Eew6qjbO1slBWB7IDj6Q/j+fZgHdzhIJ4537wL6W4I0+ID8GKfwN/5Axw2PXOzbU9VFF92OBW7oNs72QAAAABJRU5ErkJggg==" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Группы AD экземпляра" />
+			<Item Name="LocalizableStrings.InfoButton.Value" Value="Деталь отражает информацию о группах AD экземпляра" />
 		</Items>
 	</Group>
 </Resources>

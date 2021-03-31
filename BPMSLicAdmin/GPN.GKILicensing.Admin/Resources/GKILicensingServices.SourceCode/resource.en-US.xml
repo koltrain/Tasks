@@ -17,9 +17,11 @@
 			<Item Name="LocalizableStrings.GKITlrRequestProcessError.Value" Value="Процесс запроса лицензий завершен с ошибкой. Выявленная ошибка доступна для просмотра в журнале процессов." />
 			<Item Name="LocalizableStrings.GKITlrRequestSuccess.Value" Value="Запрос файлов выполнен успешно" />
 			<Item Name="LocalizableStrings.GKITlrRequestWrongCIDError.Value" Value="Некорректное значение ID компании для лицензирования" />
+			<Item Name="LocalizableStrings.GKITlsInstalledGetInfoErrorTemplate.Value" Value="Лицензии установлены, но попытка получении информации о них завершилась с ошибкой: {0}" />
 			<Item Name="LocalizableStrings.GKITlsInstallError.Value" Value="Загрузка лицензий завершена с ошибками. Описания ошибок указаны в поле &quot;Ошибки установки лицензий&quot; в записи каждого приложения" />
 			<Item Name="LocalizableStrings.GKITlsInstallSuccess.Value" Value="Загрузка лицензий на экземпляры выполнена успешно" />
 			<Item Name="LocalizableStrings.GKIVIPLimitIsExceededMessage.Value" Value="Процесс проверки лимита VIP-пользователей завершен. В результате проверки выявлено превышение лимита по продукту {0} на {1} ." />
+			<Item Name="LocalizableStrings.GKIWindowsInstanceTemplate.Value" Value="Windows-приложение: {0}" />
 		</Items>
 	</Group>
 </Resources>

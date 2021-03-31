@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "0122b5c8-c99f-4d78-b763-b33f640e97bc",
     "Name": "GKIInstanceDetail",
-    "ModifiedOnUtc": "\/Date(1608633864000)\/",
+    "ModifiedOnUtc": "\/Date(1616749641000)\/",
     "Parent": {
       "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
       "Name": "BaseGridDetailV2"

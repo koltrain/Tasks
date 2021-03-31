@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "ce3782d2-7045-6169-52a5-09ea3cce9728",
     "Name": "GKIApplicationStatus_Data",
-    "ModifiedOnUtc": "\/Date(1607944188000)\/",
+    "ModifiedOnUtc": "\/Date(1617034237000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "51315d45-4a9b-82b4-da23-3e0c17bb97e0",
@@ -18,7 +18,7 @@
       },
       {
         "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
-        "IsForceUpdate": false,
+        "IsForceUpdate": true,
         "IsKey": false,
         "ColumnName": "Name",
         "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"

@@ -125,6 +125,20 @@
           "A3": "1d439f5f-621f-0a7c-0d43-07531650c45c",
           "A4": "1d439f5f-621f-0a7c-0d43-07531650c45c",
           "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "cfbcc383-224b-e0bd-4606-bfaee7ba38aa",
+          "A2": "GKIWindowsInstanceTemplate",
+          "A3": "1d439f5f-621f-0a7c-0d43-07531650c45c",
+          "A4": "1d439f5f-621f-0a7c-0d43-07531650c45c",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+        },
+        {
+          "UId": "a9248cac-0047-6608-743c-60da2de32623",
+          "A2": "GKITlsInstalledGetInfoErrorTemplate",
+          "A3": "1d439f5f-621f-0a7c-0d43-07531650c45c",
+          "A4": "1d439f5f-621f-0a7c-0d43-07531650c45c",
+          "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
         }
       ],
       "B3": [],

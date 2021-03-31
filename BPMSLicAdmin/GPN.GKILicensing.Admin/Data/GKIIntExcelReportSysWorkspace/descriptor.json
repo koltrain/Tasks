@@ -1,0 +1,70 @@
+﻿{
+  "Descriptor": {
+    "UId": "529b24cc-ac00-ba6b-6c94-465fa696e8c3",
+    "Name": "GKIIntExcelReportSysWorkspace",
+    "ModifiedOnUtc": "\/Date(1617206436000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "7f9653ec-2e91-4aaa-a065-7b1d46edd292",
+      "Name": "SysWorkspace"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "0517e3b2-a4b5-47c5-971d-d885fc05b271",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Version",
+        "DataTypeValueUId": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+      },
+      {
+        "ColumnUId": "03c913bc-e34d-4681-9768-7bd095fb28ab",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Number",
+        "DataTypeValueUId": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+      },
+      {
+        "ColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Description",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "398635d4-b784-422d-8eec-37078b3c268f",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "WorkingCopyPath",
+        "DataTypeValueUId": "5ca35f10-a101-4c67-a96a-383da6afacfc"
+      },
+      {
+        "ColumnUId": "9ba51ca5-3a09-40c0-82e1-839d27055226",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "RepositoryRevisionNumber",
+        "DataTypeValueUId": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+      },
+      {
+        "ColumnUId": "a8c3e0db-13f1-43a1-818a-fceaa5d53767",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "RepositoryUri",
+        "DataTypeValueUId": "5ca35f10-a101-4c67-a96a-383da6afacfc"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "e3b7f23f-07e8-494c-b8c6-ca9a6c43a8ae",
+    "Name": "GKIInstanceLicUserDetailInfoButton",
+    "ModifiedOnUtc": "\/Date(1616509208000)\/",
+    "Parent": {
+      "UId": "438922b3-0330-4d6e-bae6-112c0b28edd5",
+      "Name": "GKIInstanceLicUserDetail"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "add InfoButton"
+  }
+}

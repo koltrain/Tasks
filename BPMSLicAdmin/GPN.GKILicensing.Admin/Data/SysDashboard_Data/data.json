@@ -4,31 +4,6 @@
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "df336076-9964-4b4b-9527-4ee9aadb1d83"
-        },
-        {
-          "SchemaColumnUId": "fb750eb9-35b6-463e-b3b8-1a69ec871e43",
-          "Value": "[{\"layout\":{\"column\":12,\"row\":5,\"colSpan\":12,\"rowSpan\":5},\"name\":\"Charta11ac2fc61ad\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":0,\"colSpan\":9,\"rowSpan\":5},\"name\":\"Gauge96c9e61b13a6\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":5,\"colSpan\":6,\"rowSpan\":5},\"name\":\"Indicatord341eebd8fd3\",\"itemType\":4},{\"layout\":{\"column\":6,\"row\":5,\"colSpan\":6,\"rowSpan\":5},\"name\":\"Indicatord736e9298c0a\",\"itemType\":4},{\"layout\":{\"column\":9,\"row\":0,\"colSpan\":15,\"rowSpan\":5},\"name\":\"Chart92897f225293\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":10,\"colSpan\":8,\"rowSpan\":5},\"name\":\"Indicator8a6325857b8c\",\"itemType\":4},{\"layout\":{\"column\":8,\"row\":10,\"colSpan\":8,\"rowSpan\":5},\"name\":\"Indicator014baece87c7\",\"itemType\":4},{\"layout\":{\"column\":16,\"row\":10,\"colSpan\":8,\"rowSpan\":5},\"name\":\"Indicator6780f99ab204\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":15,\"colSpan\":12,\"rowSpan\":7},\"name\":\"Chart598877b7a0e9\",\"itemType\":4}]"
-        },
-        {
-          "SchemaColumnUId": "78ed4015-b81f-49fc-9d50-847cf8df5e6c",
-          "Value": 0
-        },
-        {
-          "SchemaColumnUId": "9eedf8ab-d02e-4a4a-9f9d-19ede1c873bc",
-          "Value": "23961eb5-4035-4458-86b5-c9deb0869059",
-          "DisplayValue": "Приложения платформы"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1607546240554+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
           "Value": "5a147f2f-0906-4c3e-b075-aa2967fadea0"
         },
         {
@@ -58,7 +33,7 @@
         },
         {
           "SchemaColumnUId": "fb750eb9-35b6-463e-b3b8-1a69ec871e43",
-          "Value": "[{\"layout\":{\"column\":12,\"row\":5,\"colSpan\":12,\"rowSpan\":6},\"name\":\"DashboardGrid2b255630d16d\",\"itemType\":4},{\"layout\":{\"column\":12,\"row\":0,\"colSpan\":12,\"rowSpan\":5},\"name\":\"Chart386414d7add8\",\"itemType\":4},{\"layout\":{\"column\":12,\"row\":11,\"colSpan\":12,\"rowSpan\":5},\"name\":\"DashboardGrid0f83e01454d8\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":0,\"colSpan\":12,\"rowSpan\":5},\"name\":\"DashboardGrida63cb82234a4\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":5,\"colSpan\":12,\"rowSpan\":6},\"name\":\"DashboardGridefcf43de0d33\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":11,\"colSpan\":12,\"rowSpan\":5},\"name\":\"DashboardGrid356f84a50ae6\",\"itemType\":4}]"
+          "Value": "[{\"layout\":{\"column\":12,\"row\":0,\"colSpan\":12,\"rowSpan\":5},\"name\":\"Chart386414d7add8\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":0,\"colSpan\":12,\"rowSpan\":5},\"name\":\"DashboardGridefcf43de0d33\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":5,\"colSpan\":12,\"rowSpan\":5},\"name\":\"DashboardGrid356f84a50ae6\",\"itemType\":4},{\"layout\":{\"column\":12,\"row\":5,\"colSpan\":12,\"rowSpan\":5},\"name\":\"DashboardGrid0f83e01454d8\",\"itemType\":4}]"
         },
         {
           "SchemaColumnUId": "78ed4015-b81f-49fc-9d50-847cf8df5e6c",
@@ -97,6 +72,31 @@
         {
           "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
           "Value": "\/Date(1607621156393+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "df336076-9964-4b4b-9527-4ee9aadb1d83"
+        },
+        {
+          "SchemaColumnUId": "fb750eb9-35b6-463e-b3b8-1a69ec871e43",
+          "Value": "[{\"layout\":{\"column\":12,\"row\":5,\"colSpan\":12,\"rowSpan\":5},\"name\":\"Charta11ac2fc61ad\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":0,\"colSpan\":9,\"rowSpan\":5},\"name\":\"Gauge96c9e61b13a6\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":5,\"colSpan\":6,\"rowSpan\":5},\"name\":\"Indicatord341eebd8fd3\",\"itemType\":4},{\"layout\":{\"column\":6,\"row\":5,\"colSpan\":6,\"rowSpan\":5},\"name\":\"Indicatord736e9298c0a\",\"itemType\":4},{\"layout\":{\"column\":9,\"row\":0,\"colSpan\":15,\"rowSpan\":5},\"name\":\"Chart92897f225293\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":10,\"colSpan\":8,\"rowSpan\":5},\"name\":\"Indicator8a6325857b8c\",\"itemType\":4},{\"layout\":{\"column\":8,\"row\":10,\"colSpan\":8,\"rowSpan\":5},\"name\":\"Indicator014baece87c7\",\"itemType\":4},{\"layout\":{\"column\":16,\"row\":10,\"colSpan\":8,\"rowSpan\":5},\"name\":\"Indicator6780f99ab204\",\"itemType\":4},{\"layout\":{\"column\":0,\"row\":15,\"colSpan\":12,\"rowSpan\":7},\"name\":\"Chart598877b7a0e9\",\"itemType\":4}]"
+        },
+        {
+          "SchemaColumnUId": "78ed4015-b81f-49fc-9d50-847cf8df5e6c",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "9eedf8ab-d02e-4a4a-9f9d-19ede1c873bc",
+          "Value": "23961eb5-4035-4458-86b5-c9deb0869059",
+          "DisplayValue": "Приложения платформы"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1607546240554+0300)\/"
         }
       ]
     }

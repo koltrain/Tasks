@@ -2,12 +2,12 @@
   "Descriptor": {
     "UId": "d5a17d7a-5953-6c5a-4178-e83207e98638",
     "Name": "GKIInstanceGroupAD",
-    "ModifiedOnUtc": "\/Date(1610348895000)\/",
+    "ModifiedOnUtc": "\/Date(1614762097000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Группы AD приложения"
+    "Caption": "Группы AD экземпляра"
   }
 }

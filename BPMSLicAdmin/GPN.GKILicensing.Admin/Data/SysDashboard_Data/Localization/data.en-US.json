@@ -5,25 +5,6 @@
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
           "ColumnName": "Id",
-          "Value": "df336076-9964-4b4b-9527-4ee9aadb1d83"
-        },
-        {
-          "SchemaColumnUId": "a215f575-7283-41bd-8852-b2415a935051",
-          "ColumnName": "Caption",
-          "Value": "Аналитика по приложениям платформы"
-        },
-        {
-          "SchemaColumnUId": "551ce105-25dc-4a76-b318-cf37635e88c3",
-          "ColumnName": "Items",
-          "Value": ""
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "ColumnName": "Id",
           "Value": "5a147f2f-0906-4c3e-b075-aa2967fadea0"
         },
         {
@@ -68,6 +49,25 @@
           "SchemaColumnUId": "a215f575-7283-41bd-8852-b2415a935051",
           "ColumnName": "Caption",
           "Value": "Активность пользоватеелй"
+        },
+        {
+          "SchemaColumnUId": "551ce105-25dc-4a76-b318-cf37635e88c3",
+          "ColumnName": "Items",
+          "Value": ""
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
+          "Value": "df336076-9964-4b4b-9527-4ee9aadb1d83"
+        },
+        {
+          "SchemaColumnUId": "a215f575-7283-41bd-8852-b2415a935051",
+          "ColumnName": "Caption",
+          "Value": "Аналитика по приложениям платформы"
         },
         {
           "SchemaColumnUId": "551ce105-25dc-4a76-b318-cf37635e88c3",

@@ -4,222 +4,6 @@
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "0365297f-b7dd-46e9-868f-82283e83fe3c"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "MediumText"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKILicensingCredentials"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1606400023530+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "90ce1dc5-ed81-4a60-b2a0-3bae49f9b37c"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "Float"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKISysLicUserInactivenessControlTimespan"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1607980181954+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "fe85d1d6-2905-4fb4-a461-291b3c8cd8f0"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "DateTime"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKILicensingLDAPEntryMaxModifiedOn"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1610383360893+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "85c33ddd-7e7e-4329-b9cd-40172b462a49"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "ShortText"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKILicensingLDAPEntryModifiedOnAttribute"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1610434889630+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "f3374c70-aad2-4477-8f9b-cd4b064f9b96"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "MediumText"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKILicensingLDAPUsersFilter"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1610435338006+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "eb2f5125-af56-4648-8f39-3bd7420280a5"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "MediumText"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKILicensingTerrasoftSupportAddress"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1611307351453+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
           "Value": "3827e8c1-c216-4d6b-ab65-5dec054a45ec"
         },
         {
@@ -249,150 +33,6 @@
         {
           "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
           "Value": "\/Date(1611309897324+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "5960cc11-9888-4e16-9b84-fe86af0e2a93"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "MediumText"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKILicensingWinInstanceLogin"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1611579293597+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "c4d6e2a3-1ea1-42c6-8828-e5127013463d"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "SecureText"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKILicensingWinInstancePassword"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1611579314970+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "2d8a13ba-eb5a-4c41-94dd-3a46cab4fc80"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "LongText"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKILicensingWinInstanceUrl"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1611579366142+0300)\/"
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "712ea01a-9907-4c55-bd19-8ac3f6a6e794"
-        },
-        {
-          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
-          "Value": "null"
-        },
-        {
-          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
-          "Value": false
-        },
-        {
-          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
-          "Value": true
-        },
-        {
-          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
-          "Value": "Float"
-        },
-        {
-          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
-          "Value": "GKISysLicUserInactivenessControlCooldown"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1611665506133+0300)\/"
         }
       ]
     },
@@ -465,6 +105,402 @@
         {
           "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
           "Value": "\/Date(1613582892412+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "90ce1dc5-ed81-4a60-b2a0-3bae49f9b37c"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "Float"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKISysLicUserInactivenessControlTimespan"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1607980181954+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "eb2f5125-af56-4648-8f39-3bd7420280a5"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "MediumText"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKILicensingTerrasoftSupportAddress"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1611307351453+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "712ea01a-9907-4c55-bd19-8ac3f6a6e794"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "Float"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKISysLicUserInactivenessControlCooldown"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1611665506133+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "85c33ddd-7e7e-4329-b9cd-40172b462a49"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "ShortText"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKILicensingLDAPEntryModifiedOnAttribute"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1610434889630+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "fe85d1d6-2905-4fb4-a461-291b3c8cd8f0"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "DateTime"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKILicensingLDAPEntryMaxModifiedOn"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1610383360893+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "f3374c70-aad2-4477-8f9b-cd4b064f9b96"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "MediumText"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKILicensingLDAPUsersFilter"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1610435338006+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5960cc11-9888-4e16-9b84-fe86af0e2a93"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "MediumText"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKILicensingWinInstanceLogin"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1611579293597+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "2d8a13ba-eb5a-4c41-94dd-3a46cab4fc80"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "LongText"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKILicensingWinInstanceUrl"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1611579366142+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "dca9b5d6-b511-44bc-a785-18652fc00341"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "Integer"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKILicensingVIPPercentage"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1616598598720+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "c4d6e2a3-1ea1-42c6-8828-e5127013463d"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "SecureText"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKILicensingWinInstancePassword"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1611579314970+0300)\/"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "0186c2f9-12b1-4deb-ba52-57c62acd7649"
+        },
+        {
+          "SchemaColumnUId": "b2280617-35f9-4006-8634-c557a2e121c2",
+          "Value": "null"
+        },
+        {
+          "SchemaColumnUId": "764cd95a-59b3-4060-b17f-2797d5c76aaa",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "64fadca1-ab7c-4471-9d25-68599acc729b",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "eb971f1a-dd41-4668-99aa-1f2a6b61a1b9",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "f7960a8a-1fd4-41d2-997a-fd78ea60075f",
+          "Value": "Integer"
+        },
+        {
+          "SchemaColumnUId": "13aad544-ec30-4e76-a373-f0cff3202e24",
+          "Value": "GKILicensingRegularLoginAuditInterval"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1611675374243+0300)\/"
         }
       ]
     }

@@ -1,0 +1,25 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "1f1b4dbb-46e6-4080-adec-211ae3d1fb0b"
+        },
+        {
+          "SchemaColumnUId": "b03360a8-d50e-4cb0-a1d7-6d46d0b31bff",
+          "Value": "71c08045-25bc-4081-95c2-9daecee0d5ed",
+          "DisplayValue": "IntExcelReport"
+        },
+        {
+          "SchemaColumnUId": "087f5050-1d50-4639-905e-b75eea498ff8",
+          "Value": "6731ff78-2a22-4d27-83bc-9c429b79a5de"
+        },
+        {
+          "SchemaColumnUId": "9ed7e3f6-ce67-41fb-8dcc-16c9c5e4d08f",
+          "Value": ""
+        }
+      ]
+    }
+  ]
+}

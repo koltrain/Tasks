@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "537dbcfc-e4bd-dee8-e50d-8cf6ebe13751",
     "Name": "GKILicSyncSource",
-    "ModifiedOnUtc": "\/Date(1606828295000)\/",
+    "ModifiedOnUtc": "\/Date(1616849567000)\/",
     "Parent": {
       "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
       "Name": "BaseLookup"

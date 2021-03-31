@@ -1,0 +1,35 @@
+﻿{
+  "Descriptor": {
+    "UId": "c584c7c7-767f-43fa-80af-5239c7d74836",
+    "Name": "PortalSchemaAccessList_PortalSchemaAccessListManager_GKIIntExcelReport",
+    "ModifiedOnUtc": "\/Date(1617107565000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "b5bda4b9-d2bf-4b39-8ba5-1883ac2583a7",
+      "Name": "PortalSchemaAccessList"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "0cb38aee-c8a8-46ce-8a30-37a75353fd3b",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "AccessEntitySchemaName",
+        "DataTypeValueUId": "325a73b8-0f47-44a0-8412-7606f78003ac"
+      },
+      {
+        "ColumnUId": "632e7352-e04d-40d0-8563-ad12348dca7e",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SchemaUId",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      }
+    ]
+  }
+}

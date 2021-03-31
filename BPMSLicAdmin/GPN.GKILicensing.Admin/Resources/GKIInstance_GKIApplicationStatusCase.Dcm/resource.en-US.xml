@@ -7,7 +7,6 @@
 			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
 			<Item Name="Stages.Stage1.Caption" Value="Новый" />
 			<Item Name="Stages.Stage2.Caption" Value="Ожидает обновления лицензий" />
-			<Item Name="Stages.Stage3.Caption" Value="Ожидает установки лицензий" />
 			<Item Name="Stages.Stage4.Caption" Value="Лицензии установлены" />
 			<Item Name="Stages.Stage5.Caption" Value="Лицензии не установлены" />
 			<Item Name="Stages.Stage6.Caption" Value="Сформирован запрос в ТП" />

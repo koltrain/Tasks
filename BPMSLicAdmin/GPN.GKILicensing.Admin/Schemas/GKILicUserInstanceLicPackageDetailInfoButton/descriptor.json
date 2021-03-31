@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "64d05615-f996-4788-a825-527c59fea48c",
+    "Name": "GKILicUserInstanceLicPackageDetailInfoButton",
+    "ModifiedOnUtc": "\/Date(1616506048000)\/",
+    "Parent": {
+      "UId": "919619f7-6e82-4869-a0d2-01296b2d19d1",
+      "Name": "GKILicUserInstanceLicPackageDetail"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "overridden InfoButton"
+  }
+}

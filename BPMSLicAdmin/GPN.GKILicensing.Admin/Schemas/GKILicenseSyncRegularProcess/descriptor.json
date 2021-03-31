@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "7bc91ac8-1deb-4de0-9a05-fb55e48fcb07",
     "Name": "GKILicenseSyncRegularProcess",
-    "ModifiedOnUtc": "\/Date(1611660923000)\/",
+    "ModifiedOnUtc": "\/Date(1616752972000)\/",
     "ManagerName": "ProcessSchemaManager",
     "Caption": "Синхронизация с экземплярами"
   }

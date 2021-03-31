@@ -5,6 +5,20 @@
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
           "ColumnName": "Id",
+          "Value": "245e82f3-f3f8-43b6-9071-dbcf86497484"
+        },
+        {
+          "SchemaColumnUId": "ca53e2c8-0767-4f2c-8a18-2ee5821f134e",
+          "ColumnName": "Name",
+          "Value": "Необходима актуализация пользователей на экземпляре (US)"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
           "Value": "1f16b3ad-97de-4ae1-969b-443b8df06a1c"
         },
         {

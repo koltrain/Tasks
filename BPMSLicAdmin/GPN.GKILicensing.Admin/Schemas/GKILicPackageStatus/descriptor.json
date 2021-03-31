@@ -2,12 +2,12 @@
   "Descriptor": {
     "UId": "861b8aaa-f478-4b71-a912-86296e314207",
     "Name": "GKILicPackageStatus",
-    "ModifiedOnUtc": "\/Date(1606947496000)\/",
+    "ModifiedOnUtc": "\/Date(1616842061000)\/",
     "Parent": {
       "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
       "Name": "BaseLookup"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Статус продукта лицензирования"
+	"Caption": "Статус продукта лицензирования"
   }
 }

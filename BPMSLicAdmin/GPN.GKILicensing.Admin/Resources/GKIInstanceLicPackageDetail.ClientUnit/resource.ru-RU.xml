@@ -2,7 +2,10 @@
 <Resources Culture="ru-RU">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Detail schema: &quot;Продукт лицензирования приложения&quot;" />
+			<Item Name="Caption" Value="Схема детали: &quot;Продукт лицензирования приложения&quot;" />
+			<Item Name="Images.281b53cc-2a29-094e-4e9c-749e2309792b.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDAAACwwBP0AiyAAAATBJREFUOE+1U7FtwzAQVJ3KI3iEjKAiA6g0DDm4EVwqlAJoA3kDj5ARMkKKFClVukjhFXInnWgScrrkgAd05P/980QW/4IaTXlAOzDeHcMOzdbbv0NJKqinooAaXang2pExMs7AceP0HCp+Rvuxxyu8tALFeuWY5pg7hFhc46Ui/+b6NR2fIqcaoTedwcVKY5suRxl36Ld7hEfuxa5Av9FedhQqntLuc1H41HfFxFRAOKB704Sm0/g0ritNM1D4orObTtAR2OTm1UrRYPEXuz+ZRmjiTECKCtMITQU0D6YRq4lFZIxphCagQHaBFoNNb6AIjWwH0wmeIArIUBWnhkfo9+iSMOGc/vcFut76GxRdHTWDEmjqlV1obOB3fBPjPaPvQpfEvvANzG/CW3+NovgBSeOlkjoHxt4AAAAASUVORK5CYII=" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Продукт лицензирования приложения" />
+			<Item Name="LocalizableStrings.InfoButton.Value" Value="Деталь отражает информацию о всех экземплярах с лицензией" />
 		</Items>
 	</Group>
 </Resources>

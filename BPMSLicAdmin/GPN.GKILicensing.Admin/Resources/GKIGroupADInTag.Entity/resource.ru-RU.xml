@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Тег в записи раздела Группа AD" />
+			<Item Name="Columns.Entity.Caption" Value="Группа AD" />
+			<Item Name="Columns.Tag.Caption" Value="Тег раздела Группа AD" />
+		</Items>
+	</Group>
+</Resources>

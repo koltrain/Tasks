@@ -4,29 +4,29 @@
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "a1a9635a-1233-48a2-95d8-52d39fa6280c"
+          "Value": "9b5d9874-a1ec-4150-80a9-a9790b2db534"
         },
         {
           "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1614605221688+0300)\/"
+          "Value": "\/Date(1617012382193+0300)\/"
         },
         {
           "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
-          "Value": "5306142d-df82-44ac-898b-08024d9ec0f0",
-          "DisplayValue": "Просмотр журнала изменений"
+          "Value": "d9a147e4-d205-424f-b72b-dd2fcb474de9",
+          "DisplayValue": "Доступ к разделу \"Системные настройки\""
         },
         {
           "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
-          "Value": 0
+          "Value": 1
         },
         {
           "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
-          "Value": "a4b65f4b-e504-419c-a811-9e399f347af2",
-          "DisplayValue": "Аудитор информационной безопасности"
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
         },
         {
           "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
-          "Value": true
+          "Value": false
         }
       ]
     },
@@ -34,16 +34,16 @@
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "bacd4dd1-6d80-4c5d-8001-fed8907a93c6"
+          "Value": "b90d2433-a50b-4f52-b0ce-f610afa08433"
         },
         {
           "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1612770034487+0300)\/"
+          "Value": "\/Date(1617012382200+0300)\/"
         },
         {
           "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
-          "Value": "94d54c88-7ced-4ef0-a42b-91e78779bea2",
-          "DisplayValue": "Доступ к разделу \"Справочники\""
+          "Value": "d9a147e4-d205-424f-b72b-dd2fcb474de9",
+          "DisplayValue": "Доступ к разделу \"Системные настройки\""
         },
         {
           "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
@@ -51,8 +51,8 @@
         },
         {
           "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
-          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
-          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
         },
         {
           "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
@@ -94,20 +94,380 @@
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "45029309-0a1c-4212-a957-87cce479b2a2"
+          "Value": "5ea180a4-49dc-4e79-ab66-3dc11c5a3617"
         },
         {
           "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1612770800440+0300)\/"
+          "Value": "\/Date(1563224445474+0300)\/"
         },
         {
           "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
-          "Value": "d9a147e4-d205-424f-b72b-dd2fcb474de9",
-          "DisplayValue": "Доступ к разделу \"Системные настройки\""
+          "Value": "d4a6478f-c9ff-45b4-be6d-bcc4328ee4b9",
+          "DisplayValue": "Доступ к разделу \"Журнал изменений\""
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 1
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "fb9da63f-550d-41ba-8fc0-d68791dec86c"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1616493655108+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "d4a6478f-c9ff-45b4-be6d-bcc4328ee4b9",
+          "DisplayValue": "Доступ к разделу \"Журнал изменений\""
         },
         {
           "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
           "Value": 0
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "bacd4dd1-6d80-4c5d-8001-fed8907a93c6"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1612770034487+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "94d54c88-7ced-4ef0-a42b-91e78779bea2",
+          "DisplayValue": "Доступ к разделу \"Справочники\""
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 1
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5c855ea5-5833-e011-ac0a-00155d043205"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1563224445388+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "94d54c88-7ced-4ef0-a42b-91e78779bea2",
+          "DisplayValue": "Доступ к разделу \"Справочники\""
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 3
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "0ab43663-b79c-4561-b311-3aa61d6aec21"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1616509090136+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "94d54c88-7ced-4ef0-a42b-91e78779bea2",
+          "DisplayValue": "Доступ к разделу \"Справочники\""
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "a4b65f4b-e504-419c-a811-9e399f347af2",
+          "DisplayValue": "Аудитор информационной безопасности"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "ec28a18a-5b38-4f78-92a0-3bb33cd7a009"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1616493705394+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "dc5e7bb9-f346-4e67-a9f1-746b289de165",
+          "DisplayValue": "Доступ к разделу \"Журнал процессов\""
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "366817c2-99bf-4b63-91ff-878d9cbc0d11"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1563224299216+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "dc5e7bb9-f346-4e67-a9f1-746b289de165",
+          "DisplayValue": "Доступ к разделу \"Журнал процессов\""
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 1
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "a1a9635a-1233-48a2-95d8-52d39fa6280c"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1614605221688+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "5306142d-df82-44ac-898b-08024d9ec0f0",
+          "DisplayValue": "Просмотр журнала изменений"
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 2
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "a4b65f4b-e504-419c-a811-9e399f347af2",
+          "DisplayValue": "Аудитор информационной безопасности"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "23e1abf8-ae70-4d36-afe1-15db00c4d64d"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1616493670373+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "5306142d-df82-44ac-898b-08024d9ec0f0",
+          "DisplayValue": "Просмотр журнала изменений"
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "adc7619d-6793-4332-bdcf-a7343fe3d069"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1565717162744+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "5306142d-df82-44ac-898b-08024d9ec0f0",
+          "DisplayValue": "Просмотр журнала изменений"
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 1
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "77e5bb02-ca02-43ef-8d39-d244e2d6e51f"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1612777465312+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "56088a10-6bac-41f8-ab38-2acc74d2b6b4",
+          "DisplayValue": "Управление настройками службы лицензирования"
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 1
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "e63a1828-1ea3-4dc3-9f3b-46343cc702d0"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1616493627145+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "56088a10-6bac-41f8-ab38-2acc74d2b6b4",
+          "DisplayValue": "Управление настройками службы лицензирования"
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
+        },
+        {
+          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
+          "Value": true
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5051fcd9-61be-426c-8f29-1154ff3b8ef4"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1612778380670+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
+          "Value": "008993af-b1ed-49bc-ae57-f0662755e1da",
+          "DisplayValue": "Чтение настроек службы лицензирования"
+        },
+        {
+          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
+          "Value": 1
         },
         {
           "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
@@ -137,7 +497,7 @@
         },
         {
           "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
-          "Value": 1
+          "Value": 2
         },
         {
           "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
@@ -154,11 +514,11 @@
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "5051fcd9-61be-426c-8f29-1154ff3b8ef4"
+          "Value": "e9b839e1-5fdd-4f94-9454-ba5c807befbc"
         },
         {
           "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1612778380670+0300)\/"
+          "Value": "\/Date(1616493641779+0300)\/"
         },
         {
           "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
@@ -171,38 +531,8 @@
         },
         {
           "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
-          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
-          "DisplayValue": "Администратор по управлению лицензиями пользователей"
-        },
-        {
-          "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",
-          "Value": true
-        }
-      ]
-    },
-    {
-      "Row": [
-        {
-          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
-          "Value": "77e5bb02-ca02-43ef-8d39-d244e2d6e51f"
-        },
-        {
-          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
-          "Value": "\/Date(1612777465312+0300)\/"
-        },
-        {
-          "SchemaColumnUId": "a64eb826-4dc1-45fb-a5ac-d768275eb719",
-          "Value": "56088a10-6bac-41f8-ab38-2acc74d2b6b4",
-          "DisplayValue": "Управление настройками службы лицензирования"
-        },
-        {
-          "SchemaColumnUId": "9d032101-3db5-4bba-ab16-294104cd15ad",
-          "Value": 0
-        },
-        {
-          "SchemaColumnUId": "423b165f-9759-437b-b532-95ef1b78063b",
-          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
-          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
         },
         {
           "SchemaColumnUId": "e1f978af-3b07-4c9f-a422-c6170cd1b1a4",

@@ -1,0 +1,166 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "69fdbec8-a5d6-4361-b715-3752b3ac4c39"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "6339fb9b-6863-4a27-be04-dae97402e5da",
+          "DisplayValue": "Время запуска ежедневных бизнес-процессов лицензий"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "0a81769b-5367-44ea-9282-7b263c08658b",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "4265877f-a852-4d6f-93b4-caff3b6e324d"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "6b8e2d74-0424-45e1-b0fe-10b9c16f4810",
+          "DisplayValue": "Группа AD"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "0a81769b-5367-44ea-9282-7b263c08658b",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "d07fa01c-10bc-4ed0-a050-9f27cb2c6763"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "f78eaaf6-1848-4862-9985-35b5b960f2f8",
+          "DisplayValue": "Тип лицензии"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "0a81769b-5367-44ea-9282-7b263c08658b",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "8a0e6ac4-217d-432a-a538-8069919e2901"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "b0757c83-7946-405e-bf4f-877676ab7ca2",
+          "DisplayValue": "Причина деактивации"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "0a81769b-5367-44ea-9282-7b263c08658b",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "6bb60edd-459d-4836-945e-5fb1ead2f593"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "18578be1-facf-49da-ba11-ffac17028354",
+          "DisplayValue": "Статус пользователя платформы"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "0a81769b-5367-44ea-9282-7b263c08658b",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "8cc36e59-74a3-497d-b0a4-368c01bb0739"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "02314476-c7ac-40fe-bcdb-6be552cba188",
+          "DisplayValue": "Статус приложения"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "0a81769b-5367-44ea-9282-7b263c08658b",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "fb3a989f-4b90-41f0-9e1b-109380c18eaa"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "c0833343-ff2b-4b26-b5bf-2dec4c9e092f",
+          "DisplayValue": "Статус лицензии"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "0a81769b-5367-44ea-9282-7b263c08658b",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "8e8027e3-7c0b-4024-af18-85ca989e5c9e"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "cd51daab-edb7-4cc9-b324-bf6e2780a7c6",
+          "DisplayValue": "Экземпляр платформы"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "0a81769b-5367-44ea-9282-7b263c08658b",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "7d37460f-0b8f-486c-9668-b4eaf2d5f94d"
+        },
+        {
+          "SchemaColumnUId": "34391227-ac90-4b55-9739-6720e97a0594",
+          "Value": "13f8d02a-2915-4c5e-a64a-7ec915eb217f",
+          "DisplayValue": "Источник добавления пользователя"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "0a81769b-5367-44ea-9282-7b263c08658b",
+          "DisplayValue": "Служба лицензирования"
+        }
+      ]
+    }
+  ]
+}

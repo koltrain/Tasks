@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "43d15e52-bad6-46d2-905b-9a88f050d7e9",
+    "Name": "GKIInstanceUpdateSelectedProcess",
+    "ModifiedOnUtc": "\/Date(1615728707000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Обновления лицензий по всем пользователям выбранных экземпляров"
+  }
+}

@@ -2,7 +2,7 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="Columns.GKIGKICustomerID.Caption" Value="Журнал управления лицензиями" />
+			<Item Name="Columns.GKIGKICustomerID.Caption" Value="Управление лицензиями CID" />
 			<Item Name="Columns.GKIGKIInstance.Caption" Value="Приложения платформы" />
 			<Item Name="Columns.GKIGKILicUser.Caption" Value="Пользователи платформы" />
 		</Items>

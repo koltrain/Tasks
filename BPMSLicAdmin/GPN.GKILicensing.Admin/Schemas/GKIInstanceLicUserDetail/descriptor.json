@@ -2,12 +2,12 @@
   "Descriptor": {
     "UId": "438922b3-0330-4d6e-bae6-112c0b28edd5",
     "Name": "GKIInstanceLicUserDetail",
-    "ModifiedOnUtc": "\/Date(1608543914000)\/",
+    "ModifiedOnUtc": "\/Date(1617098609000)\/",
     "Parent": {
       "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
       "Name": "BaseGridDetailV2"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "Схема детали: \"Пользователь приложения\""
+    "Caption": "Схема детали: \"Экземпляры пользователя\""
   }
 }

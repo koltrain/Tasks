@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "5e79fb5b-e710-4ec9-a34d-3779c4b8707c",
+    "Name": "GKIGroupADInTag",
+    "ModifiedOnUtc": "\/Date(1614850178000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Группа AD"
+  }
+}

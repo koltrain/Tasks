@@ -50,7 +50,22 @@ define("GKIGroupADInstanceLicenseDetail", ["ConfigurationGrid", "ConfigurationGr
 					"activeRowAction": {"bindTo": "onActiveRowAction"},
 					"multiSelect": {"bindTo": "MultiSelect"}
 				}
-			}
+			},
+            {
+                "operation": "insert",
+                "parentName": "Detail",
+                "propertyName": "tools",
+                "name": "AddTypedRecordButton",
+                "values": {
+                    "itemType": Terrasoft.ViewItemType.INFORMATION_BUTTON,
+                    "content": { "bindTo": "Resources.Strings.InfoButton" },
+                    "controlConfig": {
+                        "imageConfig": {
+                            "bindTo": "Resources.Images.InfoIcon"
+                        }
+                    }
+                }
+            }
 		]/**SCHEMA_DIFF*/,
 		methods: {}
 	};

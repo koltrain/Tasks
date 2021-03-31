@@ -1,0 +1,256 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "3f0f9571-69ed-42e9-b2c2-c04531864875"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "3827e8c1-c216-4d6b-ab65-5dec054a45ec",
+          "DisplayValue": "Почтовый ящик для отправки уведомлений службы по управлению лицензиями"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "40ce8b34-9a14-4c45-8844-1760e8aebfd5"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "e6940389-8a9c-4838-abaf-8760a57a3ee7",
+          "DisplayValue": "Периодичность запросов на подчиненные экземпляры, секунд"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "37ca11b4-71a9-4ac2-bf2f-7ffe193931b2"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "a42ea770-c3ac-42a3-97d7-e8cef4a0fc0e",
+          "DisplayValue": "Время ожидания подчиненного экземпляра до разблокировки, минут"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "9732889b-f326-4ae8-9b14-04bea131c97f"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "90ce1dc5-ed81-4a60-b2a0-3bae49f9b37c",
+          "DisplayValue": "Временной промежуток контроля активности пользователя на приложении"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "cae9c6c4-a54b-4de0-9c77-3332aec4a9cf"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "eb2f5125-af56-4648-8f39-3bd7420280a5",
+          "DisplayValue": "Email для отправки вопроса технической поддержке"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "bee9159c-0d40-4df0-843c-5698b1bf9a05"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "712ea01a-9907-4c55-bd19-8ac3f6a6e794",
+          "DisplayValue": "Временной промежуток контроля даты создания пользователя на приложении"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "c823c958-1662-43f6-a78e-b90689027e7a"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "85c33ddd-7e7e-4329-b9cd-40172b462a49",
+          "DisplayValue": "Атрибут последней даты изменения в AD"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "d7a45b50-1789-4014-b4bc-9d0d128e33af"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "fe85d1d6-2905-4fb4-a461-291b3c8cd8f0",
+          "DisplayValue": "Последняя дата изменения для LDAP-синхронизации"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "f9f988f1-0c22-4f91-9288-caf4b77f4603"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "f3374c70-aad2-4477-8f9b-cd4b064f9b96",
+          "DisplayValue": "Фильтр пользователей для синхронизации в LDAP"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "cf7e05d4-8f77-4bcb-a85f-5e92f7fc9d53"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "5960cc11-9888-4e16-9b84-fe86af0e2a93",
+          "DisplayValue": "Логин windows-приложения"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "14f5d479-8a0b-434a-ad08-a7ed6830a24d"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "2d8a13ba-eb5a-4c41-94dd-3a46cab4fc80",
+          "DisplayValue": "Url windows-приложения"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "b5f9ef47-5278-4b42-bc16-ffccfdf06088"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "dca9b5d6-b511-44bc-a785-18652fc00341",
+          "DisplayValue": "Процент определения лимита VIP-пользователей"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "7581e394-1afc-4953-915c-a831ba276942"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "c4d6e2a3-1ea1-42c6-8828-e5127013463d",
+          "DisplayValue": "Пароль windows-приложения"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "97818320-5a71-4efd-a65f-12e1a65b161a"
+        },
+        {
+          "SchemaColumnUId": "9e46bb69-9788-423c-b7cd-4c624081082d",
+          "Value": "ba96f774-7ba2-4561-bfba-fe1cfe9b9e3e",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "34982036-bcf9-408a-a293-d6b35c45edd5",
+          "Value": "0186c2f9-12b1-4deb-ba52-57c62acd7649",
+          "DisplayValue": "Периодичность просмотра журнала аудита на подчиненных экземплярах, секунд"
+        }
+      ]
+    }
+  ]
+}

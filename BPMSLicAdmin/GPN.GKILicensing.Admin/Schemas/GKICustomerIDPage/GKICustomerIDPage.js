@@ -55,6 +55,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUt
 		methods: {
 			/**
 			 * @overridden
+			 * @desc действия после инициализации карточки
 			 */
 			onEntityInitialized: function() {
 				this.callParent(arguments);
@@ -63,6 +64,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUt
 			
 			/**
 			 * @overridden
+			 * @desc подписка на сообщения
 			 */
 			subscribeSandboxEvents: function() {
 				this.callParent(arguments);
@@ -87,6 +89,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUt
 
 			/**
 			 * @overridden
+			 * @desc обновление видимости кнопок
 			 */
 			updateButtonsVisibility: function() {
 				this.callParent(arguments);
@@ -192,6 +195,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUt
 					this.showInformationDialog(responseMessage);
 				}, serviceData, this);
 			},
+
 			/**
 			 * @private
 			 * @desc returns file config
@@ -207,6 +211,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUt
 					isChunkedUpload: false
 				};
 			},
+			
 			/**
 			 * @public
 			 * @desc file methods
@@ -252,7 +257,7 @@ define("GKICustomerIDPage", ["ServiceHelper", "ProcessModuleUtilities", "RightUt
 				RightUtilities.checkCanExecuteOperation({
 					operation: "GKICanManageLicensingSettings"
 				}, function(result) {
-					this.set("isGKIButtonsEnabled", true);
+					this.set("isGKIButtonsEnabled", result);
 					if (callback){
 						Ext.callback(callback, scope || this);
 					}

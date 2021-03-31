@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "66ef85e3-f3b4-0f81-6180-372f3ebea216",
     "Name": "EmailTemplateData",
-    "ModifiedOnUtc": "\/Date(1611342173000)\/",
+    "ModifiedOnUtc": "\/Date(1614866917000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "93030575-f70f-4041-902e-c4badaf62c63",
@@ -18,7 +18,7 @@
       },
       {
         "ColumnUId": "ca53e2c8-0767-4f2c-8a18-2ee5821f134e",
-        "IsForceUpdate": false,
+        "IsForceUpdate": true,
         "IsKey": false,
         "ColumnName": "Name",
         "DataTypeValueUId": "5ca35f10-a101-4c67-a96a-383da6afacfc"
@@ -32,28 +32,28 @@
       },
       {
         "ColumnUId": "26bd9f25-0d50-4c47-829f-8b286576317c",
-        "IsForceUpdate": false,
+        "IsForceUpdate": true,
         "IsKey": false,
         "ColumnName": "Object",
         "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
       },
       {
         "ColumnUId": "54425b16-8b5b-40a1-baf1-3997560a6b0e",
-        "IsForceUpdate": false,
+        "IsForceUpdate": true,
         "IsKey": false,
         "ColumnName": "Body",
         "DataTypeValueUId": "c0f04627-4620-4bc0-84e5-9419dc8516b1"
       },
       {
         "ColumnUId": "698c2960-3832-4ba4-ad56-8a6489b32ad4",
-        "IsForceUpdate": false,
+        "IsForceUpdate": true,
         "IsKey": false,
         "ColumnName": "IsHtmlBody",
         "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
       },
       {
         "ColumnUId": "2e7c35e3-0774-4a4a-bea5-6ce4c8de1465",
-        "IsForceUpdate": false,
+        "IsForceUpdate": true,
         "IsKey": false,
         "ColumnName": "Subject",
         "DataTypeValueUId": "5ca35f10-a101-4c67-a96a-383da6afacfc"

@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "920563df-5680-9e7d-b265-8905e38fd1dd",
+    "Name": "GKITlsFileEntity",
+    "ModifiedOnUtc": "\/Date(1616779610000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Файл tls"
+  }
+}

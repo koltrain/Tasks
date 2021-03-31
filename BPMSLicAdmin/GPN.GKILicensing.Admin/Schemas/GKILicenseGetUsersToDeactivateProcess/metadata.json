@@ -336,7 +336,7 @@
           "BO3": true,
           "BP2": [],
           "CL2": "FFFFFFFF",
-          "CH1": "Guid instanceIdFilter = Get<Guid>(\"instanceIdFilter\");\n\nvar GKILicensingAdminService = new Terrasoft.Configuration.GKILicensingAdminService();\nGKILicensingAdminService.GKILicenseGetUsersToDeactivate(instanceIdFilter);\nreturn true;",
+          "CH1": "UserConnection userConnection = Get<UserConnection>(\"UserConnection\");\nGuid instanceIdFilter = Get<Guid>(\"instanceIdFilter\");\n\nvar GKILicensingAdminService = new Terrasoft.Configuration.GKILicensingAdminService(userConnection);\nGKILicensingAdminService.GKILicenseGetUsersToDeactivate(instanceIdFilter);\nreturn true;",
           "CH2": true
         },
         {
@@ -364,7 +364,8 @@
               "L1": "cffc4762-c5c7-44bc-8cc6-cb55aba6e06b",
               "L8": {
                 "GS1": 1,
-                "GS2": "{\"$type\":\"Terrasoft.Core.Process.LocalizableParameterValuesList, Terrasoft.Core\",\"$values\":[{\"ItemUId\":\"96259935-683f-4566-bcce-e27ae65c8441\",\"Id\":{\"value\":\"96259935-683f-4566-bcce-e27ae65c8441\"},\"Name\":{\"value\":\"Button-6321f299d7b24c6db85632351de37155\"},\"Tag\":{\"value\":\"Continue\"},\"Caption\":{\"isLczValue\":true},\"PerformClosePage\":{\"value\":\"True\"},\"PerformSaveData\":{\"value\":\"False\"},\"GenerateSignal\":{\"value\":\"\"}},{\"ItemUId\":\"c4841740-ff8c-406f-8626-1c78f78608bf\",\"Id\":{\"value\":\"c4841740-ff8c-406f-8626-1c78f78608bf\"},\"Name\":{\"value\":\"Button-3a8ac667899d4aa68021a07eb1c7c49c\"},\"Tag\":{\"value\":\"ClosePage\"},\"Caption\":{\"isLczValue\":true},\"PerformClosePage\":{\"value\":\"False\"},\"PerformSaveData\":{\"value\":\"False\"},\"GenerateSignal\":{\"value\":\"\"}}]}"
+                "GS2": "{\"$type\":\"Terrasoft.Core.Process.LocalizableParameterValuesList, Terrasoft.Core\",\"$values\":[{\"ItemUId\":\"96259935-683f-4566-bcce-e27ae65c8441\",\"Id\":{\"value\":\"96259935-683f-4566-bcce-e27ae65c8441\"},\"Name\":{\"value\":\"Button-6321f299d7b24c6db85632351de37155\"},\"Tag\":{\"value\":\"Continue\"},\"Caption\":{\"isLczValue\":true},\"PerformClosePage\":{\"value\":\"True\"},\"PerformSaveData\":{\"value\":\"False\"},\"GenerateSignal\":{\"value\":\"\"}},{\"ItemUId\":\"c4841740-ff8c-406f-8626-1c78f78608bf\",\"Id\":{\"value\":\"c4841740-ff8c-406f-8626-1c78f78608bf\"},\"Name\":{\"value\":\"Button-3a8ac667899d4aa68021a07eb1c7c49c\"},\"Tag\":{\"value\":\"ClosePage\"},\"Caption\":{\"isLczValue\":true},\"PerformClosePage\":{\"value\":\"False\"},\"PerformSaveData\":{\"value\":\"False\"},\"GenerateSignal\":{\"value\":\"\"}}]}",
+                "GS5": "b7f73e55-a789-4932-b3ae-6c50f12fb0fd"
               },
               "SourceParameterUId": "c49bd85e-159a-49ee-b10a-3c3bca63d7d5"
             },

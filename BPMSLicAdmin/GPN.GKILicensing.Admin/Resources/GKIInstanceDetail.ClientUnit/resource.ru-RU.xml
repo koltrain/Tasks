@@ -3,7 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Схема детали: &quot;Приложения платформы&quot;" />
-			<Item Name="LocalizableStrings.Caption.Value" Value="Зарегистрированные приложения" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Зарегистрированные экземпляры" />
 		</Items>
 	</Group>
 </Resources>

@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "5b71b70d-0ffd-4d65-9c9a-6258bfd91306",
     "Name": "GKIGroupADUsersDetail",
-    "ModifiedOnUtc": "\/Date(1610719282000)\/",
+    "ModifiedOnUtc": "\/Date(1617098522000)\/",
     "Parent": {
       "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
       "Name": "BaseGridDetailV2"

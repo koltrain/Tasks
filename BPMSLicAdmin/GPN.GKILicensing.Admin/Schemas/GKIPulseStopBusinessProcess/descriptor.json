@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "5d8e0ffb-2efd-420c-ac7a-9749376fd6f6",
     "Name": "GKIPulseStopBusinessProcess",
-    "ModifiedOnUtc": "\/Date(1611823210000)\/",
+    "ModifiedOnUtc": "\/Date(1616756069000)\/",
     "ManagerName": "ProcessSchemaManager",
     "Caption": "Остановка пульса подчиненных экземпляров"
   }

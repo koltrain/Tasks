@@ -2,8 +2,10 @@
 <Resources Culture="ru-RU">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Схема детали: &quot;Пользователь приложения&quot;" />
-			<Item Name="LocalizableStrings.Caption.Value" Value="Пользователь приложения" />
+			<Item Name="Caption" Value="Схема детали: &quot;Экземпляры пользователя&quot;" />
+			<Item Name="Images.fc312c34-01d1-33d1-98d7-0c0cb24ee075.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDwAACw8BkvkDpQAAATBJREFUOE+1U7FtwzAQVJ3KI3iEjKAiA6g0DDm4EVwqlAJoA3kDj5ARMkKKFClVukjhFXInnWgScrrkgAd05P/980QW/4IaTXlAOzDeHcMOzdbbv0NJKqinooAaXang2pExMs7AceP0HCp+Rvuxxyu8tALFeuWY5pg7hFhc46Ui/+b6NR2fIqcaoTedwcVKY5suRxl36Ld7hEfuxa5Av9FedhQqntLuc1H41HfFxFRAOKB704Sm0/g0ritNM1D4orObTtAR2OTm1UrRYPEXuz+ZRmjiTECKCtMITQU0D6YRq4lFZIxphCagQHaBFoNNb6AIjWwH0wmeIArIUBWnhkfo9+iSMOGc/vcFut76GxRdHTWDEmjqlV1obOB3fBPjPaPvQpfEvvANzG/CW3+NovgBSeOlkjoHxt4AAAAASUVORK5CYII=" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Экземпляры пользователя" />
+			<Item Name="LocalizableStrings.GKIInfoButtonHint.Value" Value="Деталь отражает информацию об экземплярах текущего пользователя" />
 		</Items>
 	</Group>
 </Resources>

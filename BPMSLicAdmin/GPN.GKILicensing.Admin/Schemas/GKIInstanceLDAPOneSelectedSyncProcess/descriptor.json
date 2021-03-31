@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "cd278845-92ab-4918-8913-00c1ef431c19",
+    "Name": "GKIInstanceLDAPOneSelectedSyncProcess",
+    "ModifiedOnUtc": "\/Date(1617094861000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Синхронизация пользователей платформы с LDAP по одному выбранному экземпляру"
+  }
+}

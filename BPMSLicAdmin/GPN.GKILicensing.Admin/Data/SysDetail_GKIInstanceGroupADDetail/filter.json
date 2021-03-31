@@ -1,1 +1,48 @@
-{"_isFilter":false,"uId":"9f492d69-c465-4b48-a5ac-06302d846e45","name":"FilterEdit","logicalOperation":"Or","items":[{"_isFilter":true,"_filterSchemaUId":"363c2008-c733-407d-9b01-9e6a7cd9a77a","uId":"3bfd2cbd-ea5d-499e-aa0a-4a1a2f0fb7b1","leftExpression":{"expressionType":"SchemaColumn","metaPath":"ae0e45ca-c495-4fe7-a39d-3ab7278e1617","caption":"Id","dataValueType":{"id":"23018567-a13c-4320-8687-fd6f9e3699bd","name":"Guid","isNumeric":false,"editor":{"controlTypeName":"TextEdit","controlXType":"textedit"},"useClientEncoding":false}},"comparisonType":"Equal","rightExpression":{"expressionType":"Parameter","dataValueType":{"id":"23018567-a13c-4320-8687-fd6f9e3699bd","name":"Guid","isNumeric":false,"editor":{"controlTypeName":"TextEdit","controlXType":"textedit"},"useClientEncoding":false},"parameterValues":[{"displayValue":"\"c09f5770-ba32-4c28-9783-9474ecf8f9df\"","parameterValue":"\"c09f5770-ba32-4c28-9783-9474ecf8f9df\""}]}}]}
+{
+  "_isFilter": false,
+  "uId": "9f492d69-c465-4b48-a5ac-06302d846e45",
+  "name": "FilterEdit",
+  "logicalOperation": "Or",
+  "items": [
+    {
+      "_isFilter": true,
+      "_filterSchemaUId": "363c2008-c733-407d-9b01-9e6a7cd9a77a",
+      "uId": "3bfd2cbd-ea5d-499e-aa0a-4a1a2f0fb7b1",
+      "leftExpression": {
+        "expressionType": "SchemaColumn",
+        "metaPath": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "caption": "Id",
+        "dataValueType": {
+          "id": "23018567-a13c-4320-8687-fd6f9e3699bd",
+          "name": "Guid",
+          "isNumeric": false,
+          "editor": {
+            "controlTypeName": "TextEdit",
+            "controlXType": "textedit"
+          },
+          "useClientEncoding": false
+        }
+      },
+      "comparisonType": "Equal",
+      "rightExpression": {
+        "expressionType": "Parameter",
+        "dataValueType": {
+          "id": "23018567-a13c-4320-8687-fd6f9e3699bd",
+          "name": "Guid",
+          "isNumeric": false,
+          "editor": {
+            "controlTypeName": "TextEdit",
+            "controlXType": "textedit"
+          },
+          "useClientEncoding": false
+        },
+        "parameterValues": [
+          {
+            "displayValue": "\"c09f5770-ba32-4c28-9783-9474ecf8f9df\"",
+            "parameterValue": "\"c09f5770-ba32-4c28-9783-9474ecf8f9df\""
+          }
+        ]
+      }
+    }
+  ]
+}

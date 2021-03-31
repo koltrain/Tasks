@@ -39,6 +39,7 @@
           "A5": "3716e58e-ad82-22ae-4451-78d83916585d",
           "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
           "BL8": "f835c208-0567-42db-b0a2-e829143a5d04",
+          "BM1": 0,
           "BM4": [
             {
               "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
@@ -73,7 +74,8 @@
           "BL8": "f835c208-0567-42db-b0a2-e829143a5d04",
           "BN2": "31;31",
           "BO3": true,
-          "FC1": []
+          "FC1": [],
+          "ED1": false
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaTerminateEvent",
@@ -105,7 +107,7 @@
           "BO3": true,
           "BP2": [],
           "CL2": "FFFFFFFF",
-          "CH1": "var GKILicensingAdminService = new Terrasoft.Configuration.GKILicensingAdminService();\nGKILicensingAdminService.GKIPulseStart();\nreturn true;",
+          "CH1": "UserConnection userConnection = Get<UserConnection>(\"UserConnection\");\nvar GKILicensingAdminService = new Terrasoft.Configuration.GKILicensingAdminService(userConnection);\nGKILicensingAdminService.GKIPulseStart();\nreturn true;",
           "CH2": true
         },
         {

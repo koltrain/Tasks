@@ -23,6 +23,7 @@
 			<Item Name="LocalizableStrings.LDAPSettingsGroupLabel.Value" Value="Настройки LDAP" />
 			<Item Name="LocalizableStrings.PageCaption.Value" Value="Настройки службы лицензирования" />
 			<Item Name="LocalizableStrings.SaveButtonCaption.Value" Value="Сохранить" />
+			<Item Name="LocalizableStrings.SuccessMessage.Value" Value="Настройки успешно сохранены" />
 		</Items>
 	</Group>
 </Resources>

@@ -3,6 +3,8 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="GKILicenseListeners" />
+			<Item Name="LocalizableStrings.GKIInstanceEmptyPasswordException.Value" Value="Перед сохранением введите пароль от учетной записи для администрирования модуля на вкладке &quot;Администрирование&quot;" />
+			<Item Name="LocalizableStrings.GKILicUserNotActiveException.Value" Value="У вас недостаточно прав на выполнение этой операции" />
 		</Items>
 	</Group>
 </Resources>

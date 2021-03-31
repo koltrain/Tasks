@@ -1,0 +1,10 @@
+﻿{
+  "SqlScript": {
+    "UId": "e4c07eb3-b1f2-ec18-8cc0-29c3485e1dd8",
+    "Name": "GKIDeleteObsoleteRecords_AfterPackage",
+    "DBEngineType": 2,
+    "InstallType": 1,
+    "ModifiedOnUtc": "\/Date(1616502322000)\/",
+    "DependsOn": []
+  }
+}

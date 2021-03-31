@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Приложения платформы" />
+			<Item Name="Columns.GKIAdminEmail.Caption" Value="Email Администратора" />
 			<Item Name="Columns.GKIApplicationStatus.Caption" Value="Статус" />
 			<Item Name="Columns.GKICustomerID.Caption" Value="Идентификатор компании" />
 			<Item Name="Columns.GKIInstanceUnit.Caption" Value="Экземпляр" />
@@ -11,12 +12,14 @@
 			<Item Name="Columns.GKILastSyncSuccess.Caption" Value="Последняя синхронизация успешна?" />
 			<Item Name="Columns.GKILastTlrInstallError.Caption" Value="Ошибка формирования файла-запроса лицензий" />
 			<Item Name="Columns.GKILastTlsInstallError.Caption" Value="Последняя ошибка установки файла лицензий" />
+			<Item Name="Columns.GKILogin.Caption" Value="Логин" />
 			<Item Name="Columns.GKIName.Caption" Value="Название" />
 			<Item Name="Columns.GKINotes.Caption" Value="Заметки" />
+			<Item Name="Columns.GKIPassword.Caption" Value="Пароль" />
 			<Item Name="Columns.GKITlrFile.Caption" Value="Файл tlr" />
-			<Item Name="Columns.GKITlsFile.Caption" Value="Файл tls" />
 			<Item Name="Columns.GKIUrl.Caption" Value="Адрес" />
 			<Item Name="Columns.GKIVersion.Caption" Value="Версия приложения" />
+			<Item Name="Columns.GKIWinNodeAddress.Caption" Value="Адрес виндовой ноды" />
 			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
 		</Items>
 	</Group>

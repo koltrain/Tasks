@@ -3,7 +3,13 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Схема детали: &quot;Лицензии пользователей платформы&quot;" />
+			<Item Name="Images.3c66e835-c8dd-e30d-7446-88c1ef205159.Image" Type="Image" Value="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDAAACwwBP0AiyAAAATBJREFUOE+1U7FtwzAQVJ3KI3iEjKAiA6g0DDm4EVwqlAJoA3kDj5ARMkKKFClVukjhFXInnWgScrrkgAd05P/980QW/4IaTXlAOzDeHcMOzdbbv0NJKqinooAaXang2pExMs7AceP0HCp+Rvuxxyu8tALFeuWY5pg7hFhc46Ui/+b6NR2fIqcaoTedwcVKY5suRxl36Ld7hEfuxa5Av9FedhQqntLuc1H41HfFxFRAOKB704Sm0/g0ritNM1D4orObTtAR2OTm1UrRYPEXuz+ZRmjiTECKCtMITQU0D6YRq4lFZIxphCagQHaBFoNNb6AIjWwH0wmeIArIUBWnhkfo9+iSMOGc/vcFut76GxRdHTWDEmjqlV1obOB3fBPjPaPvQpfEvvANzG/CW3+NovgBSeOlkjoHxt4AAAAASUVORK5CYII=" />
 			<Item Name="LocalizableStrings.Caption.Value" Value="Лицензии пользователей платформы" />
+			<Item Name="LocalizableStrings.GKIClearFilterButtonCaption.Value" Value="Сбросить фильтр" />
+			<Item Name="LocalizableStrings.GKIDeselectAllCaption.Value" Value="Отозвать все" />
+			<Item Name="LocalizableStrings.GKIInfoButtonHint.Value" Value="Деталь отражает информацию о всех пользователях с лицензией" />
+			<Item Name="LocalizableStrings.GKISelectAllCaption.Value" Value="Выбрать все" />
+			<Item Name="LocalizableStrings.InfoButton.Value" Value="Деталь отражает информацию о лицензиях текущего пользователя" />
 		</Items>
 	</Group>
 </Resources>

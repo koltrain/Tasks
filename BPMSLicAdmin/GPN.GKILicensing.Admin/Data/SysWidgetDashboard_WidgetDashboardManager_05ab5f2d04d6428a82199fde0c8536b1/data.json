@@ -1,0 +1,33 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "05ab5f2d-04d6-428a-8219-9fde0c8536b1"
+        },
+        {
+          "SchemaColumnUId": "a215f575-7283-41bd-8852-b2415a935051",
+          "Value": ""
+        },
+        {
+          "SchemaColumnUId": "78ed4015-b81f-49fc-9d50-847cf8df5e6c",
+          "Value": 0
+        },
+        {
+          "SchemaColumnUId": "fb750eb9-35b6-463e-b3b8-1a69ec871e43",
+          "Value": ""
+        },
+        {
+          "SchemaColumnUId": "551ce105-25dc-4a76-b318-cf37635e88c3",
+          "Value": "{\"Indicator8b082c1a-378e-4fe8-80d7-06e180a5adac\":{\"widgetType\":\"Indicator\",\"parameters\":{\"caption\":\"Количество экземпляров с установленным продуктом\",\"sectionBindingColumn\":\"GKILicPackage\",\"sectionId\":\"910de435-efa7-496d-a881-3c59b7cc95a7\",\"entitySchemaName\":\"GKIInstanceLicPackage\",\"filterData\":\"{\\\"className\\\":\\\"Terrasoft.FilterGroup\\\",\\\"items\\\":{},\\\"logicalOperation\\\":0,\\\"isEnabled\\\":true,\\\"filterType\\\":6,\\\"rootSchemaName\\\":\\\"GKIInstanceLicPackage\\\",\\\"key\\\":\\\"\\\"}\",\"aggregationType\":1,\"format\":{\"textDecorator\":\"{0}\",\"type\":4,\"decimalPrecision\":0},\"style\":\"widget-dark-turquoise\",\"fontStyle\":\"big-indicator-font-size\"}},\"Chart80563b13-6a9e-4e7b-8ad6-97669ec7f8a8\":{\"widgetType\":\"Chart\",\"parameters\":{\"seriesConfig\":[],\"orderBy\":\"GroupByField\",\"orderDirection\":\"Ascending\",\"caption\":\"Количество пользователей, использующих продукт на экземпляре\",\"sectionId\":\"910de435-efa7-496d-a881-3c59b7cc95a7\",\"xAxisDefaultCaption\":null,\"yAxisDefaultCaption\":null,\"useEmptyValue\":false,\"isStackedChart\":false,\"primaryColumnName\":\"Id\",\"yAxisConfig\":{\"position\":0},\"schemaName\":\"GKIInstanceLicense\",\"sectionBindingColumn\":\"GKILic.GKILicPackage\",\"func\":2,\"type\":\"column\",\"xAxisColumn\":\"GKIInstance\",\"yAxisColumn\":\"GKICountUsed\",\"YAxisCaption\":\"Количество пользователей\",\"styleColor\":\"widget-green\",\"filterData\":\"{\\\"className\\\":\\\"Terrasoft.FilterGroup\\\",\\\"items\\\":{\\\"58625d3c-ebc1-4108-a349-439a85dfc636\\\":{\\\"className\\\":\\\"Terrasoft.IsNullFilter\\\",\\\"filterType\\\":2,\\\"comparisonType\\\":2,\\\"isEnabled\\\":true,\\\"trimDateTimeParameterToDate\\\":false,\\\"leftExpression\\\":{\\\"className\\\":\\\"Terrasoft.ColumnExpression\\\",\\\"expressionType\\\":0,\\\"columnPath\\\":\\\"GKICountUsed\\\"},\\\"isAggregative\\\":false,\\\"key\\\":\\\"58625d3c-ebc1-4108-a349-439a85dfc636\\\",\\\"dataValueType\\\":4,\\\"leftExpressionCaption\\\":\\\"Распределено\\\",\\\"isNull\\\":false}},\\\"logicalOperation\\\":0,\\\"isEnabled\\\":true,\\\"filterType\\\":6,\\\"rootSchemaName\\\":\\\"GKIInstanceLicense\\\",\\\"key\\\":\\\"\\\"}\",\"format\":{\"type\":4,\"decimalPrecision\":0},\"isLegendEnabled\":false}},\"Indicator404a6372-9d68-400e-b286-02bffbff45b2\":{\"widgetType\":\"Indicator\",\"parameters\":{\"caption\":\"Активные лицензии по продукту\",\"sectionBindingColumn\":\"GKILicPackage\",\"sectionId\":\"910de435-efa7-496d-a881-3c59b7cc95a7\",\"entitySchemaName\":\"GKILic\",\"filterData\":\"{\\\"className\\\":\\\"Terrasoft.FilterGroup\\\",\\\"items\\\":{\\\"4e72fd77-9706-4a77-b013-db642e85152e\\\":{\\\"className\\\":\\\"Terrasoft.InFilter\\\",\\\"filterType\\\":4,\\\"comparisonType\\\":3,\\\"isEnabled\\\":true,\\\"trimDateTimeParameterToDate\\\":false,\\\"leftExpression\\\":{\\\"className\\\":\\\"Terrasoft.ColumnExpression\\\",\\\"expressionType\\\":0,\\\"columnPath\\\":\\\"GKILicStatus\\\"},\\\"isAggregative\\\":false,\\\"key\\\":\\\"4e72fd77-9706-4a77-b013-db642e85152e\\\",\\\"dataValueType\\\":10,\\\"leftExpressionCaption\\\":\\\"Статус\\\",\\\"referenceSchemaName\\\":\\\"GKILicStatus\\\",\\\"rightExpressions\\\":[{\\\"className\\\":\\\"Terrasoft.ParameterExpression\\\",\\\"expressionType\\\":2,\\\"parameter\\\":{\\\"className\\\":\\\"Terrasoft.Parameter\\\",\\\"dataValueType\\\":10,\\\"value\\\":{\\\"Name\\\":\\\"Активна\\\",\\\"Id\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"value\\\":\\\"672f84f8-45de-4383-8220-a805b30b745e\\\",\\\"displayValue\\\":\\\"Активна\\\"}}}]}},\\\"logicalOperation\\\":0,\\\"isEnabled\\\":true,\\\"filterType\\\":6,\\\"rootSchemaName\\\":\\\"GKILic\\\",\\\"key\\\":\\\"\\\"}\",\"aggregationType\":1,\"format\":{\"textDecorator\":\"{0}\",\"type\":4,\"decimalPrecision\":0},\"style\":\"widget-coral\",\"fontStyle\":\"default-indicator-font-size\"}}}"
+        },
+        {
+          "SchemaColumnUId": "9eedf8ab-d02e-4a4a-9f9d-19ede1c873bc",
+          "Value": "null",
+          "DisplayValue": ""
+        }
+      ]
+    }
+  ]
+}

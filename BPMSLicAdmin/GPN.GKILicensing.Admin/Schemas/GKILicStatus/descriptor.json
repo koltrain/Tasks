@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "9c9af386-c73e-d671-4cf5-744a5d83b4aa",
     "Name": "GKILicStatus",
-    "ModifiedOnUtc": "\/Date(1608277492000)\/",
+    "ModifiedOnUtc": "\/Date(1616842140000)\/",
     "Parent": {
       "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
       "Name": "BaseLookup"

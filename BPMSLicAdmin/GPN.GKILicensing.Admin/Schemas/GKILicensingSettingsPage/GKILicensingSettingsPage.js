@@ -3,28 +3,14 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 	function(Terrasoft, resources, ServiceHelper, BusinessRuleModule, RightUtilities) {
 		return {
 			messages: {
-				/**
-				 * @message ChangeHeaderCaption
-				 * Notifies that the header caption was changed.
-				 */
 				"ChangeHeaderCaption": {
 					mode: Terrasoft.MessageMode.PTP,
 					direction: Terrasoft.MessageDirectionType.PUBLISH
 				},
-
-				/**
-				 * @message BackHistoryState
-				 * Notifies that state was returned to previous.
-				 */
 				"BackHistoryState": {
 					mode: Terrasoft.MessageMode.BROADCAST,
 					direction: Terrasoft.MessageDirectionType.PUBLISH
 				},
-
-				/**
-				 * @message InitDataViews
-				 * Notifies that the header caption was changed.
-				 */
 				"InitDataViews": {
 					mode: Terrasoft.MessageMode.PTP,
 					direction: Terrasoft.MessageDirectionType.PUBLISH
@@ -83,12 +69,18 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 				"GKISysLicUserInactivenessControlCooldown": {
 					dataValueType: Terrasoft.DataValueType.FLOAT,
 					type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				},
+				"isGKICanManageLicensingSettings": {
+					dataValueType: Terrasoft.DataValueType.BOOLEAN,
+					type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+					value: false
 				}
 			},
 			methods: {
+
 				/**
-				 * ########## ## ########## ######.
 				 * @protected
+				 * @desc уведомляет о возвращении к предыдущему состоянию
 				 * @virtual
 				 */
 				cancel: function() {
@@ -96,8 +88,8 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 				},
 
 				/**
-				 * Инициализирует страницу и параметры на ней
 				 * @protected
+				 * @desc Инициализирует страницу и параметры на ней
 				 * @overridden
 				 */
 				init: function(callback, scope) {
@@ -113,25 +105,40 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 						var sysSettingsKeys = this.getGKISettingKeys();
 						Terrasoft.SysSettings.querySysSettings(sysSettingsKeys, this.onGetSysSettingValues, this);
 						
+						this.getIsGKICanManageLicensingSettings();
 						callback.call(scope);
 					}, this]);
 					
 				},
+
+				/**
+				 * @private
+				 * @desc доступность кнопки Сохранить
+				 */
+				getIsGKICanManageLicensingSettings: function() {
+					this.canManageLicensingSettings(function(value){
+						this.set("isGKICanManageLicensingSettings", value);
+					}, this);
+				},
+
 				/**
 				 * @private
 				 * @desc проверяет права на изменение настроек службы лицензирования
 				 */
-				canManageLicensingSettings: function() {
+				canManageLicensingSettings: function(callback, scope) {
 					RightUtilities.checkCanExecuteOperation({
 						operation: "GKICanManageLicensingSettings"
 					}, function(result) {
+						if (callback){
+							callback.call(scope || this, result);
+						}
 						return result;
 					}, this);
 				},
 				
 				/**
-				 * получение списка системныз настроек
 				 * @protected
+				 * @desc получение списка системныз настроек
 				 */
 				getGKISettingKeys: function() {
 					var columnsCollection = this.columns;
@@ -148,8 +155,8 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 				},
 				
 				/**
-				 * фильтрация полей на системные настройки
 				 * @protected
+				 * @desc фильтрация полей на системные настройки
 				 * @virtual
 				 */
 				filterForColumns: function(element) {
@@ -164,7 +171,8 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 				},
 				
 				/**
-				 * обработка ответа сервиса запроса системных настроек
+				 * @public
+				 * @desc обработка ответа сервиса запроса системных настроек
 				 * @param {Terrasoft.Collection} sysSettingsCollection коллекция системных настроек
 				 */
 				onGetSysSettingValues: function(sysSettingsCollection) {
@@ -195,8 +203,10 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 						}
 					}, this);
 				},
-				/**
-				 * Подготовка коллекции для справочника почтовых ящиков
+
+				 /**
+				 * @protected
+				 * @desc подготовка коллекции для справочника почтовых ящиков
 				 * @param {String} filter фильтр для коллекции
 				 */
 				onPrepareMailboxEnum: function(filter) {
@@ -225,10 +235,11 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 							prepareListColumnName, true);
 					}, this);
 				},
+
 				/**
-				 * Получение результата запроса справочного поля
-				 * @overridden
 				 * @private
+				 * @desc получение результата запроса справочного поля
+				 * @overridden
 				 * @param {String} filterValue ###### ### primaryDisplayColumn
 				 * @param {String} columnName ### ####### ViewModel
 				 * @param {Boolean} isLookup ####### ########### ####
@@ -242,6 +253,64 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 						entitySchemaQuery.filters.add(prepareListColumnName + "Filter", prepareListFilters);
 					}
 					return entitySchemaQuery;
+				},
+
+				/**
+				 * Сохранение
+				 * @protected
+				 * @overridden
+				 */
+				save: function() {
+					if (this.validate()) {
+						ServiceHelper.callService({
+							serviceName: "GKILicensingAdminService",
+							methodName: "GKISaveLicensingSysSettings",
+							data: {
+								request: this.collectValuesOfSysSettings()
+							},
+							callback: this.saveCallBack,
+							scope: this
+						});
+					}
+				},
+
+				/**
+				 * Формирование json-файла с настройками для сохранения.
+				 * @protected
+				 * @virtual
+				 */
+				collectValuesOfSysSettings: function() {
+					var sysSettingKeys = this.getGKISettingKeys();
+					var sysEnumFieldName = this.get("EnumFieldName");
+					var sysSettingsCollection = [];
+					this.Terrasoft.each(sysSettingKeys, function(key) {
+						var value = this.get(key);
+						if (!value){
+							return;
+						}
+						if (key === sysEnumFieldName) {
+							value = value.value ? value.value : value;
+						}
+						var KeyValuePairs = {
+							"Key": key,
+							"Value": value
+						};
+						sysSettingsCollection.push(KeyValuePairs);
+					}, this);
+					return sysSettingsCollection;
+				},
+				/**
+				 * Коллбек сохранения
+				 * @protected
+				 */
+				saveCallBack: function(response) {
+					if (response && response.success) {
+						var message = resources.localizableStrings.SuccessMessage;
+						this.showInformationDialog(message);
+						this.sandbox.publish("BackHistoryState");
+					} else {
+						this.showInformationDialog(response.errorInfo.message);
+					}
 				}
 			},
 			rules: {},
@@ -296,7 +365,9 @@ define("GKILicensingSettingsPage", ["terrasoft", "GKILicensingSettingsPageResour
 						"click": {
 							"bindTo": "save"
 						},
-						"enabled": false,
+						"enabled": {
+							"bindTo": "isGKICanManageLicensingSettings"
+						},
 						"style": "green",
 						"layout": {
 							"column": 0,

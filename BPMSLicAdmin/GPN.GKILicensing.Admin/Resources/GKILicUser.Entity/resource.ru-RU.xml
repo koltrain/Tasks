@@ -3,7 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Пользователь платформы" />
-			<Item Name="Columns.GKIActive.Caption" Value="Активен на приложениях" />
+			<Item Name="Columns.GKIActive.Caption" Value="Активен на экземплярах" />
 			<Item Name="Columns.GKIIsVIP.Caption" Value="VIP" />
 			<Item Name="Columns.GKILastLicDistributionDateTime.Caption" Value="Дата последней раздачи лицензии" />
 			<Item Name="Columns.GKIMSADActive.Caption" Value="Существует в MS AD" />
@@ -15,7 +15,7 @@
 			<Item Name="Columns.GKIMSADPhone.Caption" Value="Телефон" />
 			<Item Name="Columns.GKIName.Caption" Value="Логин" />
 			<Item Name="Columns.GKINotes.Caption" Value="Заметки" />
-			<Item Name="Columns.GKIPlatformActive.Caption" Value="Имеет доступ к приложениям" />
+			<Item Name="Columns.GKIPlatformActive.Caption" Value="Имеет доступ к экземплярам" />
 			<Item Name="Columns.GKISyncedState.Caption" Value="Факт раздачи лицензии на платформе" />
 		</Items>
 	</Group>

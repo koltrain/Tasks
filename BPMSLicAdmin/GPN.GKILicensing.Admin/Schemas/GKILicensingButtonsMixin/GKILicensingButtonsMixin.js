@@ -13,7 +13,13 @@ define("GKILicensingButtonsMixin", ["ProcessModuleUtilities", "GKILicensingButto
 				this.showConfirmationDialog(resources.localizableStrings.GKILicUserSyncConfirmation,
 				function getSelectedButton(returnCode) {
 					if (returnCode === Terrasoft.MessageBoxButtons.YES.returnCode) {
-						this.GKILicUserSyncServiceCall();
+						var selectedUsers = this.get("SelectedRows");
+						if (selectedUsers.length > 0) 
+						{
+							this.GKILicSelectedUsersSyncServiceCall();
+						} else {
+							this.GKILicUserSyncServiceCall();
+						}
 					}
 				}, [Terrasoft.MessageBoxButtons.YES, Terrasoft.MessageBoxButtons.NO], null, cfg);
 			},
@@ -31,6 +37,22 @@ define("GKILicensingButtonsMixin", ["ProcessModuleUtilities", "GKILicensingButto
 				this.showInformationDialog(resources.localizableStrings.GKISyncIsInProcessReminder);
 				return;
 			},
+
+			/**
+			 * @public
+			 * @desc: вызывает бизнес-процесс, который синхронизирует лицензии у выбранных пользователей
+			 */
+			GKILicSelectedUsersSyncServiceCall: function() {
+				var args = {
+					sysProcessName: "GKILicensingLicSelectedUsersSyncProcess",
+					parameters: {
+						licUserId: this.get("SelectedRows")
+					}
+				};
+				ProcessModuleUtilities.executeProcess(args);
+				this.showInformationDialog(resources.localizableStrings.GKISyncIsInProcessReminder);
+				return;
+			}
 	});
 	return Ext.create(Terrasoft.GKILicensingButtonsMixin);
 });

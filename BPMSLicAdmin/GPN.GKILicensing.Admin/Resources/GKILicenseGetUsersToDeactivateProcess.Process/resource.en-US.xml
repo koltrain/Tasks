@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="BaseElements.ConditionalSequenceFlow1.Caption" Value="Закрыть" />
+			<Item Name="BaseElements.IntermediateThrowMessage1.Caption" Value="finished" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Caption" Value="Поиск претендентов на деактивацию завершен. Список пользователей доступен по ссылке" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Buttons.Caption" Value="Кнопки" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Buttons.Value.96259935-683f-4566-bcce-e27ae65c8441.Caption" Value="Закрыть" />
@@ -33,6 +34,7 @@
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Url.DisplayValue" Value="&quot;[#Module#]/[#Page#]/add&quot;" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.UseCardProcessModule.Caption" Value="Use standard page generator" />
 			<Item Name="BaseElements.ScriptTask1.Caption" Value="GKILicenseGetUsersToDeactivate" />
+			<Item Name="BaseElements.StartMessage1.Caption" Value="finished" />
 			<Item Name="Caption" Value="Поиск претендентов на деактивацию лицензий" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />

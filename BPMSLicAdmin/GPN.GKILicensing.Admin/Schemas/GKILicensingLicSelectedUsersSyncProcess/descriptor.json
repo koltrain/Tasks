@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "06c14b13-8afb-4f34-bcd1-2c1ba362fd21",
+    "Name": "GKILicensingLicSelectedUsersSyncProcess",
+    "ModifiedOnUtc": "\/Date(1615550657000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Обновление лицензий на экземплярах платформы у выбранных пользователей"
+  }
+}

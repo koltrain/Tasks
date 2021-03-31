@@ -18,10 +18,18 @@ define("UserPageV2", [],
 			attributes: {},
 			rules: {},
 			methods: {
+				/**
+				 * @overridden
+				 * действия после инициализации карточки
+				 */
 				onEntityInitialized: function() {
 					this.callParent(arguments);
 					this.initTabsVisibility();
 				},
+				/**
+				 * @protected
+				 * видимость вкладки "Лицензии"
+				 */
 				initTabsVisibility: function() {
 					var licenseTab = this.$TabsCollection.get("LicenseTab"); 
 					licenseTab.set("Visible", false);

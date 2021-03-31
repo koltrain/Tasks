@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "1d534d51-5573-4331-a177-b2880707bf74",
+    "Name": "GKICreatedGKILicUsersRegularPage",
+    "ModifiedOnUtc": "\/Date(1614617622000)\/",
+    "Parent": {
+      "UId": "5826ff24-46c6-4169-9223-2aaad9ec2e18",
+      "Name": "BasePageSimpleProcessTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Страница процесса \"Созданные пользователи\""
+  }
+}

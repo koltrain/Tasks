@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "76bb7986-4ead-7839-65ba-a489a848e9c5",
     "Name": "GKILicUserStatus_Data",
-    "ModifiedOnUtc": "\/Date(1607856117000)\/",
+    "ModifiedOnUtc": "\/Date(1617034205000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "4c8e0e45-e8e9-a05c-f07d-4f2537051dc4",
@@ -18,7 +18,7 @@
       },
       {
         "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
-        "IsForceUpdate": false,
+        "IsForceUpdate": true,
         "IsKey": false,
         "ColumnName": "Name",
         "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"

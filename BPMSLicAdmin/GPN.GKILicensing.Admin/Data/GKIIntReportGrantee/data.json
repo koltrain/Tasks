@@ -1,0 +1,220 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "cd0223af-df1f-4d8e-bffe-a302bde2bb46"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "6effdd9c-eee3-4136-8616-d477b88499e3",
+          "DisplayValue": "Отчет по срокам действия лицензий"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "40e0ef82-182f-4929-b273-3d11dea0851a"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "6effdd9c-eee3-4136-8616-d477b88499e3",
+          "DisplayValue": "Отчет по срокам действия лицензий"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "a4b65f4b-e504-419c-a811-9e399f347af2",
+          "DisplayValue": "Аудитор информационной безопасности"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "0b30e871-9161-4af1-9fa4-dd33dbdb9cc4"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "6effdd9c-eee3-4136-8616-d477b88499e3",
+          "DisplayValue": "Отчет по срокам действия лицензий"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "87676f36-2003-410b-b43b-fded41ac1c72"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "101b8472-a24d-48b4-9208-f501aa7be42e",
+          "DisplayValue": "Отчет по деактивации"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "a2f70400-67cb-45bd-b1b2-b72d54d23cc6"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "101b8472-a24d-48b4-9208-f501aa7be42e",
+          "DisplayValue": "Отчет по деактивации"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "a4b65f4b-e504-419c-a811-9e399f347af2",
+          "DisplayValue": "Аудитор информационной безопасности"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "ba1944ea-33de-4b09-a2cd-59531ef45e1e"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "101b8472-a24d-48b4-9208-f501aa7be42e",
+          "DisplayValue": "Отчет по деактивации"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "4743214a-c69d-4dfc-8add-65b2725537c6"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "62251e53-a038-4626-b83f-582834f78e36",
+          "DisplayValue": "Отчет по распределению лицензий"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "b7218a5e-ee17-44cb-ab51-d026c380fa7c"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "62251e53-a038-4626-b83f-582834f78e36",
+          "DisplayValue": "Отчет по распределению лицензий"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "a4b65f4b-e504-419c-a811-9e399f347af2",
+          "DisplayValue": "Аудитор информационной безопасности"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5fb92516-c37b-4445-8d13-ba2dd9d81a2d"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "62251e53-a038-4626-b83f-582834f78e36",
+          "DisplayValue": "Отчет по распределению лицензий"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "a16fd7e2-e107-4ee5-b969-233cc8fa840b"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "91008372-ed4e-4d17-a8d0-e4e6ca6f3b67",
+          "DisplayValue": "Отчет по использованию лицензий"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "b1aa7564-7e2b-4edf-8d4b-02ee011a5def",
+          "DisplayValue": "Администратор по управлению лицензиями пользователей"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "8222f3cd-744a-48dd-86ea-9c036786d438"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "91008372-ed4e-4d17-a8d0-e4e6ca6f3b67",
+          "DisplayValue": "Отчет по использованию лицензий"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "a4b65f4b-e504-419c-a811-9e399f347af2",
+          "DisplayValue": "Аудитор информационной безопасности"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "0f80010a-f56d-4336-843d-16d258c1f0f6"
+        },
+        {
+          "SchemaColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+          "Value": "91008372-ed4e-4d17-a8d0-e4e6ca6f3b67",
+          "DisplayValue": "Отчет по использованию лицензий"
+        },
+        {
+          "SchemaColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+          "Value": "83a43ebc-f36b-1410-298d-001e8c82bcad",
+          "DisplayValue": "System administrators"
+        }
+      ]
+    }
+  ]
+}

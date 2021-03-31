@@ -217,7 +217,7 @@
           "BO3": true,
           "BP2": [],
           "CL2": "FFFFFFFF",
-          "CH1": "var CustomerId = Get<Guid>(\"CustomerId\");\n\nvar GKILicensingAdminService = new Terrasoft.Configuration.GKILicensingAdminService();\nSet(\"GKITlrRequestByCustomerIDResult\", GKILicensingAdminService.GKITlrRequestByCustomerID(CustomerId));\nreturn true;",
+          "CH1": "UserConnection userConnection = Get<UserConnection>(\"UserConnection\");\nvar CustomerId = Get<Guid>(\"CustomerId\");\n\nvar GKILicensingAdminService = new Terrasoft.Configuration.GKILicensingAdminService(userConnection);\nSet(\"GKITlrRequestByCustomerIDResult\", GKILicensingAdminService.GKITlrRequestByCustomerID(CustomerId));\nreturn true;",
           "CH2": true
         },
         {

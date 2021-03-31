@@ -1,5 +1,5 @@
-define("GKILicUserInstanceLicPackageDetail", ["BusinessRulesApplierV2", "ConfigurationGrid", "ConfigurationGridGenerator", "ConfigurationGridUtilities"], 
-function(BusinessRulesApplierV2) {
+define("GKILicUserInstanceLicPackageDetail", ["BusinessRulesApplierV2","GKILicensingConstantsJs", "ConfigurationGrid", "ConfigurationGridGenerator", "ConfigurationGridUtilities"], 
+function(BusinessRulesApplierV2,constants) {
 	return {
 		entitySchemaName: "GKILicUserInstanceLicPackage",
 		attributes: {
@@ -7,14 +7,106 @@ function(BusinessRulesApplierV2) {
 				dataValueType: Terrasoft.DataValueType.BOOLEAN,
 				type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
 				value: true
+			},
+			"IsPackagePage": {
+				dataValueType: Terrasoft.DataValueType.BOOLEAN,
+				type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				value: false
+			},
+			"IsUserPage": {
+				dataValueType: Terrasoft.DataValueType.BOOLEAN,
+				type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				value: false
 			}
 		},
       	mixins: {
 			ConfigurationGridUtilities: "Terrasoft.ConfigurationGridUtilities"
 		},
+		messages: {
+			"GetSelectedRow": {
+                mode: Terrasoft.MessageMode.PTP,
+                direction: Terrasoft.MessageDirectionType.SUBSCRIBE
+            },
+            "GetSelectedRows": {
+                mode: Terrasoft.MessageMode.PTP,
+                direction: Terrasoft.MessageDirectionType.SUBSCRIBE
+            },
+			"GetSelectRow":{
+				mode: Terrasoft.MessageMode.PTP,
+                direction: Terrasoft.MessageDirectionType.SUBSCRIBE
+			},
+			"GetSelectRows":{
+				mode: Terrasoft.MessageMode.PTP,
+                direction: Terrasoft.MessageDirectionType.SUBSCRIBE
+			}
+		},
       	details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
 		diff: /**SCHEMA_DIFF*/[
-          {
+			{
+                "operation": "insert",
+				"parentName": "Detail",
+				"propertyName": "tools",
+                "name": "AddTypedRecordButton",
+                "values": {
+					"itemType": Terrasoft.ViewItemType.INFORMATION_BUTTON,
+                    "content": {"bindTo": "Resources.Strings.GKIInfoButtonHint" },
+					"controlConfig": {
+						"imageConfig": {
+							"bindTo": "Resources.Images.InfoIcon"
+						},
+						"visible": {"bindTo": "IsPackagePage"}
+					}
+                }
+            },
+			{
+                "operation": "insert",
+				"parentName": "Detail",
+				"propertyName": "tools",
+                "name": "ProcessButton",
+                "values": {
+					"itemType": Terrasoft.ViewItemType.INFORMATION_BUTTON,
+                    "content": {"bindTo": "Resources.Strings.InfoButton" },
+					"controlConfig": {
+						"imageConfig": {
+							"bindTo": "Resources.Images.InfoIcon"
+						},
+						"visible": {"bindTo": "IsUserPage"}
+					}
+                }
+			},
+			{
+				"operation": "insert",
+				"name": "GKISelectAllButton",
+				"parentName": "Detail",
+				"propertyName": "tools",
+				"values": {
+					"itemType": this.Terrasoft.ViewItemType.BUTTON,
+					"caption": {
+						"bindTo": "Resources.Strings.GKISelectAllCaption"
+					},
+					"click": {
+						"bindTo": "onGKISelectAllButtonClick"
+					},
+					"visible": {"bindTo": "IsUserPage"}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "GKIDeselectAllButton",
+				"parentName": "Detail",
+				"propertyName": "tools",
+				"values": {
+					"itemType": this.Terrasoft.ViewItemType.BUTTON,
+					"caption": {
+						"bindTo": "Resources.Strings.GKIDeselectAllCaption"
+					},
+					"click": {
+						"bindTo": "onGKIDeselectAllButtonClick"
+					},
+					"visible": {"bindTo": "IsUserPage"}
+				}
+			},
+            {
 				"operation": "merge",
 				"name": "DataGrid",
 				"values": {
@@ -49,12 +141,77 @@ function(BusinessRulesApplierV2) {
 					],
 					"initActiveRowKeyMap": {"bindTo": "initActiveRowKeyMap"},
 					"activeRowAction": {"bindTo": "onActiveRowAction"},
-					"multiSelect": {"bindTo": "MultiSelect"}	
+					"multiSelect": {"bindTo": "MultiSelect"}
 				}
 			}
         ]/**SCHEMA_DIFF*/,
 		methods: {
 			/**
+			 * @overriden
+			 * действия на инциализации детали
+			 */
+			init: function () {
+				this.callParent(arguments);
+
+				this.sandbox.subscribe("GetSelectedRow", function (args) {
+					var filterGroup = Terrasoft.createFilterGroup();
+
+					filterGroup.add("GKIInstanceIdFilter", Terrasoft.createColumnFilterWithParameter(
+						Terrasoft.ComparisonType.EQUAL, "GKIInstance", args.row.values.GKIInstance.value
+					));
+
+					this.setFiltersAndReload(filterGroup);
+				}, this, ["row"]);
+
+				this.sandbox.subscribe("GetSelectRow", function (args) {
+					var filterGroup = Terrasoft.createFilterGroup();
+
+					filterGroup.add("GKIInstanceIdsFilter", Terrasoft.createColumnFilterWithParameter(
+						Terrasoft.ComparisonType.EQUAL, "GKIInstance", args.row.values.GKIInstance.value
+					));
+					filterGroup.add("GKILicUserFilter", Terrasoft.createColumnFilterWithParameter(
+                        Terrasoft.ComparisonType.EQUAL, "GKILicUser", this.get("Id")
+					));
+
+					filterGroup.add("GKILicTypeFilter", Terrasoft.createColumnFilterWithParameter(
+                        Terrasoft.ComparisonType.EQUAL, "[GKILic:GKILicPackage:GKILicPackage].GKILicType", constants.GKILicType.Personal
+					));
+					filterGroup.add("GKILicStatusFilter", Terrasoft.createColumnFilterWithParameter(
+                        Terrasoft.ComparisonType.EQUAL, "[GKILic:GKILicPackage:GKILicPackage].GKILicStatus", constants.GKILicStatus.Active
+                    ));
+					this.setFiltersAndReload(filterGroup);
+				}, this, ["rowsWithFilter"]);
+
+				this.sandbox.subscribe("GetSelectRows", function (args) {
+					var filterGroup = Terrasoft.createFilterGroup();
+
+					filterGroup.add("GKIInstanceIdsFIlter", Terrasoft.createColumnInFilterWithParameters("GKIInstance", args.rows));
+					
+					filterGroup.add("GKILicUserFilter", Terrasoft.createColumnFilterWithParameter(
+                        Terrasoft.ComparisonType.EQUAL, "GKILicUser", this.get("Id")
+					));
+
+					filterGroup.add("GKILicTypeFilter", Terrasoft.createColumnFilterWithParameter(
+                        Terrasoft.ComparisonType.EQUAL, "[GKILic:GKILicPackage:GKILicPackage].GKILicType", constants.GKILicType.Personal
+					));
+					filterGroup.add("GKILicStatusFilter", Terrasoft.createColumnFilterWithParameter(
+                        Terrasoft.ComparisonType.EQUAL, "[GKILic:GKILicPackage:GKILicPackage].GKILicStatus", constants.GKILicStatus.Active
+                    ));
+
+					this.setFiltersAndReload(filterGroup);
+				}, this, ["rowsWithFilter"]);
+
+				this.sandbox.subscribe("GetSelectedRows", function (args) {
+					var filterGroup = Terrasoft.createFilterGroup();
+
+					filterGroup.add("GKIInstanceIdsFIlter", Terrasoft.createColumnInFilterWithParameters("GKIInstance", args.rows));
+
+					this.setFiltersAndReload(filterGroup);
+				}, this, ["rows"]);
+				this.getPage();
+			},
+
+			 /**
 			 * @overridden
 			 * Генерирует конфигурацию элементов редактирования активной строки реестра.
 			 * @param {String} id Идентификатор строки.
@@ -96,6 +253,68 @@ function(BusinessRulesApplierV2) {
 					items: gridLayoutItems
 				});
 				rowConfig.push(gridLayoutConfig);
+			},
+
+			/**
+			 * @public
+			 * @desc Обновление детали и добавление фильтров
+			 * @param {Object} filterGroup 
+			 */
+			setFiltersAndReload: function (filterGroup) {
+				this.set("DetailFilters", filterGroup);
+
+				this.updateDetail({ "reloadAll": true });
+			},
+
+			/**
+			* @desc показывает кнопки на детали в зависимости от ссылки страницы
+			* @public
+			*/
+			getPage: function() {
+				var pageName = this.get("CardPageName");
+				if(pageName == 'GKILicUserPage') {
+					this.set("IsUserPage", true)
+				}
+				if(pageName == 'GKILicPackagePage') {
+					this.set("IsPackagePage", true)
+				}
+			},
+
+			/**
+			* @protected
+			* @desc обработка кнопки "Выбрать все"
+			*/
+			   onGKISelectAllButtonClick: function () {
+				Terrasoft.each(
+					this.getGridData(),
+					function(item){
+						this.setCorrectBoolValue(true, item);
+						item.save();
+					}, this);
+			},
+
+			/**
+			* @protected
+			* @desc oбработка кнопки "Отозвать все"
+			*/
+			onGKIDeselectAllButtonClick: function () {
+				Terrasoft.each(
+					this.getGridData(),
+					function(item){
+						this.setCorrectBoolValue(false, item);
+						item.save();
+					}, this);
+			},
+
+			/**
+			* @protected
+			* @desc oбработка условия изменения значения поля
+			* @param {boolean, dataGridRow}
+			*/
+			setCorrectBoolValue: function (isCheckForActive, element) {
+				var isActive = element.get("GKIActive");
+				if (isCheckForActive !== isActive)
+					element.set("GKIActive", isCheckForActive);
 			}
 		}
 	};

@@ -4,8 +4,13 @@
 		<Items>
 			<Item Name="BaseElements.ConditionalSequenceFlow1.Caption" Value="Закрыть" />
 			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="&gt;0" />
+			<Item Name="BaseElements.ConditionalSequenceFlow5.Caption" Value="&gt;0" />
+			<Item Name="BaseElements.ConditionalSequenceFlow7.Caption" Value="Закрыть" />
+			<Item Name="BaseElements.FormulaTask1.Caption" Value="process start datetime" />
+			<Item Name="BaseElements.IntermediateThrowMessage1.Caption" Value="finished" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Caption" Value="Поиск претендентов на деактивацию завершен. Список пользователей доступен по ссылке" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Buttons.Caption" Value="Кнопки" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Buttons.DisplayValue" Value="{&quot;$type&quot;:&quot;Terrasoft.Core.Process.LocalizableParameterValuesList, Terrasoft.Core&quot;,&quot;$values&quot;:[{&quot;ItemUId&quot;:&quot;96259935-683f-4566-bcce-e27ae65c8441&quot;,&quot;Id&quot;:{&quot;value&quot;:&quot;96259935-683f-4566-bcce-e27ae65c8441&quot;},&quot;Name&quot;:{&quot;value&quot;:&quot;Button-6321f299d7b24c6db85632351de37155&quot;},&quot;Tag&quot;:{&quot;value&quot;:&quot;Continue&quot;},&quot;Caption&quot;:{&quot;isLczValue&quot;:true,&quot;value&quot;:&quot;Закрыть&quot;},&quot;PerformClosePage&quot;:{&quot;value&quot;:&quot;True&quot;},&quot;PerformSaveData&quot;:{&quot;value&quot;:&quot;False&quot;},&quot;GenerateSignal&quot;:{&quot;value&quot;:&quot;&quot;}},{&quot;ItemUId&quot;:&quot;c4841740-ff8c-406f-8626-1c78f78608bf&quot;,&quot;Id&quot;:{&quot;value&quot;:&quot;c4841740-ff8c-406f-8626-1c78f78608bf&quot;},&quot;Name&quot;:{&quot;value&quot;:&quot;Button-3a8ac667899d4aa68021a07eb1c7c49c&quot;},&quot;Tag&quot;:{&quot;value&quot;:&quot;ClosePage&quot;},&quot;Caption&quot;:{&quot;isLczValue&quot;:true,&quot;value&quot;:&quot;Свернуть&quot;},&quot;PerformClosePage&quot;:{&quot;value&quot;:&quot;False&quot;},&quot;PerformSaveData&quot;:{&quot;value&quot;:&quot;False&quot;},&quot;GenerateSignal&quot;:{&quot;value&quot;:&quot;&quot;}}]}" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Buttons.Value.96259935-683f-4566-bcce-e27ae65c8441.Caption" Value="Закрыть" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Buttons.Value.c4841740-ff8c-406f-8626-1c78f78608bf.Caption" Value="Свернуть" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.ClientUnitSchemaUId.Caption" Value="Module" />
@@ -33,6 +38,37 @@
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Url.Caption" Value="Url" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.Url.DisplayValue" Value="&quot;[#Module#]/[#Page#]/add&quot;" />
 			<Item Name="BaseElements.PreconfiguredPageUserTask1.Parameters.UseCardProcessModule.Caption" Value="Use standard page generator" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Caption" Value="Произошло создание пользователей по результату выполнения синхронизации данных с экземплярами. " />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Buttons.Caption" Value="Кнопки" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Buttons.Value.c4841740-ff8c-406f-8626-1c78f78608bf.Caption" Value="Отложить" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Buttons.Value.f073e66a-36ec-47d7-9c6a-e5952dbf05a3.Caption" Value="Закрыть" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.ClientUnitSchemaUId.Caption" Value="Module" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.ClientUnitSchemaUId.DisplayValue" Value="Страница процесса &quot;Созданные пользователи&quot; | GKICreatedGKILicUsersRegularPage" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.EntityId.Caption" Value="Object" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.EntitySchemaUId.Caption" Value="Object schema" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.EntryPointId.Caption" Value="Entry point" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.GKIDatetimeFrom.Caption" Value="Дата-время отсчета" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.GKIDatetimeFrom.DisplayValue" Value="[#старт процесса#]" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.GKILicSyncSource.Caption" Value="Источник добавления пользователя" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.GKILicSyncSource.DisplayValue" Value="[#Справочник.Источник добавления пользователя.Экземпляр#]" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.InformationOnStep.Caption" Value="Information on step" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.IsRunning.Caption" Value="Running" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Module.Caption" Value="Card module" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Module.DisplayValue" Value="[#Lookup.Schema used in workspace (view) .Process page display module#]" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.OwnerId.Caption" Value="Owner" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.OwnerId.DisplayValue" Value="[#Системная переменная.Контакт текущего пользователя#]" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.PressedButtonCode.Caption" Value="Code of the button that the user clicked" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Recommendation.Caption" Value="Recommendation" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.ShowExecutionPage.Caption" Value="Show execution page automatically" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.ShowExecutionPage.DisplayValue" Value="true" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Template.Caption" Value="Template" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Template.DisplayValue" Value="[#Lookup.Schema used in workspace (view) .BasePageProcessTemplate#]" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Title.Caption" Value="Title" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Title.DisplayValue" Value="Страница процесса &quot;Созданные пользователи&quot;" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Title.Value" Value="Страница процесса &quot;Созданные пользователи&quot;" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Url.Caption" Value="Url" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.Url.DisplayValue" Value="&quot;[#Module#]/[#Page#]/add&quot;" />
+			<Item Name="BaseElements.PreconfiguredPageUserTask2.Parameters.UseCardProcessModule.Caption" Value="Use standard page generator" />
 			<Item Name="BaseElements.ReadDataUserTask1.Caption" Value="Претенденты на деактивацию?" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
@@ -54,13 +90,36 @@
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultIntegerFunction.Caption" Value="Function result" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.ResultType.Caption" Value="Type of result" />
+			<Item Name="BaseElements.ReadDataUserTask2.Caption" Value="созданные пользователи" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ConsiderTimeInFilter.DisplayValue" Value="false" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.DataSourceFilters.Caption" Value="Data source of filters" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.EntityColumnMetaPathes.Caption" Value="Columns to read" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.FunctionType.Caption" Value="Aggregate function type" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.IgnoreDisplayValues.Caption" Value="Do not read displayed values of lookup columns" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.NumberOfRecords.Caption" Value="Number of records to read" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.OrderInfo.Caption" Value="Columns order" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ReadSomeTopRecords.Caption" Value="Read first" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultCompositeObjectList.Caption" Value="Collection of records" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultCount.Caption" Value="Number of records" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultDateTimeFunction.Caption" Value="Function result" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultEntity.Caption" Value="First item of resulting collection" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultEntityCollection.Caption" Value="Resulting collection" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultFloatFunction.Caption" Value="Function result" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultIntegerFunction.Caption" Value="Function result" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultRowsCount.Caption" Value="Number of records read" />
+			<Item Name="BaseElements.ReadDataUserTask2.Parameters.ResultType.Caption" Value="Type of result" />
 			<Item Name="BaseElements.ScriptTask1.Caption" Value="GKILicenseSyncRegular" />
+			<Item Name="BaseElements.StartMessage1.Caption" Value="finished" />
 			<Item Name="Caption" Value="Синхронизация с экземплярами" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
 			<Item Name="NotificationCaption.Caption" Value="Заголовок экземпляра процесса" />
 			<Item Name="NotificationCaption.DisplayValue" Value="[#Название процесса#]" />
 			<Item Name="Parameters.instanceIdFilter.Caption" Value="instanceIdFilter" />
+			<Item Name="Parameters.processStartDateTime.Caption" Value="старт процесса" />
 			<Item Name="Parameters.result1.Caption" Value="result1" />
 		</Items>
 	</Group>

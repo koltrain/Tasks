@@ -3,9 +3,11 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Страница редактирования: &quot;Продукты лицензирования&quot;" />
-			<Item Name="LocalizableStrings.GKIInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Приложения" />
+			<Item Name="LocalizableStrings.GKIInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Экземпляры с лицензией" />
+			<Item Name="LocalizableStrings.GKIInstanceLicPackageDetailHint.Value" Value="Деталь отражает информацию о всех приложениях с лицензией" />
 			<Item Name="LocalizableStrings.GKILicDetailDetailCaptionOnPage.Value" Value="Лицензии" />
 			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailDetailCaptionOnPage.Value" Value="Пользователи с лицензией" />
+			<Item Name="LocalizableStrings.GKILicUserInstanceLicPackageDetailHint.Value" Value="Деталь отражает информацию о всех пользователях с лицензией" />
 			<Item Name="LocalizableStrings.Tabe48ea68cTabLabelTabCaption.Value" Value="Управление" />
 		</Items>
 	</Group>

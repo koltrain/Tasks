@@ -1,0 +1,26 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "d6a79fb2-1a9a-44cb-bfd1-4f2040fd4ec4"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 17
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "176d645b-a02a-4888-bd10-4637dbab22aa",
+          "DisplayValue": "Служба лицензирования"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "17cb042c-68c4-4646-84a4-577d56dc9039",
+          "DisplayValue": "Каталог групп AD"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "6effdd9c-eee3-4136-8616-d477b88499e3"
+        },
+        {
+          "SchemaColumnUId": "6731ff78-2a22-4d27-83bc-9c429b79a5de",
+          "Value": "Отчет по срокам действия лицензий"
+        },
+        {
+          "SchemaColumnUId": "f8b55225-d4fc-4e01-86ad-4beb755606a2",
+          "Value": "Лист 1"
+        },
+        {
+          "SchemaColumnUId": "cf403712-9b1a-4432-a48c-ce877bcdf478",
+          "Value": "2814e2a1-00dd-4cc5-9008-6383aa960273",
+          "DisplayValue": "Пользовательский отчёт"
+        },
+        {
+          "SchemaColumnUId": "9b677fdd-6925-496b-9b8c-ac7434614e1c",
+          "Value": "69835192-33de-4932-95b7-93e74a797517",
+          "DisplayValue": "Лицензия платформы"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "101b8472-a24d-48b4-9208-f501aa7be42e"
+        },
+        {
+          "SchemaColumnUId": "6731ff78-2a22-4d27-83bc-9c429b79a5de",
+          "Value": "Отчет по деактивации"
+        },
+        {
+          "SchemaColumnUId": "f8b55225-d4fc-4e01-86ad-4beb755606a2",
+          "Value": "Лист 1"
+        },
+        {
+          "SchemaColumnUId": "cf403712-9b1a-4432-a48c-ce877bcdf478",
+          "Value": "2814e2a1-00dd-4cc5-9008-6383aa960273",
+          "DisplayValue": "Пользовательский отчёт"
+        },
+        {
+          "SchemaColumnUId": "9b677fdd-6925-496b-9b8c-ac7434614e1c",
+          "Value": "90176c39-3af8-4c78-afc9-9dfbdc50288f",
+          "DisplayValue": "Лицензии пользователей платформы"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "62251e53-a038-4626-b83f-582834f78e36"
+        },
+        {
+          "SchemaColumnUId": "6731ff78-2a22-4d27-83bc-9c429b79a5de",
+          "Value": "Отчет по распределению лицензий"
+        },
+        {
+          "SchemaColumnUId": "f8b55225-d4fc-4e01-86ad-4beb755606a2",
+          "Value": "Лист 1"
+        },
+        {
+          "SchemaColumnUId": "cf403712-9b1a-4432-a48c-ce877bcdf478",
+          "Value": "2814e2a1-00dd-4cc5-9008-6383aa960273",
+          "DisplayValue": "Пользовательский отчёт"
+        },
+        {
+          "SchemaColumnUId": "9b677fdd-6925-496b-9b8c-ac7434614e1c",
+          "Value": "2c8baf7b-dece-4f82-a6d8-208007b25f6f",
+          "DisplayValue": "Лицензии экземпляра"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "91008372-ed4e-4d17-a8d0-e4e6ca6f3b67"
+        },
+        {
+          "SchemaColumnUId": "6731ff78-2a22-4d27-83bc-9c429b79a5de",
+          "Value": "Отчет по использованию лицензий"
+        },
+        {
+          "SchemaColumnUId": "f8b55225-d4fc-4e01-86ad-4beb755606a2",
+          "Value": "Лист 1"
+        },
+        {
+          "SchemaColumnUId": "cf403712-9b1a-4432-a48c-ce877bcdf478",
+          "Value": "2814e2a1-00dd-4cc5-9008-6383aa960273",
+          "DisplayValue": "Пользовательский отчёт"
+        },
+        {
+          "SchemaColumnUId": "9b677fdd-6925-496b-9b8c-ac7434614e1c",
+          "Value": "2c8baf7b-dece-4f82-a6d8-208007b25f6f",
+          "DisplayValue": "Лицензии экземпляра"
+        }
+      ]
+    }
+  ]
+}

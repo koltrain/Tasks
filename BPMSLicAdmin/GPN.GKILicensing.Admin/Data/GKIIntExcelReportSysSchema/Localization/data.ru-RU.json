@@ -1,0 +1,46 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
+          "Value": "69835192-33de-4932-95b7-93e74a797517"
+        },
+        {
+          "SchemaColumnUId": "a6a36da5-b401-4192-8369-5acd607142df",
+          "ColumnName": "Caption",
+          "Value": "Лицензия платформы"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
+          "Value": "90176c39-3af8-4c78-afc9-9dfbdc50288f"
+        },
+        {
+          "SchemaColumnUId": "a6a36da5-b401-4192-8369-5acd607142df",
+          "ColumnName": "Caption",
+          "Value": "Лицензии пользователей платформы"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "ColumnName": "Id",
+          "Value": "2c8baf7b-dece-4f82-a6d8-208007b25f6f"
+        },
+        {
+          "SchemaColumnUId": "a6a36da5-b401-4192-8369-5acd607142df",
+          "ColumnName": "Caption",
+          "Value": "Лицензии экземпляра"
+        }
+      ]
+    }
+  ]
+}

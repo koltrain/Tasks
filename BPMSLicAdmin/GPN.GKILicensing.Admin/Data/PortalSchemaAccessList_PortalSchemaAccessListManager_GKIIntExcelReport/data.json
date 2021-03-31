@@ -1,0 +1,20 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "71c08045-25bc-4081-95c2-9daecee0d5ed"
+        },
+        {
+          "SchemaColumnUId": "0cb38aee-c8a8-46ce-8a30-37a75353fd3b",
+          "Value": "IntExcelReport"
+        },
+        {
+          "SchemaColumnUId": "632e7352-e04d-40d0-8563-ad12348dca7e",
+          "Value": "f6670caf-5f73-4d67-aa6f-96838444a388"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "6b8439e4-c80f-487b-8a69-934e0a98659c",
+    "Name": "GKIInstanceLicenseSelectedSyncProcess",
+    "ModifiedOnUtc": "\/Date(1617092535000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Синхронизация с экземплярами по всем выбранным экземплярам"
+  }
+}

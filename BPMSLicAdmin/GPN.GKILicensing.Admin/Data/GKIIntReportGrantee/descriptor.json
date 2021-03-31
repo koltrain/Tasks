@@ -1,0 +1,35 @@
+﻿{
+  "Descriptor": {
+    "UId": "4307de1b-b4c3-6c91-a879-0dc31f998b4a",
+    "Name": "GKIIntReportGrantee",
+    "ModifiedOnUtc": "\/Date(1617208125000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "32f42402-64ff-48c7-a6e4-6ce7b8356f15",
+      "Name": "IntReportGrantee"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "03c88b6e-7b85-49d5-9bde-6dda6f44db36",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "IntExcelReport",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "97a668c0-0fdd-4c54-9b18-03fbed3093cd",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "IntSysAdminUnit",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      }
+    ]
+  }
+}

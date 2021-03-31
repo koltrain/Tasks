@@ -4,6 +4,35 @@
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "245e82f3-f3f8-43b6-9071-dbcf86497484"
+        },
+        {
+          "SchemaColumnUId": "e80190a5-03b2-4095-90f7-a193a960adee",
+          "Value": "\/Date(1614852469631+0300)\/"
+        },
+        {
+          "SchemaColumnUId": "26bd9f25-0d50-4c47-829f-8b286576317c",
+          "Value": "5cec432d-65ee-fe69-4dec-e798dfc33055",
+          "DisplayValue": "Приложения платформы"
+        },
+        {
+          "SchemaColumnUId": "54425b16-8b5b-40a1-baf1-3997560a6b0e",
+          "Value": "Добрый день!<br><br>На экземпляре [#GKIName#] платформы ИСАП необходимо выполнить актуализацию перечня пользователей системы согласно данным, хранящимся в каталоге групп пользователей Active Directory\""
+        },
+        {
+          "SchemaColumnUId": "698c2960-3832-4ba4-ad56-8a6489b32ad4",
+          "Value": false
+        },
+        {
+          "SchemaColumnUId": "2e7c35e3-0774-4a4a-bea5-6ce4c8de1465",
+          "Value": "Необходима актуализация пользователей на экземпляре"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
           "Value": "1f16b3ad-97de-4ae1-969b-443b8df06a1c"
         },
         {

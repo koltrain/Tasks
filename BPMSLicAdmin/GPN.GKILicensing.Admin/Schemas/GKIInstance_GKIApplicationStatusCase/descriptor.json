@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "486c9f77-540d-41ff-a6e1-3df0ce68f97f",
     "Name": "GKIInstance_GKIApplicationStatusCase",
-    "ModifiedOnUtc": "\/Date(1612422403000)\/",
+    "ModifiedOnUtc": "\/Date(1617031111000)\/",
     "ManagerName": "DcmSchemaManager",
     "Caption": "Статус приложения"
   }

@@ -2,13 +2,14 @@
 <Resources Culture="ru-RU">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Пользователь приложения" />
-			<Item Name="Columns.GKIActive.Caption" Value="Активен" />
-			<Item Name="Columns.GKIInstance.Caption" Value="Приложение" />
+			<Item Name="Caption" Value="Пользователи экземпляра" />
+			<Item Name="Columns.GKIActive.Caption" Value="Активен на экземпляре" />
+			<Item Name="Columns.GKIInstance.Caption" Value="Экземпляр" />
+			<Item Name="Columns.GKILastActivityDateTime.Caption" Value="Дата последней активности на экземпляре" />
 			<Item Name="Columns.GKILicSyncSource.Caption" Value="Источник добавления" />
 			<Item Name="Columns.GKILicUser.Caption" Value="Пользователь платформы" />
-			<Item Name="Columns.GKIMSADActive.Caption" Value="Активен на приложениях в MS AD" />
-			<Item Name="Columns.GKIRegistrationDate.Caption" Value="Дата регистрации" />
+			<Item Name="Columns.GKIMSADActive.Caption" Value="Активен в каталоге групп AD" />
+			<Item Name="Columns.GKIRegistrationDate.Caption" Value="Дата регистрации на экземпляре" />
 			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
 		</Items>
 	</Group>

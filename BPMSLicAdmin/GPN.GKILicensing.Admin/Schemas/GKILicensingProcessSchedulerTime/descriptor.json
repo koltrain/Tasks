@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "7953dbf6-2dfe-1df6-2b95-153e7fcf4cbb",
+    "Name": "GKILicensingProcessSchedulerTime",
+    "ModifiedOnUtc": "\/Date(1616750848000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Время запуска ежедневных бизнес-процессов лицензий"
+  }
+}

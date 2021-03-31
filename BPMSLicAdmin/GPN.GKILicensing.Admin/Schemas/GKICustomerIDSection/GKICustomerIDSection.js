@@ -119,6 +119,7 @@ define("GKICustomerIDSection", ["RightUtilities"], function(RightUtilities) {
 			
 			/**
 			 * @overridden
+			 * @desc подписка на сообщения
 			 */
 			subscribeSandboxEvents: function() {
 				this.callParent(arguments);

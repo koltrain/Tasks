@@ -1,17 +1,26 @@
 namespace Terrasoft.Configuration
 {
-	using System;
-	using Terrasoft.Core;
-	using Terrasoft.Core.Entities;
-	using Terrasoft.Core.Entities.Events;
-	using System.Collections.Generic;
-	using Terrasoft.Core.DB;
-	using Terrasoft.Common;
+    using Quartz;
+    using Quartz.Impl.Triggers;
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Linq;
+    using Terrasoft.Common;
+    using Terrasoft.Core;
+    using Terrasoft.Core.DB;
+    using Terrasoft.Core.Entities;
+    using Terrasoft.Core.Entities.Events;
+    using Terrasoft.Core.Scheduler;
 
-
-	[EntityEventListener(SchemaName = "GKILicUserInstanceLicPackage")]
+    [EntityEventListener(SchemaName = "GKILicUserInstanceLicPackage")]
 	public class GKILicUserInstanceLicPackageEntityEventListener : BaseEntityEventListener
 	{
+		/// <summary>
+        /// добавление фильтрации по полям
+        /// </summary>
+        /// <param name="sender">отправитель</param>
+        /// <param name="e">аргументы</param>
         public override void OnInserted(object sender, EntityAfterEventArgs e)
         {
             base.OnInserted(sender, e);
@@ -45,7 +54,7 @@ namespace Terrasoft.Configuration
                     esqSchemaLicPackageUser.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicPackage", licPackage));
                 esqSchemaLicPackageUser.Filters.Add(
                     esqSchemaLicPackageUser.CreateFilterWithParameters(FilterComparisonType.Equal, "GKILicUserId", userLicId));
-                esqSchemaLicPackageUser.Filters.Add(
+				esqSchemaLicPackageUser.Filters.Add(
                     esqSchemaLicPackageUser.CreateFilterWithParameters(FilterComparisonType.Equal, "GKICustomerID", customerId));
                 EntityCollection entityLicPackageUser = esqSchemaLicPackageUser.GetEntityCollection(userConnection);
 
@@ -79,7 +88,13 @@ namespace Terrasoft.Configuration
                 Console.Write(ex.Message);
             }
         }
-        public override void OnUpdating(object sender, EntityBeforeEventArgs e)
+
+		/// <summary>
+		/// обновление по условиям фильтрации
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
+		public override void OnUpdating(object sender, EntityBeforeEventArgs e)
 		{
 			base.OnUpdating(sender, e);
 			var entity = (Entity)sender;
@@ -121,10 +136,31 @@ namespace Terrasoft.Configuration
 				#endregion
 			}
 			catch (Exception ex)
-            {
+			{
 				Console.Write(ex.Message);
 			}
+			#region GKILicUserInstanceLicPackage
+			var esqEntity = userConnection.EntitySchemaManager.GetInstanceByName("GKILicUser").CreateEntity(userConnection);
+			var userId = entity.GetTypedColumnValue<Guid>("GKILicUserId");
+			string errorMsg = new LocalizableString(userConnection.Workspace.ResourceStorage,
+				"GKILicenseListeners",
+				"LocalizableStrings.GKILicUserNotActiveException.Value");
+			if (esqEntity.FetchFromDB("Id", userId))
+            {
+				var isUserActive = esqEntity.GetTypedColumnValue<bool>("GKIActive");
+				if (isUserActive == false)
+		        {
+					throw new InvalidOperationException(errorMsg);
+				}	
+			}
+			#endregion
 		}
+
+		/// <summary>
+		/// сохранение записей, удовлетворяющих условиям фильтрации
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
 		public override void OnSaving(object sender, EntityBeforeEventArgs e)
 		{
 			base.OnSaving(sender, e);
@@ -155,7 +191,7 @@ namespace Terrasoft.Configuration
 							esqActive.Filters.Add(
 								esqActive.CreateFilterWithParameters(FilterComparisonType.NotEqual, "Id", entity.GetTypedColumnValue<Guid>("Id")));
 							Entity summaryEntity = esqActive.GetSummaryEntity(userConnection);
-
+							
 							int activeRecs = summaryEntity.GetTypedColumnValue<int>(countActive.Name);
 							aggrStatus = activeRecs > 0 ? true : false;
 
@@ -182,6 +218,12 @@ namespace Terrasoft.Configuration
 				Console.Write(ex.Message);
 			}
 		}
+
+		/// <summary>
+		/// удаление записей, удовлетворяющих условиям фильтра
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
 		public override void OnDeleting(object sender, EntityBeforeEventArgs e)
 		{
 			base.OnDeleting(sender, e);
@@ -230,6 +272,11 @@ namespace Terrasoft.Configuration
 	[EntityEventListener(SchemaName = "GKIInstanceLicUser")]
 	public class GKIInstanceLicUserEntityEventListener : BaseEntityEventListener
 	{
+		/// <summary>
+		/// сохранение записей, удовлетворяющих условиям фильтрации
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
 		public override void OnSaving(object sender, EntityBeforeEventArgs e)
 		{
 			base.OnSaving(sender, e);
@@ -309,6 +356,11 @@ namespace Terrasoft.Configuration
 	[EntityEventListener(SchemaName = "GKILicUser")]
 	public class GKILicUserEntityEventListener : BaseEntityEventListener
 	{
+		/// <summary>
+		/// сохранение записей, удовлетворяющих условиям фильтрации
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
 		public override void OnSaving(object sender, EntityBeforeEventArgs e)
 		{
 			base.OnSaving(sender, e);
@@ -339,7 +391,7 @@ namespace Terrasoft.Configuration
 						Guid licUserStatus = !curStatus ? GKILicensingConstantsCs.GKILicUserStatus.Inactive :
 							GKILicensingConstantsCs.GKILicUserStatus.Active;
 
-						entity.SetColumnValue("GKIStatusId", licUserStatus);
+							entity.SetColumnValue("GKIStatusId", licUserStatus);
 					}
 					catch (Exception ex)
 					{
@@ -398,6 +450,11 @@ namespace Terrasoft.Configuration
 	[EntityEventListener(SchemaName = "GKILic")]
 	public class GKILicEntityEventListener : BaseEntityEventListener
 	{
+		/// <summary>
+		/// сохранение записей, удовлетворяющих условиям фильтрации
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
 		public override void OnSaving(object sender, EntityBeforeEventArgs e)
 		{
 			base.OnSaving(sender, e);
@@ -465,6 +522,11 @@ namespace Terrasoft.Configuration
 	[EntityEventListener(SchemaName = "GKIInstanceGroupAD")]
 	public class GKIInstanceGroupADEntityEventListener : BaseEntityEventListener
 	{
+		/// <summary>
+		/// сохранение записей, удовлетворяющих условиям фильтрации
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
 		public override void OnSaving(object sender, EntityBeforeEventArgs e)
 		{
 			base.OnSaving(sender, e);
@@ -493,6 +555,11 @@ namespace Terrasoft.Configuration
 			}
 		}
 
+		/// <summary>
+		/// удаление записей, удовлетворяющих условиям фильтра
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
 		public override void OnDeleting(object sender, EntityBeforeEventArgs e)
 		{
 			base.OnDeleting(sender, e);
@@ -520,8 +587,12 @@ namespace Terrasoft.Configuration
     [EntityEventListener(SchemaName = "GKILicPackageUser")]
     public class GKILicPackageUserEventListener : BaseEntityEventListener
     {
-
-        public override void OnUpdating(object sender, EntityBeforeEventArgs e)
+		/// <summary>
+		/// обновление по условиям фильтрации
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
+		public override void OnUpdating(object sender, EntityBeforeEventArgs e)
         {
             base.OnUpdating(sender, e);
             var entity = (Entity)sender;
@@ -567,8 +638,186 @@ namespace Terrasoft.Configuration
             }
         }
     }
-    public class GKILicensingListenersHelper
+
+	[EntityEventListener(SchemaName = "GKIInstance")]
+	public class GKIInstanceEventListener : BaseEntityEventListener
 	{
+		/// <summary>
+		/// обновление по условиям фильтрации
+		/// </summary>
+		/// <param name="sender">отправитель</param>
+		/// <param name="e">аргументы</param>
+		public override void OnSaving(object sender, EntityBeforeEventArgs e)
+		{
+			base.OnSaving(sender, e);
+			var entity = (Entity)sender;
+			var userConnection = entity.UserConnection;
+
+			try
+			{
+				var oldGKIIsLimitApllied = entity.GetTypedOldColumnValue<bool>("GKIIsLimitApllied");
+				var newLGKIIsLimitApllied = entity.GetTypedColumnValue<bool>("GKIIsLimitApllied");
+
+				var recordId = entity.GetTypedColumnValue<Guid>("Id");
+
+				#region GKIInstanceLicense
+				if (oldGKIIsLimitApllied != newLGKIIsLimitApllied && !newLGKIIsLimitApllied)
+				{
+					//clear all instance's GKIInstanceLicense.GKILimitVIP
+					var updateGKILimitVIP = new Update(userConnection, "GKIInstanceLicense")
+						.Set("GKILimitVIP", Column.Parameter(0))
+						.Where("GKIInstanceId").IsEqual(Column.Parameter(recordId));
+
+					updateGKILimitVIP.Execute();
+				}
+				if (oldGKIIsLimitApllied != newLGKIIsLimitApllied && newLGKIIsLimitApllied)
+				{
+					//apply the formula to the all GKIInstanceLicense.GKILimitVIP
+					//a
+					var esqGKIInstanceLicUser = new EntitySchemaQuery(userConnection.EntitySchemaManager, "GKIInstanceLicUser") ;
+					EntitySchemaQueryColumn countColumn = esqGKIInstanceLicUser.AddColumn("Id");
+					countColumn.SummaryType = AggregationType.Count;
+					esqGKIInstanceLicUser.Filters.Add(
+						esqGKIInstanceLicUser.CreateFilterWithParameters(FilterComparisonType.Equal, "GKIInstance", recordId));
+					Entity summary = esqGKIInstanceLicUser.GetSummaryEntity(userConnection);
+					int _a = (summary != null) ? summary.GetTypedColumnValue<int>(countColumn.Name) : 0;
+					
+					//b
+					int _b = Terrasoft.Core.Configuration.SysSettings.GetValue(userConnection, "GKILicensingVIPPercentage", 0);
+
+					//formula
+					int _c = Convert.ToInt32(Math.Round((double)(_a * _b / 100)));
+
+					var updateGKILimitVIP = new Update(userConnection, "GKIInstanceLicense")
+						.Set("GKILimitVIP", Column.Parameter(_c))
+						.Where("GKIInstanceId").IsEqual(Column.Parameter(recordId))
+						.And("GKILimit").IsGreater(Column.Parameter(0))
+						.And("GKILicId").In(
+							new Select(userConnection)
+							.Column("Id")
+							.From("GKILic")
+							.Where("GKILicStatusId").IsEqual(Column.Parameter(GKILicensingConstantsCs.GKILicStatus.Active))
+						);
+
+					updateGKILimitVIP.Execute();
+				}
+				#endregion
+			}
+			catch (Exception ex)
+			{
+				Console.Write(ex.Message);
+			}
+		}
+	}
+
+	[EntityEventListener(SchemaName = "GKILicensingProcessSchedulerTime")]
+	public class GKILicensingProcessSchedulerTimeEventListener : BaseEntityEventListener
+	{
+
+		private UserConnection _userConnection;
+		private Entity _entity;
+
+		protected List<EntityColumnValue> ChangedColumns
+		{
+			get; private set;
+		}
+
+		#region Methods: Private
+
+		private void InitState(Entity entity)
+		{
+			_entity = entity;
+			_userConnection = entity.UserConnection;
+			ChangedColumns = entity.GetChangedColumnValues().ToList();
+		}
+
+		private string GetProcessName(Guid processId)
+		{
+			var select = new Select(_userConnection).Top(1)
+				.Column("Name")
+				.From("VwSysProcess")
+					.Where("Id").IsEqual(Column.Parameter(processId)) as Select;
+			return select.ExecuteScalar<string>();
+		}
+		
+		private bool GetIsColumnChanged(string columnName)
+		{
+			return ChangedColumns.Any(x => x.Name == columnName);
+		}
+
+		private string GetJobName(string processName)
+		{
+			return $"{processName}Job";
+		}
+
+		private string GetTriggerName(string processName)
+		{
+			return $"{processName}Trigger";
+		}
+
+		private string GetCronExpression(DateTime startTime)
+		{
+			return String.Format("0 {0} {1} * * ? *", startTime.Minute, startTime.Hour);
+		}
+
+		private void AddQuartzJob()
+		{
+			Guid processId = _entity.GetTypedColumnValue<Guid>("GKIProcessId");
+			DateTime fireDateTime = _entity.GetTypedColumnValue<DateTime>("GKIFireTime");
+			string processName = GetProcessName(processId);
+			string jobName = GetJobName(processName);
+			string triggerName = GetTriggerName(processName);
+			string croneExpression = GetCronExpression(fireDateTime);
+			AppScheduler.RemoveJob(jobName, "Main");
+			IJobDetail jobDetail = AppScheduler.CreateProcessJob(jobName, "Main", processName, "Default", "Supervisor");
+			ITrigger trigger = new CronTriggerImpl(triggerName, "Main", croneExpression);
+			AppScheduler.Instance.ScheduleJob(jobDetail, trigger);
+		}
+
+		private void RemoveQuartzJob()
+		{
+			string processName = GetProcessName(_entity.GetTypedColumnValue<Guid>("GKIProcessId"));
+			var jobName = GetJobName(processName);
+			AppScheduler.RemoveJob(jobName, "Main");
+		}
+
+		#endregion
+
+		#region Methods: Public
+
+		public override void OnSaving(object sender, EntityBeforeEventArgs e)
+		{
+			base.OnSaving(sender, e);
+			InitState((Entity)sender);
+		}
+
+		public override void OnSaved(object sender, EntityAfterEventArgs e)
+		{
+			base.OnSaved(sender, e);
+			if (GetIsColumnChanged("GKIFireTime"))
+			{
+				AddQuartzJob();
+			}
+		}
+
+		public override void OnDeleted(object sender, EntityAfterEventArgs e)
+		{
+			base.OnDeleted(sender, e);
+			InitState((Entity)sender);
+			RemoveQuartzJob();
+		}
+
+		#endregion
+
+	}
+	public class GKILicensingListenersHelper
+	{
+		/// <summary>
+		/// "удаление "устаревших" Users
+		/// </summary>
+		/// <param name="userConnection"></param>
+		/// <param name="oldGroup"></param>
+		/// <param name="oldInstance"></param>
 		public void GKIGroupADUsersDelete(UserConnection userConnection, Guid oldGroup, Guid oldInstance)
 		{
 			//check if there's any records with the old group and the old instance
@@ -600,6 +849,13 @@ namespace Terrasoft.Configuration
 			}
 		}
 
+		/// <summary>
+		/// обновление записей по полю isVIP
+		/// </summary>
+		/// <param name="userConnection"></param>
+		/// <param name="recordId"></param>
+		/// <param name="isVIP"></param>
+		/// <returns></returns>
 		public bool GKILicUserIsVIPUpdate(UserConnection userConnection, Guid recordId, bool isVIP)
         {
 			Update update = new Update(userConnection, "GKILicUser")

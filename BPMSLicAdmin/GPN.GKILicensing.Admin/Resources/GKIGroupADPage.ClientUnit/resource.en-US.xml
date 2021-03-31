@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Страница редактирования: &quot;Каталог групп AD&quot;" />
+			<Item Name="LocalizableStrings.GKIInstanceGroupADDetailDetailCaptionOnPage.Value" Value="Группы AD приложения" />
+			<Item Name="LocalizableStrings.TabTabLabelTabCaption.Value" Value="Экземпляры группы AD" />
+		</Items>
+	</Group>
+</Resources>

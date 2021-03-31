@@ -24,6 +24,11 @@
         "UId": "bb1e143e-f3ee-4316-9450-851ddd02d999",
         "PackageVersion": "7.8.0",
         "Name": "LDAP"
+      },
+      {
+        "UId": "ddc6c3b7-c066-4772-b228-0bed216ae7a1",
+        "PackageVersion": "7.9.1",
+        "Name": "IntExcelExport"
       }
     ]
   }

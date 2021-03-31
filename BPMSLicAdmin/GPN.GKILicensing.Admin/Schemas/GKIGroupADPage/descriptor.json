@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "4bbd7eb2-9009-4f22-88da-f1dde35ebe1d",
+    "Name": "GKIGroupADPage",
+    "ModifiedOnUtc": "\/Date(1614850630000)\/",
+    "Parent": {
+      "UId": "d62293c0-7f14-44b1-b547-735fb40499cd",
+      "Name": "BaseModulePageV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Страница редактирования: \"Каталог групп AD\""
+  }
+}

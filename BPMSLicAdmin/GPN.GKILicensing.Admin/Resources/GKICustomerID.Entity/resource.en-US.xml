@@ -2,11 +2,9 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Журнал управления лицензиями" />
+			<Item Name="Caption" Value="Управление лицензиями CID" />
 			<Item Name="Columns.GKILicPackageStatus.Caption" Value="Статус" />
 			<Item Name="Columns.GKINotes.Caption" Value="Заметки" />
-			<Item Name="Columns.GKITlrFile.Caption" Value="Файл запроса лицензий (.tlr)" />
-			<Item Name="Columns.GKITlsFile.Caption" Value="Файл лицензий (.tls)" />
 		</Items>
 	</Group>
 </Resources>

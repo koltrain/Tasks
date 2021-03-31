@@ -6,7 +6,15 @@
       "A2": "GKILicenseListeners",
       "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
       "B1": [],
-      "B2": [],
+      "B2": [
+        {
+          "UId": "9fcd73ec-3bbd-4a6b-9b43-ced92131da43",
+          "A2": "GKILicUserNotActiveException",
+          "A3": "e7f412a6-9225-d632-aed3-53ac33a3973b",
+          "A4": "e7f412a6-9225-d632-aed3-53ac33a3973b",
+          "A5": "d2728e89-35a5-497b-99e2-01c0db87b1d2"
+        }
+      ],
       "B3": [],
       "B6": "3716e58e-ad82-22ae-4451-78d83916585d",
       "B8": "7.17.0.2164",

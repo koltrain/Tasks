@@ -36,6 +36,7 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 			GKILicensingButtonsMixin: "Terrasoft.GKILicensingButtonsMixin"
 		},
 		methods: {
+
 			/**
 			 * @overridden
 			 * @desc действия при инициализации
@@ -47,6 +48,7 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 				this.on("change:GKIIsToShowGKIMSADActiveOnly", this.onGKIFiltersChanged, this);
 				this.isGKIButtonsEnabledMethod();
 			},
+
 			/**
 			 * @overridden
 			 * @desc получение фильтров
@@ -58,16 +60,19 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 				esq = this.changeByFixedFilter(esq, "GKIIsToShowGKIMSADActiveOnly");
 				return esq;
 			},
+
 			/**
 			 * @overridden
 			 * @desc удаление "Импорт данных" в меню "Действия"
 			 */
 			getDataImportMenuItemVisible: Terrasoft.emptyFn,
+
 			/**
 			 * @overridden
 			 * @desc удаление "Удалить" в меню "Действия"
 			 */
 			isVisibleDeleteAction: Terrasoft.emptyFn,
+
 			/**
 			 * @public
 			 * @param {object} esq 
@@ -88,13 +93,16 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 				}
 				return esq;
 			},
+
 			/**
 			 * @public
 			 * @desc событие при смене значения фильтра
 			 */
-			onGKIFiltersChanged: function() {
+			onGKIFiltersChanged: function () {
+				this.sandbox.publish("FiltersChanged", null, [this.sandbox.id]);
 				this.reloadGridData();
 			},
+
 			/**
 			 * @public
 			 * @desc вызывает процесс, который обновляет информацию со стендов
@@ -110,6 +118,7 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 				this.showInformationDialog(this.get("Resources.Strings.GKILicenseSyncRegularProcessReminder"));
 				return;
 			},
+
 			/**
 			 * @public
 			 * @desc вызывает синхронизацию с LDAP
@@ -131,6 +140,7 @@ define("GKILicUserSection", ["ProcessModuleUtilities", "BaseFiltersGenerateModul
 			onGKILicUserSyncCombinedButtonClick: function() {
 				this.sandbox.publish("GKILicUserSyncCombinedMessage", null, [this.sandbox.id]);
 			},
+
 			/**
 			 * @private
 			 * @desc определение видимости кнопок по правам

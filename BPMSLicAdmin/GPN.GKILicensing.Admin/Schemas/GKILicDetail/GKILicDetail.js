@@ -4,17 +4,21 @@ define("GKILicDetail", [], function() {
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
 		diff: /**SCHEMA_DIFF*/[]/**SCHEMA_DIFF*/,
 		methods: {
-			getCopyRecordMenuItem: Terrasoft.emptyFn,
+			//region overridden методы убирающие кнопки детали
+				getCopyRecordMenuItem: Terrasoft.emptyFn,
 
-			getDeleteRecordMenuItem: Terrasoft.emptyFn,
+				getDeleteRecordMenuItem: Terrasoft.emptyFn,
 
-			getAddRecordMenuItem: Terrasoft.emptyFn,
+				getAddRecordMenuItem: Terrasoft.emptyFn,
 
-			getEditRecordMenuItem: Terrasoft.emptyFn,
+				getEditRecordMenuItem: Terrasoft.emptyFn,
 
-			getAddRecordButtonVisible: Terrasoft.emptyFn,
-			
-			editRecord: Ext.emptyFn
+				getAddRecordButtonVisible: Terrasoft.emptyFn,
+				
+				editRecord: Ext.emptyFn,
+				
+				getDataImportMenuItemVisible: Terrasoft.emptyFn
+			//endregion
 		}
 	};
 });

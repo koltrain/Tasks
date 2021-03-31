@@ -2,7 +2,7 @@
 <Resources Culture="ru-RU">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Лицензии приложения" />
+			<Item Name="Caption" Value="Лицензии экземпляра" />
 			<Item Name="Columns.GKICount.Caption" Value="Остаток" />
 			<Item Name="Columns.GKICountUsed.Caption" Value="Распределено" />
 			<Item Name="Columns.GKIInstance.Caption" Value="Приложение" />

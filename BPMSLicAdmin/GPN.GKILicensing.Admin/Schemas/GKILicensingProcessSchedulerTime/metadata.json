@@ -1,0 +1,63 @@
+= MetaData.Schema.UId "7953dbf6-2dfe-1df6-2b95-153e7fcf4cbb"
+= MetaData.Schema.A2 "GKILicensingProcessSchedulerTime"
+= MetaData.Schema.A5 "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
+= MetaData.Schema.B6 "3716e58e-ad82-22ae-4451-78d83916585d"
+= MetaData.Schema.B8 "7.17.0.2164"
+= MetaData.Schema.EG1.UId "94010f44-5e01-4ecd-943a-b0084eecba0f"
+= MetaData.Schema.EG1.A2 "GKIEntity_9fb87a1EventsProcess"
+= MetaData.Schema.EG1.A5 "2f9b0342-6aef-4d6e-a69a-f3f319b97869"
++ MetaData.Schema.EG1.B8 "7.17.0.2164"
+= MetaData.Schema.EG1.BK8 "7bb7d6a5-e7a3-4837-83bc-7f785d688165"
+= MetaData.Schema.EG1.BK37.A3 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK37.A4 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK4.["08594d74-60b0-45ce-bf17-bac1a8b127f7"].CK2.["496d4a3c-b644-4a65-b0ed-2534d9236da5"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["90027ac8-c9c3-4d21-a4f9-da1cde752cd1"].CK2.["d8b8410f-5c8a-4ddc-8fc2-353483452aed"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["5f3bfbbe-1820-44ca-92f1-6f993169b2dd"].CK2.["d7c806b7-a29b-4ce5-9167-b3319472e772"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["dbf48103-dcf6-4f53-a052-d727a95ea0b4"].CK2.["933bf2fc-d052-40c8-a3e0-bf60049da5d8"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["f0646c74-f291-474f-9a10-143ee868f1c9"].CK2.["b3d5b61f-7afe-48b5-a8cc-40317ea9c428"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
+= MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D2 {
+  "UId": "beab5fb4-4373-7d4d-bc39-36dfb51c2e75",
+  "A2": "GKIFireTime",
+  "A3": "7953dbf6-2dfe-1df6-2b95-153e7fcf4cbb",
+  "A4": "7953dbf6-2dfe-1df6-2b95-153e7fcf4cbb",
+  "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
+  "S2": "04cc757b-8f06-482c-8a1a-0c0e171d2410",
+  "E2": 1
+}
++ MetaData.Schema.D2 {
+  "UId": "9d68bfe4-8e4e-276a-edc9-a6daafbf371c",
+  "A2": "GKIProcess",
+  "A3": "7953dbf6-2dfe-1df6-2b95-153e7fcf4cbb",
+  "A4": "7953dbf6-2dfe-1df6-2b95-153e7fcf4cbb",
+  "A5": "2f9b0342-6aef-4d6e-a69a-f3f319b97869",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "842e74a2-e737-476c-b3d0-8aa3d5ddd229",
+  "E2": 1,
+  "E6": true,
+  "E8": true,
+  "E17": "GKIProcessId",
+  "E18": "GKIProcessCaption"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","beab5fb4-4373-7d4d-bc39-36dfb51c2e75","9d68bfe4-8e4e-276a-edc9-a6daafbf371c"]
+= MetaData.Schema.D20.A2 "GKILicensingProcessSchedulerTimeEvents"
+- MetaData.Schema.EG1.B6
+- MetaData.Schema.EG1.BK29
+- MetaData.Schema.EG1.BK30
+- MetaData.Schema.D1
+- MetaData.Schema.D20.A5
+- MetaData.Schema.D20.FA4
+- MetaData.Schema.D20.FA5
+- MetaData.Schema.D20.FA6
+- MetaData.Schema.D20.FA7
+- MetaData.Schema.D20.FA11
+- MetaData.Schema.D20.FA12
+- MetaData.Schema.D20.FA15
++ MetaData.Schema.B7 false
++ MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16 false
++ MetaData.Schema.D2.["e80190a5-03b2-4095-90f7-a193a960adee"].E16 false
++ MetaData.Schema.D2.["ebf6bb93-8aa6-4a01-900d-c6ea67affe21"].E16 false
++ MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16 false
++ MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16 false
++ MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16 false

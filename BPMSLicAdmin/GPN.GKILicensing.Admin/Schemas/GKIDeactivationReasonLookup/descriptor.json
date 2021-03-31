@@ -2,13 +2,12 @@
   "Descriptor": {
     "UId": "7e8e518f-ee67-d33b-ba74-0c62f27408a3",
     "Name": "GKIDeactivationReasonLookup",
-    "ModifiedOnUtc": "\/Date(1612541016000)\/",
+    "ModifiedOnUtc": "\/Date(1616841958000)\/",
     "Parent": {
       "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
       "Name": "BaseLookup"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Причина деактивации",
-    "DependsOn": []
+    "Caption": "Причина деактивации"
   }
 }
