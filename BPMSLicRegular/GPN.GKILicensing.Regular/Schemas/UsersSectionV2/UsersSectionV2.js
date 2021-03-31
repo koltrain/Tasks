@@ -155,7 +155,7 @@ define("UsersSectionV2", ["ServiceHelper", "RightUtilities"], function(ServiceHe
 			 * Открытие окна отзыва VIP-лицензий
 			 */
 			openVIPLicensesToWithdraw: function() {
-				var config = this.getLicDistributionLookupConfig();
+				var config = this.getGKIVIPLicDistributionLookupConfig();
 				this.openLookup(config, this.onVIPLicPackagesToWithdrawSelected, this);
 			},
 
@@ -163,8 +163,35 @@ define("UsersSectionV2", ["ServiceHelper", "RightUtilities"], function(ServiceHe
 			 * Открытие окна назначения VIP-лицензий
 			 */
 			openVIPLicensesToDistribute: function() {
-				var config = this.getLicDistributionLookupConfig();
+				var config = this.getGKIVIPLicDistributionLookupConfig();
 				this.openLookup(config, this.onVIPLicPackagesToDistibuteSelected, this);
+			},
+
+			/**
+			 * Конфиг окна выбора лицензий
+			 * @protected
+			 * @return {Object} Конфиг окна выбора лицензий
+			 */
+			getGKIVIPLicDistributionLookupConfig: function() {
+				var now = new Date();
+				const filters = this.createPersonalLicPackageFilterGroup();
+				filters.addItem(this.Terrasoft.createColumnFilterWithParameter(
+					this.Terrasoft.ComparisonType.GREATER_OR_EQUAL,
+					"[SysLic:SysLicPackage:Id].DueDate",
+					this.Terrasoft.endOfDay(now)));
+				filters.addItem(this.Terrasoft.createColumnFilterWithParameter(
+					this.Terrasoft.ComparisonType.LESS_OR_EQUAL,
+					"[SysLic:SysLicPackage:Id].StartDate",
+					this.Terrasoft.endOfDay(now)));
+				filters.addItem(Terrasoft.createExistsFilter(
+					"[GKIVIPUsersLicenses:GKISysLicPackage:Id].Id"));
+				return {
+					entitySchemaName: "SysLicPackage",
+					multiSelect: true,
+					filters: filters,
+					columnName: "Name",
+					hideActions: true
+				};
 			},
 
 			/**

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "94d3faa7-4894-43cb-aa28-a6c7dadd34d0",
+    "Name": "LDAPServerSettings",
+    "ModifiedOnUtc": "\/Date(1616661413000)\/",
+    "Parent": {
+      "UId": "8ba5fd12-2e04-4691-a68e-be71033f4dd2",
+      "Name": "LDAPServerSettings"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Страница настройки сервера LDAP"
+  }
+}

@@ -3,6 +3,7 @@ namespace Terrasoft.Configuration
 	using Newtonsoft.Json;
 	using System;
 	using System.Collections.Generic;
+	using System.Collections.Concurrent;
 	using System.Collections.ObjectModel;
 	using System.Data;
 	using System.Linq;
@@ -11,13 +12,13 @@ namespace Terrasoft.Configuration
 	using System.ServiceModel;
 	using System.ServiceModel.Activation;
 	using System.ServiceModel.Web;
+	using System.Threading.Tasks;
 	using Terrasoft.Common;
 	using Terrasoft.Core;
 	using Terrasoft.Core.DB;
 	using Terrasoft.Web.Common;
 	using Terrasoft.Core.Entities;
-
-
+	
 	[ServiceContract]
 	[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
 	public class GKILicensingRegularService : BaseService
@@ -77,120 +78,13 @@ namespace Terrasoft.Configuration
 		public GKILicUserSyncResult GKIAddOrRemoveLicense(List<LicUserData> userLicensePair, bool isAddLicense)
 		{
 			GKILicUserSyncResult licUserSyncResult = new GKILicUserSyncResult();
-			List<LicUserSyncResult> syncResults = new List<LicUserSyncResult>();
-			licUserSyncResult.LicUserSyncResults = syncResults;
+			
 			try
 			{
-				foreach (LicUserData LicUserData in userLicensePair)
-				{
-					string userLogin = LicUserData.LicUserName;
-					string licenseName = LicUserData.LicPackageName;
-					try
-					{
-						if (userLogin.IsNullOrWhiteSpace() || licenseName.IsNullOrWhiteSpace())
-						{
-							syncResults.Add(new LicUserSyncResult()
-							{
-								LicUserName = userLogin,
-								LicPackageName = licenseName,
-								isSuccess = false,
-								ErrorMsg = userLogin.IsNullOrWhiteSpace() ? "LicUserName is empty" : "LicPackageName is empty"
-							});
-							continue;
-						}
-
-						var sysadminunitSchema = UserConnection.EntitySchemaManager.FindInstanceByName("SysAdminUnit");
-						var esqSysadminunit = new EntitySchemaQuery(sysadminunitSchema) { PrimaryQueryColumn = { IsAlwaysSelect = true } };
-						esqSysadminunit.AddColumn("Id");
-						esqSysadminunit.Filters.Add(esqSysadminunit.CreateFilterWithParameters(FilterComparisonType.Equal, "Name", userLogin));
-						var sysadminunitEntities = esqSysadminunit.GetEntityCollection(UserConnection);
-						if (sysadminunitEntities.Count != 1)
-						{
-							syncResults.Add(new LicUserSyncResult()
-							{
-								LicUserName = userLogin,
-								LicPackageName = licenseName,
-								isSuccess = false,
-								ErrorMsg = sysadminunitEntities.Count < 1 ? "There are no users with this login" : "There are more than one user with this login"
-							});
-							continue;
-						}
-						Entity record = sysadminunitEntities.First();
-						Guid userIdGuid = record.GetTypedColumnValue<Guid>("Id");
-
-						var licenseString = new Collection<string>();
-						licenseString.Add(licenseName);
-
-						//esq for calculating have the license been removed or granted already
-						var sysLicUserESQ = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "SysLicUser");
-						sysLicUserESQ.UseAdminRights = false;
-						sysLicUserESQ.AddAllSchemaColumns();
-						sysLicUserESQ.Filters.Add(sysLicUserESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysUser.Name", userLogin));
-						sysLicUserESQ.Filters.Add(sysLicUserESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysLicPackage.Name", licenseName));
-						var sysLicUserESQCollection = sysLicUserESQ.GetEntityCollection(UserConnection);
-
-						if (isAddLicense) {
-							var grantedLicenses = UserConnection.LicHelper.AddUserAvailableLicences(userIdGuid, licenseString);
-							if (sysLicUserESQCollection.Count == 0 && (grantedLicenses == null || grantedLicenses.Count < 1))
-							{
-								syncResults.Add(new LicUserSyncResult()
-								{
-									LicUserName = userLogin,
-									LicPackageName = licenseName,
-									isSuccess = false,
-									ErrorMsg = "License was not granted"
-								});
-								continue;
-							}
-							else
-							{
-								syncResults.Add(new LicUserSyncResult()
-								{
-									LicUserName = userLogin,
-									LicPackageName = licenseName,
-									isSuccess = true,
-									ErrorMsg = ""
-								});
-							}
-						}
-						else
-						{
-							if (sysLicUserESQCollection.Count > 0)
-							{
-
-								int removedLicenses = GKIRemoveLicensesRequest(userIdGuid, licenseName);
-								if (removedLicenses < 1)
-								{
-									syncResults.Add(new LicUserSyncResult()
-									{
-										LicUserName = userLogin,
-										LicPackageName = licenseName,
-										isSuccess = false,
-										ErrorMsg = "License was not removed"
-									});
-									continue;
-								}
-							}
-							syncResults.Add(new LicUserSyncResult()
-							{
-								LicUserName = userLogin,
-								LicPackageName = licenseName,
-								isSuccess = true,
-								ErrorMsg = ""
-							});
-						}
-					}
-					catch (Exception ex)
-					{
-						syncResults.Add(new LicUserSyncResult()
-						{
-							LicUserName = userLogin,
-							LicPackageName = licenseName,
-							isSuccess = false,
-							ErrorMsg = ex.Message
-						});
-					}
-				}
+				ConcurrentQueue<LicUserSyncResult> syncResultsQueue = new ConcurrentQueue<LicUserSyncResult>();
+				Parallel.ForEach(userLicensePair, LicUserData => GKIProcessLicUserData(LicUserData, syncResultsQueue, isAddLicense));
+				List<LicUserSyncResult> syncResults = new List<LicUserSyncResult>(syncResultsQueue.ToList());
+				licUserSyncResult.LicUserSyncResults = syncResults;
 				licUserSyncResult.Success = true;
 				licUserSyncResult.ErrMsg = String.Empty;
 				return licUserSyncResult;
@@ -236,7 +130,6 @@ namespace Terrasoft.Configuration
 				sysLicUserESQ.UseAdminRights = false;
 				sysLicUserESQ.AddAllSchemaColumns();
 				var SysLicPackageNameClm = sysLicUserESQ.AddColumn("SysLicPackage.Name").Name;
-				//TODO: filter by LDAPEntryId is not empty?
 				var sysLicUserESQCollection = sysLicUserESQ.GetEntityCollection(UserConnection);
 				List<Entity> sysLicUserESQCollectionList = sysLicUserESQCollection.ToList();
 
@@ -246,33 +139,36 @@ namespace Terrasoft.Configuration
 				var lastActivityDateTimeColumn = sysAdminUnitESQ.AddColumn(sysAdminUnitESQ.CreateAggregationFunction(AggregationTypeStrict.Max,
 					"[SysUserSession:SysUser].SessionStartDate"));
 				sysAdminUnitESQ.Filters.Add(sysAdminUnitESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysAdminUnitTypeValue", 4)); //users
-																																				 //TODO: filter by LDAPEntryId is not empty?
-				var sysAdminUnitESQCollection = sysAdminUnitESQ.GetEntityCollection(UserConnection);
+				var sysAdminUnitESQCollections = sysAdminUnitESQ.GetEntityCollectionIterator(UserConnection);
 				usersSyncResult.UserSyncResultSysAdminUnit = new List<UserSyncResultSysAdminUnit>();
-
-				foreach (Entity sysAdminUnitEntity in sysAdminUnitESQCollection)
+				foreach (var sysAdminUnitESQCollection in sysAdminUnitESQCollections)
 				{
-					UserSyncResultSysAdminUnit userSAU = new UserSyncResultSysAdminUnit();
-					userSAU.Active = sysAdminUnitEntity.GetTypedColumnValue<bool>("Active");
-					userSAU.Name = sysAdminUnitEntity.GetTypedColumnValue<string>("Name");
-					DateTime? lastActivityDateTime = sysAdminUnitEntity.GetTypedColumnValue<DateTime>(lastActivityDateTimeColumn.Name);
-					if (lastActivityDateTime != null && lastActivityDateTime > DateTime.MinValue)
-						userSAU.LastActivityDateTime = lastActivityDateTime;
-					DateTime? registrationDateTime = sysAdminUnitEntity.GetTypedColumnValue<DateTime>("CreatedOn");
-					if (registrationDateTime != null && registrationDateTime > DateTime.MinValue)
-						userSAU.RegistrationDateTime = registrationDateTime;
-					userSAU.UserSyncResultSysLicUser = new List<UserSyncResultSysLicUser>();
-					usersSyncResult.UserSyncResultSysAdminUnit.Add(userSAU);
-					foreach (Entity sysLicPackage in sysLicPackageESQCollection)
+					ConcurrentQueue<UserSyncResultSysAdminUnit> userQueue = new ConcurrentQueue<UserSyncResultSysAdminUnit>();
+					Parallel.ForEach(sysAdminUnitESQCollection, sysAdminUnitEntity =>
 					{
-						UserSyncResultSysLicUser userSLU = new UserSyncResultSysLicUser();
-						userSLU.SysLicPackageName = sysLicPackage.GetTypedColumnValue<string>("Name");
-						userSLU.Active = sysLicUserESQCollectionList.Find(c => (c.GetTypedColumnValue<Guid>("SysUserId") == sysAdminUnitEntity.GetTypedColumnValue<Guid>("Id")) &&
-							(c.GetTypedColumnValue<string>(SysLicPackageNameClm) == sysLicPackage.GetTypedColumnValue<string>("Name"))
-						) != null ? true : false;
-						userSLU.SysUserName = sysAdminUnitEntity.GetTypedColumnValue<string>("Name");
-						userSAU.UserSyncResultSysLicUser.Add(userSLU);
-					}
+						UserSyncResultSysAdminUnit userSAU = new UserSyncResultSysAdminUnit();
+						userSAU.Active = sysAdminUnitEntity.GetTypedColumnValue<bool>("Active");
+						userSAU.Name = sysAdminUnitEntity.GetTypedColumnValue<string>("Name");
+						DateTime? lastActivityDateTime = sysAdminUnitEntity.GetTypedColumnValue<DateTime>(lastActivityDateTimeColumn.Name);
+						if (lastActivityDateTime != null && lastActivityDateTime > DateTime.MinValue)
+							userSAU.LastActivityDateTime = lastActivityDateTime;
+						DateTime? registrationDateTime = sysAdminUnitEntity.GetTypedColumnValue<DateTime>("CreatedOn");
+						if (registrationDateTime != null && registrationDateTime > DateTime.MinValue)
+							userSAU.RegistrationDateTime = registrationDateTime;
+						userSAU.UserSyncResultSysLicUser = new List<UserSyncResultSysLicUser>();
+						userQueue.Enqueue(userSAU);
+						foreach (Entity sysLicPackage in sysLicPackageESQCollection)
+						{
+							UserSyncResultSysLicUser userSLU = new UserSyncResultSysLicUser();
+							userSLU.SysLicPackageName = sysLicPackage.GetTypedColumnValue<string>("Name");
+							userSLU.Active = sysLicUserESQCollectionList.Find(c => (c.GetTypedColumnValue<Guid>("SysUserId") == sysAdminUnitEntity.GetTypedColumnValue<Guid>("Id")) &&
+								(c.GetTypedColumnValue<string>(SysLicPackageNameClm) == sysLicPackage.GetTypedColumnValue<string>("Name"))
+							) != null ? true : false;
+							userSLU.SysUserName = sysAdminUnitEntity.GetTypedColumnValue<string>("Name");
+							userSAU.UserSyncResultSysLicUser.Add(userSLU);
+						}
+					});
+					usersSyncResult.UserSyncResultSysAdminUnit.AddRange(userQueue);
 				}
 				usersSyncResult.Success = true;
 				return usersSyncResult;
@@ -496,33 +392,39 @@ namespace Terrasoft.Configuration
 				.And().OpenBlock("Description").IsLike(Column.Parameter(pulseAuditLogDescEn))
 				.Or("Description").IsLike(Column.Parameter(pulseAuditLogDescRu)).CloseBlock()
 				as Select;
+			List<string> bufferStrings = new List<string>();
 			using (DBExecutor dbExecutor = UserConnection.EnsureDBConnection())
 			{
 				using (IDataReader dr = auditSelect.ExecuteReader(dbExecutor))
 				{
-					string bufferString;
+					
 					while (dr.Read())
 					{
-						bufferString = dr.GetString(0);
-						if (bufferString.StartsWith(pulseAuditLogDescBeginningEn) || bufferString.StartsWith(pulseAuditLogDescBeginningRu))
-						{
-							if (bufferString.StartsWith(pulseAuditLogDescBeginningEn))
-							{
-								bufferString = bufferString.Substring(pulseAuditLogDescBeginningEn.Length,
-									bufferString.IndexOf(pulseAuditLogDescEndingEn) - (pulseAuditLogDescBeginningEn.Length));
-							}
-							if (bufferString.StartsWith(pulseAuditLogDescBeginningRu))
-							{
-								bufferString = bufferString.Substring(pulseAuditLogDescBeginningRu.Length,
-									bufferString.IndexOf(pulseAuditLogDescEndingRu) - (pulseAuditLogDescBeginningRu.Length));
-							}
-
-							if (!pulseData.pulseLicUserNames.Contains(bufferString))
-								pulseData.pulseLicUserNames.Add(bufferString);
-						}
+						bufferStrings.Add(dr.GetString(0));
 					}
 				}
 			}
+			ConcurrentQueue<string> pulseLicUserNames = new ConcurrentQueue<string>();
+			Parallel.ForEach(bufferStrings, bufferString =>
+			{
+				if (bufferString.StartsWith(pulseAuditLogDescBeginningEn) || bufferString.StartsWith(pulseAuditLogDescBeginningRu))
+				{
+					if (bufferString.StartsWith(pulseAuditLogDescBeginningEn))
+					{
+						bufferString = bufferString.Substring(pulseAuditLogDescBeginningEn.Length,
+							bufferString.IndexOf(pulseAuditLogDescEndingEn) - (pulseAuditLogDescBeginningEn.Length));
+					}
+					if (bufferString.StartsWith(pulseAuditLogDescBeginningRu))
+					{
+						bufferString = bufferString.Substring(pulseAuditLogDescBeginningRu.Length,
+							bufferString.IndexOf(pulseAuditLogDescEndingRu) - (pulseAuditLogDescBeginningRu.Length));
+					}
+
+					if (!pulseLicUserNames.Contains(bufferString))
+						pulseLicUserNames.Enqueue(bufferString);
+				}
+			});
+			pulseData.pulseLicUserNames.AddRange(pulseLicUserNames);
 
 			pulseData.isSuccess = true;
 			pulseData.errorMsg = String.Empty;
@@ -775,7 +677,7 @@ namespace Terrasoft.Configuration
 				foreach (Guid sysPackage in packageIds)
                 {
 					int limit = GKIGetVIPLimit(sysPackage);
-					int usedCount = GetUsedVIPCount(sysPackage);
+					int usedCount = GetUsedVIPCount(sysPackage, userIds.ToList());
 					if (countUsers > limit - usedCount)
                     {
 						Entity entitySysLicPackage = schemaSysLicPackage.CreateEntity(UserConnection);
@@ -800,13 +702,14 @@ namespace Terrasoft.Configuration
 							new Select(UserConnection)
 								.Column("Id")
 								.Column(Column.Const(licPackage))
-									.From("SysAdminUnit")
-									.Where("Id").Not().In(
-										new Select(UserConnection)
-										.Column("GKISysAdminUnitId")
-										.From("GKIVIPUsersLicenses")
-										.Where("GKISysLicPackageId")
-										.IsEqual(Column.Parameter(licPackage))
+								.From("SysAdminUnit")
+								.Where("Id").Not().In(
+									new Select(UserConnection)
+									.Column("GKISysAdminUnitId")
+									.From("GKIVIPUsersLicenses")
+									.Where("GKISysLicPackageId")
+									.IsEqual(Column.Parameter(licPackage))
+									.And("GKISysAdminUnitId").Not().IsNull()
 									)
 						as Select);
 					insertIntoGKIVIPUsersLicenses.Execute();
@@ -916,6 +819,19 @@ namespace Terrasoft.Configuration
 				dictGKIVIPLicenses.Remove(missingKey);
 			}
 			DeleteGKIVIPUsersLicenses(missingSysLicPackages);
+
+			//assign empty rows so usersection filter would work
+			var schemaGKIVIPUsersLicenses = UserConnection.EntitySchemaManager.GetInstanceByName("GKIVIPUsersLicenses");
+			foreach (var key in dictGKIVIPLicenses.Keys)
+            {
+				Entity entityGKIVIPUsersLicenses = schemaGKIVIPUsersLicenses.CreateEntity(UserConnection);
+				if (!entityGKIVIPUsersLicenses.FetchFromDB("GKISysLicPackage", key))
+				{
+					entityGKIVIPUsersLicenses.SetDefColumnValues();
+					entityGKIVIPUsersLicenses.SetColumnValue("GKISysLicPackageId", key);
+					entityGKIVIPUsersLicenses.Save();
+				}
+			}
 		}
 
 		private void DeleteGKIVIPUsersLicenses(IEnumerable<Guid> missingSysLicPackages = null)
@@ -995,14 +911,152 @@ namespace Terrasoft.Configuration
 			}
 			return usedCount;
 		}
+		public int GetUsedVIPCount(Guid sysLicPackageId, List<Guid> sysUserIds)
+		{
+			int usedCount = 0;
+			IEnumerable<QueryParameter> queryParameterUserIds = sysUserIds.ConvertAll(x => new QueryParameter(x));
+			var usedVIPLicensesSelect =
+				new Select(UserConnection)
+				.Column(Func.Count("Id"))
+				.Column("GKISysLicPackageId")
+				.From("GKIVIPUsersLicenses")
+				.Where("GKISysLicPackageId").IsEqual(Column.Parameter(sysLicPackageId))
+				.And("GKIisVIP").IsEqual(Column.Parameter(true))
+				.And("GKISysAdminUnitId").Not().In(queryParameterUserIds)
+				.GroupBy("GKISysLicPackageId") as Select;
+			using (DBExecutor dbExecutor = UserConnection.EnsureDBConnection())
+			{
+				using (IDataReader dr = usedVIPLicensesSelect.ExecuteReader(dbExecutor))
+				{
+					while (dr.Read())
+					{
+						usedCount = dr.GetInt32(0);
+					}
+				}
+			}
+			return usedCount;
+		}
+		private void GKIProcessLicUserData(LicUserData LicUserData, ConcurrentQueue<LicUserSyncResult> syncResultsQueue, bool isAddLicense)
+        {
+			string userLogin = LicUserData.LicUserName;
+			string licenseName = LicUserData.LicPackageName;
+			try
+			{
+				if (userLogin.IsNullOrWhiteSpace() || licenseName.IsNullOrWhiteSpace())
+				{
+					syncResultsQueue.Enqueue(new LicUserSyncResult()
+					{
+						LicUserName = userLogin,
+						LicPackageName = licenseName,
+						isSuccess = false,
+						ErrorMsg = userLogin.IsNullOrWhiteSpace() ? "LicUserName is empty" : "LicPackageName is empty"
+					});
+					return;
+				}
+
+				var sysadminunitSchema = UserConnection.EntitySchemaManager.FindInstanceByName("SysAdminUnit");
+				var esqSysadminunit = new EntitySchemaQuery(sysadminunitSchema) { PrimaryQueryColumn = { IsAlwaysSelect = true } };
+				esqSysadminunit.AddColumn("Id");
+				esqSysadminunit.Filters.Add(esqSysadminunit.CreateFilterWithParameters(FilterComparisonType.Equal, "Name", userLogin));
+				var sysadminunitEntities = esqSysadminunit.GetEntityCollection(UserConnection);
+				if (sysadminunitEntities.Count != 1)
+				{
+					syncResultsQueue.Enqueue(new LicUserSyncResult()
+					{
+						LicUserName = userLogin,
+						LicPackageName = licenseName,
+						isSuccess = false,
+						ErrorMsg = sysadminunitEntities.Count < 1 ? "There are no users with this login" : "There are more than one user with this login"
+					});
+					return;
+				}
+				Entity record = sysadminunitEntities.First();
+				Guid userIdGuid = record.GetTypedColumnValue<Guid>("Id");
+
+				var licenseString = new Collection<string>();
+				licenseString.Add(licenseName);
+
+				bool hasTheLicense = GKIDoesUserHaveTheLicense(userIdGuid, licenseName);
+
+				if (isAddLicense)
+				{
+					if (!hasTheLicense)
+                    {
+						var grantedLicenses = UserConnection.LicHelper.AddUserAvailableLicences(userIdGuid, licenseString);
+						if (!GKIDoesUserHaveTheLicense(userIdGuid, licenseName))
+						{
+							syncResultsQueue.Enqueue(new LicUserSyncResult()
+							{
+								LicUserName = userLogin,
+								LicPackageName = licenseName,
+								isSuccess = false,
+								ErrorMsg = "License was not granted"
+							});
+							return;
+						}
+					}
+					syncResultsQueue.Enqueue(new LicUserSyncResult()
+					{
+						LicUserName = userLogin,
+						LicPackageName = licenseName,
+						isSuccess = true,
+						ErrorMsg = ""
+					});
+				}
+				else
+				{
+					if (hasTheLicense)
+					{
+
+						int removedLicenses = GKIRemoveLicensesRequest(userIdGuid, licenseName);
+						if (removedLicenses < 1)
+						{
+							syncResultsQueue.Enqueue(new LicUserSyncResult()
+							{
+								LicUserName = userLogin,
+								LicPackageName = licenseName,
+								isSuccess = false,
+								ErrorMsg = "License was not removed"
+							});
+							return;
+						}
+					}
+					syncResultsQueue.Enqueue(new LicUserSyncResult()
+					{
+						LicUserName = userLogin,
+						LicPackageName = licenseName,
+						isSuccess = true,
+						ErrorMsg = ""
+					});
+				}
+			}
+			catch (Exception ex)
+			{
+				syncResultsQueue.Enqueue(new LicUserSyncResult()
+				{
+					LicUserName = userLogin,
+					LicPackageName = licenseName,
+					isSuccess = false,
+					ErrorMsg = ex.Message
+				});
+			}
+		}
+
+		private bool GKIDoesUserHaveTheLicense(Guid userIdGuid, string licenseName)
+        {
+			//esq for calculating have the license been removed or granted already
+			var sysLicUserESQ = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "SysLicUser") { PrimaryQueryColumn = { IsAlwaysSelect = true } };
+			sysLicUserESQ.UseAdminRights = false;
+			sysLicUserESQ.Filters.Add(sysLicUserESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysUser", userIdGuid));
+			sysLicUserESQ.Filters.Add(sysLicUserESQ.CreateFilterWithParameters(FilterComparisonType.Equal, "SysLicPackage.Name", licenseName));
+			var sysLicUserESQCollection = sysLicUserESQ.GetEntityCollection(UserConnection);
+			bool hasTheLicense = sysLicUserESQCollection.Count > 0 ? true : false;
+			return hasTheLicense;
+		}
+
 		private IEnumerable<QueryParameter> GetVIPLicensesFilter()
         {
-			List<QueryParameter> queryParamListGKIVIPLicenses = new List<QueryParameter>();
-			foreach (var GKIVIPLicense in dictGKIVIPLicenses)
-			{
-				queryParamListGKIVIPLicenses.Add(new QueryParameter(GKIVIPLicense.Key));
-			}
-			IEnumerable<QueryParameter> queryParamListGKIVIPLicensesEnum = queryParamListGKIVIPLicenses.AsEnumerable();
+			IEnumerable<QueryParameter> queryParamListGKIVIPLicensesEnum = dictGKIVIPLicenses.Keys.ToList().ConvertAll(x => new QueryParameter(x));
 			return queryParamListGKIVIPLicensesEnum;
 		}
 

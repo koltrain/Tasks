@@ -60,6 +60,14 @@ define("UserPageV2", ["RightUtilities", "ConfigurationConstants", "ViewUtilities
 					dataValueType: this.Terrasoft.DataValueType.BOOLEAN,
 					type: this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN
 				},
+				/**
+				 * Количество плохих запросов
+				 */
+				"GKIBadRequestsCounter": {
+					dataValueType: this.Terrasoft.DataValueType.INTEGER,
+					type: this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+					value: 0
+				},
 			},
 			rules: {},
 			methods: {
@@ -183,6 +191,11 @@ define("UserPageV2", ["RightUtilities", "ConfigurationConstants", "ViewUtilities
 					this.set("IsGKIVIPLicenseDataLoaded", false);
 					this.showMaskOnGKIVIPLicenses();
 					this.callService(config, function(response) {
+						if(!response.GetUserGKIVIPLicPackagesResult && this.get("GKIBadRequestsCounter") < 20){
+							this.getGKIVIPCollection();
+							this.set("GKIBadRequestsCounter", this.get("GKIBadRequestsCounter")+1);
+							return;
+						}
 						this.onGetGKIVIPCollection(response);
 					}, this);
 				},

@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "0ab01e6b-1fc8-97ca-4a85-e8c9842d6aac",
     "Name": "GPN.GKILicensing.Regular",
-    "ModifiedOnUtc": "\/Date(1606404279000)\/",
+    "ModifiedOnUtc": "\/Date(1616661266000)\/",
     "Maintainer": "Customer",
     "DependsOn": [
       {
@@ -19,6 +19,11 @@
         "UId": "a7d9c356-450c-46d7-bc85-72dca4e280ba",
         "PackageVersion": "7.8.0",
         "Name": "NUI"
+      },
+      {
+        "UId": "bb1e143e-f3ee-4316-9450-851ddd02d999",
+        "PackageVersion": "7.8.0",
+        "Name": "LDAP"
       }
     ]
   }
