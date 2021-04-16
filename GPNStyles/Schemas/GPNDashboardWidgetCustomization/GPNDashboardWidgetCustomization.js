@@ -5,7 +5,7 @@ function(resources) {
 	function addWidgetStyles() {
 
 		Terrasoft.DashboardEnums.WidgetColorSet = [
-			"#d60100", // - Красный
+			//"#d60100", // - Красный
 			"#ffb100", // - Желтый
 			"#46b145", // - Зеленый
 			"#793dc0", // - Фиолетовый
@@ -30,37 +30,37 @@ function(resources) {
 		];
 		
 		Terrasoft.DashboardEnums.StyleColors = {
-			"widget-green": Terrasoft.DashboardEnums.WidgetColorSet[0], // Красный
-			"widget-mustard": Terrasoft.DashboardEnums.WidgetColorSet[1], // Желтый
-			"widget-orange": Terrasoft.DashboardEnums.WidgetColorSet[2], // Зеленый
-			"widget-coral": Terrasoft.DashboardEnums.WidgetColorSet[3], // Фиолетовый
-			"widget-violet": Terrasoft.DashboardEnums.WidgetColorSet[4], // Бирюзовый
-			"widget-navy": Terrasoft.DashboardEnums.WidgetColorSet[5], // Антрацитовый
-			"widget-blue": Terrasoft.DashboardEnums.WidgetColorSet[6], // Нейтральный-серый
-			"widget-turquoise": Terrasoft.DashboardEnums.WidgetColorSet[7], // Бело-алюминиевый
-			"widget-dark-turquoise": Terrasoft.DashboardEnums.WidgetColorSet[8], // Кадетский синий Крайола
-			"widget-d4dce5": Terrasoft.DashboardEnums.WidgetColorSet[9], // Светлый серо-лазурный
-			"widget-dde0e6": Terrasoft.DashboardEnums.WidgetColorSet[10], // - Светло-серый
-			"widget-ebebeb": Terrasoft.DashboardEnums.WidgetColorSet[11], // - Дымчато-белый
-			"widget-f3f4f8": Terrasoft.DashboardEnums.WidgetColorSet[12], // - Гейнсборо
-			"widget-003d76": Terrasoft.DashboardEnums.WidgetColorSet[13], // - Транспортно-синий
-			"widget-00569b": Terrasoft.DashboardEnums.WidgetColorSet[14], // - Насыщенный синий
-			"widget-006fba": Terrasoft.DashboardEnums.WidgetColorSet[15], // - Ярко-синий
-			"widget-2378d8": Terrasoft.DashboardEnums.WidgetColorSet[16], // - Темно-синий Крайола
-			"widget-0097d8": Terrasoft.DashboardEnums.WidgetColorSet[17], // - Аква
-			"widget-2cb4e9": Terrasoft.DashboardEnums.WidgetColorSet[18], // - Цвет Твиттера
-			"widget-71c5f0": Terrasoft.DashboardEnums.WidgetColorSet[19], // - Светло-голубой
-			"widget-a1daf8": Terrasoft.DashboardEnums.WidgetColorSet[20], // - Бирюзово-голубой
-			"widget-bce4fa": Terrasoft.DashboardEnums.WidgetColorSet[21], // - Бледно-синий
+			//"widget-green": Terrasoft.DashboardEnums.WidgetColorSet[0], // Красный
+			"widget-mustard": Terrasoft.DashboardEnums.WidgetColorSet[0], // Желтый
+			"widget-orange": Terrasoft.DashboardEnums.WidgetColorSet[1], // Зеленый
+			"widget-coral": Terrasoft.DashboardEnums.WidgetColorSet[2], // Фиолетовый
+			"widget-violet": Terrasoft.DashboardEnums.WidgetColorSet[3], // Бирюзовый
+			"widget-navy": Terrasoft.DashboardEnums.WidgetColorSet[4], // Антрацитовый
+			"widget-blue": Terrasoft.DashboardEnums.WidgetColorSet[5], // Нейтральный-серый
+			"widget-turquoise": Terrasoft.DashboardEnums.WidgetColorSet[6], // Бело-алюминиевый
+			"widget-dark-turquoise": Terrasoft.DashboardEnums.WidgetColorSet[7], // Кадетский синий Крайола
+			"widget-d4dce5": Terrasoft.DashboardEnums.WidgetColorSet[8], // Светлый серо-лазурный
+			"widget-dde0e6": Terrasoft.DashboardEnums.WidgetColorSet[9], // - Светло-серый
+			"widget-ebebeb": Terrasoft.DashboardEnums.WidgetColorSet[10], // - Дымчато-белый
+			"widget-f3f4f8": Terrasoft.DashboardEnums.WidgetColorSet[11], // - Гейнсборо
+			"widget-003d76": Terrasoft.DashboardEnums.WidgetColorSet[12], // - Транспортно-синий
+			"widget-00569b": Terrasoft.DashboardEnums.WidgetColorSet[13], // - Насыщенный синий
+			"widget-006fba": Terrasoft.DashboardEnums.WidgetColorSet[14], // - Ярко-синий
+			"widget-2378d8": Terrasoft.DashboardEnums.WidgetColorSet[15], // - Темно-синий Крайола
+			"widget-0097d8": Terrasoft.DashboardEnums.WidgetColorSet[16], // - Аква
+			"widget-2cb4e9": Terrasoft.DashboardEnums.WidgetColorSet[17], // - Цвет Твиттера
+			"widget-71c5f0": Terrasoft.DashboardEnums.WidgetColorSet[18], // - Светло-голубой
+			"widget-a1daf8": Terrasoft.DashboardEnums.WidgetColorSet[19], // - Бирюзово-голубой
+			"widget-bce4fa": Terrasoft.DashboardEnums.WidgetColorSet[20], // - Бледно-синий
 		};
 		
 		//Описания цветов графиков
 		Terrasoft.DashboardEnums.WidgetColor = {
-			"widget-green": {
-				value: "widget-green",
-				displayValue: resources.localizableStrings.Styled60100Caption,
-				imageConfig: resources.localizableImages.Styled60100Image
-			},
+			// "widget-green": {
+			// 	value: "widget-green",
+			// 	displayValue: resources.localizableStrings.Styled60100Caption,
+			// 	imageConfig: resources.localizableImages.Styled60100Image
+			// },
 			"widget-mustard": {
 				value: "widget-mustard",
 				displayValue: resources.localizableStrings.Styleffb100Caption,
